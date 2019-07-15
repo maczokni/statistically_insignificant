@@ -12,7 +12,11 @@ images: []
 
 Last week I had the opportunity to take a one-week course by [Andy Kirk](https://www.visualisingdata.com/about/) about data visualisation, hosted by [Methods at Manchester](https://www.methods.manchester.ac.uk/) as part of the [Summer School](https://www.methods.manchester.ac.uk/connect/events/summer-school-2019/) programme. It was a fantastic experience to be a student again, and I learned a lot about practicat considerations that go into producing effective visualisations that are trustworthy, accessible, and elegant. 
 
-I will not (and cannot) summarise the course here, I recomment anyone interested in creating data visuailisations to get in touch with Andy for courses. But I did want to quickly summarise some really awesome tools, and show off some creations from the course. 
+I will not (and cannot) summarise the course here, I recomment anyone interested in creating data visuailisations to get in touch with Andy for courses. But I did want to quickly summarise some key take aways, list some really awesome tools, and show off some creations from the course. 
+
+# Take aways
+
+I really liked how the course was software agnostic, instead of teaching how to create particular plots with R or Tableu or something specific, the aim was to teach design thinking, and to take time to consider everything that goes into the data visualisation process. 
 
 
 # Resources 

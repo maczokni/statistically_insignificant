@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "www.rekadata.site/"
 relativeurls = true
 title = "Statistically Insignificant"
 theme = "pulp"
