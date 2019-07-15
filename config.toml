@@ -1,4 +1,4 @@
-baseurl = ""
+baseurl = "/"
 relativeurls = true
 title = "Statistically Insignificant"
 theme = "pulp"

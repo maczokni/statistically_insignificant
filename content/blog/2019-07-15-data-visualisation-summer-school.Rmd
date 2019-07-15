@@ -10,7 +10,7 @@ images: []
 
 # Learning to visualise data
 
-Last week I had the opportunity to take a one-week course by [Andy Kirk](https://www.visualisingdata.com/about/) about data visualisation, hosted by [Methods at Manchester](https://www.methods.manchester.ac.uk/) as part of the [Summer School](https://www.methods.manchester.ac.uk/connect/events/summer-school-2019/) programme. It was a fantastic experience to be a student again, and I learned a lot about practicat considerations that go into producing effective visualisations that are trustworthy, accessible, and elegant. 
+Last week I had the opportunity to take a one-week course by [Andy Kirk](https://www.visualisingdata.com/about/) about data visualisation, hosted by [Methods at Manchester](https://www.methods.manchester.ac.uk/) as part of the [Summer School](https://www.methods.manchester.ac.uk/connect/events/summer-school-2019/) programme. It was a fantastic experience to be a student again, and I learned a lot about practical considerations that go into producing effective visualisations that are trustworthy, accessible, and elegant. 
 
 I will not (and cannot) summarise the course here, I recomment anyone interested in creating data visuailisations to get in touch with Andy for courses. But I did want to quickly summarise some key take aways, list some really awesome tools, and show off some creations from the course. 
 
@@ -149,7 +149,7 @@ My colleague Vibhuti made the sanky diagram using Flourish mentioned above, and 
 
 # A note on accessibility
 
-There was a lot of talk about accessibility of charts and this was I think a really important thing to always keep in mind. We discussed accessibility as in is the chart usable, is it suitably understandable, and therefore *accessible to the audience* but also in terms of considering colourbling users for example. Some resources for this: 
+There was a lot of talk about accessibility of charts and this was I think a really important thing to always keep in mind. We discussed accessibility as in is the chart usable, is it suitably understandable, and therefore *accessible to the audience* but also discussed accessibility in terms of considering colourblind users for example. Some resources for this: 
 
 - [colororacle.org](http://colororacle.org/) gives a way to check if your colour scheme is colourblind
 - [colorbrewer](http://colorbrewer2.org) has colourbling friendly pallette suggestions
