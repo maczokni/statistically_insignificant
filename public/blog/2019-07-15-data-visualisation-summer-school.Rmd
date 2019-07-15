@@ -12,7 +12,20 @@ images: []
 
 Last week I had the opportunity to take a one-week course by [Andy Kirk](https://www.visualisingdata.com/about/) about data visualisation, hosted by [Methods at Manchester](https://www.methods.manchester.ac.uk/) as part of the [Summer School](https://www.methods.manchester.ac.uk/connect/events/summer-school-2019/) programme. It was a fantastic experience to be a student again, and I learned a lot about practicat considerations that go into producing effective visualisations that are trustworthy, accessible, and elegant. 
 
-I will not (and cannot) summarise the course here, I recomment anyone interested in creating data visuailisations to get in touch with Andy for courses. But I did want to quickly summarise some really awesome tools, and show off some creations from the course. 
+I will not (and cannot) summarise the course here, I recomment anyone interested in creating data visuailisations to get in touch with Andy for courses. But I did want to quickly summarise some key take aways, list some really awesome tools, and show off some creations from the course. 
+
+# Take aways
+
+I really liked how the course was software agnostic, instead of teaching how to create particular plots with R or Tableu or something specific, the aim was to teach design thinking, and to take time to consider everything that goes into the data visualisation process. 
+
+The most useful thing for me to structure my approach to visualisation I think came from the 4-step breakdown of the visualisation process. It really made organising my thinking about how to get from question to visualisation easier. The steps are: 
+
+1. **Formulate a brief** - why are you doing this? what/who is it for? what question is it answering?
+2. **Work with the data** - think about what data is required and also what format the data need to be in to allow the visualisation to be created
+3. **Establish editorial thinking** - really focus on what you want to say, to guide how to say it. we talked about the angle of the approach, and framing in relation to this.
+4. **Develop design solution** - finally think about the key decisions that go into the visualisation design: data representation, interactivity, annotation, colour, and composition, and how these all contribute to creating a trustworthy, elegant, and accessible piece. 
+
+Finally, many of the exercises involved looking at existing pieces of visualisation and really thinking about what I like and don't like about them. This turned out to be a really good starting point to think about what is a good and not so good way to develop my own visualisations. Not only that, but using a google sheet to collect class responses to answers to "how much they like/dislike" some elements really got a discussion going and good engagement - something I might try in my teaching going forward. 
 
 
 # Resources 
