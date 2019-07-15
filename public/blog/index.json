@@ -1,6 +1,6 @@
 [
     {
-        "ref": "/blog/data-visualisation-summer-school/",
+        "ref": "https://rekadata.site/blog/data-visualisation-summer-school/",
         "title": "Data Visualisation Summer School",
         "section": "blog",
         "date" : "2019.07.15",
@@ -8,7 +8,7 @@
     }
 ,
     {
-        "ref": "/blog/hello-world/",
+        "ref": "https://rekadata.site/blog/hello-world/",
         "title": "Hello World",
         "section": "blog",
         "date" : "2019.07.07",
@@ -16,7 +16,7 @@
     }
 ,
     {
-        "ref": "/blog/hello-world.nb/",
+        "ref": "https://rekadata.site/blog/hello-world.nb/",
         "title": "",
         "section": "blog",
         "date" : "0001.01.01",

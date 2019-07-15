@@ -1,4 +1,4 @@
-baseurl = ""
+baseurl = "https://rekadata.site"
 relativeurls = true
 title = "Statistically Insignificant"
 theme = "pulp"
@@ -6,7 +6,7 @@ theme = "pulp"
 hasCJKLanguage = true
 # pygmentsCodefences = true
 # pygmentsUseClasses = true
-# googleAnalytics = "{your tracking code}"
+googleAnalytics = "{UA-143850780-1}"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown", "_files$", "_cache$"]
 
 [taxonomies]

@@ -3,68 +3,68 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/blog/data-visualisation-summer-school/</loc>
+    <loc>https://rekadata.site/blog/data-visualisation-summer-school/</loc>
     <lastmod>2019-07-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/hello-world/</loc>
+    <loc>https://rekadata.site/blog/hello-world/</loc>
     <lastmod>2019-07-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/hello-world/</loc>
+    <loc>https://rekadata.site/post/hello-world/</loc>
     <lastmod>2019-07-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/markdown-syntax/</loc>
+    <loc>https://rekadata.site/post/markdown-syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/rich-content/</loc>
+    <loc>https://rekadata.site/post/rich-content/</loc>
     <lastmod>2019-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/placeholder-text/</loc>
+    <loc>https://rekadata.site/post/placeholder-text/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/math-typesetting/</loc>
+    <loc>https://rekadata.site/post/math-typesetting/</loc>
     <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/emoji-support/</loc>
+    <loc>https://rekadata.site/post/emoji-support/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/hello-world.nb/</loc>
+    <loc>https://rekadata.site/blog/hello-world.nb/</loc>
   </url>
   
   <url>
-    <loc>/blog/index.json</loc>
+    <loc>https://rekadata.site/blog/index.json</loc>
     <lastmod>2019-07-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/post/index.json</loc>
+    <loc>https://rekadata.site/post/index.json</loc>
     <lastmod>2019-07-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/series/</loc>
+    <loc>https://rekadata.site/series/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://rekadata.site/</loc>
     <lastmod>2019-07-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
