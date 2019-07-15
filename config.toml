@@ -1,11 +1,13 @@
 baseurl = "/"
+relativeurls = true
 title = "Statistically Insignificant"
 theme = "pulp"
-canonifyurls = true
+#canonifyurls = true
 hasCJKLanguage = true
 # pygmentsCodefences = true
 # pygmentsUseClasses = true
 # googleAnalytics = "{your tracking code}"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown", "_files$", "_cache$"]
 
 [taxonomies]
   series = "series"

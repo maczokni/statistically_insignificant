@@ -1,0 +1,9 @@
+---
+title: Data Visualisation Summer School
+author: ~
+date: '2019-07-15'
+slug: data-visualisation-summer-school
+categories: []
+tags: []
+images: []
+---
