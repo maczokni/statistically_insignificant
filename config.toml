@@ -1,6 +1,6 @@
 baseurl = "https://rekadata.site"
 relativeurls = true
-title = "Statistically Insignificant"
+title = "Dr Reka Solymosi"
 theme = "pulp"
 #canonifyurls = true
 hasCJKLanguage = true
@@ -13,11 +13,13 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown", "_files$", "_cache$"]
   series = "series"
 
 [params]
-    author = "Statistically Insignificant"
+    author = "Dr Reka Solymosi"
     avatar = "avatar.jpg"
     favicon = "favicon.ico"
     description = """
-        This is a blog about data stuff I get up to.
+        I am a Lecturer in Quantitative Methods at the Department of Criminology at University of Manchester. I am a member of the Software Sustainability Institute and an Honorary Lecturer at University College London.
+
+My research focuses on making use of new forms of data to gain insight into people's behaviour and subjective experiences, particularly focusing on crime, victimisation, transport, and spatial research. I am also dedicated to promoting data literacy in social science study and practice.
     """
     publicationYear = "2019"
     # listPageDateFormat = "January, 2006" # See https://gohugo.io/functions/format/
@@ -28,30 +30,53 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown", "_files$", "_cache$"]
 [outputs]
     section = ["JSON", "HTML"]
 
+
+
+[[menu.main]]
+    identifier = "research"
+    name = "Research" #If display text link, cancel comment out
+    pre = "<i class='fa fa-flask fa-lg'></i>" #Choose your favorite font from Font Awesome
+    url = "/research/"
+    weight = 1
+
+[[menu.main]]
+    identifier = "teaching"
+    name = "Teaching" #If display text link, cancel comment out
+    pre = "<i class='fa fa-chalkboard-teacher fa-lg'></i>" #Choose your favorite font from Font Awesome
+    url = "/teching/"
+    weight = 2
+    
+[[menu.main]]
+    identifier = "CV"
+    name = "CV" #If display text link, cancel comment out
+    pre = "<i class='fa fa-id-card fa-lg'></i>" #Choose your favorite font from Font Awesome
+    url = "/cv/"
+    weight = 3    
+
 [[menu.main]]
     identifier = "blog"
     name = "Blog" #If display text link, cancel comment out
     pre = "<i class='fa fa-book-open fa-lg'></i>" #Choose your favorite font from Font Awesome
     url = "/blog/"
-    weight = 10
-
+    weight = 4
+    
 [[menu.main]]
     identifier = "twitter"
     name = "Twitter"
     pre = "<i class='fab fa-twitter fa-lg'></i>"
     url = "https://twitter.com/r_solymosi"
-    weight = 20
+    weight = 5
 
 [[menu.main]]
     identifier = "github"
     name = "GitHub"
     pre = "<i class='fab fa-github fa-lg'></i>"
     url = "https://github.com/maczokni"
-    weight = 30
+    weight = 6
 
 [[menu.main]]
     identifier = "email"
     name = "Email"
     pre = "<i class='fa fa-envelope fa-lg'></i>"
     url = "mailto:reka.solymosi@manchester.ac.uk"
-    weight = 40
+    weight = 7

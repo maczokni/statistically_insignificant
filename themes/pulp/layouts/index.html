@@ -20,7 +20,12 @@
         <!-- navigation -->
         <nav>
           <ul>
-            {{ range .Site.Menus.main }}
+            {{ range first 4 .Site.Menus.main }}
+            <li><a href="{{ .URL }}" aria-label="{{ .Identifier }}">{{ .Pre }}<br>{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+          <ul>
+            {{ range after 4 .Site.Menus.main }}
             <li><a href="{{ .URL }}" aria-label="{{ .Identifier }}">{{ .Pre }}<br>{{ .Name }}</a></li>
             {{ end }}
           </ul>

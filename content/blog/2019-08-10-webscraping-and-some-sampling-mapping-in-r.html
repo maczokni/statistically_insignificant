@@ -1,0 +1,190 @@
+---
+title: Webscraping and some sampling & mapping in R
+author: ~
+date: '2019-08-10'
+slug: webscraping-and-some-sampling-mapping-in-r
+categories: []
+tags: []
+images: []
+---
+
+
+
+<div id="presenting-at-r-sheffield" class="section level1">
+<h1>Presenting at R Sheffield</h1>
+<p>Last week I had the pleasure to present at the <a href="https://www.meetup.com/SheffieldR-Sheffield-R-Users-Group">Sheffield R User Group</a>. It was a great event, set in a meeting room upstairs in <a href="http://www.red-deer-sheffield.co.uk/">The Red Deer</a> pub, which gave it a nice informal feel. The attendees were all welcoming, knowedgeable, and very engaged and engaging, so it was a great experience and I recommend to anyone in the area. The one negative was that <a href="https://www.manchestereveningnews.co.uk/news/greater-manchester-news/manchester-sheffield-train-line-shut-16711833">trains weren’t running due to floods</a> so I had to drive and therefore not fully immerse the presenting-in-a-pub-with-a-pint aesthetic. Next time…!</p>
+</div>
+<div id="disclaimer" class="section level1">
+<h1>!!!DISCLAIMER!!!</h1>
+<p>I am no expert on scaping data from the web. In that I really only engage with this problem when I find an interesting source of data, then scarpe this, and then abandon it forever. So <strong>DISCLAIMER</strong>: there are probably much better, more effective/efficient ways of doing this.</p>
+<p>In fact someone in the meetup mentioned <a href="https://github.com/tidyverse/rvest">rvest</a>. I haven’t looked into it yet but an initial look is already super exciting, and I urge anyone interested in webscrping to check that out, as it’s probably loads more useful than my hack-together approach.</p>
+<p>That said, I do use my hacky approach to get myself exciting data sets sometimes, such as data from <a href="https://www.fixmystreet.com/">FixMyStreet</a>, and people have asked me before about how I do this, so I thought this could be a good chance to share that. So what follows is a cliffnote of the talk:</p>
+</div>
+<div id="finding-some-data-about-experiences-of-sexual-harassment" class="section level1">
+<h1>Finding some data about experiences of sexual harassment</h1>
+<p>Sexual harassment is a widespread global issue. 75% of all women worldwide (~ 2 billion) have experienced sexual harassment. 35% of all women worldwise (~ 930 million) have experienced some form of sexual/physical violence (source: <a href="https://www.who.int/en/news-room/fact-sheets/detail/violence-against-women">World Health Organisation, 2017</a>).</p>
+<p>One approach to tackle sexual harassment is to use a Crime Science framework. Crime science</p>
+<ul>
+<li>applies scientific method</li>
+<li>to the study of crime and security problems</li>
+<li>with the aim of reducing harm</li>
+</ul>
+<p>(source: <a href="https://oxfordre.com/criminology/view/10.1093/acrefore/9780190264079.001.0001/acrefore-9780190264079-e-4">Cockbain, E., &amp; Laycock, G. (2017). Crime Science. Oxford Research Encyclopedia of Criminology</a>)</p>
+<p>However one issue with sexual harassment is that sexual harassment and violence are massively underreported:</p>
+<ul>
+<li>in England and Wales, 1 in 6 people who had experienced rape or assault by penetration (17%) had told the police
+<ul>
+<li>(source: <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/articles/sexualoffencesinenglandandwales/yearendingmarch2017#reporting-of-sexual-assault-by-rape-or-penetration">Office of National Statistics</a>)</li>
+</ul></li>
+<li>in India, fewer than 1.5% of victims of sexual violence report their assaults to police
+<ul>
+<li>(source: <a href="https://journals.sagepub.com/doi/10.1177/0886260518811421">McDougal, Krumholz, Bhan, Bharadwaj, &amp; Raj, 2018</a>)</li>
+</ul></li>
+</ul>
+<p>This means that we struggle to gain information about the situational features associated with sexual harassment and violence.</p>
+<p>One solution can be to make use of crowdsourced data, as I have done in previous projects looking at <a href="">fix my street reports</a> and <a href="">spatial behaviour of those who report</a>. In particular, there is an online platform called <a href="https://safecity.in/">Safecity</a>.</p>
+<div class="figure">
+<img src="img/safecity_homescreen.png" alt="home screen of safecity.in" />
+<p class="caption">home screen of safecity.in</p>
+</div>
+<p>Safecity is a platform that crowdsources personal stories of sexual harassment and abuse in public spaces. This data which maybe anonymous, gets aggregated as hot spots on a map indicating trends at a local level. The idea is to make this data useful for individuals, local communities and local administration to identify factors that causes behavior that leads to violence and work on strategies for solutions (source: <a href="https://safecity.in/about/">Safecity</a>).</p>
+<p>To submit a report, you click on a map and find the location where the incident took place. Then you fill out a short form that asks for a title, a description, the time of the incident.</p>
+<div class="figure">
+<img src="img/submit_report.png" alt="form for submitting report" />
+<p class="caption">form for submitting report</p>
+</div>
+<p>These reports are then displayed on the website.</p>
+<div class="figure">
+<img src="img/safecity_report.png" alt="a screenshot of one report" />
+<p class="caption">a screenshot of one report</p>
+</div>
+<p>These reports are viewable one by one, but also, lucky for the potential data-hungry researcher, their URLs are sequential. What I mean is that, if one report is <code>safectiy.in/.../report/12345</code> then the next ones are <code>safectiy.in/.../report/12346</code> and <code>safectiy.in/.../report/12347</code> etc. So, if we can write a script to open each page, and take the data we need, and then move on to the next one, we can iterate through each report, from first to last, to build a dataframe of these reports.</p>
+</div>
+<div id="extracting-the-data-we-need" class="section level1">
+<h1>Extracting the data we need</h1>
+<p>So how to extract the data we need? Well as a first step we need to think about the variables of interest. One good starting point is the form that someone reporting an incident would have to fill out. We can see it has for example a ‘title’. Great so let’s get the title for each report. To do this, we will need to see what html ‘tags’ this title is demarcated by. So fir this, first view the page source by right clicking somewhere on the page, and selecting “View Page Source”. So here I have the source for the report <a href="http://maps.safecity.in/reports/view/11679" class="uri">http://maps.safecity.in/reports/view/11679</a></p>
+<div class="figure">
+<img src="img/view_src.png" alt="view page source screenshot" />
+<p class="caption">view page source screenshot</p>
+</div>
+<p>My approach here is to start searching for the tag in this source. For exaple, I can see that the tag here is <code>&quot;report-title&quot;</code>.</p>
+<div class="figure">
+<img src="img/get_tags.png" alt="screenshot of report-title in source" />
+<p class="caption">screenshot of report-title in source</p>
+</div>
+<p>So I make a note of this, and any other tags that I will need to locate the variables that I want to scrape into my datasets.</p>
+<p>My approach to selecting the variables required is to start by downloading the entire page. I do this with <code>readLines()</code>, which grabs all the lines into a list object. Here I use the <code>url()</code> function to get all the lines directly from the web page for which I have the url address. In this case that address is <strong><a href="http://maps.safecity.in/reports/view/11679" class="uri">http://maps.safecity.in/reports/view/11679</a></strong>. Let’s grab all the lines for this into an object I will call <code>all_lines</code>.</p>
+<pre class="r"><code>all_lines &lt;- readLines(url(&quot;http://maps.safecity.in/reports/view/11679&quot;))</code></pre>
+<p>This <code>all_lines</code> object now contains all the lines of html that we could see earlier when we used the “View Source” option in our web browser. If interested we can print this to the console just to see…</p>
+<p>Anyway, usually we are not interested, instead we want to select the lines of interest. So for example, we want to select the line which has the title of the report that is displayed on this page. But how to find this line?</p>
+<p>One approach is to use <code>grepl()</code>. This function uses pattern matching to return TRUE where a pattern is found in a string. For example, <code>grepl(&quot;a&quot;, &quot;abc&quot;)</code> returns TRUE, while <code>grepl(&quot;z&quot;, &quot;abc&quot;)</code> returns FALSE. So, using the tag we identified earlier, <strong>“report-title”</strong>, we can use grepl to find the line where it is present.</p>
+<p>We can then use subsetting (here I’m using square brackets) and the <code>which()</code> function, which returns the TRUE indices of a logical object, allowing for array indices. For example, <code>which(grepl(&quot;a&quot;, c(&quot;abc&quot;, &quot;xyz&quot;)))</code> will return 1, and <code>which(grepl(&quot;z&quot;, c(&quot;abc&quot;, &quot;xyz&quot;)))</code> will return 2.</p>
+<p>Going back to the case of extracting the title of the report from our webpage, we can create an object called title, and use subsetting and <code>grepl()</code> and <code>which()</code> to assign to it the line which has the “report-title” tag.</p>
+<pre class="r"><code>title &lt;- all_lines[which(grepl(&quot;report-title&quot;, all_lines))]</code></pre>
+<p>This is nice, but you can see it returns the entire line, html tags and all:</p>
+<pre class="r"><code>title</code></pre>
+<pre><code>## [1] &quot;\t\t&lt;h1 class=\&quot;report-title\&quot;&gt;Stalking&lt;/h1&gt;&quot;</code></pre>
+<p>To clean out the HTML tags I make use of a function (<a href="https://stackoverflow.com/questions/17227294/removing-html-tags-from-a-string-in-r">obviously lifted from Stackoverflow</a>):</p>
+<pre class="r"><code>cleanFun &lt;- function(htmlString) {
+  return(gsub(&quot;&lt;.*?&gt;&quot;, &quot;&quot;, htmlString))
+}</code></pre>
+<p>Unfortunately for me, this has not removed the tabs:</p>
+<pre class="r"><code>cleanFun(title) </code></pre>
+<pre><code>## [1] &quot;\t\tStalking&quot;</code></pre>
+<p>Now again, there are probably better ways to do this but I am too lazy to look this up so I use more pattern matching with the <code>gsub()</code> function to get rid of those:</p>
+<pre class="r"><code>gsub(&quot;\\t&quot;, &quot;&quot;, cleanFun(title))</code></pre>
+<pre><code>## [1] &quot;Stalking&quot;</code></pre>
+</div>
+<div id="using-the-above-to-build-a-dataframe" class="section level1">
+<h1>Using the above to build a dataframe</h1>
+<p>Okay so that should give you an idea of how to extract a variable of interest from one page. We did this for title but you could do it again easily for other features of interest, such as the description, or the longitude/latitude for mapping. And more importantly, you want to do this for multiple reports, to append them all together into a dataframe.</p>
+<p>I mentioned before that the URLs for these reports are sequential, in that report 1234 is followed by report 1235, 1236, 1237, and so on. You may guess where I’m going with this: it is possible to write a loop that will repeat this extraction action for all the urls in a list. Again, I know <a href="https://stackoverflow.com/questions/30240573/are-for-loops-evil-in-r">for loops are evil in R</a>, but this is where I’m at.</p>
+<p>So first things first, I create an empty list to save all my dataframes into. I’ll call ic (creatively) <code>datalist</code>. I also need to create a counter <code>j</code> here. (Note: I only create it here because I don’t start my loop from 1. Mostly because this is a toy example. If I were getting all the reports (in fact when I got all the reports) I would build my loop with 1:number of reports, so I could simply use <code>i</code> to index my list of dataframes. )</p>
+<pre class="r"><code>datalist &lt;- list()
+j &lt;- 1</code></pre>
+<p>Now that I have these essential items, I write a loop, which will count from 11676 to 11679 to iterate through 4 reports (<a href="http://maps.safecity.in/reports/view/11676" class="uri">http://maps.safecity.in/reports/view/11676</a>, <a href="http://maps.safecity.in/reports/view/11677" class="uri">http://maps.safecity.in/reports/view/11677</a>, <a href="http://maps.safecity.in/reports/view/11678" class="uri">http://maps.safecity.in/reports/view/11678</a>, <a href="http://maps.safecity.in/reports/view/11679" class="uri">http://maps.safecity.in/reports/view/11679</a>) and for each one, repeat the steps discussed above to extract a title (and also duplicate for description), and save into my list object called <code>datalist</code>.</p>
+<pre class="r"><code>for (i in 11676:11679) {
+  all_lines &lt;- readLines(url(paste0(&#39;http://maps.safecity.in/reports/view/&#39;, i)))
+  
+  datalist[[j]] &lt;- data.frame(
+      title = gsub(&quot;\\t&quot;,&quot;&quot;,cleanFun(all_lines[which(grepl(&quot;report-title&quot;, all_lines))])),
+      description = gsub(&quot;\\t&quot;,&quot;&quot;,cleanFun(all_lines[which(grepl(&quot;Description&quot;, all_lines)) + 1]))
+    )
+  j &lt;- j+1 
+}</code></pre>
+<p>(Note: I also increase my index j there, again if you start from report 1, this is not necessary).</p>
+<p>When this is all finished, I am left with a list of dataframes, so my remaining task is to bind the list of data frames. Because I’ve been so hacky with everything I want to make up for it and inject some tidyverse into the mix, so let’s use the <code>bind_rows()</code> function from dplyr to do this.</p>
+<pre class="r"><code>library(dplyr)
+safecity_data &lt;- bind_rows(datalist)</code></pre>
+<p>Now we have a dataframe called <code>safecity_data</code> which we can have a look at here:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">title</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">TOUCHINGS</td>
+<td align="left">The girl was being touched by her classmates who are boys on her buttocks.</td>
+</tr>
+<tr class="even">
+<td align="left">TOUCHINGS</td>
+<td align="left">A teacher is touching girls on their buttocks and canning their buttocks too.</td>
+</tr>
+<tr class="odd">
+<td align="left">Stalking</td>
+<td align="left">A man kept following me.. It was scary.. He kept saying something</td>
+</tr>
+<tr class="even">
+<td align="left">Stalking</td>
+<td align="left">A man kept following me.. It was scary.. He kept saying something</td>
+</tr>
+</tbody>
+</table>
+<p>As I mentioned, this is a toy example, but it should provide you with a good idea about how you can go about replicating this for more variables, and across more URLs. One thing I did not mention is error handling. It is likely that not all URLs will lead to a valid page, for example reports may get removed, or for other reasons. For such cases it is important that the code you run has a way to handle such errors. In my work I used <code>tryCatch()</code>, which worked excellently.</p>
+</div>
+<div id="map-and-sample-the-reports" class="section level1">
+<h1>Map and sample the reports</h1>
+<p>Once you had all your variables (including spatial data such as Longitude and Latitude) and a sizeable data set, it is possible to put these reports on a map, and use spatial information to sample from these reports.</p>
+<p>The first step to take for this is to make the data spatial. Currently, while the data may have a Longitude and Latitude column, these are not recognised as a geometry. To achieve this, you can use the <code>sf</code> package. Sf stands for simple features. Simple features or simple feature access refers to a formal standard (ISO 19125-1:2004) that describes how objects in the real world can be represented in computers, with emphasis on the spatial geometry of these objects. It also describes how such objects can be stored in and retrieved from databases, and which geometrical operations should be defined for them ( <a href="https://r-spatial.github.io/sf/articles/sf1.html">source: R Spatial</a>). Check out <a href="https://geocompr.robinlovelace.net/">Lovelace, R., Nowosad, J., &amp; Muenchow, J. (2019). Geocomputation with R. CRC Press.</a> for a great resource on all things spatial in R with sf.</p>
+<p>For this example here, I’ve got a larger data set from my earlier webscraping work so let’s use the function <code>st_as_sf()</code> from the sf library to turn the long and lat columns into geometries:</p>
+<pre class="r"><code>library(sf)
+safecity_sf &lt;- st_as_sf(safecity, coords = c(&quot;longitude&quot;, &quot;latitude&quot;), crs = 4326)</code></pre>
+<p>Having done this, we turn the flat dataframe into an sf object, and it becomes incredibly smooth to map the data, using our trusty old <code>ggplot</code>:</p>
+<pre class="r"><code>library(ggplot2)
+ggplot() +
+  geom_sf(data = safecity_sf, colour = &#39;blue&#39;) + 
+  theme_bw()</code></pre>
+<p><img src="/blog/2019-08-10-webscraping-and-some-sampling-mapping-in-r_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p>By turning our data into an sf spatial object, and using <code>geom_sf()</code> it becomes possible to plot our data as a ggplot. But the above isn’t giving us <em>loads</em> of context really. We can possibly guess that the blob of points is India, but unless we’re great geograpgers we may encounter trouble trying to guess where our out-of-India points are…</p>
+<p>One way to quickly give some context and explore the background is to make use of the shapefiles in the <code>rnaturalearth</code> package, an R package to hold and facilitate interaction with <a href="http://www.naturalearthdata.com/">Natural Earth</a> map data. Read more about its usage <a href="https://cran.r-project.org/web/packages/rnaturalearth/README.html">here</a>.</p>
+<p>Then, we can use the function <code>ne_countries()</code> to request a vector shapefile of all the country outlines across the world. In the parameters we specity that we want the resulting object to be of class sf, as well as set out the fill and outline colours.</p>
+<pre class="r"><code>library(rnaturalearth)
+
+ggplot() +
+  geom_sf(data = safecity_sf, colour = &#39;blue&#39;) + 
+  geom_sf(data = ne_countries(returnclass = &#39;sf&#39;), fill = &#39;transparent&#39;, colour = &#39;black&#39;) +
+  theme_bw()</code></pre>
+<p><img src="/blog/2019-08-10-webscraping-and-some-sampling-mapping-in-r_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p>This time we can see better that yes all our points are in India, but we seem to have some reports from the USA and the UK as well.</p>
+<p>Which brings us to the sampling option. What if I wanted only those reports that were made in India, and to exclude the other ones? Well we can make use of the specific shapefile from the rnaturalearth package to subset our point list to only those which intersect with the India polygon. So let’s create a sf object for India:</p>
+<pre class="r"><code>india &lt;- ne_states(country = &#39;india&#39;, returnclass = &#39;sf&#39;)</code></pre>
+<p>To then select only reports made in India, we can use the <code>st_intersects()</code> function from the sf package, which will return TRUE for all points which intersect our polygon of interest. Then we can use that set of points labelled with TRUE to subset our original dataframe. Like so:</p>
+<pre class="r"><code>india_safecity_int &lt;- st_intersects(india, safecity_sf)
+india_safecity_sf &lt;- safecity_sf[unlist(india_safecity_int),]</code></pre>
+<p>Now we can make sure we did everything right, and map our India only reports</p>
+<pre class="r"><code>ggplot() +
+  geom_sf(data = india_safecity_sf, colour = &#39;blue&#39;) + 
+  geom_sf(data = ne_countries(returnclass = &#39;sf&#39;), fill = &#39;transparent&#39;, colour = &#39;black&#39;) + 
+  theme_bw()</code></pre>
+<p><img src="/blog/2019-08-10-webscraping-and-some-sampling-mapping-in-r_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p>We now have a fantastic, spatially explicit data set of people’s experiences with victimisation from sexual harassment across India. It can be now used to perform other mapping exercises, and in my presentation I mentioned <a href="">tmap</a> for creating thematic maps smoothly, and <a href="">sppt</a> for running various spatial point pattern tests to compare different point sets.</p>
+</div>
+<div id="wrapping-up" class="section level1">
+<h1>Wrapping up</h1>
+<p>Overall I hope the above is useful as a bit of a guide into thinking about scraping some data from the web that may fill a gap in knowledge or understanding around a specific problem, which may help gain further insight and achieve good outcomes (possibly reduced prevalence of sexual harassment, or other societal ills). As I mentioned, there are probably other better/more efficient ways of doing this, but I thought I would share what I have been doing here.</p>
+<p>I am actually writing up a paper from the data, so I will share this later on here as well, for anyone interested. I will be presenting a version of this paper at the <a href="">ASC</a> so if anyone will be there then come see what we got up to with all these data!</p>
+<p>On a final note, thank you to <a href="https://twitter.com/annakrystalli">Anna Krystalli</a> for inviting me to speak at <a href="https://www.meetup.com/SheffieldR-Sheffield-R-Users-Group/">R Sheffield</a>, I really do recommend anyone in the area to attend this meetup, and if you have something to share to get in touch with Anna. I hope that I can attend another meetup soon, hopefully when the trains are back up and running so I can make up on that lost pint…!</p>
+</div>
