@@ -13,7 +13,10 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 ```
 
 # Presenting at R Sheffield
-Last week I had the pleasure to present at the [Sheffield R User Group](https://www.meetup.com/SheffieldR-Sheffield-R-Users-Group). It was a great event, set in a meeting room upstairs in [The Red Deer](http://www.red-deer-sheffield.co.uk/) pub, which gave it a nice informal feel. The attendees were all welcoming, knowedgeable, and very engaged and engaging, so it was a great experience and I recommend to anyone in the area. The one negative was that [trains weren't running due to floods](https://www.manchestereveningnews.co.uk/news/greater-manchester-news/manchester-sheffield-train-line-shut-16711833) so I had to drive and therefore not fully immerse the presenting-in-a-pub-with-a-pint aesthetic. Next time...!
+Last week I had the pleasure to present at the [Sheffield R User Group](https://www.meetup.com/SheffieldR-Sheffield-R-Users-Group) alongside former PhD colleague (and roommate) [Joanna Hill](https://www.c3e.rutgers.edu/associate-bios/) who is currently based in Uganda, working remotely at [Rutgers University](https://www.c3e.rutgers.edu/). It was a great event, set in a meeting room upstairs in [The Red Deer](http://www.red-deer-sheffield.co.uk/) pub, which gave it a nice informal feel. The attendees were all welcoming, knowedgeable, and very engaged and engaging, so it was a great experience and I recommend to anyone in the area. The one negative was that [trains weren't running due to floods](https://www.manchestereveningnews.co.uk/news/greater-manchester-news/manchester-sheffield-train-line-shut-16711833) so I had to drive and therefore not fully immerse the presenting-in-a-pub-with-a-pint aesthetic. Oh well, there is always next time, and at least we got to see some nice peak district views.
+
+
+![Peak views (photo by Jo Hill)](/img/peak_drive.jpg)
 
 # !!!DISCLAIMER!!!
 
@@ -50,7 +53,7 @@ This means that we struggle to gain information about the situational features a
 One solution can be to make use of crowdsourced data, as I have done in previous projects looking at [fix my street reports]() and [spatial behaviour of those who report](). In particular, there is an online platform called [Safecity](https://safecity.in/). 
 
 
-![home screen of safecity.in](img/safecity_homescreen.png)
+![home screen of safecity.in](/img/safecity_homescreen.png)
 
 
 Safecity is a platform that crowdsources personal stories of sexual harassment and abuse in public spaces. This data which maybe anonymous, gets aggregated as hot spots on a map indicating trends at a local level. The idea is to make this data useful for individuals, local communities and local administration to identify factors that causes behavior that leads to violence and work on strategies for solutions (source: [Safecity](https://safecity.in/about/)). 
@@ -59,13 +62,13 @@ Safecity is a platform that crowdsources personal stories of sexual harassment a
 To submit a report, you click on a map and find the location where the incident took place. Then you fill out a short form that asks for a title, a description, the time of the incident. 
 
 
-![form for submitting report](img/submit_report.png)
+![form for submitting report](/img/submit_report.png)
 
 
 These reports are then displayed on the website. 
 
 
-![a screenshot of one report](img/safecity_report.png)
+![a screenshot of one report](/img/safecity_report.png)
 
 
 These reports are viewable one by one, but also, lucky for the potential data-hungry researcher, their URLs are sequential. What I mean is that, if one report is `safectiy.in/.../report/12345` then the next ones are `safectiy.in/.../report/12346` and `safectiy.in/.../report/12347` etc. So, if we can write a script to open each page, and take the data we need, and then move on to the next one, we can iterate through each report, from first to last, to build a dataframe of these reports.  
@@ -76,12 +79,12 @@ These reports are viewable one by one, but also, lucky for the potential data-hu
 So how to extract the data we need? Well as a first step we need to think about the variables of interest. One good starting point is the form that someone reporting an incident would have to fill out. We can see it has for example a 'title'. Great so let's get the title for each report. To do this, we will need to see what html 'tags' this title is demarcated by. So fir this, first view the page source by right clicking somewhere on the page, and selecting "View Page Source". So here I have the source for the report <http://maps.safecity.in/reports/view/11679> 
 
 
-![view page source screenshot](img/view_src.png)
+![view page source screenshot](/img/view_src.png)
 
 
 My approach here is to start searching for the tag in this source. For exaple, I can see that the tag here is `"report-title"`.
 
-![screenshot of report-title in source](img/get_tags.png)
+![screenshot of report-title in source](/img/get_tags.png)
 
 
 So I make a note of this, and any other tags that I will need to locate the variables that I want to scrape into my datasets. 

@@ -1,9 +1,0 @@
----
-date: "2019-07-07"
-title: "Hello World"
-output: html_notebook
----
-
-Hello world. 
-
-
