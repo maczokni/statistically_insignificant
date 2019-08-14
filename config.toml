@@ -56,10 +56,11 @@ My research focuses on making use of new forms of data to gain insight into peop
 [[menu.main]]
     identifier = "blog"
     name = "Blog" #If display text link, cancel comment out
-    pre = "<i class='fa fa-book-open fa-lg'></i>" #Choose your favorite font from Font Awesome
+    pre = "<i class='fa fa-book-open fa-lg'></i>" 
     url = "/blog/"
     weight = 4
     
+
 [[menu.main]]
     identifier = "twitter"
     name = "Twitter"
@@ -68,15 +69,22 @@ My research focuses on making use of new forms of data to gain insight into peop
     weight = 5
 
 [[menu.main]]
+    identifier = "publications"
+    name = "Publications"
+    pre = "<i class='fa fa-newspaper fa-lg'></i>"
+    url = "https://scholar.google.com/citations?user=IXexMmEAAAAJ&hl=en"
+    weight = 6
+
+[[menu.main]]
     identifier = "github"
     name = "GitHub"
     pre = "<i class='fab fa-github fa-lg'></i>"
     url = "https://github.com/maczokni"
-    weight = 6
+    weight = 7
 
 [[menu.main]]
     identifier = "email"
     name = "Email"
     pre = "<i class='fa fa-envelope fa-lg'></i>"
     url = "mailto:reka.solymosi@manchester.ac.uk"
-    weight = 7
+    weight = 8
