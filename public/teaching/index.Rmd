@@ -9,7 +9,7 @@ output:
 
 # Current courses
 
-## [Making Sense of Criminological Data]("/MSCD")
+## [Making Sense of Criminological Data](/MSCD)
 
 This course is a 2nd-year Undergraduate introduction to data analysis for BA Criminology and Social Science students at University of Manchester.
 
