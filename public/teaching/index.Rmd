@@ -1,0 +1,27 @@
+---
+title: "Teaching"
+author: 
+output:
+  html_document:
+    css: "../style.min.a6cab246517742ad1189b209575fc61556550e663cdfe02a0aab0632b39e978b.css"
+---
+
+
+# Current courses
+
+## [Making Sense of Criminological Data]("/MSCD")
+
+This course is a 2nd-year Undergraduate introduction to data analysis for BA Criminology and Social Science students at University of Manchester.
+
+## Designing Criminological Research
+
+This course is for students enrolled in MA, MRes Criminology and MRes Criminology with Social Statistics to teach an introduction to research in topics of Crime, Policing, and Criminal Justice.
+
+# Past courses
+
+## [Crime Mapping](https://maczokni.github.io/crimemapping_textbook_bookdown/)
+
+
+# Short courses
+
+## [Getting Started in R](https://rcatlord.github.io/GSinR/)
