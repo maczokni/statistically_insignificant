@@ -1,0 +1,121 @@
+---
+title: "Reading List for LAWS20441"
+author: "Reka Solymosi"
+date: "04/09/2019"
+output:
+  html_document:
+    toc: true
+---
+
+This is the reading that should be done for each lecture **before you attend the lab session**. Please please please do this reading before you come to the lab in order to make the most of the lab time. It will help if you are alread familiar with the concepts when you begin to apply them. They are not long, some of them are videos, and almost all of them are available online with your library login. There is literally no way of making this easier to access and read, short of reading it out loud to you. The links should send you directly to the relevant reading, although you will have to log in with your university username and password. 
+
+
+If you want to read something cover to cover, I would recommend [Tiger That Isn`t, written by Michael Blastland & Andrew Dilnot.](https://www.dawsonera.com/abstract/9781847650795). Very easy, very light, and will give you a good feeling about stats (I hope). I will also put other recommended reading at the end of this list. 
+
+
+# Mandatory reading for *before* the session
+
+
+## Week 1. Data sets & variables
+	
+- Watch this video: [Hans Rosling The Joy of Stats](http://www.gapminder.org/videos/the-joy-of-stats/)
+- [Blastland, M., & Dilnot, A. W. (2008). The tiger that isn't: seeing through a world of numbers. Profile books](https://www.librarysearch.manchester.ac.uk/discovery/fulldisplay?docid=proquest1536009109&context=PC&vid=44MAN_INST:MU_NUI&search_scope=MyInst_and_CI&tab=Everything&lang=en)
+  + Introduction
+- [Weisburd D., Britt C. (2014)  Statistics in Criminal Justice. Springer, Boston, MA](https://link.springer.com/chapter/10.1007/978-1-4614-9170-5_2) 
+  + Chapter 2: Measurement: The Basic Building Block of Research (not the exercises)
+- [Agresti, A., & Finlay, B. (2013). Statistical Methods for the Social Sciences: Pearson New International Edition. Place of publication not identified: Pearson Education Limited.](https://www.librarysearch.manchester.ac.uk/discovery/fulldisplay?docid=alma992975763714001631&context=L&vid=44MAN_INST:MU_NUI&search_scope=MyInst_and_CI&tab=Everything&lang=en)
+  + Chapter 1: Introduction
+
+
+
+## Week 2. Describing and visualising single variables
+
+- [Blastland, M., & Dilnot, A. W. (2008). The tiger that isn't: seeing through a world of numbers. Profile books](https://www.librarysearch.manchester.ac.uk/discovery/fulldisplay?docid=proquest1536009109&context=PC&vid=44MAN_INST:MU_NUI&search_scope=MyInst_and_CI&tab=Everything&lang=en)
+  + Chapter 5: Averages: The White Rainbow
+- [Gary M. Klass (2012) Just Plain Data Analysis. Rowman & Littlefield Publishers](https://www.librarysearch.manchester.ac.uk/discovery/fulldisplay?docid=alma9959928450001631&context=L&vid=44MAN_INST:MU_NUI&search_scope=MyInst_and_CI&tab=Everything&lang=en)
+  + Chapter 5: Tabulating the Data and Writing about the Numbers
+- [Agresti, A., & Finlay, B. (2013). Statistical Methods for the Social Sciences: Pearson New International Edition. Place of publication not identified: Pearson Education Limited.](https://www.librarysearch.manchester.ac.uk/discovery/fulldisplay?docid=alma992975763714001631&context=L&vid=44MAN_INST:MU_NUI&search_scope=MyInst_and_CI&tab=Everything&lang=en)
+  + Chapter 3: Descriptive Statistics
+
+## Week 3. Making comparisons I: the basics
+
+- [Blastland, M., & Dilnot, A. W. (2008). The tiger that isn't: seeing through a world of numbers. Profile books](https://www.librarysearch.manchester.ac.uk/discovery/fulldisplay?docid=proquest1536009109&context=PC&vid=44MAN_INST:MU_NUI&search_scope=MyInst_and_CI&tab=Everything&lang=en): 
+  + Chapter 1: Counting: Use Mushy Peas and Chapter 
+  + Chapter 2: Size: It's Personal
+- [Gary M. Klass (2012) Just Plain Data Analysis. Rowman & Littlefield Publishers](https://www.librarysearch.manchester.ac.uk/discovery/fulldisplay?docid=alma9959928450001631&context=L&vid=44MAN_INST:MU_NUI&search_scope=MyInst_and_CI&tab=Everything&lang=en)
+  + Chapter 4: Examining a relationship: New York City Crime Rates
+- [Weisburd D., Britt C. (2014)  Statistics in Criminal Justice. Springer, Boston, MA](https://link.springer.com/chapter/10.1007/978-1-4614-9170-5_2) 
+  + Chapter 3: Representing and Displaying Data
+
+
+## Week 4. Concepts, operationalisation, measurement, and Sampling
+
+- [Blastland, M., & Dilnot, A. W. (2008). The tiger that isn't: seeing through a world of numbers. Profile books](https://www.librarysearch.manchester.ac.uk/discovery/fulldisplay?docid=proquest1536009109&context=PC&vid=44MAN_INST:MU_NUI&search_scope=MyInst_and_CI&tab=Everything&lang=en)
+ + Chapter 6: Targets: The Whole Elephant
+ + Chapter 8: Sampling: Drinking from the Firehose
+- [Babbie, E. (2016). The practice of social research (Fourteenth edition.). Australia: Cengage Learning.](https://www.librarysearch.manchester.ac.uk/discovery/fulldisplay?docid=alma992975996319901631&context=L&vid=44MAN_INST:MU_NUI&search_scope=MyInst_and_CI&isFrbr=true&tab=Everything&lang=en)
+  + Chapter 5: Conceptualization, Operationalization, and Measurement
+  + Chapter 6: Indexes, Scales, and Typologies
+
+## Week 5. Making comparisons II: the relevance of research design
+
+- [Babbie, E. (2016). The practice of social research (Fourteenth edition.). Australia: Cengage Learning.](https://www.librarysearch.manchester.ac.uk/discovery/fulldisplay?docid=alma992975996319901631&context=L&vid=44MAN_INST:MU_NUI&search_scope=MyInst_and_CI&isFrbr=true&tab=Everything&lang=en)
+  + Chapter 4: Research Design
+- [Gary M. Klass (2012) Just Plain Data Analysis. Rowman & Littlefield Publishers](https://www.librarysearch.manchester.ac.uk/discovery/fulldisplay?docid=alma9959928450001631&context=L&vid=44MAN_INST:MU_NUI&search_scope=MyInst_and_CI&tab=Everything&lang=en)
+  + Chapter 1: Measuring Political, Social, and Economic Conditions
+- [Cox, D., & Donnelly, C. (n.d.). Principles of applied statistics. Cambridge ;: Cambridge University Press.](https://www.librarysearch.manchester.ac.uk/discovery/fulldisplay?docid=alma9957439210001631&context=L&vid=44MAN_INST:MU_NUI&search_scope=MyInst_and_CI&tab=Everything&lang=en)
+  + Chapter 1: Some General Concepts
+  + half of Chaptaer 2: Design of Studies. Note: STOP AFTER SECTION 2.3: Types of Study 
+  
+
+## Week 6. Data visualisation
+- Watch: [David Mccandless on the beauty of data visualisation](https://www.ted.com/talks/david_mccandless_the_beauty_of_data_visualization) 
+- [Cairo, A. (2016). The truthful art data, charts, and maps for communication . Berkeley: New Riders.](https://www.librarysearch.manchester.ac.uk/discovery/fulldisplay?docid=alma992975992516101631&context=L&vid=44MAN_INST:MU_NUI&search_scope=MyInst_and_CI&tab=Everything&lang=en)
+  + Chapter 1: What We Talk About When We Talk About Visualisation
+  + Chapter 2: The FIve QUalitites of Great Visualisations
+
+## Week 7. Looking at trends
+
+- [Dorling, D., & Simpson, S. (n.d.). Statistics in society : the arithmetic of politics . London: Arnold.](https://www.librarysearch.manchester.ac.uk/discovery/fulldisplay?docid=alma9913496214401631&context=L&vid=44MAN_INST:MU_NUI&search_scope=MyInst_and_CI&tab=Everything&lang=en)
+  + Chapter 13: 'Models Are Stories Are Not Real Life' NOTE: THIS IS NOT AVAILABLE ONLINE YOU HAVE TO GO TO LIBRARY TO FIND HARD COPY
+- [Read this ONS report on the seasonality of crime](www.ons.gov.uk/ons/guide-method/method-quality/specific/crime-statistics-methodology/methodological-note--seasonality-of-property-crime.pdf) - download link
+- [Wilkinson, L. (2005). The Grammar of Graphics (Second Edition.). New York, NY: Springer New York. https://doi.org/10.1007/0-387-28695-0](https://link-springer-com.manchester.idm.oclc.org/chapter/10.1007/0-387-28695-0_14)
+  + Chapter 14: Time 
+- This paper on crime seasonality and its variations across space: [Andresen, M. A., & Malleson, N. (2013). Crime seasonality and its variations across space. Applied Geography, 43, 25-35.](http://www.sciencedirect.com/science/article/pii/S0143622813001410)
+
+## Week 8. Qualitative data
+
+Read:
+
+- Silver, C. and Lewins, A. (2014) 'Chapter 1 Qualitative Data Analysis and CAQDAS' from their book Using Software in Qualitative Research: A Step-By-Step Guide (p.9-34) - link on Blackboard.
+- Silver, C. and Lewins, A. (2014) 'Chapter 5 Early Steps in Software: Practical Tasks and Familiarisation', again from the same book book (p.106-133) - link on blackboard.
+
+Also watch the following two videos. These are taken from the QSR NVivo website where there are lots of good tutorials on how to use NVivo to analyse and manage your qualitative data. Feel free to explore further too...
+
+ - [Explore NVivo 11 Pro for Windows - video here.](https://www.youtube.com/watch?v=S7Z8izUiQjA&index=2&list=PLNjHMRgHS4Fcx3NfpKsaqXuGdcxI9y-Qa)
+- [Using Nodes and Cases in NVivo - video here](https://www.youtube.com/watch?v=l5dJOKkJZxs&index=4&list=PLNjHMRgHS4Fcx3NfpKsaqXuGdcxI9y-Qa)
+
+[If you're a Mac user  you can also watch the equivalent tutorials for Mac here](https://www.youtube.com/playlist?list=PLNjHMRgHS4FfTN-GoztTaPLshavAb0NxR).
+
+## Week 9. Qualitative data analysis
+
+Read: 
+
+- Silver, C. and Lewins, A. (2014) 'Chapter 7 Qualitative Coding in Software: Principles and Processes' from their book Using Software in Qualitative Research: A Step-By-Step Guide (p.9-34) - [link on Blacboard](https://online.manchester.ac.uk/bbcswebdav/pid-6513809-dt-content-rid-26831733_1/xid-26831733_1)
+- Seale, C. (2004) '24 Quality In Qualitative Research' in Seale, C., Gobo, G. Gubrium, J. F. and Silverman, D. (eds) Qualitative Research Practice, London: Sage (p.379-390) - [link on Blacboard](https://online.manchester.ac.uk/bbcswebdav/pid-6513809-dt-content-rid-26831736_1/xid-26831736_1)
+
+
+Also watch the following two videos: 
+
+- [Developing 'Mind Maps' - video here](https://www.youtube.com/watch?v=OZy1sgKQ4KY&list=PLNjHMRgHS4Fcx3NfpKsaqXuGdcxI9y-Qa&index=7). These are useful at the start of your project when you're developing your initial ideas.
+- [Visualising 'Concept Maps' - video here.](https://www.youtube.com/watch?v=3R5gZKdOJD4&list=PLNjHMRgHS4Fcx3NfpKsaqXuGdcxI9y-Qa&index=8) These enable you to build connections between your concepts, nodes and ideas - i.e. theorise!
+
+[If you're a Mac user (like me, and Reka!) you can also watch the equivalent tutorials for Mac here.](https://www.youtube.com/playlist?list=PLNjHMRgHS4FfTN-GoztTaPLshavAb0NxR)
+
+## Week 10. Wrap up and project support
+
+No preparatory reading required
+
+
+
+

@@ -1,0 +1,189 @@
+---
+title: "Syllabus"
+author: "Reka Solymosi"
+date: "04/09/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# LAWS20441: Making Sense of Criminological Data
+
+This course is designed to get you working with data related to crime and criminal justice, as well as other aspects of everyday life. It is meant to be both fun, and a lot of hard work, as you will be acquiring a new skill. The teaching team are here to help you make this enjoyable, and we guarantee that as long as you put in the effort, you will find this course easy. Nothing we teach you requires any sort of previous knowledge or special disposition towards maths or stats, instead all you will need is an inquiring mind, and a willingness to learn. Your main job is to do all the reading, watch all the videos, ask questions, follow all the tasks and activities, try new things, make mistakes, get feedback, ask questions, ask for help, help each other, ask questions, ask for help, ask questions. If you get stuck anywhere do not suffer in silence. Our job here is to make sure that you engage with the topic and make this course work for you, so help us do this by keeping up, and asking for help when you fall behind.
+
+
+## Rationale
+
+
+> Imagine you assembled an extensive library comprised of the finest literary works in the world. How valuable would it be to someone who is illiterate? Until they can read and appreciate it, the library remains just a useless collection of inked paper. Similarly, all of the rich data visualizations and intelligence built into today’s self-service analytics tools can be negated by a simple deficiency in data literacy, which can be defined as the ability to understand, use and communicate data effectively. Increasingly, this data literacy divide will impede organizations of all shapes and sizes from reaping higher rewards from their data investments.
+
+- [Why companies must close the data literacy gap](https://www.forbes.com/sites/brentdykes/2017/03/09/why-companies-must-close-the-data-literacy-divide/#9e4276c369d9)
+
+
+Every day more and more data are being generated about the world arouns us. It is important that we posess the ability to make sense of these data, and to use them to draw meaningful conclusions about the phenomena in which we are interested. 
+
+> The UK has a shortage of social scientists trained in quantitative methods and consequently is unable to meet the demand from employers across all sectors – academia, government, charities and business – for staff who can apply such methods to evaluating evidence and analysing data
+
+- [Nuffield Foundation](http://www.nuffieldfoundation.org/sites/default/files/files/QM%20Programme%20Background_v_FINAL.pdf). 
+
+
+In fact, recent numbers show that [About 4 in 5 UK adults have low numeracy levels which costs the UK £billions.](https://www.nationalnumeracy.org.uk/what-issue)
+
+
+So not only is this a vital skill, it is one that will (for now) give you a competitive advantage in your employability. Doing well in this course and it's 2nd term counterpart, Modelling Criminological Data also opens up the possibility to parttake in a [Q-step internship](http://www.humanities.manchester.ac.uk/q-step/internships/). These things are really cool - you get placed with an organisation such as the Home Office, or College of Policing, or more, work on an interesting project, and get paid. Pretty nice way to spend a month or so of your summer. You will hear more about these but some detail is available on the [Q-step website](http://www.humanities.manchester.ac.uk/q-step/internships/) 
+
+
+This course will put you on the right track to acquiring the transferable skills that make you employable in the field of data analysis, which has plenty of jobs in criminal justice. You could for example consider a career as a [Criminal Intelligence Analyst](https://nationalcareersservice.direct.gov.uk/job-profiles/criminal-intelligence-analyst). But there are many many other options as well, and currently there are more jobs than people to fill them. In fact, you may have heard some myths about how [data science is the sexiest job of the 21st century](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century). This is not true. [Firefighting is obviously sexier, since that's where the calendars come from.](http://adversariallearning.com/episode-12-data-science-myths.html).  Nevertheless, data is [EVERYWHERE](https://www.economist.com/news/leaders/21721656-data-economy-demands-new-approach-antitrust-rules-worlds-most-valuable-resource). And as responsible citizens there is an expectation of [data literacy](https://www.forbes.com/sites/homaycotte/2014/10/28/data-literacy-what-it-is-and-why-none-of-us-have-it/) placed upon you by our current circumstances. No matter the job you end up in, it is very likely that you will have contact with some form of data. At the very least you will be a consumer of data through reading/ watching the news. And it's important that you understand what you see. 
+
+
+This course is designed to make you data literate criminologists, who can not only consume data in an informed manner, use it as evidence to support your arguments, or to question those made by others, and draw meaningful conclusions from the ever-increasing firehose of data being generated in our domain.  
+
+
+## Course unit overview
+
+### 1. Data sets & variables 
+  - Lab: Tuesday 24/09/2019
+  - Lecture: Friday 27/09/2019
+  
+### 2. Describing and visualising single variables
+  - Lab: Tuesday 01/10/2019
+  - Lecture: Friday 04/10/2019
+  
+### 3. Making comparisons I: the basics
+  - Lab: Tuesday 08/10/2019
+  - Lecture: Friday 11/10/2019
+  
+### 4. Concepts, operationalisation, measurement
+  - Lab: Tuesday 15/10/2019
+  - Lecture: Friday 18/10/2019
+  
+### 5. Making comparisons II: the relevance of research design
+  - Lab: Tuesday 22/10/2019
+  - Lecture: Friday 25/10/2019
+  
+### 6. Data visualisation
+  - Lab: Tuesday 05/11/2019
+  - Lecture: Friday 08/11/2019
+  
+### 7. Looking at trends
+  - Lab: Tuesday 12/11/2019
+  - Lecture: Friday 15/11/2019
+  
+### 8. Qualitative data
+  - Lab: Tuesday 19/11/2019
+  - Lecture: Friday 22/11/2019
+  
+### 9. Qualitative data analysis
+  - Lab: Tuesday26/11/2019
+  - Lecture: Friday 29/11/2019
+  
+### 10. Wrap up and project support
+  - Lab:  Tuesday 03/12/2019
+  - Lecture: Friday 06/12/2019
+  
+
+
+## Structure
+
+*Lab sessions - 20 hours: *
+The course will consist of lab sessions, where students will be expected to work through previously constructed readings, videos, and exercises, while recieving support from the teaching staff. Students will be able to work individually and move through the course materials at their own pace, while also coming together occasionally in group-based tasks and activities. 
+
+
+*Lectures - 10 hours*: There will be weekly Lectures which will take the form of interactive lectures, where sometimes students can receive feedback on their work, and ask questions. General concepts will be clarified, and students will be able to use this opportunity to catch up, and ensure their learning. **Attendance at these sessions is mandatory and monitored**
+
+
+## Aims
+
+The course hopes to achieve the following aims: 
+
+- To introduce students to quantitative and qualitative sources of information on issues of relevance to criminology, social policy, and other social science disciplines
+- To introduce students to the principles underlying statistical and qualitative analysis
+- To develop students’ basic skills in producing, interpreting, writing up, and visualising the results of data analysis
+- To equip students with basic skills using software for data analysis 
+- To provide students with the skills necessary to critically evaluate both academic and media accounts of statistical and qualitative research
+- To develop students’ autonomy and independence as learners whilst promoting collaborative practices needed to work as part of a team
+
+
+## Learning outcomes
+
+### After this course, students should be able to: 
+
+- Identify the principal data sources for a number of key areas in criminology and other cognate areas of social policy
+- Demonstrate a critical awareness of key data quality issues and how they are linked to research design decisions
+- Produce, read, and interpret quantitative information in the form of tables and graphs
+- Understand the basic tenets and concepts of exploratory data analysis (e.g. measures of central tendency and spread, various types of charts), as well as principles of good data visualisation
+- understand the different levels at which social and personal characteristics (variables) are measures and how resulting data are distributed
+- Become aware of the range of existing qualitative data and basic approaches to their analysis
+
+
+### Knowledge and understanding
+
+- Identify the principal data sources for a number of key areas in criminology and other cognate areas of social policy
+
+- Demonstrate a critical awareness of key data quality issues
+
+
+### Intellectual skills
+
+- Develop a critical understanding of social statistics, in academic writing, the news, and official reports.
+
+
+### Practical skills
+
+- Read and interpret quantitative information in the form of tables and graphs
+
+- Understand some of the basic principles underlying statistical analysis including: samples and populations, distributions, statistical significance, hypothesis testing
+
+- Understand the different levels at which social characteristics (variables) area measured and how resulting data are distributed
+
+- Become aware of the range of existing qualitative data and basic approaches to their analysis
+
+- Be in a position to consider conducting secondary data analysis for their third year UG dissertations (after taking Modelling Criminological data in their 2nd term).
+
+
+## Teaching and learning methods
+
+Teaching methods will combine lab sessions, lectures, group discussion, interactive teaching and private study. Each week we will have a two-hour lab session and a feedback workshop to discuss homework solutions and to clarify understanding. We used something close to the ["flip teaching" method](https://search.proquest.com/openview/8916edc229140a1a54cf66e839682e79/1?pq-origsite=gscholar&cbl=25066). This means that there is a greater expectation that you will come prepared to class (i.e., have done the required reading) and it also means that you will spend most of the contact time working through a set of computer exercises trying to put to practice the knowledge acquired through your reading. **YOU HAVE TO DO THE READING BEFORE YOU COME TO THE LAB SESSION ON THURSDAYS**. The course will not work for you otherwise. 
+
+
+The two-hour lab sessions run from week 1 to week 10, on Thursdays. Lab sessions will introduce you to some of the principles and the concepts underlying our use of software for data analysis. During the lab period, students will work on computing exercises to develop and test their understanding of the material presented online. The course coordinator and the teaching assistants will help you to resolve problems in dealing with the software and the interpretation of results.
+
+
+Although there won’t be much formal lecturing during most of the lab sessions, the materials you will be provided during these interactive sessions will contain hyperlinks to video presentations or reading material that you will be able to consult for further conceptual clarification of the topics being explored. The computer clusters do not have headphones attached to the computers. Therefore, you are strongly recommended to bring your own headphones so that you can watch (and listen to) these videos during the lab sessions.
+
+
+From week 2 to 11 of the semester we will have one-hour Feedback Support Sessions. These sessions will focus on explaining the answers to the previous week homework and further clarifying concepts.
+
+
+## Assessment methods
+
+**Final project 80%**. Students will be required to produce a report of 2,500 words incorporating charts, tables and graphs, to be produced to a good quality standard. 
+
+**Homework 20%**. Short homework exercises will be assigned every week, to be submitted either through Blackboard, or through presentation in the Lecture. 
+
+## Feedback
+
+Each week, homework will be assigned for students to work on in their own time. This homework will be handed in and assessed. Total scores for all homework submitted over the course will make up 20% of the mark for the course unit. Weekly (compulsory) Lectures allow students to get formative feedback on homework after having handed it in, helping them to determine how well they have understood the material. The Lecture is designed for students to be able to review their weekly progress with a tutor.
+
+
+## Requisites
+None
+
+
+## Recommended reading
+
+- Blastland, Michael, and Andrew W. Dilnot. The tiger that isn't: seeing through a world of numbers. Profile books, 2008.
+- E. Babbie, The Practice of Social Research, (Most recent edition) 
+- D. Dorling and S. Simpson, Statistics in Society. (London: Arnold, 1999) 
+- Martin Slattery, Official Statistics (London: Tavistock 1986). 
+
+
+## Scheduled activity hours
+
+ -Labs	20  
+ -Lectures	10  
+
+
+
