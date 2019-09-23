@@ -184,6 +184,73 @@ None
 
  -Labs	20  
  -Lectures	10  
+ 
+ 
+## Tips
+
+- Practice!
+- Ask questions!
+- Work together / help each other.
+- Keep up, if you fall behind let someone know.
+
+## FAQ
+
+#### Who is the Teaching team on this module? 
+Your course director is Dr Reka Solymosi. Call her Reka. If that makes you uncomfortable then Dr Solymosi. Don't call her Ms/Mrs Solymosi, that's her mum. Don't call her 'hey'/ 'yo', each time that happens a she grows a new grey hair, and it makes her sad. You can reach her via email at reka.solymosi@manchester.ac.uk.
+
+For two weeks (when you are learning about qualitative research) your lecturer will be Dr Nicholas Lord. You can reach him at nicholas.lord@manchester.ac.uk. 
+
+Your teaching assistants are:
+
+- Dr Dermot Barr (dermot.barr@manchester.ac.uk)
+- Natalie Watson (natalie.watson@stu.mmu.ac.uk)
+- Oana Petcu (oana.petcu10@gmail.com)
+- Sebastian Acevedo Valenzuela (sebastian.acevedo@postgrad.manchester.ac.uk)
+- Carlos Iglesias Vergara (carlos.iglesiasvergara@manchester.ac.uk)
+
+
+
+#### I want to ask a question.
+Check the syllabus. Then check the discussion board. If your question is already answered on either of these forums it's the fastest reply you can get. 
+To ask questions about the course content, the assessment, the reading, blackboard, anything like this post on the BB discussion board. If for some reason you're uncomfortable doing so, please email *the entire teaching team* cc-d who will post the question for you. This adds an extra step so please keep in mind taking this option will add delay to you receiving an answer. Please check the discussion board for a posted answer. 
+If your question is personal in nature, and is not relevant to others, then do email *the teaching team* in one email together.
+
+#### I have a personal question that I cannot post on the discussion board, or I am uncomfortable posting myself. How can I contact the teaching team? 
+Email the entire teaching team together please. This is your 2nd best option for fast replies. 
+Our emails are:
+Reka.solymosi@manchester.ac.uk
+
+#### Do I have to keep checking back on the discussions forum for an answer or can I get a notification? 
+You can subscribe to a discussion board so that you receive a notification each time a post is made. Watch this video [https://www.youtube.com/watch?v=xGLtjrhG3RA](https://www.youtube.com/watch?v=xGLtjrhG3RA) to see how.
+
+#### I missed a lab, what do I do?
+If you miss a lab try to catch up on it in your own time. Whenever you have a question or want clarification, make a note as you go through. If you can, check the blackboard discussion forum to see if this has been answered, and if no, post your question there. You can also book office hours to come and ask your questions there, or bring them to the next lab which you can attend. Labs are attendance monitored so you must get in touch with TLSEO to excuse your absence.
+
+#### I missed a lecture, what do I do?
+Lectures are podcast and immediately released so you can watch a lecture after it's finished. Just like with labs, whenever you have a question or want clarification, make a note as you go through. If you can, check the blackboard discussion forum to see if this has been answered, and if no, post your question there. You can also book office hours to come and ask your questions there, or bring them to the next lab which you can attend.
+
+#### My homework quiz crashed / I ran out of time/ my computer broke/ other quiz issues - what can I do? 
+Before you start your quiz please make sure you have your reading notes and completed tasks in front of you. Make sure you have 30 min of uninterrupted time with good Internet connection, on a charged computer. Do not ever press the back or refresh buttons. That said, stuff happens, so each student gets one "get out of homework free" card. You can use this once to discount one homework from your grade in the event of something going wrong. You cannot use this to discount a quiz only because you're unhappy with the grade though, this is a last resort option, don't try to game it please. You can find the card on Blackboard under the homework section.
+
+#### I think that the answer I gave to the homework quiz is right but it was marked wrong, what can I do? 
+If you think that you gave a correct answer, but quiz marked it wrong, please email REKA with the email subject QUIZ and tell me 1: who you are (with student number) 2: the quiz number and question description 3: your answer and why you think it's correct. I willing reply to you about it in 2 working days.
+
+
+#### I need further help, when are your office hours?
+Our office hours are as follows:
+
+- Reka: Tuesday 15:00 - 16:00 and Friday 11:00 - 12:00 please book via https://rekasolymosi.youcanbook.me/
+
+- Dermot: 
+- Natalie:
+- Oana:
+- Sebastian:
+- Carlos: 
+
+
+#### I can't read so much text in one go - what can I do?
+
+One option is to use a screen reader. This is something that can read text to you out loud. You should bring headphones to class if you are going to use this option. One example is a chrome plugin caller [Read Aloud](https://chrome.google.com/webstore/detail/read-aloud-a-text-to-spee/hdhinadidafjejdhmfkjgnolgimiaplp?hl=en). You can follow the instructions from the link to install this to your Chrome browser, and then use it to read aloud the lab notes to you (if you have opened them in Chrome). Similar software is available for other browsers as well. 
 
 
 
