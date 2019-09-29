@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.10)  29 SEP 2019 12:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.10)  29 SEP 2019 15:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1132,88 +1132,91 @@ Overfull \hbox (21.80074pt too wide) in alignment at lines 254--254
  []
 
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 277.
+(Font)              scaled to size 10.0pt on input line 278.
 [1
 
 {/Users/reka/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 1681) in paragraph at lines 314--314
+Underfull \hbox (badness 1681) in paragraph at lines 317--317
 [][] [][][]\T1/Carlito-TLF/m/n/10 Solymosi, R (2018). North-west Uni-ver-si-tie
 s R Day event. \T1/Carlito-TLF/m/it/10 Soft-ware Sus-tain-abil-ity In-sti-tute 
 Blog. Avail-able: 
  []
 
 
-Underfull \hbox (badness 6961) in paragraph at lines 314--314
+Underfull \hbox (badness 6961) in paragraph at lines 317--317
 [][] [][][]\T1/Carlito-TLF/m/n/10 Solymosi, R (2018). Brexit Data Chal-lenge ev
 ent. \T1/Carlito-TLF/m/it/10 Soft-ware Sus-tain-abil-ity In-sti-tute Blog. Avai
 l-able: 
  []
 
 
-Underfull \hbox (badness 3240) in paragraph at lines 314--314
+Underfull \hbox (badness 3240) in paragraph at lines 317--317
 [][] [][][]\T1/Carlito-TLF/m/n/10 Solymosi, R (2016). Con-fi-dence in trans-por
 t and polic-ing. \T1/Carlito-TLF/m/it/10 Avail-able: https://www.ucl.ac.uk/tran
 sport- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
+Underfull \hbox (badness 10000) in paragraph at lines 317--317
 [][] [][][]\T1/Carlito-TLF/m/n/10 Solymosi, R (2014). Trans-port Streets and Cr
 ime. \T1/Carlito-TLF/m/it/10 Avail-able: https://www.ucl.ac.uk/transport- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--334
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
 []\T1/Carlito-TLF/b/n/10 Identifying fea-tures that af-fect pub-lic en-gage-men
 t with ap-peals for in-for-ma-tion about miss-ing per-
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 353--353
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
 []\T1/Carlito-TLF/m/n/8 Weeklong in-ten-sive course in-tro-duc-ing stu-dents to
  us-ing R and R Stu-dio for data anal-y-sis. Open to all, usu-ally at-tended by
  pro-fes-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--359
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 []\T1/Carlito-TLF/b/n/10 The role of in-no-va-tive data col-lec-tion meth-ods i
 n ad-vanc-ing un-der-stand-ing, and the im-por-tance of
  []
 
+
+Overfull \vbox (4.87347pt too high) has occurred while \output is active []
+
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 386--386
+Underfull \hbox (badness 10000) in paragraph at lines 394--394
 []\T1/Carlito-TLF/b/n/10 Victimization and per-ceived safety among col-lege stu
 -dents: Fo-cus on women's tran-sit safety in Lon-
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 395--395
+Underfull \hbox (badness 10000) in paragraph at lines 403--403
 []\T1/Carlito-TLF/b/n/10 Mapping Fear of Crime Dy-nam-i-cally in Place and Time
 : Case study of Rev-enue Pro-tec-tion In-spec-tors
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 419.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 427.
 [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 419.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 427.
 (./cv.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 419.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 419.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 427.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 427.
 Package rerunfilecheck Info: File `cv.out' has not changed.
-(rerunfilecheck)             Checksum: EB5B9F9FA18E7080263D5FBF347AB32E;820.
+(rerunfilecheck)             Checksum: AF8805BE6BB8E0D576B2769194DDC060;3217.
 Package logreq Info: Writing requests to 'cv.run.xml'.
 \openout1 = `cv.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 419.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 427.
  ) 
 Here is how much of TeX's memory you used:
- 30446 strings out of 494553
- 532428 string characters out of 6174236
- 965830 words of memory out of 5000000
- 33808 multiletter control sequences out of 15000+600000
+ 30481 strings out of 494553
+ 533455 string characters out of 6174236
+ 966553 words of memory out of 5000000
+ 33827 multiletter control sequences out of 15000+600000
  602769 words of font info for 52 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,19n,63p,1193b,1360s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,19n,63p,1193b,1362s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/reka/Library/TinyTeX/texmf-dist/fonts/enc/dvips/carlito/crlt_z7vml3.e
 nc}{/Users/reka/Library/TinyTeX/texmf-dist/fonts/enc/dvips/fontawesome/fontawes
 omethree.enc}{/Users/reka/Library/TinyTeX/texmf-dist/fonts/enc/dvips/fontawesom
@@ -1223,10 +1226,10 @@ nd/carlito/Carlito-Bold.pfb></Users/reka/Library/TinyTeX/texmf-dist/fonts/type1
 nts/type1/typoland/carlito/Carlito.pfb></Users/reka/Library/TinyTeX/texmf-dist/
 fonts/type1/public/fontawesome/FontAwesome.pfb></Users/reka/Library/TinyTeX/tex
 mf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on cv.pdf (5 pages, 107037 bytes).
+Output written on cv.pdf (5 pages, 108262 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 141 compressed objects within 2 object streams
- 63 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 199 PDF objects out of 1000 (max. 8388607)
+ 185 compressed objects within 2 object streams
+ 79 named destinations out of 1000 (max. 500000)
+ 129 words of extra memory for PDF output out of 10000 (max. 10000000)
 

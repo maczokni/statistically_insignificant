@@ -81,7 +81,7 @@ orcid_educations(my_orcid) %>%
 ORCID: `r my_orcid`
 
 
-Peer reviewed publications
+## Peer reviewed publications
 
 
 ```{r publications}
@@ -94,7 +94,7 @@ bibliography_entries("published.bib", "",
 
 
 
-Forthcoming: publications under review for which pre-prints are available. OSF profile: [osf.io/3nzk2](osf.io/3nzk2).
+## Forthcoming: publications under review for which pre-prints are available. OSF profile: [osf.io/3nzk2](osf.io/3nzk2).
 
 ```{r forthcoming}
 bibliography_entries("forthcoming.bib", "", 
@@ -105,7 +105,7 @@ bibliography_entries("forthcoming.bib", "",
 ```
 
 
-Other outputs
+## Other outputs
 
 ```{r otherpubs}
 bibliography_entries("otherpubs.bib", "", 
@@ -114,7 +114,7 @@ bibliography_entries("otherpubs.bib", "",
 
 # Funding
 
-Funding awarded as Principal Investigator
+## Funding awarded as Principal Investigator
 
 
 ```{r fundingpi}
@@ -135,7 +135,7 @@ tribble(
 ```
 
 
-Funding awarded as Co Investigator
+## Funding awarded as Co Investigator
 
 
 ```{r fundingci}
@@ -156,8 +156,7 @@ tribble(
 
 # Teaching
 
-University of Manchester Graduate Level Courses
-
+## University of Manchester Graduate Level Courses
 
 ```{r teachingpgt}
 tribble(
@@ -175,8 +174,7 @@ tribble(
 ```
 
 
-University of Manchester Undergraduate Level Courses
-
+## University of Manchester Undergraduate Level Courses
 
 ```{r teachingug}
 tribble(
@@ -196,8 +194,7 @@ tribble(
 ```
 
 
-Other teaching, short courses, and guest lecturing
-
+## Other teaching, short courses, and guest lecturing
 
 ```{r teachingother}
 tribble(
