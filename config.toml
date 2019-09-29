@@ -50,7 +50,7 @@ My research focuses on making use of new forms of data to gain insight into peop
     identifier = "CV"
     name = "CV" #If display text link, cancel comment out
     pre = "<i class='fa fa-id-card fa-lg'></i>" #Choose your favorite font from Font Awesome
-    url = "/cv/"
+    url = "/cv/cv.pdf"
     weight = 3    
 
 [[menu.main]]
