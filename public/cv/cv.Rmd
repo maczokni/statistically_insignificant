@@ -94,7 +94,9 @@ bibliography_entries("published.bib", "",
 
 
 
-## Forthcoming: publications under review for which pre-prints are available. OSF profile: [osf.io/3nzk2](osf.io/3nzk2).
+## Forthcoming: publications under review for which pre-prints are available. 
+
+OSF profile: [osf.io/3nzk2](osf.io/3nzk2).
 
 ```{r forthcoming}
 bibliography_entries("forthcoming.bib", "", 
@@ -239,6 +241,7 @@ tribble(
 ```{r invitedtalks2018}
 tribble(
 	~title,  ~venue, 
+	"Crowdsourcing subjective perceptions of neighbourhood disorder: interpreting bias in Open Data", "TicTec 2018, Lisbon, Portugal",
 	"Interdisciplinary Alchemy: Data Science + Social Science","Data Kind UK",
 	"Everybody Lies but Not Everybody Tweets: Making Sense of the Bias in Your Data","Advances in Data Science conference, Manchester, UK"
 ) %>% 
