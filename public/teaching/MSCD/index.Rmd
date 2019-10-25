@@ -2,15 +2,27 @@
 title: "Making Sense of Criminological Data"
 author: 
 output:
-  html_document
+  html_document:
+    css: "../../rekadata.css"
 ---
 
 ## Welcome to the website for Making Sense of Criminological Data. 
 
-Here you fill find access to:
+This 10 week undergraduate module is mandatory for BA Criminology and optional for BA Social Sciences students. It provides a first insight into dealing with quantitative and qualitative data. By the end of this module, students are expected to have a critical and practical understanding of descriptive data analysis, and be able to summarise and draw meaningful conclusions from various forms of data. They will be proficient in the use of Excel and NVivo. 
+
+The course is made up of 10 labs and 10 lectures, and is assessed by weekly homework (20%) and a final assignment research report (80%). 
+
+For more details please see:
 
 - The [Syllabus](https://rekadata.site/teaching/mscd/syllabus.html)
+
+For required reading for each week, please see: 
+
 - The [Reading list](https://rekadata.site/teaching/mscd/reading_list.html)
+
+For the lab worksheets, please see:
+
 - The [Lab notes](https://maczokni.github.io/MSCD_labs/)
 
-For your weekly tasks and homework quizes, you will need to login to [BlackBoard](https://online.manchester.ac.uk). 
+For your weekly tasks and homework quizes, as well as to download the data for the lab notes, you will need to login to [University of Manchester BlackBoard](https://online.manchester.ac.uk).
+

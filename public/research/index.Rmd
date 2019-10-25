@@ -3,19 +3,28 @@ title: "Research"
 author: 
 output:
   html_document:
-    css: "../style.min.a6cab246517742ad1189b209575fc61556550e663cdfe02a0aab0632b39e978b.css"
+    css: "../rekadata.css"
 ---
 
 
 # Ongoing Research Projects
 
-## Appeal for Information about Missing Persons
+### Appeal for Information about Missing Persons
 
 This project, funded by the [Manchester Statistical Society](https://manstatsoc.org/) is looking at Tweets made by Greater Manchester Police Twitter accounts which are appeals for information about missing persons, in order to determine what features are associated with increased engagement (in the form of retweets) from the public. 
 
 
-## Using App-Based and Sensing Measures to Map Fear of Crime and Perception of Place
+### Using App-Based and Sensing Measures to Map Fear of Crime and Perception of Place
 
 This project, funded by [The British Academy](https://www.thebritishacademy.ac.uk/funding/ba-leverhulme-small-research-grants) explores the feasibility of using mobile applications and physiological sensing in order to measure fear of crime as a situation-specific experience. The first part of the project was to take stock of existing work making use of mobile applications in order to measure fear of crime **in-situ**. The preprint for this paper is available [on Soc ArXiv here](https://osf.io/preprints/socarxiv/h3n9w). The second part of the paper explores the feasibility of using Galvanic Skin Response and Heart Rate as indicators of fear of crime experienced, and how these correlate with self-report measures and with contextual features measured with eye-tracking. 
 
-## 
+### Civic InnovatioN in CommunITY: safety, policing and trust with young people
+
+This project, funded by the [EPSRC Not Equal Project Network](https://not-equal.tech/) looks at using app-based experience sampling and mental model approaches to understand young people's experiences with knife crime, to identify and address the existing barriers in communication with authorities. 
+
+
+# Past research projects 
+
+### Mapping Companies in Trouble using Bayesian Surprise
+
+This project, funded by the [Consumer Data Research Centre](https://www.cdrc.ac.uk) looked at County Court Judgement data to explore spatial patterns, in particular making use of bayesian surprise maps. 

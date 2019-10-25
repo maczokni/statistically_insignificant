@@ -1,9 +1,10 @@
 ---
 title: "Reading List for LAWS20441"
 author: "Reka Solymosi"
-date: "04/09/2019"
+date: ""
 output:
   html_document:
+    css: "../../rekadata.css"
     toc: true
 ---
 

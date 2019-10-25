@@ -1,6 +1,6 @@
 [
     {
-        "ref": "/blog/webscraping-and-some-sampling-mapping-in-r/",
+        "ref": "https://rekadata.site/blog/webscraping-and-some-sampling-mapping-in-r/",
         "title": "Webscraping and some sampling \u0026 mapping in R",
         "section": "blog",
         "date" : "2019.08.10",
@@ -8,7 +8,7 @@
     }
 ,
     {
-        "ref": "/blog/data-visualisation-summer-school/",
+        "ref": "https://rekadata.site/blog/data-visualisation-summer-school/",
         "title": "Data Visualisation Summer School",
         "section": "blog",
         "date" : "2019.07.15",

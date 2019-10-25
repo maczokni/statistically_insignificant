@@ -3,25 +3,31 @@ title: "Teaching"
 author: 
 output:
   html_document:
-    css: "../style.min.a6cab246517742ad1189b209575fc61556550e663cdfe02a0aab0632b39e978b.css"
+    css: "../rekadata.css"
 ---
 
+Below is a list of the modules and couses which I have developed and taught.
 
 # Current courses
 
-## [Making Sense of Criminological Data](https://rekadata.site/teaching/mscd/)
+### Making Sense of Criminological Data
 
-This course is a 2nd-year Undergraduate introduction to data analysis for BA Criminology and Social Science students at University of Manchester.
+10 week 2nd-year Undergraduate introduction to data analysis for BA Criminology and Social Science students at University of Manchester. [See here for more info](https://rekadata.site/teaching/mscd/)
 
-## Designing Criminological Research
+### Designing Criminological Research
 
 This course is for students enrolled in MA, MRes Criminology and MRes Criminology with Social Statistics to teach an introduction to research in topics of Crime, Policing, and Criminal Justice.
 
 # Past courses
 
-## [Crime Mapping](https://maczokni.github.io/crimemapping_textbook_bookdown/)
+### Crime Mapping
+
+Introduction to spatial data analysis and visualisation for criminology students. See course content [here](https://maczokni.github.io/crimemapping_textbook_bookdown/)
 
 
 # Short courses
 
-## [Getting Started in R](https://rcatlord.github.io/GSinR/)
+### Getting Started in R
+
+One-week introductory course for students to become familiar with data import, wrangling, analysis and visualisation as part of the [methods@manchester](https://www.methods.manchester.ac.uk/connect/events/summer-school-2020/) summer school. See course materials [here](https://rcatlord.github.io/GSinR/)
+

@@ -1,8 +1,10 @@
 ---
 title: "Syllabus"
 author: "Reka Solymosi"
-date: "04/09/2019"
-output: html_document
+date: ""
+output:
+  html_document:
+    css: "../../rekadata.css"
 ---
 
 ```{r setup, include=FALSE}
@@ -88,10 +90,10 @@ This course is designed to make you data literate criminologists, who can not on
 ## Structure
 
 *Lab sessions - 20 hours: *
-The course will consist of lab sessions, where students will be expected to work through previously constructed readings, videos, and exercises, while recieving support from the teaching staff. Students will be able to work individually and move through the course materials at their own pace, while also coming together occasionally in group-based tasks and activities. 
+The course will consist of lab sessions, where students will be expected to work through previously constructed readings, videos, and exercises, while recieving support from the teaching staff. Students will be able to work individually and move through the course materials at their own pace, while also coming together occasionally in group-based tasks and activities. **Attendance at these sessions is mandatory and monitored**
 
 
-*Lectures - 10 hours*: There will be weekly Lectures which will take the form of interactive lectures, where sometimes students can receive feedback on their work, and ask questions. General concepts will be clarified, and students will be able to use this opportunity to catch up, and ensure their learning. **Attendance at these sessions is mandatory and monitored**
+*Lectures - 10 hours*: There will be weekly Lectures which will take the form of interactive lectures, where sometimes students can receive feedback on their work, and ask questions. General concepts will be clarified, and students will be able to use this opportunity to catch up, and ensure their learning. 
 
 
 ## Aims
@@ -159,9 +161,9 @@ From week 1 to 10 of the semester we will have one-hour Feedback Support Session
 
 ## Assessment methods
 
-**Final project 80%**. Students will be required to produce a report of 2,500 words incorporating charts, tables and graphs, to be produced to a good quality standard. 
-
 **Homework 20%**. Short homework exercises will be assigned every week, to be submitted either through Blackboard, or through presentation in the Lecture. 
+
+**Final project 80%**. Students will be required to produce a report of 2,500 words incorporating charts, tables and graphs, to be produced to a good quality standard. 
 
 ## Feedback
 
@@ -237,16 +239,7 @@ If you think that you gave a correct answer, but quiz marked it wrong, please em
 
 
 #### I need further help, when are your office hours?
-Our office hours are as follows:
-
-- Reka: Tuesday 15:00 - 16:00 and Friday 11:00 - 12:00 please book via [https://rekasolymosi.youcanbook.me/](https://rekasolymosi.youcanbook.me/)
-
-- Dermot: 
-- Natalie:
-- Oana: Thuesdays 18:00 - 19:00 please book via [https://oanapetcu.youcanbook.me/](https://oanapetcu.youcanbook.me/)
-- Sebastian:
-- Carlos: 
-
+Our office hours can be found on Blackboard page under the communications tab
 
 #### I can't read so much text in one go - what can I do?
 
