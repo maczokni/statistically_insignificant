@@ -30,7 +30,7 @@ I friggin' love Halloween! I get really into it. Last year, we organised a Hallo
 
 (far right, with a broom and some functions taped to me...!) 
 
-When I first moved to the UK 9 years ago, it was not really a thing at all, but more recently, it has become adopted as a fun and spooky holiday for all the age groups. In Manchester for example [there are now all sorts of Halloween related activities](). One of these is a set of [inflatable monstrers]() which are dotted around the city centre. You can download a map to hunt for them all [here](). 
+When I first moved to the UK 9 years ago, it was not really a thing at all, but more recently, it has become adopted as a fun and spooky holiday for all the age groups. In Manchester for example [there are now all sorts of Halloween related activities](https://www.visitmanchester.com/ideas-and-inspiration/halloween-in-the-city). One of these is a set of [inflatable monsters](https://www.manchestereveningnews.co.uk/whats-on/whats-on-news/massive-inflatable-monsters-taken-over-17138466) which are dotted around the city centre. You can download a map to hunt for them all [here](https://www.manchestereveningnews.co.uk/incoming/article17138695.ece/BINARY/Halloween%20in%20the%20City%202019%20-%20where%20to%20find%20the%20monsters). 
 
 Naturally, the monster walk was something very appealing to me, and we set out to walk the monster walk, take nice photos, and then pick our fave monsters over some beers. In our household, the hands down winner was "Blob":
 
@@ -120,7 +120,7 @@ Yess, Blob back in the lead!
 
 But this measure is still weighting the number of photos taken, as more photos mean more likes. What about likes per photo?
 
-```{r}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
 tagged_monsters %>% 
   filter(!monsters %in% c('event', 'other')) %>% 
@@ -148,7 +148,7 @@ In either case, since I filtered for images in 2019 only, it should not be there
 So intead the winner is....
 
 
-```{r}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
 tagged_monsters %>% 
   filter(!monsters %in% c('event', 'other', 'fake')) %>% 
@@ -187,7 +187,7 @@ There is much more to explore though; originally I was hoping to get information
 
 For anyone interested, all my code for this is on my [github page](https://github.com/maczokni/halloweenMCR). 
 
-Happy halloween!
+Happy halloween!!
 
 
 

@@ -25,7 +25,7 @@ This our town of Halloween
 <p>…and me dressed up as the <a href="https://cran.r-project.org/web/packages/broom/vignettes/broom.html">broom package</a></p>
 <p><img src="https://www.software.ac.uk/sites/default/files/image5.jpg" /></p>
 <p>(far right, with a broom and some functions taped to me…!)</p>
-<p>When I first moved to the UK 9 years ago, it was not really a thing at all, but more recently, it has become adopted as a fun and spooky holiday for all the age groups. In Manchester for example <a href="">there are now all sorts of Halloween related activities</a>. One of these is a set of <a href="">inflatable monstrers</a> which are dotted around the city centre. You can download a map to hunt for them all <a href="">here</a>.</p>
+<p>When I first moved to the UK 9 years ago, it was not really a thing at all, but more recently, it has become adopted as a fun and spooky holiday for all the age groups. In Manchester for example <a href="https://www.visitmanchester.com/ideas-and-inspiration/halloween-in-the-city">there are now all sorts of Halloween related activities</a>. One of these is a set of <a href="https://www.manchestereveningnews.co.uk/whats-on/whats-on-news/massive-inflatable-monsters-taken-over-17138466">inflatable monsters</a> which are dotted around the city centre. You can download a map to hunt for them all <a href="https://www.manchestereveningnews.co.uk/incoming/article17138695.ece/BINARY/Halloween%20in%20the%20City%202019%20-%20where%20to%20find%20the%20monsters">here</a>.</p>
 <p>Naturally, the monster walk was something very appealing to me, and we set out to walk the monster walk, take nice photos, and then pick our fave monsters over some beers. In our household, the hands down winner was “Blob”:</p>
 <div class="figure">
 <img src="/img/blob.jpg" alt="blob" />
@@ -57,28 +57,35 @@ For my monster from his slab, began to rise
 </blockquote>
 <p>So finally we can get to some results.</p>
 <p>First I considered number of posts:</p>
-<pre class="r"><code>library(ggplot2)
-library(dplyr)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>tagged_monsters &lt;- read.csv(&quot;https://raw.githubusercontent.com/maczokni/halloweenMCR/master/HalloweenMCR%2CMCRMONSTERS/mcrmonsters_2019_tagged.csv&quot;)
-
-tagged_monsters %&gt;% 
-  filter(!monsters %in% c(&#39;event&#39;, &#39;other&#39;, &#39;fake&#39;)) %&gt;% 
-  group_by(monsters) %&gt;% 
-  summarise(n = n()) %&gt;% 
-  ggplot(., aes(x = reorder(monsters, n), y = n)) + 
-  geom_bar(stat = &#39;identity&#39;) + 
-  theme_bw() +
-  xlab(&quot;&quot;) + ylab(&quot;number of photos&quot;) +
-  coord_flip() + 
-  theme(axis.text = element_text(size = 18), 
-        axis.title = element_text(size = 18))</code></pre>
 <p><img src="/blog/2019-10-30-halloween-mcr_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>Well it seems like this round has been won by the dragon who lives atop the Printworks. Okay…</p>
+<div class="figure">
+<img src="/img/printworks_dragon.jpg" alt="printworks dragon" />
+<p class="caption">printworks dragon</p>
+</div>
+<p>What about the most likes?</p>
+<p><img src="/blog/2019-10-30-halloween-mcr_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>Yess, Blob back in the lead!</p>
+<p>But this measure is still weighting the number of photos taken, as more photos mean more likes. What about likes per photo?</p>
+<p><img src="/blog/2019-10-30-halloween-mcr_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>What is this?! Well in this case it seems I get as winner something I tagged as “fake”. While it is definitely not a current monster (currently in its place are the “orange eyes”), after further investigation, I think maybe it is not fake but an image from last year. <a href="https://scontent-lhr3-1.cdninstagram.com/vp/dd5625f8382560c327dd79351e06b358/5E4890DC/t51.2885-15/e35/72361344_2447249538936030_5536868822524031099_n.jpg?_nc_ht=scontent-lhr3-1.cdninstagram.com&amp;_nc_cat=106">This is the image in question.</a></p>
+<p>In either case, since I filtered for images in 2019 only, it should not be there, and is therefore DISQUALIFIED.</p>
+<p>So intead the winner is….</p>
+<p><img src="/blog/2019-10-30-halloween-mcr_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>…BLOB! What a champ</p>
+<div class="figure">
+<img src="/img/blob2.jpg" alt="blob" />
+<p class="caption">blob</p>
+</div>
+</div>
+<div id="all-is-well-that-ends-well" class="section level2">
+<h2>All is well that ends well</h2>
+<p>In conclusion, it has been a fun exercise to play a bit with the Instragram API and see what sorts of information I can get out of it. Number of likes, also replies, and the URL to the photos. I want to explore more.</p>
+<p>I also noted that there is this “may contain” feature, which has some sort of image recognition application to <a href="https://www.theverge.com/2018/11/28/18116323/instagram-ai-visual-impairment-description">help describe posts for those with visual impairment</a>. I used this to query some dog photos for example (everyone loves dog photos!). A simple string contains search and boom, I hav dog + halloween monster photos!</p>
+<pre class="r"><code>dog_pics &lt;- tagged_monsters[grepl(&#39;dog&#39;, tagged_monsters$may_contain),] </code></pre>
+<p>See the two results I got back <a href="https://scontent-lhr3-1.cdninstagram.com/vp/1edf102bfe4da170e25ec11da7365375/5E59E6EB/t51.2885-15/e35/s1080x1080/73497460_551022798987863_2293245314924870553_n.jpg?_nc_ht=scontent-lhr3-1.cdninstagram.com&amp;_nc_cat=111">here</a> and <a href="https://scontent-lhr3-1.cdninstagram.com/vp/f733845b659c074eef6055f42493c71b/5E641B94/t51.2885-15/e35/s1080x1080/72267439_181815752864752_1432029834899294132_n.jpg?_nc_ht=scontent-lhr3-1.cdninstagram.com&amp;_nc_cat=104">here</a>.</p>
+<p>There is much more to explore though; originally I was hoping to get information about what filters people use, based on <a href="https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-017-0110-z">this paper about instagram filter choice being able to diagnose depression</a>, but I did not get this info with instaloader. I guess I will keep exploring what is out there.</p>
+<p>For anyone interested, all my code for this is on my <a href="https://github.com/maczokni/halloweenMCR">github page</a>.</p>
+<p>Happy halloween!!</p>
+<p><img src="/img/tentacles_mcr.gif" /></p>
 </div>
