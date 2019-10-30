@@ -1,0 +1,195 @@
+---
+title: Halloween MCR
+author: ~
+date: '2019-10-30'
+slug: halloween-mcr
+categories: []
+tags: []
+images: []
+---
+
+On 29 October 2019 I gave a short presentation at [PyData Manchester](https://twitter.com/pydatamcr) and [Open Data Manchester](https://twitter.com/opendatamcr) joint meetup on the topic of [Data Horror Stories](https://www.meetup.com/PyData-Manchester/events/265148553/?oc=evam). My talk was a data-driven exploration of the [massive inflatable Halloween monsters of Manchester](https://www.manchestereveningnews.co.uk/whats-on/whats-on-news/massive-inflatable-monsters-taken-over-17138466). 
+
+
+## Halloween is the best
+
+> Boys and girls of every age
+Wouldn't you like to see something strange
+Come with us and you will see,
+This our town of Halloween
+ - [The Nightmare Before Christmas](https://www.imdb.com/title/tt0107688/)
+
+I friggin' love Halloween! I get really into it. Last year, we organised a Halloween themed all day [#rstats](https://twitter.com/search?q=%23rstats) conference/meetup/thing, ( [you can read all about that here](https://www.software.ac.uk/blog/2019-01-23-northwest-universities-r-day-event)), which involved some fantastic pumpkin carvings: 
+
+![](https://www.software.ac.uk/sites/default/files/image10.png)
+
+
+...and me dressed up as the [broom package](https://cran.r-project.org/web/packages/broom/vignettes/broom.html) 
+
+![](https://www.software.ac.uk/sites/default/files/image5.jpg)
+
+(far right, with a broom and some functions taped to me...!) 
+
+When I first moved to the UK 9 years ago, it was not really a thing at all, but more recently, it has become adopted as a fun and spooky holiday for all the age groups. In Manchester for example [there are now all sorts of Halloween related activities](). One of these is a set of [inflatable monstrers]() which are dotted around the city centre. You can download a map to hunt for them all [here](). 
+
+Naturally, the monster walk was something very appealing to me, and we set out to walk the monster walk, take nice photos, and then pick our fave monsters over some beers. In our household, the hands down winner was "Blob":
+
+![blob](/img/blob.jpg)
+
+But what about the rest of the city? Which was Manchester's favourite monster? This was the question I set out to answer in this talk
+
+![](https://pbs.twimg.com/media/EIETl6gXYAgIMCA?format=jpg&name=4096x4096)
+image credit: [@OpenDataManchester](https://twitter.com/opendatamcr/status/1189253327550406657/photo/1)
+
+
+## MCR Monsters
+
+One way to gauge what monsters people are photographing and sharing is to look at Instagram. I found two key hashtags that were relevant: 
+
+- [#MCRMonsters](https://www.instagram.com/explore/tags/mcrmonsters/) and
+- [#HalloweenMCR](https://www.instagram.com/explore/tags/halloweenmcr)
+
+
+I wanted to select posts that used both hashtags, because a lot of what was coming up with just one or the other was actually not monster related content (at least not in the sense that I was after).
+
+To acquire a set of photos with these hashtags and some of their metadata, I used the [instaloader tool](https://instaloader.github.io/). Specifically to get only posts that had both hashtags, I modified this [bit of code](https://gist.github.com/aandergr/73140345c68ed7c36d74c92b86dd6271) by [aandergr](https://gist.github.com/aandergr). My version can be found on github here: [https://github.com/maczokni/halloweenMCR](https://github.com/maczokni/halloweenMCR). This was the only bit of Python I used however, and then I swiftly read my retreived JSON into R. 
+
+After [some cleaning](https://github.com/maczokni/halloweenMCR/blob/master/halloweenmcr.R) I had a nice bit of data with some Monster photos and associated metadata. However, none of these told me which monster is in each photo. So this required some manual coding, where I looked at each photo, and coded what monster I saw. 
+
+Finally, after all this was done, the results could be considered
+
+## And the winner is...
+
+> I was working in the lab, late one night
+When my eyes beheld an eerie sight
+For my monster from his slab, began to rise
+  -[Bobby Pickett - Monster Mash](https://www.huffingtonpost.co.uk/entry/monster-mash-lyrics-lie_us_59dbd426e4b0208970cefb2a)
+
+
+So finally we can get to some results. 
+
+First I considered number of posts:
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+library(ggplot2)
+library(dplyr)
+
+
+tagged_monsters <- read.csv("https://raw.githubusercontent.com/maczokni/halloweenMCR/master/HalloweenMCR%2CMCRMONSTERS/mcrmonsters_2019_tagged.csv")
+
+tagged_monsters %>% 
+  filter(!monsters %in% c('event', 'other')) %>% 
+  group_by(monsters) %>% 
+  summarise(n = n()) %>% 
+  ggplot(., aes(x = reorder(monsters, n), y = n)) + 
+  geom_bar(stat = 'identity') + 
+  theme_bw() +
+  xlab("") + ylab("number of photos") +
+  coord_flip() + 
+  labs(title = "Number of photos of each monster") + 
+  theme(axis.text = element_text(size = 14), 
+        axis.title = element_text(size = 14))
+
+```
+
+Well it seems like this round has been won by the dragon who lives atop the Printworks. Okay...
+
+![printworks dragon](/img/printworks_dragon.jpg)
+
+What about the most likes? 
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+tagged_monsters %>% 
+  filter(!monsters %in% c('event', 'other')) %>% 
+  group_by(monsters) %>% 
+  summarise(likes = sum(num_likes, na.rm = T)) %>% 
+  ggplot(., aes(x = reorder(monsters, likes), y = likes)) + 
+  geom_bar(stat = 'identity') + 
+  theme_bw() +
+  xlab("") + ylab("number of total likes") +
+    labs(title = "Number of total likes of each monster") + 
+  coord_flip() + 
+  theme(axis.text = element_text(size = 14), 
+        axis.title = element_text(size = 14))
+
+```
+
+Yess, Blob back in the lead!
+
+But this measure is still weighting the number of photos taken, as more photos mean more likes. What about likes per photo?
+
+```{r}
+
+tagged_monsters %>% 
+  filter(!monsters %in% c('event', 'other')) %>% 
+  group_by(monsters) %>% 
+  summarise(likes = mean(num_likes, na.rm = T)) %>% 
+  ggplot(., aes(x = reorder(monsters, likes), y = likes)) + 
+  geom_bar(stat = 'identity') + 
+  theme_bw() +
+  xlab("") + ylab("mean likes") +
+  labs(title = "Mean likes per photo for each monster") +
+  coord_flip() + 
+  theme(axis.text = element_text(size = 14), 
+        axis.title = element_text(size = 14))
+
+
+```
+
+
+
+What is this?! Well in this case it seems I get as winner something I tagged as "fake". While it is definitely not a current monster (currently in its place are the "orange eyes"), after further investigation, I think maybe it is not fake but an image from last year. [This is the image in question.](https://scontent-lhr3-1.cdninstagram.com/vp/dd5625f8382560c327dd79351e06b358/5E4890DC/t51.2885-15/e35/72361344_2447249538936030_5536868822524031099_n.jpg?_nc_ht=scontent-lhr3-1.cdninstagram.com&_nc_cat=106)
+
+
+In either case, since I filtered for images in 2019 only, it should not be there, and is therefore DISQUALIFIED. 
+
+So intead the winner is....
+
+
+```{r}
+
+tagged_monsters %>% 
+  filter(!monsters %in% c('event', 'other', 'fake')) %>% 
+  group_by(monsters) %>% 
+  summarise(likes = mean(num_likes, na.rm = T)) %>% 
+  ggplot(., aes(x = reorder(monsters, likes), y = likes)) + 
+  geom_bar(stat = 'identity') + 
+  theme_bw() +
+  xlab("") + ylab("mean likes") +
+  labs(title = "Mean likes per photo for each monster") +
+  coord_flip() + 
+  theme(axis.text = element_text(size = 14), 
+        axis.title = element_text(size = 14))
+
+```
+
+...BLOB! What a champ
+
+![blob](/img/blob2.jpg)
+
+## All is well that ends well 
+
+In conclusion, it has been a fun exercise to play a bit with the Instragram API and see what sorts of information I can get out of it. Number of likes, also replies, and the URL to the photos. I want to explore more. 
+
+I also noted that there is this "may contain" feature, which has some sort of image recognition application to [help describe posts for those with visual impairment](https://www.theverge.com/2018/11/28/18116323/instagram-ai-visual-impairment-description). I used this to query some dog photos for example (everyone loves dog photos!). A simple string contains search and boom, I hav dog + halloween monster photos!
+
+```{r}
+dog_pics <- tagged_monsters[grepl('dog', tagged_monsters$may_contain),] 
+
+```
+
+See the two results I got back [here](https://scontent-lhr3-1.cdninstagram.com/vp/1edf102bfe4da170e25ec11da7365375/5E59E6EB/t51.2885-15/e35/s1080x1080/73497460_551022798987863_2293245314924870553_n.jpg?_nc_ht=scontent-lhr3-1.cdninstagram.com&_nc_cat=111) and [here](https://scontent-lhr3-1.cdninstagram.com/vp/f733845b659c074eef6055f42493c71b/5E641B94/t51.2885-15/e35/s1080x1080/72267439_181815752864752_1432029834899294132_n.jpg?_nc_ht=scontent-lhr3-1.cdninstagram.com&_nc_cat=104). 
+ 
+
+There is much more to explore though; originally I was hoping to get information about what filters people use, based on [this paper about instagram filter choice being able to diagnose depression](https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-017-0110-z), but I did not get this info with instaloader. I guess I will keep exploring what is out there. 
+
+For anyone interested, all my code for this is on my [github page](https://github.com/maczokni/halloweenMCR). 
+
+Happy halloween!
+
+
+
+![](/img/tentacles_mcr.gif)
+

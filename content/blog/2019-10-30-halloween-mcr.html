@@ -1,0 +1,84 @@
+---
+title: Halloween MCR
+author: ~
+date: '2019-10-30'
+slug: halloween-mcr
+categories: []
+tags: []
+images: []
+---
+
+
+
+<p>On 29 October 2019 I gave a short presentation at <a href="https://twitter.com/pydatamcr">PyData Manchester</a> and <a href="https://twitter.com/opendatamcr">Open Data Manchester</a> joint meetup on the topic of <a href="https://www.meetup.com/PyData-Manchester/events/265148553/?oc=evam">Data Horror Stories</a>. My talk was a data-driven exploration of the <a href="https://www.manchestereveningnews.co.uk/whats-on/whats-on-news/massive-inflatable-monsters-taken-over-17138466">massive inflatable Halloween monsters of Manchester</a>.</p>
+<div id="halloween-is-the-best" class="section level2">
+<h2>Halloween is the best</h2>
+<blockquote>
+<p>Boys and girls of every age
+Wouldn’t you like to see something strange
+Come with us and you will see,
+This our town of Halloween
+- <a href="https://www.imdb.com/title/tt0107688/">The Nightmare Before Christmas</a></p>
+</blockquote>
+<p>I friggin’ love Halloween! I get really into it. Last year, we organised a Halloween themed all day <a href="https://twitter.com/search?q=%23rstats">#rstats</a> conference/meetup/thing, ( <a href="https://www.software.ac.uk/blog/2019-01-23-northwest-universities-r-day-event">you can read all about that here</a>), which involved some fantastic pumpkin carvings:</p>
+<p><img src="https://www.software.ac.uk/sites/default/files/image10.png" /></p>
+<p>…and me dressed up as the <a href="https://cran.r-project.org/web/packages/broom/vignettes/broom.html">broom package</a></p>
+<p><img src="https://www.software.ac.uk/sites/default/files/image5.jpg" /></p>
+<p>(far right, with a broom and some functions taped to me…!)</p>
+<p>When I first moved to the UK 9 years ago, it was not really a thing at all, but more recently, it has become adopted as a fun and spooky holiday for all the age groups. In Manchester for example <a href="">there are now all sorts of Halloween related activities</a>. One of these is a set of <a href="">inflatable monstrers</a> which are dotted around the city centre. You can download a map to hunt for them all <a href="">here</a>.</p>
+<p>Naturally, the monster walk was something very appealing to me, and we set out to walk the monster walk, take nice photos, and then pick our fave monsters over some beers. In our household, the hands down winner was “Blob”:</p>
+<div class="figure">
+<img src="/img/blob.jpg" alt="blob" />
+<p class="caption">blob</p>
+</div>
+<p>But what about the rest of the city? Which was Manchester’s favourite monster? This was the question I set out to answer in this talk</p>
+<p><img src="https://pbs.twimg.com/media/EIETl6gXYAgIMCA?format=jpg&amp;name=4096x4096" />
+image credit: <span class="citation">[@OpenDataManchester]</span>(<a href="https://twitter.com/opendatamcr/status/1189253327550406657/photo/1" class="uri">https://twitter.com/opendatamcr/status/1189253327550406657/photo/1</a>)</p>
+</div>
+<div id="mcr-monsters" class="section level2">
+<h2>MCR Monsters</h2>
+<p>One way to gauge what monsters people are photographing and sharing is to look at Instagram. I found two key hashtags that were relevant:</p>
+<ul>
+<li><a href="https://www.instagram.com/explore/tags/mcrmonsters/">#MCRMonsters</a> and</li>
+<li><a href="https://www.instagram.com/explore/tags/halloweenmcr">#HalloweenMCR</a></li>
+</ul>
+<p>I wanted to select posts that used both hashtags, because a lot of what was coming up with just one or the other was actually not monster related content (at least not in the sense that I was after).</p>
+<p>To acquire a set of photos with these hashtags and some of their metadata, I used the <a href="https://instaloader.github.io/">instaloader tool</a>. Specifically to get only posts that had both hashtags, I modified this <a href="https://gist.github.com/aandergr/73140345c68ed7c36d74c92b86dd6271">bit of code</a> by <a href="https://gist.github.com/aandergr">aandergr</a>. My version can be found on github here: <a href="https://github.com/maczokni/halloweenMCR">https://github.com/maczokni/halloweenMCR</a>. This was the only bit of Python I used however, and then I swiftly read my retreived JSON into R.</p>
+<p>After <a href="https://github.com/maczokni/halloweenMCR/blob/master/halloweenmcr.R">some cleaning</a> I had a nice bit of data with some Monster photos and associated metadata. However, none of these told me which monster is in each photo. So this required some manual coding, where I looked at each photo, and coded what monster I saw.</p>
+<p>Finally, after all this was done, the results could be considered</p>
+</div>
+<div id="and-the-winner-is" class="section level2">
+<h2>And the winner is…</h2>
+<blockquote>
+<p>I was working in the lab, late one night
+When my eyes beheld an eerie sight
+For my monster from his slab, began to rise
+-<a href="https://www.huffingtonpost.co.uk/entry/monster-mash-lyrics-lie_us_59dbd426e4b0208970cefb2a">Bobby Pickett - Monster Mash</a></p>
+</blockquote>
+<p>So finally we can get to some results.</p>
+<p>First I considered number of posts:</p>
+<pre class="r"><code>library(ggplot2)
+library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>tagged_monsters &lt;- read.csv(&quot;https://raw.githubusercontent.com/maczokni/halloweenMCR/master/HalloweenMCR%2CMCRMONSTERS/mcrmonsters_2019_tagged.csv&quot;)
+
+tagged_monsters %&gt;% 
+  filter(!monsters %in% c(&#39;event&#39;, &#39;other&#39;, &#39;fake&#39;)) %&gt;% 
+  group_by(monsters) %&gt;% 
+  summarise(n = n()) %&gt;% 
+  ggplot(., aes(x = reorder(monsters, n), y = n)) + 
+  geom_bar(stat = &#39;identity&#39;) + 
+  theme_bw() +
+  xlab(&quot;&quot;) + ylab(&quot;number of photos&quot;) +
+  coord_flip() + 
+  theme(axis.text = element_text(size = 18), 
+        axis.title = element_text(size = 18))</code></pre>
+<p><img src="/blog/2019-10-30-halloween-mcr_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>

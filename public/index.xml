@@ -5,10 +5,20 @@
     <link>https://rekadata.site/</link>
     <description>Recent content on Dr Reka Solymosi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 10 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rekadata.site/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Halloween MCR</title>
+      <link>https://rekadata.site/blog/halloween-mcr/</link>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rekadata.site/blog/halloween-mcr/</guid>
+      <description>On 29 October 2019 I gave a short presentation at PyData Manchester and Open Data Manchester joint meetup on the topic of Data Horror Stories. My talk was a data-driven exploration of the massive inflatable Halloween monsters of Manchester.
+Halloween is the best  Boys and girls of every age Wouldn’t you like to see something strange Come with us and you will see, This our town of Halloween - The Nightmare Before Christmas</description>
+    </item>
     
     <item>
       <title>Webscraping and some sampling &amp; mapping in R</title>
