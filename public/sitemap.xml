@@ -3,23 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://rekadata.site/post/asc-2019/</loc>
+    <loc>https://rekadata.site/blog/asc-2019/</loc>
+    <lastmod>2019-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rekadata.site/blog/</loc>
     <lastmod>2019-11-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://rekadata.site/</loc>
     <lastmod>2019-11-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rekadata.site/post/</loc>
-    <lastmod>2019-11-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rekadata.site/blog/</loc>
-    <lastmod>2019-10-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -39,6 +34,11 @@
   
   <url>
     <loc>https://rekadata.site/post/hello-world/</loc>
+    <lastmod>2019-07-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rekadata.site/post/</loc>
     <lastmod>2019-07-07T00:00:00+00:00</lastmod>
   </url>
   
