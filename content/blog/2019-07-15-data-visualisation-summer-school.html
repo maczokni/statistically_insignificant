@@ -50,14 +50,14 @@ library(ggplot2)
 library(tidyr)
 library(dplyr)
 library(stringr)
-
+library(janitor)
 #read in each sheet, create a variable to tag film, and merge into one dataframe
-newhope &lt;- read_excel(&quot;data/2.OriginalStarWarsScripts.xlsx&quot;, sheet = &quot;SW_EpisodeIV&quot;)
+newhope &lt;- read_excel(&quot;data/2.OriginalStarWarsScripts.xlsx&quot;, sheet = &quot;SW_EpisodeIV&quot;) %&gt;% clean_names() %&gt;% select(line_number, character, dialogue)
 newhope$film &lt;- &quot;SW_Episode_IV&quot;
 newhope$X__3 &lt;- NULL
-empire &lt;- read_excel(&quot;data/2.OriginalStarWarsScripts.xlsx&quot;, sheet = &quot;SW_EpisodeV&quot;)
+empire &lt;- read_excel(&quot;data/2.OriginalStarWarsScripts.xlsx&quot;, sheet = &quot;SW_EpisodeV&quot;)%&gt;% clean_names() %&gt;% select(line_number, character, dialogue)
 empire$film &lt;- &quot;SW_Episode_V&quot;
-jedi &lt;- read_excel(&quot;data/2.OriginalStarWarsScripts.xlsx&quot;, sheet = &quot;SW_EpisodeVI&quot;)
+jedi &lt;- read_excel(&quot;data/2.OriginalStarWarsScripts.xlsx&quot;, sheet = &quot;SW_EpisodeVI&quot;) %&gt;% clean_names() %&gt;% select(line_number, character, dialogue)
 jedi$film &lt;- &quot;SW_Episode_VI&quot;
 all_sw &lt;- rbind(newhope, empire)
 all_sw &lt;- rbind(all_sw, jedi)
@@ -66,14 +66,14 @@ all_sw &lt;- rbind(all_sw, jedi)
 all_sw$pos &lt;- 1:nrow(all_sw)
 
 #create new variable that counts the number of words in each line
-all_sw$nwords &lt;- sapply(strsplit(all_sw$Dialogue, &quot; &quot;), length)
+all_sw$nwords &lt;- sapply(strsplit(all_sw$dialogue, &quot; &quot;), length)
 
 #get cumulative words spoken at each line for all characters
-talk_vol &lt;- all_sw %&gt;% select(Character, nwords, pos, `Line Number`)
+talk_vol &lt;- all_sw %&gt;% select(character, nwords, pos, line_number)
 test &lt;- talk_vol %&gt;% 
-  spread(Character, nwords) %&gt;% 
+  spread(character, nwords) %&gt;% 
   replace(is.na(.), 0) %&gt;% 
-  gather(&quot;who&quot;, &quot;num_chars&quot;, -pos, -`Line Number`)
+  gather(&quot;who&quot;, &quot;num_chars&quot;, -pos, -line_number)
 test$csum &lt;- ave(test$num_chars, test$who, FUN=cumsum)
 
 #get the top 10 speakers to highlight them in the chart

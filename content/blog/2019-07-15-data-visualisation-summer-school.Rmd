@@ -56,20 +56,19 @@ The really neat part about being a student again was to explore cool and totally
 
 ```{r, warning=FALSE, message=FALSE, fig.height=6.5, fig.width=9}
 
-
 library(readxl)
 library(ggplot2)
 library(tidyr)
 library(dplyr)
 library(stringr)
-
+library(janitor)
 #read in each sheet, create a variable to tag film, and merge into one dataframe
-newhope <- read_excel("data/2.OriginalStarWarsScripts.xlsx", sheet = "SW_EpisodeIV")
+newhope <- read_excel("data/2.OriginalStarWarsScripts.xlsx", sheet = "SW_EpisodeIV") %>% clean_names() %>% select(line_number, character, dialogue)
 newhope$film <- "SW_Episode_IV"
 newhope$X__3 <- NULL
-empire <- read_excel("data/2.OriginalStarWarsScripts.xlsx", sheet = "SW_EpisodeV")
+empire <- read_excel("data/2.OriginalStarWarsScripts.xlsx", sheet = "SW_EpisodeV")%>% clean_names() %>% select(line_number, character, dialogue)
 empire$film <- "SW_Episode_V"
-jedi <- read_excel("data/2.OriginalStarWarsScripts.xlsx", sheet = "SW_EpisodeVI")
+jedi <- read_excel("data/2.OriginalStarWarsScripts.xlsx", sheet = "SW_EpisodeVI") %>% clean_names() %>% select(line_number, character, dialogue)
 jedi$film <- "SW_Episode_VI"
 all_sw <- rbind(newhope, empire)
 all_sw <- rbind(all_sw, jedi)
@@ -78,14 +77,14 @@ all_sw <- rbind(all_sw, jedi)
 all_sw$pos <- 1:nrow(all_sw)
 
 #create new variable that counts the number of words in each line
-all_sw$nwords <- sapply(strsplit(all_sw$Dialogue, " "), length)
+all_sw$nwords <- sapply(strsplit(all_sw$dialogue, " "), length)
 
 #get cumulative words spoken at each line for all characters
-talk_vol <- all_sw %>% select(Character, nwords, pos, `Line Number`)
+talk_vol <- all_sw %>% select(character, nwords, pos, line_number)
 test <- talk_vol %>% 
-  spread(Character, nwords) %>% 
+  spread(character, nwords) %>% 
   replace(is.na(.), 0) %>% 
-  gather("who", "num_chars", -pos, -`Line Number`)
+  gather("who", "num_chars", -pos, -line_number)
 test$csum <- ave(test$num_chars, test$who, FUN=cumsum)
 
 #get the top 10 speakers to highlight them in the chart

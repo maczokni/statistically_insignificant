@@ -9,3 +9,5 @@ blogdown::new_post(title="Halloween MCR",
 
 
 
+library(blogdown)
+install.packages("rnaturalearthhires", repos = "http://packages.ropensci.org", type = "source")
