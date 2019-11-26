@@ -56,7 +56,7 @@ orcid_educations(my_orcid) %>%
 	{ do.call("rbind", .) } %>% 
 	brief_entries(
     what = `education-summary.role-title`,
-    when = glue::glue("{`education-summary.start-date.year.value`}–{`education-summary.end-date.year.value`}"),
+    when = glue::glue("{`education-summary.start-date.year.value`}-{`education-summary.end-date.year.value`}"),
     with = `education-summary.organization.name`
 	)
 ```
@@ -94,12 +94,24 @@ bibliography_entries("published.bib", "",
 
 
 
-## Forthcoming: publications under review for which pre-prints are available. 
+## In press: accepted publications for which pre-prints are available. 
 
 OSF profile: [osf.io/3nzk2](osf.io/3nzk2).
 
 ```{r forthcoming}
 bibliography_entries("forthcoming.bib", "", 
+										 sorting = "ydnt") %>% 
+	mutate(journal = ifelse(is.na(journal) & bibtype == "Article",
+													paste("pre-print on", publisher),
+													journal))
+```
+
+
+## Forthcoming: publications under review or about to be submitted. 
+
+
+```{r underreview}
+bibliography_entries("underreview.bib", "", 
 										 sorting = "ydnt") %>% 
 	mutate(journal = ifelse(is.na(journal) & bibtype == "Article",
 													paste("pre-print on", publisher),
