@@ -85,7 +85,7 @@ tribble(
 	
 	"Fellow", 2017, "present", "Software Sustainability Institute", "Working to promote open research and credit for research software",
 	
-	"Fellow", 2019, "present", "Higher Education Academy", "Fellowship is awarded to professionals who meet the criteria of Descriptor 2 of the UK Professional Standards Framework for teaching and supporting learning in higher education.",
+	"Fellow", 2019, "present", "Higher Education Academy", "Fellowship awarded to professionals who meet the criteria of Descriptor 2 of the UK Professional Standards Framework for teaching and supporting learning in higher education.",
 	
 	"Board member", 2017, "present", "Economic and Social Research Council Business and Local Government Data Research Centre", "Data Acquisition Board"
 ) %>% 
@@ -101,6 +101,7 @@ tribble(
 # Research and academic/professional standing
 
 ## Publications
+
 
 My research areas include perception of crime and place, spatial crime analysis, environmental criminology, social data science, transport crime, crowdsourcing, and geographical information analysis.
 
@@ -199,7 +200,9 @@ tribble(
 
 		"Mohammed Patel", 2019, 2023, "Health-related behaviour and working conditions", "Funded by Data Analytics and Society Centre for Doctoral Training, University of Manchester",
 	
-		"Sebastian Acevedo", 2018, 2021, "Unequal Distribution of Access to Public Safety: The Case of Local Governments in Chile", "Funded by Capital Humano Avanzado Conicyt – Becas Chile",
+		"Sebastian Acevedo", 2018, 2021, "Unequal Distribution of Access to Public Safety: The Case of Local Governments in Chile", "Funded by Capital Humano Avanzado Conicyt - Becas Chile",
+	
+	"Daniel Hammocks", 2018, 2022, "Innovation in Police Intelligence Practice: Horizon Scanning Tools and Processes for Finding Signals within the Noise.", "Funded by the Dawes Centre for Future Crimes (and based in University College London)",
 	
 			"Oskar Enghoff", 2017, 2020, "Consumer culture in an illicit digital economy: the production of demand, risk perceptions and trust among digital consumers of illicit drugs", "Funded by Engineering and Physical Research Council"
 	
@@ -322,7 +325,9 @@ brief_entries(
 
 # Teaching and Learning
 
+
 My teaching areas include, research methods, quantitative data analysis/ statistical methods, spatial data analysis and GIS, and environmental criminology. 
+
 
 
 ## University of Manchester Undergraduate Level Courses
@@ -369,12 +374,12 @@ tribble(
 ```{r teachingother}
 tribble(
 	~title, ~start_date, ~end_date, ~code, ~level,
-	"Getting Started in R: introduction to data analysis & visualisation", 2017, "present", "methods@manchester", "Weeklong intensive course introducing students to using R and R Studio for data analysis. Open to all, usually attended by professionals and academics.",
-	"Introduction to mapping data with QGIS", 2017, "present", "Q-Step internship preparation", "Afternoon short introduction to mapping spatial data for Q-step internship students",
-	"Spatial Data Analysis in Practice", 2017, 2017, "Stockholm Royal Institute of Technology (KTH)", "One-day introduction to mapping with QGIS and data collection from APIs as part of weeklong summer school for PhD students",
-	"Crowdsourced data and a crime science approach to perception of crime and place", 2018, 2018, "University of Amsterdam", "Crime Science module for masters level students",
-	"Trasport Safety and Security", 2012, 2017, "University College London MSc Transport Studies", "Guest lecture for graduate module, UCL Department of Civil, Environmental, and Geomatic Engineering",
-	"Data analysis using R", 2019, 2019, "Research IT", "One-day introduction to R, part of University of Manchester's Research IT series of courses for staff and PhD students."
+	"Getting Started in R: introduction to data analysis & visualisation", 2017, "present", "methods@manchester", "Week-long intensive course introducing students to using R and R Studio for data analysis. Open to all, usually attended by professionals and academics.\n",
+	"Introduction to mapping data with QGIS", 2017, "present", "Q-Step internship preparation", "Afternoon short introduction to mapping spatial data for Q-step internship students.\n",
+	"Spatial Data Analysis in Practice", 2017, 2017, "Stockholm Royal Institute of Technology (KTH)", "One-day introduction to mapping with QGIS and data collection from APIs as part of weeklong summer school for PhD students.\n",
+	"Crowdsourced data and a crime science approach to perception of crime and place", 2018, 2018, "University of Amsterdam", "Crime Science module for masters level students.\n",
+	"Trasport Safety and Security", 2012, 2017, "University College London MSc Transport Studies", "Guest lecture for graduate module, UCL Department of Civil, Environmental, and Geomatic Engineering.\n",
+	"Data analysis using R", 2019, 2019, "Research IT", "One-day introduction to R, part of University of Manchester's Research IT series of courses for staff and PhD students.\n"
 	
 ) %>% 
 	arrange(desc(start_date)) %>% 
@@ -385,13 +390,16 @@ tribble(
 	)
 ```
 
+
+
+---------------
 # Academic Enterprise and Knowledge Transfer
 
 ```{r enterprise}
 tribble(
 	~title, ~start_date, ~desc, 
 	
-"Open Data Manchester", 2020, "Open Data Manchester is a Community Interest Company interested in open data and promoting data literacy and suporting data analysis for good. I have been working with them for a while and recently they have come on-board to co-supervise my PhD student Nathan Khadaroo.", 
+"Open Data Manchester", 2020, "Open Data Manchester is a Community Interest Company interested in open data and promoting data literacy and suporting data analysis for good. I have been collaborating with them for a while and recently they have come on-board to co-supervise my PhD student Nathan Khadaroo.", 
 
 	"Wirral Hospitals' School Joseph Paxton Campus", "", "One-hour career oriented session for students enrolled in a community school for students unable to attend mainstream school introducing them to crime analysis.",
 
@@ -413,6 +421,8 @@ tribble(
 		with = glue::glue("{`desc`}")
 	)
 ```
+
+
 
 # Service and Leadership
 
