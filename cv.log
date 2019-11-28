@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.11.25)  28 NOV 2019 11:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.11.25)  25 NOV 2019 16:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -746,651 +746,102 @@ Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@width=\dimen130
 ) (/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2001/04/09 non-zero parskip adjustments
-) (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2017/12/19 v3.10 programmable bibliographies (PK/JW/AB)
-(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count112
-) (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
-Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count113
-(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
-File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-)) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/te
-xlive/texmf-dist/tex/generic/xstring/xstring.tex
-\@xs@message=\write3
-\integerpart=\count114
-\decimalpart=\count115
-)
-Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
-)
-\c@tabx@nest=\count116
-\c@listtotal=\count117
-\c@listcount=\count118
-\c@liststart=\count119
-\c@liststop=\count120
-\c@citecount=\count121
-\c@citetotal=\count122
-\c@multicitecount=\count123
-\c@multicitetotal=\count124
-\c@instcount=\count125
-\c@maxnames=\count126
-\c@minnames=\count127
-\c@maxitems=\count128
-\c@minitems=\count129
-\c@citecounter=\count130
-\c@savedcitecounter=\count131
-\c@uniquelist=\count132
-\c@uniquename=\count133
-\c@refsection=\count134
-\c@refsegment=\count135
-\c@maxextratitle=\count136
-\c@maxextratitleyear=\count137
-\c@maxextradate=\count138
-\c@maxextraalpha=\count139
-\c@abbrvpenalty=\count140
-\c@highnamepenalty=\count141
-\c@lownamepenalty=\count142
-\c@maxparens=\count143
-\c@parenlevel=\count144
-\blx@tempcnta=\count145
-\blx@tempcntb=\count146
-\blx@tempcntc=\count147
-\blx@maxsection=\count148
-\blx@maxsegment@0=\count149
-\blx@notetype=\count150
-\blx@parenlevel@text=\count151
-\blx@parenlevel@foot=\count152
-\blx@sectionciteorder@0=\count153
-\labelnumberwidth=\skip49
-\labelalphawidth=\skip50
-\biblabelsep=\skip51
-\bibitemsep=\skip52
-\bibnamesep=\skip53
-\bibinitsep=\skip54
-\bibparsep=\skip55
-\bibhang=\skip56
-\blx@bcfin=\read1
-\blx@bcfout=\write4
-\c@mincomprange=\count154
-\c@maxcomprange=\count155
-\c@mincompwidth=\count156
-Package biblatex Info: Trying to load biblatex default data model...
-Package biblatex Info: ... file 'blx-dm.def' found.
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def)
-Package biblatex Info: Trying to load biblatex citestyle data model...
-Package biblatex Info: ... file 'authoryear.dbx' not found.
-Package biblatex Info: Trying to load biblatex bibstyle data model...
-Package biblatex Info: ... file 'authoryear-comp.dbx' not found.
-Package biblatex Info: Trying to load biblatex custom data model...
-Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count157
-\c@savedafterword=\count158
-\c@annotator=\count159
-\c@savedannotator=\count160
-\c@author=\count161
-\c@savedauthor=\count162
-\c@bookauthor=\count163
-\c@savedbookauthor=\count164
-\c@commentator=\count165
-\c@savedcommentator=\count166
-\c@editor=\count167
-\c@savededitor=\count168
-\c@editora=\count169
-\c@savededitora=\count170
-\c@editorb=\count171
-\c@savededitorb=\count172
-\c@editorc=\count173
-\c@savededitorc=\count174
-\c@foreword=\count175
-\c@savedforeword=\count176
-\c@holder=\count177
-\c@savedholder=\count178
-\c@introduction=\count179
-\c@savedintroduction=\count180
-\c@namea=\count181
-\c@savednamea=\count182
-\c@nameb=\count183
-\c@savednameb=\count184
-\c@namec=\count185
-\c@savednamec=\count186
-\c@translator=\count187
-\c@savedtranslator=\count188
-\c@shortauthor=\count189
-\c@savedshortauthor=\count190
-\c@shorteditor=\count191
-\c@savedshorteditor=\count192
-\c@labelname=\count193
-\c@savedlabelname=\count194
-\c@institution=\count195
-\c@savedinstitution=\count196
-\c@lista=\count197
-\c@savedlista=\count198
-\c@listb=\count199
-\c@savedlistb=\count266
-\c@listc=\count267
-\c@savedlistc=\count268
-\c@listd=\count269
-\c@savedlistd=\count270
-\c@liste=\count271
-\c@savedliste=\count272
-\c@listf=\count273
-\c@savedlistf=\count274
-\c@location=\count275
-\c@savedlocation=\count276
-\c@organization=\count277
-\c@savedorganization=\count278
-\c@origlocation=\count279
-\c@savedoriglocation=\count280
-\c@origpublisher=\count281
-\c@savedorigpublisher=\count282
-\c@publisher=\count283
-\c@savedpublisher=\count284
-\c@language=\count285
-\c@savedlanguage=\count286
-\c@origlanguage=\count287
-\c@savedoriglanguage=\count288
-\c@pageref=\count289
-\c@savedpageref=\count290
-\shorthandwidth=\skip57
-\shortjournalwidth=\skip58
-\shortserieswidth=\skip59
-\shorttitlewidth=\skip60
-\shortauthorwidth=\skip61
-\shorteditorwidth=\skip62
-Package biblatex Info: Trying to load compatibility code...
-Package biblatex Info: ... file 'blx-compat.def' found.
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2017/12/19 v3.10 biblatex compatibility (PK/JW/AB)
-)
-Package biblatex Info: Trying to load generic definitions...
-Package biblatex Info: ... file 'biblatex.def' found.
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
-File: biblatex.def 2017/12/19 v3.10 biblatex compatibility (PK/JW/AB)
-\c@textcitecount=\count291
-\c@textcitetotal=\count292
-\c@textcitemaxnames=\count293
-\c@biburlnumpenalty=\count294
-\c@biburlucpenalty=\count295
-\c@biburllcpenalty=\count296
-\c@smartand=\count297
-)
-Package biblatex Info: Trying to load natbib compatibility...
-Package biblatex Info: ... file 'blx-natbib.def' found.
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-natbib.def
-File: blx-natbib.def 2017/12/19 v3.10 biblatex compatibility (PK/JW/AB)
-)
-Package biblatex Info: Trying to load bibliography style 'authoryear-comp'...
-Package biblatex Info: ... file 'authoryear-comp.bbx' found.
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear-comp.bbx
-File: authoryear-comp.bbx 2017/12/19 v3.10 biblatex bibliography style (PK/JW/A
-B)
-Package biblatex Info: Trying to load bibliography style 'authoryear'...
-Package biblatex Info: ... file 'authoryear.bbx' found.
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
-File: authoryear.bbx 2017/12/19 v3.10 biblatex bibliography style (PK/JW/AB)
-Package biblatex Info: Trying to load bibliography style 'standard'...
-Package biblatex Info: ... file 'standard.bbx' found.
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2017/12/19 v3.10 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count298
-\c@bbx:relatedtotal=\count299
-)))
-Package biblatex Info: Trying to load citation style 'authoryear'...
-Package biblatex Info: ... file 'authoryear.cbx' found.
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
-File: authoryear.cbx 2017/12/19 v3.10 biblatex citation style (PK/JW/AB)
-Package biblatex Info: Redefining '\cite'.
-Package biblatex Info: Redefining '\parencite'.
-Package biblatex Info: Redefining '\footcite'.
-Package biblatex Info: Redefining '\footcitetext'.
-Package biblatex Info: Redefining '\smartcite'.
-Package biblatex Info: Redefining '\textcite'.
-Package biblatex Info: Redefining '\textcites'.
-)
-Package biblatex Info: Trying to load configuration file...
-Package biblatex Info: ... file 'biblatex.cfg' found.
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
-File: biblatex.cfg 
-)) (/usr/share/texlive/texmf-dist/tex/latex/xpatch/xpatch.sty (/usr/share/texli
-ve/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2018/02/21 L3 programming layer (loader) 
-(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2018/02/21 L3 programming layer (code)
-\c_max_int=\count300
-\l_tmpa_int=\count301
-\l_tmpb_int=\count302
-\g_tmpa_int=\count303
-\g_tmpb_int=\count304
-\g__intarray_font_int=\count305
-\g__prg_map_int=\count306
-\c_log_iow=\count307
-\l_iow_line_count_int=\count308
-\l__iow_line_target_int=\count309
-\l__iow_one_indent_int=\count310
-\l__iow_indent_int=\count311
-\c_zero_dim=\dimen131
-\c_max_dim=\dimen132
-\l_tmpa_dim=\dimen133
-\l_tmpb_dim=\dimen134
-\g_tmpa_dim=\dimen135
-\g_tmpb_dim=\dimen136
-\c_zero_skip=\skip63
-\c_max_skip=\skip64
-\l_tmpa_skip=\skip65
-\l_tmpb_skip=\skip66
-\g_tmpa_skip=\skip67
-\g_tmpb_skip=\skip68
-\c_zero_muskip=\muskip11
-\c_max_muskip=\muskip12
-\l_tmpa_muskip=\muskip13
-\l_tmpb_muskip=\muskip14
-\g_tmpa_muskip=\muskip15
-\g_tmpb_muskip=\muskip16
-\l_keys_choice_int=\count312
-\c__fp_leading_shift_int=\count313
-\c__fp_middle_shift_int=\count314
-\c__fp_trailing_shift_int=\count315
-\c__fp_big_leading_shift_int=\count316
-\c__fp_big_middle_shift_int=\count317
-\c__fp_big_trailing_shift_int=\count318
-\c__fp_Bigg_leading_shift_int=\count319
-\c__fp_Bigg_middle_shift_int=\count320
-\c__fp_Bigg_trailing_shift_int=\count321
-\c__fp_rand_size_int=\count322
-\c__fp_rand_four_int=\count323
-\c__fp_rand_eight_int=\count324
-\l__sort_length_int=\count325
-\l__sort_min_int=\count326
-\l__sort_top_int=\count327
-\l__sort_max_int=\count328
-\l__sort_true_max_int=\count329
-\l__sort_block_int=\count330
-\l__sort_begin_int=\count331
-\l__sort_end_int=\count332
-\l__sort_A_int=\count333
-\l__sort_B_int=\count334
-\l__sort_C_int=\count335
-\l__tl_build_start_index_int=\count336
-\l__tl_build_index_int=\count337
-\l__tl_analysis_normal_int=\count338
-\l__tl_analysis_index_int=\count339
-\l__tl_analysis_nesting_int=\count340
-\l__tl_analysis_type_int=\count341
-\l__regex_internal_a_int=\count342
-\l__regex_internal_b_int=\count343
-\l__regex_internal_c_int=\count344
-\l__regex_balance_int=\count345
-\l__regex_group_level_int=\count346
-\l__regex_mode_int=\count347
-\c__regex_cs_in_class_mode_int=\count348
-\c__regex_cs_mode_int=\count349
-\l__regex_catcodes_int=\count350
-\l__regex_default_catcodes_int=\count351
-\c__regex_catcode_D_int=\count352
-\c__regex_catcode_S_int=\count353
-\c__regex_catcode_L_int=\count354
-\c__regex_catcode_O_int=\count355
-\c__regex_catcode_A_int=\count356
-\c__regex_all_catcodes_int=\count357
-\l__regex_show_lines_int=\count358
-\l__regex_min_state_int=\count359
-\l__regex_max_state_int=\count360
-\l__regex_left_state_int=\count361
-\l__regex_right_state_int=\count362
-\l__regex_capturing_group_int=\count363
-\l__regex_min_pos_int=\count364
-\l__regex_max_pos_int=\count365
-\l__regex_curr_pos_int=\count366
-\l__regex_start_pos_int=\count367
-\l__regex_success_pos_int=\count368
-\l__regex_curr_char_int=\count369
-\l__regex_curr_catcode_int=\count370
-\l__regex_last_char_int=\count371
-\l__regex_case_changed_char_int=\count372
-\l__regex_curr_state_int=\count373
-\l__regex_step_int=\count374
-\l__regex_min_active_int=\count375
-\l__regex_max_active_int=\count376
-\l__regex_replacement_csnames_int=\count377
-\l__regex_match_count_int=\count378
-\l__regex_min_submatch_int=\count379
-\l__regex_submatch_int=\count380
-\l__regex_zeroth_submatch_int=\count381
-\g__regex_trace_regex_int=\count382
-\c_empty_box=\box31
-\l_tmpa_box=\box32
-\l_tmpb_box=\box33
-\g_tmpa_box=\box34
-\g_tmpb_box=\box35
-\l__box_top_dim=\dimen137
-\l__box_bottom_dim=\dimen138
-\l__box_left_dim=\dimen139
-\l__box_right_dim=\dimen140
-\l__box_top_new_dim=\dimen141
-\l__box_bottom_new_dim=\dimen142
-\l__box_left_new_dim=\dimen143
-\l__box_right_new_dim=\dimen144
-\l__box_internal_box=\box36
-\l__coffin_internal_box=\box37
-\l__coffin_internal_dim=\dimen145
-\l__coffin_offset_x_dim=\dimen146
-\l__coffin_offset_y_dim=\dimen147
-\l__coffin_x_dim=\dimen148
-\l__coffin_y_dim=\dimen149
-\l__coffin_x_prime_dim=\dimen150
-\l__coffin_y_prime_dim=\dimen151
-\c_empty_coffin=\box38
-\l__coffin_aligned_coffin=\box39
-\l__coffin_aligned_internal_coffin=\box40
-\l_tmpa_coffin=\box41
-\l_tmpb_coffin=\box42
-\l__coffin_display_coffin=\box43
-\l__coffin_display_coord_coffin=\box44
-\l__coffin_display_pole_coffin=\box45
-\l__coffin_display_offset_dim=\dimen152
-\l__coffin_display_x_dim=\dimen153
-\l__coffin_display_y_dim=\dimen154
-\l__coffin_bounding_shift_dim=\dimen155
-\l__coffin_left_corner_dim=\dimen156
-\l__coffin_right_corner_dim=\dimen157
-\l__coffin_bottom_corner_dim=\dimen158
-\l__coffin_top_corner_dim=\dimen159
-\l__coffin_scaled_total_height_dim=\dimen160
-\l__coffin_scaled_width_dim=\dimen161
-) (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count383
-\l__driver_tmp_box=\box46
-))
-Package: xpatch 2012/10/02 v0.3 Extending etoolbox patching commands
-(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2018/02/21 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count384
-\g__xparse_grabber_int=\count385
-\l__xparse_m_args_int=\count386
-\l__xparse_mandatory_args_int=\count387
-\l__xparse_v_nesting_int=\count388
-)
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpatchcmd with sig. '' on line 125.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpretocmd with sig. '' on line 126.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xapptocmd with sig. '' on line 127.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xshowcmd with sig. '' on line 128.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpatchbibmacro with sig. 'm' on line 131.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpretobibmacro with sig. 'm' on line 133.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xapptobibmacro with sig. 'm' on line 135.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xshowbibmacro with sig. 'm' on line 137.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpatchfieldformat with sig. 'O{*}m' on line 139.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpretofieldformat with sig. 'O{*}m' on line 141.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xapptofieldformat with sig. 'O{*}m' on line 143.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xshowfieldformat with sig. 'O{*}m' on line 145.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpatchnameformat with sig. 'O{*}m' on line 147.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpretonameformat with sig. 'O{*}m' on line 149.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xapptonameformat with sig. 'O{*}m' on line 151.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xshownameformat with sig. 'O{*}m' on line 153.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpatchlistformat with sig. 'O{*}m' on line 155.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpretolistformat with sig. 'O{*}m' on line 157.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xapptolistformat with sig. 'O{*}m' on line 159.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xshowlistformat with sig. 'O{*}m' on line 161.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpatchindexfieldformat with sig. 'O{*}m' on line 163.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpretoindexfieldformat with sig. 'O{*}m' on line 165.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xapptoindexfieldformat with sig. 'O{*}m' on line 167.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xshowindexfieldformat with sig. 'O{*}m' on line 169.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpatchindexnameformat with sig. 'O{*}m' on line 171.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpretoindexnameformat with sig. 'O{*}m' on line 173.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xapptoindexnameformat with sig. 'O{*}m' on line 175.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xshowindexnameformat with sig. 'O{*}m' on line 177.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpatchindexlistformat with sig. 'O{*}m' on line 179.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpretoindexlistformat with sig. 'O{*}m' on line 181.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xappindextolistformat with sig. 'O{*}m' on line 183.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xshowindexlistformat with sig. 'O{*}m' on line 185.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpatchbibdriver with sig. 'm' on line 187.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xpretobibdriver with sig. 'm' on line 189.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xapptobibdriver with sig. 'm' on line 191.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xshowbibdriver with sig. 'm' on line 193.
-.................................................
-)
-\c@papers=\count389
-
-Package biblatex Warning: '\DeclareSortingScheme' is deprecated.
-(biblatex)                Please use '\DeclareSortingTemplate'.
-
-(/usr/share/texlive/texmf-dist/tex/latex/paralist/paralist.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/paralist/paralist.sty
 Package: paralist 2017/01/22 v2.7 Extended list environments
-\pltopsep=\skip69
-\plpartopsep=\skip70
-\plitemsep=\skip71
-\plparsep=\skip72
+\pltopsep=\skip49
+\plpartopsep=\skip50
+\plitemsep=\skip51
+\plparsep=\skip52
 \pl@lab=\toks22
 ) (/usr/share/texlive/texmf-dist/tex/latex/ms/ragged2e.sty
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everysel.sty
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
-\CenteringLeftskip=\skip73
-\RaggedLeftLeftskip=\skip74
-\RaggedRightLeftskip=\skip75
-\CenteringRightskip=\skip76
-\RaggedLeftRightskip=\skip77
-\RaggedRightRightskip=\skip78
-\CenteringParfillskip=\skip79
-\RaggedLeftParfillskip=\skip80
-\RaggedRightParfillskip=\skip81
-\JustifyingParfillskip=\skip82
-\CenteringParindent=\skip83
-\RaggedLeftParindent=\skip84
-\RaggedRightParindent=\skip85
-\JustifyingParindent=\skip86
+\CenteringLeftskip=\skip53
+\RaggedLeftLeftskip=\skip54
+\RaggedRightLeftskip=\skip55
+\CenteringRightskip=\skip56
+\RaggedLeftRightskip=\skip57
+\RaggedRightRightskip=\skip58
+\CenteringParfillskip=\skip59
+\RaggedLeftParfillskip=\skip60
+\RaggedRightParfillskip=\skip61
+\JustifyingParfillskip=\skip62
+\CenteringParindent=\skip63
+\RaggedLeftParindent=\skip64
+\RaggedRightParindent=\skip65
+\JustifyingParindent=\skip66
 ) (/usr/share/texlive/texmf-dist/tex/latex/datetime/datetime.sty
 Package: datetime 2015/03/20 v2.60 Date Time Package
-(/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fmtcount.sty
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count112
+) (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fmtcount.sty
 Package: fmtcount 2017/12/24 v3.05
-(/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcprefix.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcprefix.sty
 Package: fcprefix 2012/09/28
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
 Package: fcnumparser 2017/06/15
-\fc@digit@counter=\count390
+\fc@digit@counter=\count113
 )) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks23
-\ex@=\dimen162
+\ex@=\dimen131
 )
-\c@padzeroesN=\count391
-\fc@tmpcatcode=\count392
-\@DT@modctr=\count393
-\@ordinalctr=\count394
-\@orgargctr=\count395
-\@strctr=\count396
-\@tmpstrctr=\count397
-\@DT@loopN=\count398
-\@DT@X=\count399
+\c@padzeroesN=\count114
+\fc@tmpcatcode=\count115
+\@DT@modctr=\count116
+\@ordinalctr=\count117
+\@orgargctr=\count118
+\@strctr=\count119
+\@tmpstrctr=\count120
+\@DT@loopN=\count121
+\@DT@X=\count122
 ) (/usr/share/texlive/texmf-dist/tex/latex/datetime/datetime-defaults.sty
 Package: datetime-defaults 2013/09/10
 )
-\@day=\count400
-\@month=\count401
-\@year=\count402
-\c@HOUR=\count403
-\c@HOURXII=\count404
-\c@MINUTE=\count405
-\c@TOHOUR=\count406
-\c@TOMINUTE=\count407
-\c@SECOND=\count408
-\currenthour=\count409
-\currentminute=\count410
-\currentsecond=\count411
+\@day=\count123
+\@month=\count124
+\@year=\count125
+\c@HOUR=\count126
+\c@HOURXII=\count127
+\c@MINUTE=\count128
+\c@TOHOUR=\count129
+\c@TOMINUTE=\count130
+\c@SECOND=\count131
+\currenthour=\count132
+\currentminute=\count133
+\currentsecond=\count134
 Package datetime Info: No datetime.cfg file found, using default settings on in
 put line 308.
-\@dtctr=\count412
-\dayofyear=\count413
-\dayofweek=\count414
+\@dtctr=\count135
+\dayofyear=\count136
+\dayofweek=\count137
 LaTeX Info: Redefining \today on input line 736.
 \dt@a=\toks24
 \dt@b=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
 s
-\f@nch@headwidth=\skip87
-\f@nch@O@elh=\skip88
-\f@nch@O@erh=\skip89
-\f@nch@O@olh=\skip90
-\f@nch@O@orh=\skip91
-\f@nch@O@elf=\skip92
-\f@nch@O@erf=\skip93
-\f@nch@O@olf=\skip94
-\f@nch@O@orf=\skip95
+\f@nch@headwidth=\skip67
+\f@nch@O@elh=\skip68
+\f@nch@O@erh=\skip69
+\f@nch@O@olh=\skip70
+\f@nch@O@orh=\skip71
+\f@nch@O@elf=\skip72
+\f@nch@O@erf=\skip73
+\f@nch@O@olf=\skip74
+\f@nch@O@orf=\skip75
 ) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip96
-\enit@outerparindent=\dimen163
+\labelindent=\skip76
+\enit@outerparindent=\dimen132
 \enit@toks=\toks26
-\enit@inbox=\box47
-\enitdp@description=\count415
+\enit@inbox=\box31
+\enitdp@description=\count138
 ) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/pifont.sty
 Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
 LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
@@ -1402,46 +853,46 @@ LaTeX Font Info:    Try loading font information for U+psy on input line 64.
 File: upsy.fd 2001/06/04 font definitions for U/psy.
 )) (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
-\ttl@box=\box48
-\beforetitleunit=\skip97
-\aftertitleunit=\skip98
-\ttl@plus=\dimen164
-\ttl@minus=\dimen165
+\ttl@box=\box32
+\beforetitleunit=\skip77
+\aftertitleunit=\skip78
+\ttl@plus=\dimen133
+\ttl@minus=\dimen134
 \ttl@toksa=\toks27
-\titlewidth=\dimen166
-\titlewidthlast=\dimen167
-\titlewidthfirst=\dimen168
+\titlewidth=\dimen135
+\titlewidthlast=\dimen136
+\titlewidthfirst=\dimen137
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
-\col@sep=\dimen169
-\extrarowheight=\dimen170
+\col@sep=\dimen138
+\extrarowheight=\dimen139
 \NC@list=\toks28
-\extratabsurround=\skip99
-\backup@length=\skip100
+\extratabsurround=\skip79
+\backup@length=\skip80
 )
-\TX@col@width=\dimen171
-\TX@old@table=\dimen172
-\TX@old@col=\dimen173
-\TX@target=\dimen174
-\TX@delta=\dimen175
-\TX@cols=\count416
+\TX@col@width=\dimen140
+\TX@old@table=\dimen141
+\TX@old@col=\dimen142
+\TX@target=\dimen143
+\TX@delta=\dimen144
+\TX@cols=\count139
 \TX@ftn=\toks29
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count417
-\calc@Bcount=\count418
-\calc@Adimen=\dimen176
-\calc@Bdimen=\dimen177
-\calc@Askip=\skip101
-\calc@Bskip=\skip102
+\calc@Acount=\count140
+\calc@Bcount=\count141
+\calc@Adimen=\dimen145
+\calc@Bdimen=\dimen146
+\calc@Askip=\skip81
+\calc@Bskip=\skip82
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count419
-\calc@Cskip=\skip103
+\calc@Ccount=\count142
+\calc@Cskip=\skip83
 )
-\headerboxwidth=\skip104
+\headerboxwidth=\skip84
 (/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesome.sty
 Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
 
@@ -1449,64 +900,57 @@ Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
 .tex)
 (/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-pdftex.
 tex))
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
-)
-\@quotelevel=\count420
-\@quotereset=\count421
-(./cv.aux)
+No file cv.aux.
 \openout1 = `cv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 248.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 248.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 188.
+LaTeX Font Info:    ... okay on input line 188.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 188.
+LaTeX Font Info:    ... okay on input line 188.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 188.
+LaTeX Font Info:    ... okay on input line 188.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 188.
+LaTeX Font Info:    ... okay on input line 188.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 188.
+LaTeX Font Info:    ... okay on input line 188.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 188.
+LaTeX Font Info:    ... okay on input line 188.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 188.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 188.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
+LaTeX Font Info:    ... okay on input line 188.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 188.
+LaTeX Font Info:    ... okay on input line 188.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 188.
+LaTeX Font Info:    ... okay on input line 188.
 LaTeX Font Info:    Try loading font information for T1+Carlito-TLF on input li
-ne 248.
+ne 188.
 (/usr/share/texlive/texmf-dist/tex/latex/carlito/T1Carlito-TLF.fd
 File: T1Carlito-TLF.fd 2014/08/20 (autoinst) Font definitions for T1/Carlito-TL
 F.
 )
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 248.
-\c@mv@tabular=\count422
-\c@mv@boldtabular=\count423
+(Font)              scaled to size 10.0pt on input line 188.
+\c@mv@tabular=\count143
+\c@mv@boldtabular=\count144
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count424
-\scratchdimen=\dimen178
-\scratchbox=\box49
-\nofMPsegments=\count425
-\nofMParguments=\count426
+\scratchcounter=\count145
+\scratchdimen=\dimen147
+\scratchbox=\box33
+\nofMPsegments=\count146
+\nofMParguments=\count147
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count427
-\MPscratchDim=\dimen179
-\MPnumerator=\count428
-\makeMPintoPDFobject=\count429
+\MPscratchCnt=\count148
+\MPscratchDim=\dimen148
+\MPnumerator=\count149
+\makeMPintoPDFobject=\count150
 \everyMPtoPDFconversion=\toks31
 )
-LaTeX Info: Redefining \microtypecontext on input line 248.
+LaTeX Info: Redefining \microtypecontext on input line 188.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
@@ -1520,21 +964,20 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Carlito-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-\AtBeginShipoutBox=\box50
-Package hyperref Info: Link coloring OFF on input line 248.
+\AtBeginShipoutBox=\box34
+Package hyperref Info: Link coloring OFF on input line 188.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count430
+\c@section@level=\count151
 )
-LaTeX Info: Redefining \ref on input line 248.
-LaTeX Info: Redefining \pageref on input line 248.
-LaTeX Info: Redefining \nameref on input line 248.
-(./cv.out) (./cv.out)
-\@outlinefile=\write5
-\openout5 = `cv.out'.
+LaTeX Info: Redefining \ref on input line 188.
+LaTeX Info: Redefining \pageref on input line 188.
+LaTeX Info: Redefining \nameref on input line 188.
+\@outlinefile=\write3
+\openout3 = `cv.out'.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1570,18 +1013,8 @@ LaTeX Info: Redefining \nameref on input line 248.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Data encoding 'utf8' specified.
-(biblatex)             No need to reencode data.
-\openout4 = `cv.bcf'.
-
-Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'cv.bbl' found.
-(./cv.bbl)
-Package biblatex Info: Reference section=0 on input line 248.
-Package biblatex Info: Reference segment=0 on input line 248.
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 248.
+LaTeX Info: Redefining \selectfont on input line 188.
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
@@ -1589,279 +1022,73 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 249.
+(Font)              <7> on input line 189.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 249.
+(Font)              <5> on input line 189.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 249.
+(Font)              scaled to size 17.28pt on input line 189.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/bx/n' in size <17.28> not availa
 ble
 (Font)              Font shape `T1/Carlito-TLF/b/n' tried instead on input line
- 249.
+ 189.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 249.
+(Font)              scaled to size 17.28pt on input line 189.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 249.
+(Font)              scaled to size 12.0pt on input line 189.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/bx/n' in size <10> not available
 
 (Font)              Font shape `T1/Carlito-TLF/b/n' tried instead on input line
- 249.
+ 189.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 249.
+(Font)              scaled to size 10.0pt on input line 189.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 249.
+(Font)              scaled to size 9.0pt on input line 189.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 249.
+(Font)              <9> on input line 189.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 249.
+(Font)              <6> on input line 189.
 LaTeX Font Info:    Try loading font information for U+fontawesometwo on input 
-line 249.
+line 189.
 (/usr/share/texlive/texmf-dist/tex/latex/fontawesome/ufontawesometwo.fd
 File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 )
 LaTeX Font Info:    Try loading font information for U+fontawesomethree on inpu
-t line 249.
+t line 189.
 (/usr/share/texlive/texmf-dist/tex/latex/fontawesome/ufontawesomethree.fd
 File: ufontawesomethree.fd 2016/05/22 Font definitions for U/fontawesomethree.
 )
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 249--250
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 189--190
 [][][][] 
  []
 
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/bx/n' in size <12> not available
 
 (Font)              Font shape `T1/Carlito-TLF/b/n' tried instead on input line
- 253.
+ 193.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 253.
+(Font)              scaled to size 12.0pt on input line 193.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 255.
+(Font)              scaled to size 8.0pt on input line 195.
 
-Overfull \hbox (19.88274pt too wide) in alignment at lines 260--260
+Overfull \hbox (58.44868pt too wide) in alignment at lines 195--195
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
-[]\T1/Carlito-TLF/m/n/8 (+20) Fellowship is awarded to pro-fes-sion-als who mee
-t the cri-te-ria of De-scrip-tor 2 of the UK Pro-fes-sional Stan-dards Frame-wo
-rk for
+Overfull \hbox (20.28966pt too wide) in alignment at lines 200--200
+[] []
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
-[]\T1/Carlito-TLF/b/n/10 Board mem-ber: Eco-nomic and So-cial Re-search Coun-ci
-l Busi-ness and Lo-cal Gov-ern-ment Data Re-search
- []
-
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 289.
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 1072) in paragraph at lines 350--350
-[][] [][][]\T1/Carlito-TLF/m/n/10 (+20) Solymosi, R (2018). North-west Uni-ver-
-si-ties R Day event. \T1/Carlito-TLF/m/it/10 (+20) Soft-ware Sus-tain-abil-ity 
-In-sti-tute Blog. Avail-able: 
- []
-
-
-Underfull \hbox (badness 5431) in paragraph at lines 350--350
-[][] [][][]\T1/Carlito-TLF/m/n/10 (+20) Solymosi, R (2018). Brexit Data Chal-le
-nge event. \T1/Carlito-TLF/m/it/10 (+20) Soft-ware Sus-tain-abil-ity In-sti-tut
-e Blog. Avail-able: 
- []
-
-
-Underfull \hbox (badness 2302) in paragraph at lines 350--350
-[][] [][][]\T1/Carlito-TLF/m/n/10 (+20) Solymosi, R (2016). Con-fi-dence in tra
-ns-port and polic-ing. \T1/Carlito-TLF/m/it/10 (+20) Avail-able: https://www.uc
-l.ac.uk/transport- 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 350--350
-[][] [][][]\T1/Carlito-TLF/m/n/10 (+20) Solymosi, R (2014). Trans-port Streets 
-and Crime. \T1/Carlito-TLF/m/it/10 (+20) Avail-able: https://www.ucl.ac.uk/tran
-sport- 
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 371--371
-[]\T1/Carlito-TLF/b/n/10 Identifying fea-tures that af-fect pub-lic en-gage-men
-t with ap-peals for in-for-ma-tion about miss-ing per-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 381--381
-[]\T1/Carlito-TLF/b/n/10 Sebastian Acevedo: Un-equal Dis-tri-bu-tion of Ac-cess
- to Pub-lic Safety: The Case of Lo-cal Gov-ern-ments in
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 381--381
-[]\T1/Carlito-TLF/b/n/10 Oskar En-ghoff: Con-sumer cul-ture in an il-licit dig-
-i-tal econ-omy: the pro-duc-tion of de-mand, risk per-cep-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 389--389
-[]\T1/Carlito-TLF/b/n/10 The role of in-no-va-tive data col-lec-tion meth-ods i
-n ad-vanc-ing un-der-stand-ing, and the im-por-tance of
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 394--394
-[]\T1/Carlito-TLF/b/n/10 Victimization and per-ceived safety among col-lege stu
--dents: Fo-cus on women's tran-sit safety in Lon-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 394--394
-[]\T1/Carlito-TLF/b/n/10 Mapping Fear of Crime Dy-nam-i-cally in Place and Time
-: Case study of Rev-enue Pro-tec-tion In-spec-tors
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 399--399
-[]\T1/Carlito-TLF/b/n/10 Mapping fear of crime hotspots as they vary with place
-, time, and in-di-vid-ual char-ac-ter-is-tics us-ing
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 419--419
-[]\T1/Carlito-TLF/b/n/10 University of Am-s-ter-dam: Crowd-sourced data and a c
-rime sci-ence ap-proach to per-cep-tion of crime
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 419--419
-[]\T1/Carlito-TLF/m/n/8 (+20) Weeklong in-ten-sive course in-tro-duc-ing stu-de
-nts to us-ing R and R Stu-dio for data anal-y-sis. Open to all, usu-ally at-ten
-ded by
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 424--424
-[]\T1/Carlito-TLF/m/n/8 (+20) Open Data Manch-ester is a Com-mu-nity In-ter-est
- Com-pany in-ter-ested in open data and pro-mot-ing data lit-er-acy and su-port
--ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 424--424
-[]\T1/Carlito-TLF/m/n/8 (+20) One-hour ca-reer ori-ented ses-sion for stu-dents
- en-rolled in a com-mu-nity school for stu-dents un-able to at-tend main-stream
- school
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 424--424
-[]\T1/Carlito-TLF/m/n/8 (+20) Co-supervision of PhD stu-dent with Greater Manch
--ester Po-lice's Force In-tel-li-gence Bu-reau and col-leagues in Uni-ver-sity 
-Col-lege
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 424--424
-[]\T1/Carlito-TLF/m/n/8 (+13) Training work-shop on data vi-su-al-i-sa-tion and
- GIS as part of the N8 Polic-ing Re-search Part-ner-ship train-ing course for p
-o-lice an-a-lysts
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 424--424
-[]\T1/Carlito-TLF/m/n/8 (+9) I con-sis-tently give talks and par-tic-i-pate in 
-data-related mee-tups in-clud-ing ones which em-pha-sise rep-re-sen-ta-tion of 
-women in data
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 424--424
-[]\T1/Carlito-TLF/m/n/8 (+20) The NGO `MySo-ci-ety' in-vited me to present the 
-work I did us-ing their fix my street plat-form at the in-ter-na-tional civic t
-ech-nol-ogy
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 424--424
-\T1/Carlito-TLF/m/n/8 (+20) con-fer-ence for re-searchers, prac-ti-tion-ers, an
-d all those with an in-ter-est in how tech-nol-ogy is chang-ing the way we en-g
-age with
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 424--424
-\T1/Carlito-TLF/m/n/8 (+20) so-ci-ety. TICTeC is known for its unique fo-cus on
- the im-pacts of Civic Tech-nolo-gies where fun-ders mix with prac-ti-tion-ers,
- ac-tivists
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 424--424
-\T1/Carlito-TLF/m/n/8 (+20) con-verse with re-searchers, small NGOs get as much
- at-ten-tion as the big play-ers. Since then, I have been work-ing with their
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 429--429
-[]\T1/Carlito-TLF/b/n/10 Department of Crim-i-nol-ogy: Pro-gramme Di-rec-tor fo
-r Post-grad-u-ate Taught Pro-grammes (Mas-ters
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 429--429
-[]\T1/Carlito-TLF/m/n/8 (+16) Strategic over-sight of pro-gramme di-rec-tion te
-ach-ing cur-ricu-lum for all Mas-ters' streams, along-side day-to-day ad-min-is
--tra-tive and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 429--429
-[]\T1/Carlito-TLF/m/n/8 (+20) Direction and or-gan-i-sa-tion of user group ac-t
-iv-i-ties such as monthly meet-ings, hackathons, and prepa-ra-tion of joint re-
-search
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 429--429
-[]\T1/Carlito-TLF/m/n/8 (+20) Undergraduate Open Day, Post-grad-u-ate Re-search
- (PhD) Open Day, and sim-i-lar roles as-sist-ing col-leagues and pro-mot-ing th
-e
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 431.
-[6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 431.
-(./cv.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 431.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 431.
-Package rerunfilecheck Info: File `cv.out' has not changed.
-(rerunfilecheck)             Checksum: 303E5CC682C22CF31F06D78B5B575E29;5284.
-Package logreq Info: Writing requests to 'cv.run.xml'.
-\openout1 = `cv.run.xml'.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 431.
- ) 
+! Undefined control sequence.
+l.210 \defbibheading
+                    {bib-published.bib-2909426}{} 
 Here is how much of TeX's memory you used:
- 30617 strings out of 492982
- 530794 string characters out of 6134895
- 967239 words of memory out of 5000000
- 33706 multiletter control sequences out of 15000+600000
- 612807 words of font info for 107 fonts, out of 8000000 for 9000
+ 15511 strings out of 492982
+ 224599 string characters out of 6134895
+ 338596 words of memory out of 5000000
+ 18862 multiletter control sequences out of 15000+600000
+ 66911 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 50i,19n,63p,10438b,1256s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/carlito/crlt_z7vml3.enc}{/usr/
-share/texlive/texmf-dist/fonts/enc/dvips/fontawesome/fontawesomethree.enc}{/usr
-/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc}</usr/
-share/texlive/texmf-dist/fonts/type1/typoland/carlito/Carlito-Bold.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/typoland/carlito/Carlito-Italic.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/typoland/carlito/Carlito.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb>
-Output written on cv.pdf (6 pages, 114312 bytes).
-PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 222 compressed objects within 3 object streams
- 94 named destinations out of 1000 (max. 500000)
- 24761 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 50i,19n,54p,1009b,402s stack positions out of 5000i,500n,10000p,200000b,80000s
 
+!  ==> Fatal error occurred, no output PDF file produced!

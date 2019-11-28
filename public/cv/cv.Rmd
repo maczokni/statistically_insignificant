@@ -14,6 +14,7 @@ output: vitae::hyndman
 
 
 ```{r setup, include=FALSE}
+
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library("lubridate")
 library("rorcid")
@@ -24,7 +25,22 @@ my_orcid <- "0000-0001-8689-1526"
 ```
 
 
-# Employment
+# Education and Qualifications
+
+```{r education}
+
+orcid_educations(my_orcid) %>% 
+	pluck(my_orcid, "affiliation-group", "summaries") %>% 
+	{ do.call("rbind", .) } %>% 
+	brief_entries(
+    what = `education-summary.role-title`,
+    when = glue::glue("{`education-summary.start-date.year.value`}-{`education-summary.end-date.year.value`}"),
+    with = `education-summary.organization.name`
+	)
+```
+
+
+# Present and previous appointments
 
 ```{r employment}
 orcid_employments(my_orcid) %>% 
@@ -36,7 +52,7 @@ orcid_employments(my_orcid) %>%
 			format(ymd(paste(`employment-summary.start-date.year.value`,
 											 `employment-summary.start-date.month.value`,
 											 `employment-summary.start-date.day.value`)), "%b %Y"), 
-			"–",
+			"-",
 			ifelse(is.na(`employment-summary.end-date.year.value`),
 						 "present",
 						 format(ymd(paste(`employment-summary.end-date.year.value`,
@@ -46,21 +62,6 @@ orcid_employments(my_orcid) %>%
 		with = glue::glue("{`employment-summary.department-name`}, {`employment-summary.organization.name`}")
 	)
 ```
-
-
-# Education
-
-```{r education}
-orcid_educations(my_orcid) %>% 
-	pluck(my_orcid, "affiliation-group", "summaries") %>% 
-	{ do.call("rbind", .) } %>% 
-	brief_entries(
-    what = `education-summary.role-title`,
-    when = glue::glue("{`education-summary.start-date.year.value`}–{`education-summary.end-date.year.value`}"),
-    with = `education-summary.organization.name`
-	)
-```
-
 
 <!-- # Professional qualifications -->
 
@@ -75,13 +76,39 @@ orcid_educations(my_orcid) %>%
 <!-- 	) -->
 <!-- ``` -->
 
+# Visiting appointments and memberships 
 
-# Publications
+```{r visiting}
+tribble(
+	~title, ~start_date, ~end_date, ~value, ~funder,
+	"Honorary Lecturer", 2016, "present", "University College London", "Research and teaching activities based in Department of Civil, Environmental, and Geomatic Engineering",
+	
+	"Fellow", 2017, "present", "Software Sustainability Institute", "Working to promote open research and credit for research software",
+	
+	"Fellow", 2019, "present", "Higher Education Academy", "Fellowship is awarded to professionals who meet the criteria of Descriptor 2 of the UK Professional Standards Framework for teaching and supporting learning in higher education.",
+	
+	"Board member", 2017, "present", "Economic and Social Research Council Business and Local Government Data Research Centre", "Data Acquisition Board"
+) %>% 
+	arrange(desc(start_date)) %>% 
+	brief_entries(
+		what = glue::glue("{`title`}: {`value`}"),
+		when = glue::glue("{`start_date`}-{`end_date`}"),
+		with = glue::glue("{`funder`}")
+	)
+```
+
+
+# Research and academic/professional standing
+
+## Publications
+
+My research areas include perception of crime and place, spatial crime analysis, environmental criminology, social data science, transport crime, crowdsourcing, and geographical information analysis.
+
 
 ORCID: `r my_orcid`
 
 
-## Peer reviewed publications
+### Peer reviewed publications
 
 
 ```{r publications}
@@ -94,12 +121,22 @@ bibliography_entries("published.bib", "",
 
 
 
-## Forthcoming: publications under review for which pre-prints are available. 
+### Publications accepted or under review (pre-prints available). 
 
 OSF profile: [osf.io/3nzk2](osf.io/3nzk2).
 
-```{r forthcoming}
-bibliography_entries("forthcoming.bib", "", 
+```{r accepted}
+bibliography_entries("accepted.bib", "", 
+										 sorting = "ydnt") %>% 
+	mutate(journal = ifelse(is.na(journal) & bibtype == "Article",
+													paste("pre-print on", publisher),
+													journal))
+```
+
+### Forthcoming publications pending submission. 
+
+```{r underreview}
+bibliography_entries("underreview.bib", "", 
 										 sorting = "ydnt") %>% 
 	mutate(journal = ifelse(is.na(journal) & bibtype == "Article",
 													paste("pre-print on", publisher),
@@ -107,73 +144,185 @@ bibliography_entries("forthcoming.bib", "",
 ```
 
 
-## Other outputs
+### Media and other outputs
 
 ```{r otherpubs}
 bibliography_entries("otherpubs.bib", "", 
 										 sorting = "ydnt")
 ```
 
-# Funding
+## Research Grants
 
-## Funding awarded as Principal Investigator
+### Funding awarded as Principal Investigator
 
 
 ```{r fundingpi}
 tribble(
 	~title, ~start_date, ~end_date, ~value, ~funder,
-	"Identifying features that affect public engagement with appeals for information about missing persons on Twitter", 2019, 2019, "£5,000", "Manchester Statistical Society Campion Grant",
-	"Measuring fear of crime using app-based and sensing methodologies", 2017, 2020, "£10,000", "British Academy and Leverhulme Small Grants",
-	"Using Bayesian Surprise maps to explore debt and insolvency across the UK", 2018, 2019, "£10,000", "Consumer Data Research Centre, Economic and Social Research Council",
-	"Building Tools and Training for Crime Analysts using R", 2017, 2017, "£3,000", "N8 Policing Research Partnership", 
-	"Data Visualisation in Criminal Courts", 2017, 2017, "£1,000", "Economic Social Research Council, Festival of Social Sciences"
+	"Identifying features that affect public engagement with appeals for information about missing persons on Twitter", 2019, 2019, "GBP 5,000", "Manchester Statistical Society Campion Grant",
+	"Measuring fear of crime using app-based and sensing methodologies", 2017, 2020, "GBP 10,000", "British Academy and Leverhulme Small Grants",
+	"Using Bayesian Surprise maps to explore debt and insolvency across the UK", 2018, 2019, "GBP 10,000", "Consumer Data Research Centre, Economic and Social Research Council",
+	"Building Tools and Training for Crime Analysts using R", 2017, 2017, "GBP 3,000", "N8 Policing Research Partnership", 
+	"Data Visualisation in Criminal Courts", 2017, 2017, "GBP 1,000", "Economic Social Research Council, Festival of Social Sciences"
 ) %>% 
 	arrange(desc(start_date)) %>% 
 	brief_entries(
 		what = glue::glue("{`title`}"),
-		when = glue::glue("{`start_date`}–{`end_date`}"),
+		when = glue::glue("{`start_date`}-{`end_date`}"),
 		with = glue::glue("{`value`} funding from {`funder`}")
 	)
 ```
 
 
-## Funding awarded as Co Investigator
+### Funding awarded as Co Investigator
 
 
 ```{r fundingci}
 tribble(
 	~title, ~start_date, ~end_date, ~value, ~funder,
-	"Civic InnovatioN in CommunITY: safety, policing and trust with young people", 2019, 2020, "£30,000", "EPSRC Network+: Social Justice through the Digital Economy"
+	"Civic InnovatioN in CommunITY: safety, policing and trust with young people", 2019, 2020, "GBP 60,000", "EPSRC Network+: Social Justice through the Digital Economy"
 ) %>% 
 	arrange(desc(start_date)) %>% 
 	brief_entries(
 		what = glue::glue("{`title`}"),
-		when = glue::glue("{`start_date`}–{`end_date`}"),
+		when = glue::glue("{`start_date`}-{`end_date`}"),
 		with = glue::glue("{`value`} funding from {`funder`}")
 	)
 ```
 
+## Supervision of Research Students
 
-
-
-# Teaching
-
-## University of Manchester Graduate Level Courses
-
-```{r teachingpgt}
+```{r phdsups}
 tribble(
-	~title, ~start_date, ~end_date, ~code, ~level,
-	"Designing Criminological Research", 2016, "present", "LAWS70311", "Course director and primary lecturer on compulsory research methods module for all Masters streams",
-	"Data Analysis with R & R Studio", 2016, 2019, "LAWS70821", "2016: Course director and sole lecturer, 2018 onwards: ad-hoc lecturer on introductory statistics for MRes students using R",
-	"Evaluating Policy and Practice", 2018, 2019, "LAWS70542", "Lecturer on mandatory module for all Masters streams introducing evaluation research beyond academia"
+	~name, ~start_date, ~end_date, ~title, ~funder,
+	"Nathan Khadaroo", 2019, 2023, "Citizen Data Science for Public Good", "Funded by Data Analytics and Society Centre for Doctoral Training, University of Manchester",
+
+		"Mohammed Patel", 2019, 2023, "Health-related behaviour and working conditions", "Funded by Data Analytics and Society Centre for Doctoral Training, University of Manchester",
+	
+		"Sebastian Acevedo", 2018, 2021, "Unequal Distribution of Access to Public Safety: The Case of Local Governments in Chile", "Funded by Capital Humano Avanzado Conicyt – Becas Chile",
+	
+			"Oskar Enghoff", 2017, 2020, "Consumer culture in an illicit digital economy: the production of demand, risk perceptions and trust among digital consumers of illicit drugs", "Funded by Engineering and Physical Research Council"
+	
 ) %>% 
-	arrange(desc(start_date)) %>% 
+  arrange(desc(start_date)) %>% 
 	brief_entries(
-		what = glue::glue("{`code`}: {`title`}"),
-		when = glue::glue("{`start_date`}–{`end_date`}"),
-		with = glue::glue("{`level`}")
+		what = glue::glue("{`name`}: {`title`}"),
+		when = glue::glue("{`start_date`}-{`end_date`}"),
+		with = glue::glue("{`funder`}")
 	)
 ```
+
+
+## Lectures and Conference Activity
+
+### Invited talks
+
+
+```{r invitedtalks}
+tribble(
+	~title, ~date, ~venue, 
+	"Mapping and spatial modelling in R for crime prevention and conservation", 2019,"Sheffield R User Group, UK",
+	
+	"The role of innovative data collection methods in advancing understanding, and the importance of considering the biases within", "","Women in Data Science: Zurich, Switzerland",
+	
+	"Keynote: Data-driven insights in law: opportunities and cautions", "","Berlin Legal Tech Conference 2019, Germany",
+	
+	"The role of innovative data collection methods in advancing behavioural understanding", "", "Cognitive and Decision Sciences, University of Basel, Switzerland",
+	
+	"The role of innovative data collection methods in advancing criminological understanding","","Manchester Metropolitan University Big Data Centre Seminar Series, UK",
+	
+	"Crowdsourcing subjective perceptions of neighbourhood disorder: interpreting bias in Open Data", 2018, "TicTec 2018, Lisbon, Portugal",
+	
+	"Interdisciplinary Alchemy: Data Science + Social Science","","Data Kind UK",
+	
+	"Everybody Lies but Not Everybody Tweets: Making Sense of the Bias in Your Data","","Advances in Data Science conference, Manchester, UK",
+	
+		"Reproducible Crime Analysis using R", 2017,"Intelligence Innovation Working Group hosted by West Midlands Police",
+	"Building Interactive Data Visualizations","","Manchester Methods Fair, UK",
+	"Using open data in the social sciences","", "Her+Data Meetup, Manchester, UK",
+	"What is Crowdsourced Data?","","Methods@Manchester seminar on research methods in social sciences, Manchester,UK", 
+	"Eyes and Apps on the Street","", "Stockholm Royal Institute of Technology (KTH), Sweden",
+	"Keynote: Making Sense of Data using Methods","","Methods North West Launch Conference, Manchester, UK", 
+	"Using R for Crime Analysis","", "Greater Manchester Police, Force HQ, Manchester, UK",
+	"Mapping	fear	of	crime	as	a	context-dependent	everyday	experience	that	varies	in	space	and	time","","Horizon 2020 Project MARGIN conference, Budapest, Hungary",
+	"Using open data to evaluate current approaches to cabs tasking","", "11th International Crime Science Conference, London, UK",
+	"Fighting Crime (and other bad things) on the transport network","", "Manchester R User Group meetup",
+	
+	"Practitioner-Academic Seminar on Confidence in Policing",2016, "Transport for London, UK",
+	"Policing and Public Confidence - Confidence at TfL and the challenges of a transport environment","","Public Confidence in the Police - University of Warwick, UK",
+	
+		"Scheduling student-led learning by enquiry into the curriculum",2015,"Teaching and Learning Conference 2015, UCL, London, UK",
+	"Alternative Denominators in Transport Crime Rates","","Transport Statistics User Group Meeting, London, UK",
+	"Using a smartphone app to measure fear of crime on route 25","","Transport for London Route 25 Joint Transport Action Group (JTAG) meeting, London, UK",
+	
+		"Streets, Crime, and Transport",2014, "EPSRC Impact Award Seminar, London, UK",
+	"A new approach to mapping perceptions of crime along the door-to-door journey","","Transport Geography Research Group Workshop, Leeds, UK",
+	"Fear of crime on transport","","PopFest, annual Population Studies conference for PhD students, London, UK",
+	"Using a smartphone app to report fear of hate crime","","Trans London Meetup, London, UK",
+	"Crowd spatial patterns at bus stops",2013,"Stockholm Royal Institute of Technology (KTH), Sweden"
+	
+) %>% 
+	brief_entries(
+		what = glue::glue("{`title`}"),
+		when = glue::glue("{`date`}"),
+		with = glue::glue("{`venue`}")
+	)
+```
+
+
+
+### Conference presentations
+
+```{r conf}
+tribble(
+	~title, ~date, ~venue, 
+	"Linking app-based and physiological measures of fear of crime",2019,"Environmental Criminology and Crime Analysis Symposium, Gungzhou China",
+		"Mapping Sexual Harassment in Public Places: Open Source Data Driven Contextual Analysis","","Environmental Criminology and Crime Analysis Symposium, Gungzhou China",
+	
+	"Victimization and perceived safety among college students: Focus on women's transit safety in London, UK",2018,"Crime and fear in public places: KTH Royal Institute of Technology, Stockholm, Sweden",
+		"Measuring fear of crime through app-based and sensing methodologies","","Crime and fear in public places: KTH Royal Institute of Technology, Stockholm, Sweden",
+	
+		"Using open data to evaluate current approaches to cabs tasking",2017,"American Society of Criminology Conference, Philadelphia, USA",
+	"Using open data to evaluate current approaches to cabs tasking","","Environmental Criminology and Crime Analysis Symposium, El Salvador",
+	"Active Participant","","R Open Science Unconference, Los Angeles, USA",
+	
+	"Using open crowdsourced data to map signal crimes in place and time",2015,"Environmental Criminology and Crime Analysis Symposium, New Zealand",
+	"Alternative Denominators in Transport Crime Rate","","Stockholm Symposium for Criminology, Sweden",
+	
+		"Mapping Fear of Crime Dynamically in Place and Time: Case study of Revenue Protection Inspectors on a London Bus Route",2014,"American Society of Criminology, San Francisco, USA", 
+	
+		"Participatory mapping of fear of crime using a mobile phone application",2013,"Urban Data Management Symposium, London, UK"
+	
+	
+) %>% 
+brief_entries(
+		what = glue::glue("{`title`}"),
+		when = glue::glue("{`date`}"),
+		with = glue::glue("{`venue`}")
+	)
+```
+
+### Poster presentations
+
+```{r poster}
+tribble(
+	~title, ~date, ~venue, 
+	"Mapping Fear of crime on the London Bus Network",2016,"Environmental Criminology and Crime Analysis Symposium, Munster, Germany",
+	"Mapping fear of crime hotspots as they vary with place, time, and individual characteristics using amobile phone app", 2015, "Home Office International Crime and Policing Conference, London, UK",
+	"Mapping Fear of Crime", 2013, "European Society of Criminology Conference, Budapest, Hungary",
+	"Mapping fear of crime as a dynamic event", 2012, "Crime Science Conference, London, UK"
+	
+) %>% 
+brief_entries(
+		what = glue::glue("{`title`}"),
+		when = glue::glue("{`date`}"),
+		with = glue::glue("{`venue`}")
+	)
+```
+
+# Teaching and Learning
+
+My teaching areas include, research methods, quantitative data analysis/ statistical methods, spatial data analysis and GIS, and environmental criminology. 
 
 
 ## University of Manchester Undergraduate Level Courses
@@ -190,7 +339,26 @@ tribble(
 	arrange(desc(start_date)) %>% 
 	brief_entries(
 		what = glue::glue("{`code`}: {`title`}"),
-		when = glue::glue("{`start_date`}–{`end_date`}"),
+		when = glue::glue("{`start_date`}-{`end_date`}"),
+		with = glue::glue("{`level`}")
+	)
+```
+
+
+
+## University of Manchester Graduate Level Courses
+
+```{r teachingpgt}
+tribble(
+	~title, ~start_date, ~end_date, ~code, ~level,
+	"Designing Criminological Research", 2016, "present", "LAWS70311", "Course director and primary lecturer on compulsory research methods module for all Masters streams",
+	"Data Analysis with R & R Studio", 2016, 2019, "LAWS70821", "2016: Course director and sole lecturer, 2018 onwards: ad-hoc lecturer on introductory statistics for MRes students using R",
+	"Evaluating Policy and Practice", 2018, 2019, "LAWS70542", "Lecturer on mandatory module for all Masters streams introducing evaluation research beyond academia"
+) %>% 
+	arrange(desc(start_date)) %>% 
+	brief_entries(
+		what = glue::glue("{`code`}: {`title`}"),
+		when = glue::glue("{`start_date`}-{`end_date`}"),
 		with = glue::glue("{`level`}")
 	)
 ```
@@ -204,6 +372,7 @@ tribble(
 	"Getting Started in R: introduction to data analysis & visualisation", 2017, "present", "methods@manchester", "Weeklong intensive course introducing students to using R and R Studio for data analysis. Open to all, usually attended by professionals and academics.",
 	"Introduction to mapping data with QGIS", 2017, "present", "Q-Step internship preparation", "Afternoon short introduction to mapping spatial data for Q-step internship students",
 	"Spatial Data Analysis in Practice", 2017, 2017, "Stockholm Royal Institute of Technology (KTH)", "One-day introduction to mapping with QGIS and data collection from APIs as part of weeklong summer school for PhD students",
+	"Crowdsourced data and a crime science approach to perception of crime and place", 2018, 2018, "University of Amsterdam", "Crime Science module for masters level students",
 	"Trasport Safety and Security", 2012, 2017, "University College London MSc Transport Studies", "Guest lecture for graduate module, UCL Department of Civil, Environmental, and Geomatic Engineering",
 	"Data analysis using R", 2019, 2019, "Research IT", "One-day introduction to R, part of University of Manchester's Research IT series of courses for staff and PhD students."
 	
@@ -211,218 +380,65 @@ tribble(
 	arrange(desc(start_date)) %>% 
 	brief_entries(
 		what = glue::glue("{`code`}: {`title`}"),
-		when = glue::glue("{`start_date`}–{`end_date`}"),
+		when = glue::glue("{`start_date`}-{`end_date`}"),
+		with = glue::glue("{`level`}")
+	)
+```
+
+# Academic Enterprise and Knowledge Transfer
+
+```{r enterprise}
+tribble(
+	~title, ~start_date, ~desc, 
+	
+"Open Data Manchester", 2020, "Open Data Manchester is a Community Interest Company interested in open data and promoting data literacy and suporting data analysis for good. I have been working with them for a while and recently they have come on-board to co-supervise my PhD student Nathan Khadaroo.", 
+
+	"Wirral Hospitals' School Joseph Paxton Campus", 2020, "One-hour career oriented session for students enrolled in a community school for students unable to attend mainstream school introducing them to crime analysis.",
+
+"Greater Manchester Police",2019, "Co-supervision of PhD student with Greater Manchester Police's Force Intelligence Bureau and colleagues in University College London working to improve horizon scanning processes within the organisation and wider in policing", 
+
+"N8 Analyst Training", 2018, "Training workshop on data visualisation and GIS as part of the N8 Policing Research Partnership training course for police analysts from across northern police forces.", 
+
+"Representation of women in data roles", 2018, "I consistently give talks and participate in data-related meetups including ones which emphasise representation of women in data roles, such as R-ladies and Her+Data meetups.",
+
+"TicTec2018", 2018, "The NGO 'MySociety' invited me to present the work I did using their fix my street platform at the international civic technology conference for researchers, practitioners, and all those with an interest in how technology is changing the way we engage with society. TICTeC is known for its unique focus on the impacts of Civic Technologies where funders mix with practitioners, activists converse with researchers, small NGOs get as much attention as the big players. Since then, I have been working with their research team, who have replicated findings in two of my papers, and are in the process of further joint working."
+
+
+	
+) %>% 
+	arrange(desc(start_date)) %>% 
+	brief_entries(
+		what = glue::glue("{`title`}"),
+		when = glue::glue("{`start_date`}"),
+		with = glue::glue("{`desc`}")
+	)
+```
+
+# Service and Leadership
+
+```{r service}
+tribble(
+	~title, ~start_date, ~end_date, ~code, ~level,
+	"Programme Director for Postgraduate Taught Programmes (Masters degrees)", 2017, "present", "Department of Criminology", "Strategic oversight of programme direction teaching curriculum for all Masters' streams, alongside day-to-day administrative and pastoral responsibilities.",
+	
+	"Coordinator of the University of Manchester R User Group", 2016, 2018, "University of Manchester", "Direction and organisation of user group activities such as monthly meetings, hackathons, and preparation of joint research outputs.",
+	
+		"Curriculum Advisory Board Member", 2016, "Present", "Data Carpentry Social Sciences Curriculum", "Involvement in oversight and development of the social sciences curriculum within the Carpentries programme.",
+	
+	"Ad hoc administrative duties", 2016, "present", "University of Manchester", "Undergraduate Open Day, Postgraduate Research (PhD) Open Day, and similar roles assisting colleagues and promoting the university",
+	
+	"Academic Advising",	2016, "present", "University of Manchester", "Pastoral care and academic advising for undergraduate and postgraduate students enrolled in Criminology degrees."
+	
+) %>% 
+	arrange(desc(start_date)) %>% 
+	brief_entries(
+		what = glue::glue("{`code`}: {`title`}"),
+		when = glue::glue("{`start_date`}-{`end_date`}"),
 		with = glue::glue("{`level`}")
 	)
 ```
 
 
-# Invited talks
 
-2019
-```{r invitedtalks2019}
-tribble(
-	~title,  ~venue, 
-	"Mapping and spatial modelling in R for crime prevention and conservation","Sheffield R User Group, UK",
-	"The role of innovative data collection methods in advancing understanding, and the importance of considering the biases within","Women in Data Science: Zurich, Switzerland",
-	"Keynote: Data-driven insights in law: opportunities and cautions", "Berlin Legal Tech Conference 2019, Germany",
-	"The role of innovative data collection methods in advancing behavioural understanding", "Cognitive and Decision Sciences, University of Basel, Switzerland",
-	"The role of innovative data collection methods in advancing criminological understanding","Manchester Metropolitan University Big Data Centre Seminar Series, UK"
-	
-) %>% 
-	brief_entries(
-		what = glue::glue("{`title`}"),
-		with = glue::glue("{`venue`}")
-	)
-```
-
-
-2018
-```{r invitedtalks2018}
-tribble(
-	~title,  ~venue, 
-	"Crowdsourcing subjective perceptions of neighbourhood disorder: interpreting bias in Open Data", "TicTec 2018, Lisbon, Portugal",
-	"Interdisciplinary Alchemy: Data Science + Social Science","Data Kind UK",
-	"Everybody Lies but Not Everybody Tweets: Making Sense of the Bias in Your Data","Advances in Data Science conference, Manchester, UK"
-) %>% 
-	brief_entries(
-		what = glue::glue("{`title`}"),
-		with = glue::glue("{`venue`}")
-	)
-```
-
-
-2017
-```{r invitedtalks2017}
-tribble(
-	~title,  ~venue, 
-	"Reproducible Crime Analysis using R","Intelligence Innovation Working Group hosted by West Midlands Police",
-	"Building Interactive Data Visualizations","Manchester Methods Fair, UK",
-	"Using open data in the social sciences", "Her+Data Meetup, Manchester, UK",
-	"What is Crowdsourced Data?","Methods@Manchester seminar on research methods in social sciences, Manchester,UK", 
-	"Eyes and Apps on the Street", "Stockholm Royal Institute of Technology (KTH), Sweden",
-	"Keynote: Making Sense of Data using Methods","Methods North West Launch Conference, Manchester, UK", 
-	"Using R for Crime Analysis", "Greater Manchester Police, Force HQ, Manchester, UK",
-	"Mapping	fear	of	crime	as	a	context-dependent	everyday	experience	that	varies	in	space	and	time","Horizon 2020 Project MARGIN conference, Budapest, Hungary",
-	"Using open data to evaluate current approaches to cabs tasking", "11th International Crime Science Conference, London, UK",
-	"Fighting Crime (and other bad things) on the transport network", "Manchester R User Group meetup"
-) %>% 
-	brief_entries(
-		what = glue::glue("{`title`}"),
-		with = glue::glue("{`venue`}")
-	)
-```
-
-
-2016
-```{r invitedtalks2016}
-tribble(
-	~title,  ~venue, 
-	"Practitioner-Academic Seminar on Confidence in Policing","Transport for London, UK",
-	"Policing and Public Confidence - Confidence at TfL and the challenges of a transport environment","Public Confidence in the Police - University of Warwick, UK"
-) %>% 
-	brief_entries(
-		what = glue::glue("{`title`}"),
-		with = glue::glue("{`venue`}")
-	)
-```
-
-
-2015
-```{r invitedtalks2015}
-tribble(
-	~title,  ~venue, 
-	"Scheduling student-led learning by enquiry into the curriculum","Teaching and Learning Conference 2015, UCL, London, UK",
-	"Alternative Denominators in Transport Crime Rates","Transport Statistics User Group Meeting, London, UK",
-	"Using a smartphone app to measure fear of crime on route 25","Transport for London Route 25 Joint Transport Action Group (JTAG) meeting, London, UK"
-) %>% 
-	brief_entries(
-		what = glue::glue("{`title`}"),
-		with = glue::glue("{`venue`}")
-	)
-```
-
-
-2014
-```{r invitedtalks2014}
-tribble(
-	~title,  ~venue, 
-	"Streets, Crime, and Transport","EPSRC Impact Award Seminar, London, UK",
-	"A new approach to mapping perceptions of crime along the door-to-door journey","Transport Geography Research Group Workshop, Leeds, UK",
-	"Fear of crime on transport","PopFest, annual Population Studies conference for PhD students, London, UK",
-	"Using a smartphone app to report fear of hate crime","Trans London Meetup, London, UK"
-) %>% 
-	brief_entries(
-		what = glue::glue("{`title`}"),
-		with = glue::glue("{`venue`}")
-	)
-```
-
-
-2013
-```{r invitedtalks2013}
-tribble(
-	~title,  ~venue, 
-	"Crowd spatial patterns at bus stops","Stockholm Royal Institute of Technology (KTH), Sweden"
-) %>% 
-	brief_entries(
-		what = glue::glue("{`title`}"),
-		with = glue::glue("{`venue`}")
-	)
-```
-
-
-# Conference presentations
-
-2019
-```{r conf2019}
-tribble(
-	~title,  ~venue, 
-	"Linking app-based and physiological measures of fear of crime","Environmental Criminology and Crime Analysis Symposium, Gungzhou China",
-		"Mapping Sexual Harassment in Public Places: Open Source Data Driven Contextual Analysis","Environmental Criminology and Crime Analysis Symposium, Gungzhou China"
-) %>% 
-	brief_entries(
-		what = glue::glue("{`title`}"),
-		with = glue::glue("{`venue`}")
-	)
-```
-
-2018
-```{r conf2018}
-tribble(
-	~title,  ~venue, 
-	"Victimization and perceived safety among college students: Focus on women's transit safety in London, UK","Crime and fear in public places: KTH Royal Institute of Technology, Stockholm, Sweden",
-		"Measuring fear of crime through app-based and sensing methodologies","Crime and fear in public places: KTH Royal Institute of Technology, Stockholm, Sweden"
-) %>% 
-	brief_entries(
-		what = glue::glue("{`title`}"),
-		with = glue::glue("{`venue`}")
-	)
-```
-
-2017
-```{r conf2017}
-tribble(
-	~title,  ~venue, 
-	"Using open data to evaluate current approaches to cabs tasking","American Society of Criminology Conference, Philadelphia, USA",
-	"Using open data to evaluate current approaches to cabs tasking","Environmental Criminology and Crime Analysis Symposium, El Salvador",
-	"Active Participant","R Open Science Unconference, Los Angeles, USA"
-) %>% 
-	brief_entries(
-		what = glue::glue("{`title`}"),
-		with = glue::glue("{`venue`}")
-	)
-```
-
-
-
-2015
-```{r conf2015}
-tribble(
-	~title,  ~venue, 
-	"Using open crowdsourced data to map signal crimes in place and time","Environmental Criminology and Crime Analysis Symposium, New Zealand",
-	"Alternative Denominators in Transport Crime Rate","Stockholm Symposium for Criminology, Sweden"
-) %>% 
-	brief_entries(
-		what = glue::glue("{`title`}"),
-		with = glue::glue("{`venue`}")
-	)
-```
-
-
-2014
-```{r conf2014}
-tribble(
-	~title,  ~venue, 
-	"Mapping Fear of Crime Dynamically in Place and Time: Case study of Revenue Protection Inspectors on a London Bus Route","American Society of Criminology, San Francisco, USA"
-) %>% 
-	brief_entries(
-		what = glue::glue("{`title`}"),
-		with = glue::glue("{`venue`}")
-	)
-```
-
-
-2013
-```{r conf2013}
-tribble(
-	~title,  ~venue, 
-	"Participatory mapping of fear of crime using a mobile phone application","Urban Data Management Symposium, London, UK"
-) %>% 
-	brief_entries(
-		what = glue::glue("{`title`}"),
-		with = glue::glue("{`venue`}")
-	)
-```
-
-
-# Memberships
-
-- **Curriculum Advisory Board Member** Data Carpentry Social Sciences Curriculum
-- **Fellow** Software Sustainability Institute
-- **Associate Fellow** Higher Education Academy
-- **Board Member** ESRC Business and Local Government Data Research Centre Data Acquisition Board
-- **Member** Environmental Criminology and Crime Analysis Symposium 
-- **Member** Transport Crime Research Network
 
 
