@@ -393,15 +393,15 @@ tribble(
 	
 "Open Data Manchester", 2020, "Open Data Manchester is a Community Interest Company interested in open data and promoting data literacy and suporting data analysis for good. I have been working with them for a while and recently they have come on-board to co-supervise my PhD student Nathan Khadaroo.", 
 
-	"Wirral Hospitals' School Joseph Paxton Campus", 2020, "One-hour career oriented session for students enrolled in a community school for students unable to attend mainstream school introducing them to crime analysis.",
+	"Wirral Hospitals' School Joseph Paxton Campus", "", "One-hour career oriented session for students enrolled in a community school for students unable to attend mainstream school introducing them to crime analysis.",
 
 "Greater Manchester Police",2019, "Co-supervision of PhD student with Greater Manchester Police's Force Intelligence Bureau and colleagues in University College London working to improve horizon scanning processes within the organisation and wider in policing", 
 
 "N8 Analyst Training", 2018, "Training workshop on data visualisation and GIS as part of the N8 Policing Research Partnership training course for police analysts from across northern police forces.", 
 
-"Representation of women in data roles", 2018, "I consistently give talks and participate in data-related meetups including ones which emphasise representation of women in data roles, such as R-ladies and Her+Data meetups.",
+"Representation of women in data roles", "", "I consistently give talks and participate in data-related meetups including ones which emphasise representation of women in data roles, such as R-ladies and Her+Data meetups.",
 
-"TicTec2018", 2018, "The NGO 'MySociety' invited me to present the work I did using their fix my street platform at the international civic technology conference for researchers, practitioners, and all those with an interest in how technology is changing the way we engage with society. TICTeC is known for its unique focus on the impacts of Civic Technologies where funders mix with practitioners, activists converse with researchers, small NGOs get as much attention as the big players. Since then, I have been working with their research team, who have replicated findings in two of my papers, and are in the process of further joint working."
+"TicTec2018", "", "The NGO 'MySociety' invited me to present the work I did using their fix my street platform at the international civic technology conference for researchers, practitioners, and all those with an interest in how technology is changing the way we engage with society. TICTeC is known for its unique focus on the impacts of Civic Technologies where funders mix with practitioners, activists converse with researchers, small NGOs get as much attention as the big players. Since then, I have been working with their research team, who have replicated findings in two of my papers, and are in the process of further joint working."
 
 
 	
