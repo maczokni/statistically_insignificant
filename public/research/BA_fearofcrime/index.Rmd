@@ -1,0 +1,44 @@
+---
+title: "Measuring fear of crime using app-based and sensing methodologies"
+author: 
+output:
+  html_document:
+    css: "../rekadata.css"
+---
+
+
+Recent contributions to the advancement of research into fear of crime focus on framing it as a situational experience. To measure fear of crime operationalised in this way, innovations in technology for data collection must be applied. This project aimed to contribute to the advancement of current topics in fear of crime research, in both methodological and theoretical innovations around operationalisation and measurement of this concept. 
+
+To achieve this aim, this project fullfilled the following objectives: 
+
+## 1) Synthesize current app-based measures of fear of crime to consolidate good practice and directions in this emerging area
+
+- We carried out a systematic review of app-based measures of fear of crime experience: 
+  + Solymosi, R, D Buil-Gil, L Vozmediano, and IS Guedes (2019). A place-based approach to fear of crime: A systematic review of app-based and crowdsourced measures. Under review in Environment and Behaviour. Pre-print available from osf: [https://osf.io/preprints/socarxiv/h3n9w/](https://osf.io/preprints/socarxiv/h3n9w/)
+
+- Collaborated with the UK Data Service to run a webinar about Using app-based and sensing methods for social science research
+  + Solymosi, R and M Chataway (2019). Webinar: Using app-based and sensing methods for social science research. UK Data Service. Available: [https://www.ukdataservice.ac.uk/news-and-events/eventsitem/?id=5461](https://www.ukdataservice.ac.uk/news-and-events/eventsitem/?id=5461)
+  
+- Publicised this work on the London School of Economics' Impact Blog
+  + Solymosi, R and M Chataway (2019). Using mobile applications for social science research. LSE Impact Blog. Available: [https://blogs.lse.ac.uk/impactofsocialsciences/2019/08/14/using-mobile-applications-for-social-scienceresearch/](https://blogs.lse.ac.uk/impactofsocialsciences/2019/08/14/using-mobile-applications-for-social-scienceresearch/)
+  
+
+## 2) Eliminate parallel working and bring together those working in this area. 
+
+The aim is to bring together people working in the area of app-based and sensing approaches to emasuring fear of crime. If you are working on this sort of thing please sign up here: [https://forms.gle/G2NwTvcX6ydsauxX6](https://forms.gle/G2NwTvcX6ydsauxX6)
+
+
+We have achieved the following objectives:
+
+ - Set up a community of researchers working in this area:
+  + see the map of related reserach here: [https://fearofcrime.shinyapps.io/Fear_of_crime_research_map/](https://fearofcrime.shinyapps.io/Fear_of_crime_research_map/)
+  
+  - Agreement with Crime Science to edit ‘Advances in the Study of Perceptions of Crime and Place’ Special Issue for Crime Science bringing together a papers which use methodological innovation for study of perception of crime and place. 
+  + see [here]() for call for papers 
+
+
+## 3) Carry out a field experiment to assess the feasibility of advancing these measurement tools by incorporating sensing methodologies. 
+
+
+ - We carried out an experiment at University College London' [PAMELa Laboratory](https://www.ucl.ac.uk/civil-environmental-geomatic-engineering/research/groups-and-centres/pedestrian-accessibility-movement-environment-laboratory-pamela). More details to come soon.
+
