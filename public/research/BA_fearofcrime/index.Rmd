@@ -3,7 +3,7 @@ title: "Measuring fear of crime using app-based and sensing methodologies"
 author: 
 output:
   html_document:
-    css: "../rekadata.css"
+    css: "../../rekadata.css"
 ---
 
 
