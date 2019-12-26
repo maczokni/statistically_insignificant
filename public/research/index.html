@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content />
@@ -262,9 +262,7 @@ a:link{color:#1f253c}
 a:visited{color:#3c1f1f}
 a:hover{color:#b03434} </style>
 
-</head>
 
-<body>
 
 <style type="text/css">
 .main-container {
@@ -278,7 +276,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -295,8 +292,6 @@ summary {
 </style>
 
 
-
-<div class="container-fluid main-container">
 
 <!-- tabsets -->
 
@@ -342,6 +337,7 @@ summary {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -354,20 +350,17 @@ summary {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -388,7 +381,7 @@ $(document).ready(function () {
 <p>This project, funded by the <a href="https://manstatsoc.org/">Manchester Statistical Society</a> is looking at Tweets made by Greater Manchester Police Twitter accounts which are appeals for information about missing persons, in order to determine what features are associated with increased engagement (in the form of retweets) from the public.</p>
 </div>
 <div id="using-app-based-and-sensing-measures-to-map-fear-of-crime-and-perception-of-place" class="section level3">
-<h3>Using App-Based and Sensing Measures to Map Fear of Crime and Perception of Place</h3>
+<h3><a href="https://rekadata.site/research/ba_fearofcrime/">Using App-Based and Sensing Measures to Map Fear of Crime and Perception of Place</a></h3>
 <p>This project, funded by <a href="https://www.thebritishacademy.ac.uk/funding/ba-leverhulme-small-research-grants">The British Academy</a> explores the feasibility of using mobile applications and physiological sensing in order to measure fear of crime as a situation-specific experience. The first part of the project was to take stock of existing work making use of mobile applications in order to measure fear of crime <strong>in-situ</strong>. The preprint for this paper is available <a href="https://osf.io/preprints/socarxiv/h3n9w">on Soc ArXiv here</a>. The second part of the paper explores the feasibility of using Galvanic Skin Response and Heart Rate as indicators of fear of crime experienced, and how these correlate with self-report measures and with contextual features measured with eye-tracking.</p>
 </div>
 <div id="civic-innovation-in-community-safety-policing-and-trust-with-young-people" class="section level3">
@@ -421,6 +414,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
