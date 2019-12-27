@@ -93,7 +93,8 @@ Authors: Inês Guedes (presenter),  Reka Solymosi, Laura Vozmediano,  David Buil
 
 knitr::include_graphics(c("https://www.thebritishacademy.ac.uk/sites/all/themes/ba/redesign_assets/images/logo-vec.svg",
 "http://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_backgrounds/TAB_col_white_background.png",
-"https://www.ehu.eus/image/image_gallery?uuid=bcfc3502-0578-4cfd-9d1b-421c5b18aa64&groupId=1690128&t=1464624749643", "https://sigarra.up.pt/fdup/pt/imagens/LogotipoSI.png"))
+"https://www.ehu.eus/documents/2947353/2967241/blanco_grande.jpg/daf895c7-8f5a-4106-b4ba-c385059ef9d6", 
+"https://sigarra.up.pt/fdup/pt/imagens/LogotipoSI.png"))
 
 ```
 
