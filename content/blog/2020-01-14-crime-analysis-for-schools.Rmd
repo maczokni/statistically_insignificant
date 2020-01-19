@@ -8,7 +8,7 @@ tags: []
 images: []
 ---
 
-On Monday (13th January) I gave a talk introducing pupils of [Wirral Hospital School](https://www.wirralhs.co.uk/) to the world of data analysis, and specifically crime analysis. It was my first time speaking to a younger audience, so I had a bit of a task trying to think about what is the appropriate amount of content to include, and level to pitch to. I didn't want to be too simplistic and therefore condescending, but I also didn't want to bore them with jargon and technical details. In the end I think it went well, there was lots of engagement from the pupils, and the head teacher gave me some positive feedback about the content as well as the delivery. So I thought I'd write this up for anyone else looking for resources, thinking about going into similar school settings to talk about data analysis or crime analysis or both! 
+On Monday (13th January) I gave a talk introducing pupils of [Wirral Hospitals' School](https://www.wirralhs.co.uk/) to the world of data analysis, and specifically crime analysis. It was my first time speaking to a younger audience, so I had a bit of a task trying to think about what is the appropriate amount of content to include, and level to pitch to. I didn't want to be too simplistic and therefore condescending, but I also didn't want to bore them with jargon and technical details. In the end I think it went well, there was lots of engagement from the pupils, and the head teacher gave me some positive feedback about the content as well as the delivery. So I thought I'd write this up for anyone else looking for resources, thinking about going into similar school settings to talk about data analysis or crime analysis or both! 
 
 
 # Preparation
@@ -21,12 +21,10 @@ The first thing I had to do was collect possible materials to use. I split this 
 
 ## Content about data analysis and associated activities
 
-Firstly, I spent some time going through content which I had curated over the years of teaching and giving talks about data analysis. Some of my fave from this collection are [visualisation of spells of harry potter](https://flowingdata.com/2016/10/12/all-the-harry-potter-spells-when-they-were-used/). I also have [Dear Data](http://www.dear-data.com/). The complaints postcard is a specifically good one to explain because you can immediately start drawing conclusions from it that people can relate to!
+Firstly, I spent some time going through content which I had curated over the years of teaching and giving talks about data analysis. Some of my fave from this collection are [visualisation of spells of Harry Potter](https://flowingdata.com/2016/10/12/all-the-harry-potter-spells-when-they-were-used/). I also have [Dear Data](http://www.dear-data.com/). The complaints postcard is a specifically good one to explain because you can immediately start drawing conclusions from it that people can relate to!
 
 
 ![Complaints postcard from Dead Data by GIORGIA LUPI and STEFANIE POSAVEC](/img/deardata_complaints.png)
-
-I have the book, so I also brought it with me to show off. 
 
 
 When I started writing the presentation I was actually on Vancouver Island with friends, and asked for advice there, and was recommended to think about [#tidytuesday](https://www.tidytuesday.com/). Of course, this is an excellent resource of fun data sets, and also creative visualisations. Also pudding.cool's [rap artists' vocabulary](https://pudding.cool/projects/vocabulary/index.html) was mentioned as something kids would be interested in.
@@ -52,12 +50,12 @@ Then, for the exercise to do together, I used the example of handbag theft from 
 
 The idea would be that each "phase" will have some handout materials, and pupils will in groups (and with me helping along as well) will follow along. So first, for the "Scanning"" phase, I had 3 newspaper articles, all about handbag theft in pubs. 
 
-![material for the "Scanning" phase](/img/scanning_pack.png)
+![Material for the "Scanning" phase](/img/scanning_pack.png)
 
 Then, for the "Analysis phase"", we had two conflicting bits of intel from two informants. One usually lies, and one usually tells the truth. So how can we know who is telling the truth or lying? Well we also have a map of the pub, with the number of bags stolen from each table, which we can use to colour in a heat map. Then, with this heatmap we can decide which informant tells the truth. 
 
 
-![pub floorplan for making heatmap of bag theft](/img/bar_map.png)
+![Pub floorplan for making heatmap of bag theft](/img/bar_map.png)
 
 Once we know this, we can open the second analysis envelope, to get some more information from our truthful infomant, who tells us that he's after bags thrown under chair or hung on the backrest. Now, we get to the response phase, and the envelope here contains two types of chairs and also a table, on which pupils can draw their creative anti-bag-theft designs. I did not manage to come up with a small-group based activity for the "Assessment" phase, so instead we together as a large group discussed the results of the actual evaluation study. 
 
