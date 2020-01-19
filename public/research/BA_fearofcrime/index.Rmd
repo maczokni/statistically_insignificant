@@ -3,15 +3,28 @@ title: "Measuring fear of crime using app-based and sensing methodologies"
 author: 
 output:
   html_document:
-    css: "../rekadata.css"
+    css: "../../rekadata.css"
 ---
+
+This page is a summary website for the project *"Measuring fear of crime using app-based and sensing methodologies"* funded by the British Academy Small Grants (no. SG171381). 
+
+
+**PI**: Dr Reka Solymosi, University of Manchester
+
+**Co-Is**: Dr Laura Vozmediano, Unversity of Basque Country & Dr Ines Guedes, University of Porto
+
+
+Interested in using app-based and sensing measures to operationalise the fear of crime? If you are working on this sort of thing, or just want to be involved please sign up here: [https://forms.gle/G2NwTvcX6ydsauxX6](https://forms.gle/G2NwTvcX6ydsauxX6)
+
+
+## Project Summary
 
 
 Recent contributions to the advancement of research into fear of crime focus on framing it as a situational experience. To measure fear of crime operationalised in this way, innovations in technology for data collection must be applied. This project aimed to contribute to the advancement of current topics in fear of crime research, in both methodological and theoretical innovations around operationalisation and measurement of this concept. 
 
 To achieve this aim, this project fullfilled the following objectives: 
 
-## 1) Synthesize current app-based measures of fear of crime to consolidate good practice and directions in this emerging area
+#### 1) Synthesize current app-based measures of fear of crime to consolidate good practice and directions in this emerging area
 
 - We carried out a systematic review of app-based measures of fear of crime experience: 
   + Solymosi, R, D Buil-Gil, L Vozmediano, and IS Guedes (2019). A place-based approach to fear of crime: A systematic review of app-based and crowdsourced measures. Under review in Environment and Behaviour. Pre-print available from osf: [https://osf.io/preprints/socarxiv/h3n9w/](https://osf.io/preprints/socarxiv/h3n9w/)
@@ -23,10 +36,9 @@ To achieve this aim, this project fullfilled the following objectives:
   + Solymosi, R and M Chataway (2019). Using mobile applications for social science research. LSE Impact Blog. Available: [https://blogs.lse.ac.uk/impactofsocialsciences/2019/08/14/using-mobile-applications-for-social-scienceresearch/](https://blogs.lse.ac.uk/impactofsocialsciences/2019/08/14/using-mobile-applications-for-social-scienceresearch/)
   
 
-## 2) Eliminate parallel working and bring together those working in this area. 
+#### 2) Eliminate parallel working and bring together those working in this area. 
 
-The aim is to bring together people working in the area of app-based and sensing approaches to emasuring fear of crime. If you are working on this sort of thing please sign up here: [https://forms.gle/G2NwTvcX6ydsauxX6](https://forms.gle/G2NwTvcX6ydsauxX6)
-
+The aim is to bring together people working in the area of app-based and sensing approaches to emasuring fear of crime. 
 
 We have achieved the following objectives:
 
@@ -37,8 +49,54 @@ We have achieved the following objectives:
   + see [here]() for call for papers 
 
 
-## 3) Carry out a field experiment to assess the feasibility of advancing these measurement tools by incorporating sensing methodologies. 
+#### 3) Carry out a field experiment to assess the feasibility of advancing these measurement tools by incorporating sensing methodologies. 
 
 
  - We carried out an experiment at University College London' [PAMELa Laboratory](https://www.ucl.ac.uk/civil-environmental-geomatic-engineering/research/groups-and-centres/pedestrian-accessibility-movement-environment-laboratory-pamela). More details to come soon.
+
+
+## List of outputs
+
+**Publications**
+
+- Solymosi, R, D Buil-Gil, L Vozmediano, and IS Guedes (2019). A place-based approach to fear of crime: A systematic review of app-based and crowdsourced measures. Under review in Environment and Behaviour. Pre-print available on SocArXiv: https://osf.io/preprints/socarxiv/h3n9w/.
+- Solymosi, R, IS Guedes, L Vozmediano, N Teixeira (forthcoming). To be submitted to the Journal of Experimental Criminology.
+- Solymosi, R and M Chataway (2019). Using mobile applications for social science research. LSE Impact Blog. Available: https://blogs.lse.ac.uk/impactofsocialsciences/2019/08/14/using-mobile-applications-for-social-scienceresearch/.
+
+
+**Conference presentations**
+
+- Title:Measuring fear of crime using app-based and sensing methodologies
+Authors: Reka Solymosi, Inês Guedes, Laura Vozmediano, & Nuno Teixeira. Conference: Crime And Fear In Public Places: A Conference On The Individual’s Right To Safe Public Places. 17-18 October 2018, Stockholm, Sweden.
+- Title: Linking app-based and physiological measures of fear of crime 
+Authors: Reka Solymosi (presenter), Laura Vozmediano, Inês Guedes, David Buil-Gil & Nuno Teixeira Conference: The International Symposium on Environmental Criminology and Crime Analysis, July 6-7, 2019, Guangzhou, China.
+- Title: Measuring fear of crime using app-based and sensing methodologies
+Authors: Reka Solymosi, Laura Vozmediano, Inês Guedes, David Buil-Gil & Nuno Teixeira. Conference: The International Symposium on Environmental Criminology and Crime Analysis June 5-7, 2018. Elche (Spain) 
+- Title: Linking app-based and physiological measures of fear of crime 
+Authors: Inês Guedes (presenter),  Reka Solymosi, Laura Vozmediano,  David Buil-Gil & Nuno Teixeira. Conference: 19th Annual Conference of the European Society of Criminology, September 18-21, 2019, Ghent, Belgium.
+
+
+**Other outputs**
+
+- **Map of app-based fear of crime research**:  [https://fearofcrime.shinyapps.io/Fear_of_crime_research_map/](https://fearofcrime.shinyapps.io/Fear_of_crime_research_map/)
+
+- **Webinar**: [https://www.ukdataservice.ac.uk/news-and-events/eventsitem/?id=5461](https://www.ukdataservice.ac.uk/news-and-events/eventsitem/?id=5461)
+
+- **Code for self report app tool**: [https://github.com/maczokni/experiment_app/tree/master](https://github.com/maczokni/experiment_app/tree/master)
+
+- **Fear of crime stimuli video**: [https://www.dropbox.com/s/5jzwuharqxc1034/long_01.mp4?dl=0](https://www.dropbox.com/s/5jzwuharqxc1034/long_01.mp4?dl=0)
+
+
+## Project sponsors and partners
+
+```{r, echo = FALSE, fig.show = "hold", out.width = "20%"}
+
+knitr::include_graphics(c("https://www.thebritishacademy.ac.uk/sites/all/themes/ba/redesign_assets/images/logo-vec.svg",
+"http://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_backgrounds/TAB_col_white_background.png",
+"https://www.ehu.eus/documents/2947353/2967241/blanco_grande.jpg/daf895c7-8f5a-4106-b4ba-c385059ef9d6", 
+"https://sigarra.up.pt/fdup/pt/imagens/LogotipoSI.png"))
+
+```
+
+
 

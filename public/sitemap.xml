@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -9,6 +9,16 @@
   
   <url>
     <loc>https://rekadata.site/blog/asc-2019/</loc>
+    <lastmod>2019-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rekadata.site/blog/</loc>
+    <lastmod>2019-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rekadata.site/</loc>
     <lastmod>2019-11-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -29,6 +39,11 @@
   
   <url>
     <loc>https://rekadata.site/post/hello-world/</loc>
+    <lastmod>2019-07-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rekadata.site/post/</loc>
     <lastmod>2019-07-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -77,7 +92,6 @@
   
   <url>
     <loc>https://rekadata.site/series/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
