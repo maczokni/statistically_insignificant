@@ -1,0 +1,206 @@
+---
+title: Exploring public engagement with missing person appeals on Twitter
+author: ~
+date: '2020-01-29'
+slug: exploring-public-engagement-with-missing-person-appeals-on-twitter
+categories: []
+tags: []
+images: []
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+
+#suppress scientific notation, round all numbers to whole numbers
+options(scipen=999, digits=0)
+```
+
+```{r loadlibs}
+#this library is available on github you can download with devtools::install_github("maczokni/misperTweetsCode")
+library(misperTweetsCode)
+#these libraries are all available from Cran
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(lubridate)
+library(ggrepel)
+library(scales)
+```
+
+
+About this time last year I received funding from the [Manchester Statistical Society Campion Grant](https://manstatsoc.org/campion-grants/) to carry out some research looking into appeals for informaion made about missing persons on Twitter. 
+
+
+The motivation behind this is that police agencies globally are seeing an increase in reports of people going missing. These people are often vulnerable, and their safe and early return can be a key factor in preventing them from coming to serious harm. One approach to quickly find missing people is to disseminate appeals for information using social media. In fact, police, and other agencies, make frequent use of social media (such as Twitter) to send out appeals for information. 
+
+The goal of this project was to better understand how police accounts tweet appeals for information about missing persons, and how the public engage with these tweets by sharing them. 
+
+
+To achieve this goal we analysed 1,008 Tweets made by Greater Manchester Police between the period of 2011 and 2018 in order to investigate what features of the tweet, the twitter account, and the missing person are associated with levels of retweeting. 
+
+
+***
+**In particular we wanted to look at different features associated with the tweet, the twitter accounts, and the missing person, and any associations with engagement by the public, measured as retweets.** 
+
+***
+
+
+**Related materials:**
+
+
+- The paper is available as a pre-print on OSF here: [https://osf.io/preprints/socarxiv/wugxs](https://osf.io/preprints/socarxiv/wugxs)
+
+
+- All of the materials (including data, data dictionary, the paper markdown) are on OSF here: [https://osf.io/4w5eg/](https://osf.io/4w5eg/). The data was anonymised using [NETANOS](https://www.theoj.org/joss-papers/joss.00293/10.21105.joss.00293.pdf). 
+
+
+- The R package which contains all the code for analysis is available on GitHub here: [https://github.com/maczokni/misperTweetsCode](https://github.com/maczokni/misperTweetsCode)
+
+
+Here I will highlight some of the most interesting findings. 
+
+
+### Features of interest
+
+First we identified features associated with public engagement that might influence engagement from a litearture review. We identified the following: 
+
+```{r litsum}
+
+litsum <- data.frame(Element = c("Features of the missing person", "Features of the tweet", "Features of the account"),
+                     Feature = c("Race/ ethnic appearance, Gender, Age",
+                                "Time and timeliness, Post length, Punctuation and hashtags, Templates, Sentiment, Tone, Useful information, Photo (presence and valence)",
+                                "Number of followers, Age of account, Tweeting activity, Trusted source"))
+
+knitr::kable(litsum, caption = "*Table 1: features in the literature*") 
+```
+
+
+
+We then went through our sample of 1,008 Tweets that were appeals for information about missing persons taken from the 56 GMP Twitter accounts identified for this study, and coded for all of these elements (except age, we abandoned it as this was too messy really...!). Please see the preprint for details on conceptualisation and operationalisation of these variables. Also for the full set of results, as below I will highlight only two of the most interesting ones, the paper itself contains many more!
+
+
+### Two highlighted results
+
+
+```{r}
+
+#misper_tweets <- read.csv("https://osf.io/akvbh/download") <- too temperamental :(
+misper_tweets <- read.csv("data/clean_anon_misper_tweets.csv")
+
+
+misper_tweets$ast_yn <- as.factor(ifelse(misper_tweets$numast >0, 1, 0))
+  misper_tweets$qm_yn <- as.factor(ifelse(misper_tweets$numqm >0, 1, 0))
+  misper_tweets$exc_yn <- as.factor(ifelse(misper_tweets$numexc >0, 1, 0))
+  misper_tweets$hasht_yn <- as.factor(ifelse(misper_tweets$numhash >0, 1, 0))
+
+    #get hour
+  misper_tweets$tw_hour <- as.factor(lubridate::hour(misper_tweets$date))
+
+
+```
+
+
+First we looked at the importance of photos, in particular if people engage differently with a custody image versus a regular everyday photo (Figure 1). We found that custory photos are retweeted less than regular photos. Using multiple photos does not seem to matter. The point estimate is the median, and the arms represent the interquartile range. 
+
+```{r figure1, fig.height= 7, fig.width= 8, fig.cap= "*Figure 1: Retweets for different image types by gender and ethnic appearance*"}
+
+fig_df <- makeDemophotoplotDf(misper_tweets)
+fig_df$phototype <- factor(fig_df$phototype, levels = c("No photo", "Custody photo", "Regular photo", "Muliple photos"))
+makeFig1(fig_df)
+
+
+```
+
+We also looked at the types of phrasing used in the Tweets, by coding these into different types of templates. 
+
+Here are he list of templates identified through qualitative coding, with an example of each: 
+
+```{r table2}
+
+examples <- makeTemplateExamplesDf(misper_tweets)
+
+knitr::kable(examples %>% arrange(-num_tweets) %>% rename(`No. of tweets` = num_tweets, 
+                                                          Template = template,
+                                                          Example = example), 
+             caption = "*Table 2: types of templates present in Tweets by GMP about missing persons*")
+
+
+```
+
+
+We compared the number of retweets between each template (Figure 2). The point estimate is the median, and the arms represent the interquartile range. 
+
+
+```{r fig2, fig.height= 7, fig.width= 8, fig.cap= "*Figure 2: Retweets for different templates*"}
+
+template_list <- c("oneohone", "help", "concern", "plsrt", "hashmiss", "aster", "appeal", "highrisk", "urg", "link", "origyn_2", "haveuseen", "thx")
+datalist = list()
+i <- 1
+
+for (temp in template_list) {
+  datalist[[i]] <- data.frame(template = temp,
+                              median_rt = median(misper_tweets %>% filter(eval(as.symbol(temp)) == 1) %>% pull(retweet_count), na.rm = TRUE), 
+                              num_tweets_with = nrow(misper_tweets %>% filter(eval(as.symbol(temp)) == 1)),
+                              median_rt_not = median(misper_tweets %>% filter(eval(as.symbol(temp)) == 0) %>% pull(retweet_count), na.rm = TRUE), 
+                              low_qt = quantile(misper_tweets %>% filter(eval(as.symbol(temp)) == 1) %>% pull(retweet_count), na.rm = TRUE)[2],
+                                up_qt = quantile(misper_tweets %>% filter(eval(as.symbol(temp)) == 1) %>% pull(retweet_count), na.rm = TRUE)[4],
+                                low_qt_not = quantile(misper_tweets %>% filter(eval(as.symbol(temp)) == 0) %>% pull(retweet_count), na.rm = TRUE)[2],
+                                up_qt_not = quantile(misper_tweets %>% filter(eval(as.symbol(temp)) == 0) %>% pull(retweet_count), na.rm = TRUE)[4],
+                              num_tweets_not = nrow(misper_tweets %>% filter(eval(as.symbol(temp)) == 0)))
+  i <- i + 1
+  
+
+}
+
+template_df <- bind_rows(datalist)
+
+template_df$template <- ifelse(template_df$template == "urg", "urgent appeal", template_df$template)
+template_df$template <- ifelse(template_df$template == "plsrt", "please RT", template_df$template)
+template_df$template <- ifelse(template_df$template == "origyn_2", "original phrasing", template_df$template)
+template_df$template <- ifelse(template_df$template == "link", "link to info", template_df$template)
+template_df$template <- ifelse(template_df$template == "oneohone", "call 101", template_df$template)
+template_df$template <- ifelse(template_df$template == "highrisk", "high risk", template_df$template)
+template_df$template <- ifelse(template_df$template == "help", "can you help", template_df$template)
+template_df$template <- ifelse(template_df$template == "hashmiss", "#missing", template_df$template)
+template_df$template <- ifelse(template_df$template == "concern", "... are concerned for..", template_df$template)
+template_df$template <- ifelse(template_df$template == "aster", "**missing**", template_df$template)
+template_df$template <- ifelse(template_df$template == "appeal", "... are appealing for..", template_df$template)
+template_df$template <- ifelse(template_df$template == "haveuseen", "have you seen..", template_df$template)
+template_df$template <- ifelse(template_df$template == "thx", "thanks", template_df$template)
+
+ggplot(data = template_df, aes(x = median_rt, y = reorder(template, median_rt))) + 
+  geom_errorbarh(aes(xmin = low_qt, xmax =  up_qt), height = 0.2, lwd = 0.5, col = "#8A5C7B", alpha = 1, position = position_nudge(y = 0.09)) + 
+  geom_point(aes(fill = "Tweets with this template", size = num_tweets_with), pch = 21, col = "black", position = position_nudge(y = 0.09)) + 
+  geom_errorbarh(data = template_df, aes(x = median_rt_not, y = template, xmin = low_qt_not, xmax =  up_qt_not), height = 0.2, lwd = 0.5, col = "black", alpha = 1, position = position_nudge(y = -0.09)) + 
+  geom_point(aes(x = median_rt_not, fill = "Tweets without this template", size = num_tweets_not), pch = 21, col = "black", position = position_nudge(y = -0.09)) +
+  scale_fill_manual(values = c("#8A5C7B", "white"), labels = c("Tweets with this template", "Tweets without this template")) + 
+  ylab("Template") +  
+  xlab("Median number of retweets")+ 
+  theme_bw() + 
+  guides(fill = guide_legend(title = "Has template"), size = guide_legend(title = "Number of tweets")) +
+  scale_x_log10() + 
+  theme(plot.title = element_text(size = 16, face = 'bold'),
+        legend.background = element_rect(fill = alpha("white", 0.0)),
+        strip.background = element_rect(fill="white", colour = 'white'), 
+        strip.text.x = element_text(size = 12,angle = 0, hjust = 0),
+        strip.text.y = element_text(size = 12),
+        axis.text.y = element_text(size = 10))
+
+```
+
+
+### Conclusions
+
+These are just two interesting insights gained from exploring these tweets. In the full paper we explore a range of features associated with the appeals for information about missing persons made on Twitter by greater Manchester police.
+
+In doing so, we uncover how the police currently construct such appeals, and whether we can infer any structure in the practice. We find that there is some structure, but there is also variation in how these messages are crafted, as well as in other features such as the type and quality of photo used, the phrasing and punctuation used, and the perceived sentiment that results. 
+
+We further considered how engagement, measured as retweets varies between these differently structured tweets, and draw conclusions about what we think might be important to follow up. 
+
+In sum, with this paper we provide an insight into how appeals for information for missing people are shared by a major UK police force, and how the public react to these messages. By doing so we serve as a reference point for an issue that is internationally relevant, affecting police and other organisations worldwide, and hope to spark future work in the area, preferably prospective or experimental studies to establish causal relationships between the features identified and engagement. 
+
+
+Read the full paper here: [https://osf.io/preprints/socarxiv/wugxs](https://osf.io/preprints/socarxiv/wugxs) and do reach out if you have any thoughts/comments/feedback/questions/ideas for future research!
+
+
