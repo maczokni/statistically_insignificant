@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.1.17)  3 FEB 2020 13:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.1.17)  3 FEB 2020 16:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**cv.tex
-(./cv.tex
+**nonac_cv.tex
+(./nonac_cv.tex
 LaTeX2e <2018-12-01>
 (/Users/reka/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
@@ -972,44 +972,44 @@ File: english.lbx 2019/08/31 v3.13a biblatex localization (PK/MW)
 )
 \@quotelevel=\count426
 \@quotereset=\count427
-(./cv.aux)
-\openout1 = `cv.aux'.
+(./nonac_cv.aux)
+\openout1 = `nonac_cv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 248.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 248.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 247.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 247.
 
 (/Users/reka/Library/TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
 LaTeX Font Info:    Try loading font information for T1+Carlito-TLF on input li
-ne 248.
+ne 247.
 (/Users/reka/Library/TinyTeX/texmf-dist/tex/latex/carlito/T1Carlito-TLF.fd
 File: T1Carlito-TLF.fd 2014/08/20 (autoinst) Font definitions for T1/Carlito-TL
 F.
 )
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 248.
+(Font)              scaled to size 10.0pt on input line 247.
 \c@mv@tabular=\count428
 \c@mv@boldtabular=\count429
 \AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring OFF on input line 248.
+Package hyperref Info: Link coloring OFF on input line 247.
 (/Users/reka/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1018,12 +1018,12 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count430
 )
-LaTeX Info: Redefining \ref on input line 248.
-LaTeX Info: Redefining \pageref on input line 248.
-LaTeX Info: Redefining \nameref on input line 248.
-(./cv.out) (./cv.out)
+LaTeX Info: Redefining \ref on input line 247.
+LaTeX Info: Redefining \pageref on input line 247.
+LaTeX Info: Redefining \nameref on input line 247.
+(./nonac_cv.out) (./nonac_cv.out)
 \@outlinefile=\write4
-\openout4 = `cv.out'.
+\openout4 = `nonac_cv.out'.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1062,288 +1062,314 @@ LaTeX Info: Redefining \nameref on input line 248.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Data encoding 'utf8' specified.
 (biblatex)             No need to reencode data.
-\openout3 = `cv.bcf'.
+\openout3 = `nonac_cv.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'cv.bbl' found.
-(./cv.bbl)
-Package biblatex Info: Reference section=0 on input line 248.
-Package biblatex Info: Reference segment=0 on input line 248.
+Package biblatex Info: ... file 'nonac_cv.bbl' found.
+(./nonac_cv.bbl)
+Package biblatex Info: Reference section=0 on input line 247.
+Package biblatex Info: Reference segment=0 on input line 247.
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 248.
+LaTeX Info: Redefining \selectfont on input line 247.
 (/Users/reka/Library/TinyTeX/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 249.
+(Font)              <7> on input line 248.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 249.
+(Font)              <5> on input line 248.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 249.
+(Font)              scaled to size 17.28pt on input line 248.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/bx/n' in size <17.28> not availa
 ble
 (Font)              Font shape `T1/Carlito-TLF/b/n' tried instead on input line
- 249.
+ 248.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 249.
+(Font)              scaled to size 17.28pt on input line 248.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 249.
+(Font)              scaled to size 12.0pt on input line 248.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/bx/n' in size <10> not available
 
 (Font)              Font shape `T1/Carlito-TLF/b/n' tried instead on input line
- 249.
+ 248.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 249.
+(Font)              scaled to size 10.0pt on input line 248.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 249.
+(Font)              scaled to size 9.0pt on input line 248.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 249.
+(Font)              <9> on input line 248.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 249.
+(Font)              <6> on input line 248.
 LaTeX Font Info:    Try loading font information for U+fontawesometwo on input 
-line 249.
+line 248.
 
 (/Users/reka/Library/TinyTeX/texmf-dist/tex/latex/fontawesome/ufontawesometwo.f
 d
 File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 )
 LaTeX Font Info:    Try loading font information for U+fontawesomethree on inpu
-t line 249.
+t line 248.
 
 (/Users/reka/Library/TinyTeX/texmf-dist/tex/latex/fontawesome/ufontawesomethree
 .fd
 File: ufontawesomethree.fd 2016/05/22 Font definitions for U/fontawesomethree.
 )
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 249--250
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 248--249
 [][][][] 
  []
 
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/bx/n' in size <12> not available
 
 (Font)              Font shape `T1/Carlito-TLF/b/n' tried instead on input line
- 253.
+ 252.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 253.
+(Font)              scaled to size 12.0pt on input line 252.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 255.
+(Font)              scaled to size 8.0pt on input line 254.
 
-Overfull \hbox (20.26868pt too wide) in alignment at lines 260--260
-[] []
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+[]\T1/Carlito-TLF/m/n/10 - Se-cured grant fund-ing, man-aged re-search teams, p
+ub-lished in aca-demic jour-nals, at-tracted high-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+\T1/Carlito-TLF/m/n/10 quality re-search stu-dents, and en-gaged with in-dus-tr
+y and pub-lic sec-tor to max-imise im-pact. - Taught
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+\T1/Carlito-TLF/m/n/10 quan-ti-ta-tive data anal-y-sis, GIS and crime map-ping,
+ eval-u-a-tion re-search in pol-icy and prac-tice to un-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+\T1/Carlito-TLF/m/n/10 der-grad-u-ate and post-grad-u-ate stu-dents, ex-ter-nal
+ teach-ing to pro-fes-sional au-di-ences. - Pro-gramme
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+\T1/Carlito-TLF/m/n/10 di-rec-tor for Mas-ters' study in the De-part-ment of Cr
+im-i-nol-ogy, Aca-demic Ad-vis-ing, and other pub-lic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+[]\T1/Carlito-TLF/m/n/10 - Gath-ered, pro-cessed, and anal-ysed data on trends 
+and emerg-ing is-sues by prepar-ing an-a-lyt-i-cal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+\T1/Carlito-TLF/m/n/10 prod-ucts, which in-formed TfL's de-ploy-ment de-ci-sion
+s. - Col-lated data from di-verse sources to make
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+\T1/Carlito-TLF/m/n/10 them use-ful by clean-ing and writ-ing code for re-pro-d
+ucible data pipelines from query to out-put
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+\T1/Carlito-TLF/m/n/10 re-port or in-ter-ac-tive ap-pli-ca-tions. - Used in-fer
+-en-tial statis-tics and spa-tiotem-po-ral anal-y-sis to draw
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+[]\T1/Carlito-TLF/m/n/10 - Pro-duced a re-port on quan-ti-ta-tive and qual-i-ta
+-tive anal-y-sis of data from a pub-lic con-sul-ta-tion on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+\T1/Carlito-TLF/m/n/10 Cam-den's ma-jor ur-ban re-de-vel-op-ment project around
+ Tot-ten-ham Court Road - Anal-ysed how at-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+\T1/Carlito-TLF/m/n/10 ti-tudes var-ied across dif-fer-ent char-ac-ter-is-tics 
+(eg res-i-dents, small busi-ness own-ers, cy-clist groups,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+\T1/Carlito-TLF/m/n/10 etc) - Ex-tracted themes from qual-i-ta-tive data about 
+what peo-ple sup-ported and op-posed, to al-low
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--264
 []\T1/Carlito-TLF/m/n/8 Fellowship awarded to pro-fes-sion-als who meet the cri
 -te-ria of De-scrip-tor 2 of the UK Pro-fes-sional Stan-dards Frame-work for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+Underfull \hbox (badness 10000) in paragraph at lines 264--264
 []\T1/Carlito-TLF/b/n/10 Board mem-ber: Eco-nomic and So-cial Re-search Coun-ci
 l Busi-ness and Lo-cal Gov-ern-ment Data Re-search
  []
 
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 289.
 [1
 
 {/Users/reka/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 1681) in paragraph at lines 352--352
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 10.0pt on input line 288.
+
+Underfull \hbox (badness 1681) in paragraph at lines 335--335
 [][] [][][]\T1/Carlito-TLF/m/n/10 Solymosi, R (2018). North-west Uni-ver-si-tie
 s R Day event. \T1/Carlito-TLF/m/it/10 Soft-ware Sus-tain-abil-ity In-sti-tute 
 Blog. Avail-able: 
  []
 
-
-Underfull \hbox (badness 6961) in paragraph at lines 352--352
+[2]
+Underfull \hbox (badness 6961) in paragraph at lines 335--335
 [][] [][][]\T1/Carlito-TLF/m/n/10 Solymosi, R (2018). Brexit Data Chal-lenge ev
 ent. \T1/Carlito-TLF/m/it/10 Soft-ware Sus-tain-abil-ity In-sti-tute Blog. Avai
 l-able: 
  []
 
 
-Underfull \hbox (badness 3240) in paragraph at lines 352--352
+Underfull \hbox (badness 3240) in paragraph at lines 335--335
 [][] [][][]\T1/Carlito-TLF/m/n/10 Solymosi, R (2016). Con-fi-dence in trans-por
 t and polic-ing. \T1/Carlito-TLF/m/it/10 Avail-able: https://www.ucl.ac.uk/tran
 sport- 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 352--352
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
 [][] [][][]\T1/Carlito-TLF/m/n/10 Solymosi, R (2014). Trans-port Streets and Cr
 ime. \T1/Carlito-TLF/m/it/10 Avail-able: https://www.ucl.ac.uk/transport- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--373
+Underfull \hbox (badness 10000) in paragraph at lines 356--356
 []\T1/Carlito-TLF/b/n/10 Identifying fea-tures that af-fect pub-lic en-gage-men
 t with ap-peals for in-for-ma-tion about miss-ing per-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--383
-[]\T1/Carlito-TLF/b/n/10 Sebastian Acevedo: Un-equal Dis-tri-bu-tion of Ac-cess
- to Pub-lic Safety: The Case of Lo-cal Gov-ern-ments in
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 383--383
-[]\T1/Carlito-TLF/b/n/10 Daniel Ham-mocks: In-no-va-tion in Po-lice In-tel-li-g
-ence Prac-tice: Hori-zon Scan-ning Tools and Pro-cesses for
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 383--383
-[]\T1/Carlito-TLF/b/n/10 Oskar En-ghoff: Con-sumer cul-ture in an il-licit dig-
-i-tal econ-omy: the pro-duc-tion of de-mand, risk per-cep-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 391--391
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
 []\T1/Carlito-TLF/b/n/10 The role of in-no-va-tive data col-lec-tion meth-ods i
 n ad-vanc-ing un-der-stand-ing, and the im-por-tance of
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 396--396
-[]\T1/Carlito-TLF/b/n/10 Victimization and per-ceived safety among col-lege stu
--dents: Fo-cus on women's tran-sit safety in Lon-
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
+[]\T1/Carlito-TLF/m/n/8 I col-lab-o-rate ac-tively with Open Data Manch-ester, 
+a Com-mu-nity In-ter-est Com-pany in-ter-ested in open data and pro-mot-ing dat
+a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 396--396
-[]\T1/Carlito-TLF/b/n/10 Mapping Fear of Crime Dy-nam-i-cally in Place and Time
-: Case study of Rev-enue Pro-tec-tion In-spec-tors
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 401--401
-[]\T1/Carlito-TLF/b/n/10 Mapping fear of crime hotspots as they vary with place
-, time, and in-di-vid-ual char-ac-ter-is-tics us-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 427--427
-[]\T1/Carlito-TLF/b/n/10 University of Am-s-ter-dam: Crowd-sourced data and a c
-rime sci-ence ap-proach to per-cep-tion of crime
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 427--427
-[]\T1/Carlito-TLF/m/n/8 Week-long in-ten-sive course in-tro-duc-ing stu-dents t
-o us-ing R and R Stu-dio for data anal-y-sis. Open to all, usu-ally at-tended b
-y
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 434--434
-[]\T1/Carlito-TLF/m/n/8 I am ac-tively col-lab-o-rat-ing with Open Data Manch-e
-ster, a Com-mu-nity In-ter-est Com-pany in-ter-ested in open data and pro-mot-i
-ng
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 434--434
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
 []\T1/Carlito-TLF/m/n/8 One-hour ca-reer ori-ented ses-sion about data anal-y-s
 is for stu-dents en-rolled in a com-mu-nity school, in-tro-duc-ing them to crim
 e
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--434
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
 []\T1/Carlito-TLF/m/n/8 Co-supervision of PhD stu-dent with Greater Manch-ester
  Po-lice's Force In-tel-li-gence Bu-reau and col-leagues in Uni-ver-sity Col-le
 ge
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--434
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
 []\T1/Carlito-TLF/m/n/8 Training work-shop on data vi-su-al-i-sa-tion and GIS a
 s part of the N8 Polic-ing Re-search Part-ner-ship train-ing course for po-lice
  an-a-lysts
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--434
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
 []\T1/Carlito-TLF/m/n/8 I con-sis-tently give talks and par-tic-i-pate in data-
 related mee-tups in-clud-ing ones which em-pha-sise rep-re-sen-ta-tion of women
  in data
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--434
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
 []\T1/Carlito-TLF/m/n/8 The NGO `MySo-ci-ety' in-vited me to present the work I
  did us-ing their fix my street plat-form at the in-ter-na-tional civic tech-no
 l-ogy
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--434
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
 \T1/Carlito-TLF/m/n/8 con-fer-ence for re-searchers, prac-ti-tion-ers, and all 
 those with an in-ter-est in how tech-nol-ogy is chang-ing the way we en-gage wi
 th
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--434
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
 \T1/Carlito-TLF/m/n/8 so-ci-ety. TICTeC is known for its unique fo-cus on the i
 m-pacts of Civic Tech-nolo-gies where fun-ders mix with prac-ti-tion-ers, ac-ti
 vists
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--434
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
 \T1/Carlito-TLF/m/n/8 con-verse with re-searchers, small NGOs get as much at-te
 n-tion as the big play-ers. Since then, I have been work-ing with their
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 439--439
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
 []\T1/Carlito-TLF/b/n/10 Department of Crim-i-nol-ogy: Pro-gramme Di-rec-tor fo
 r Post-grad-u-ate Taught Pro-grammes (Mas-ters
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--439
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
 []\T1/Carlito-TLF/m/n/8 Strategic over-sight of pro-gramme di-rec-tion teach-in
 g cur-ricu-lum for all Mas-ters' streams, along-side day-to-day ad-min-is-tra-t
 ive and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--439
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
 []\T1/Carlito-TLF/m/n/8 Direction and or-gan-i-sa-tion of user group ac-tiv-i-t
 ies such as monthly meet-ings, hackathons, and prepa-ra-tion of joint re-search
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--439
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
 []\T1/Carlito-TLF/m/n/8 Undergraduate Open Day, Post-grad-u-ate Re-search (PhD)
  Open Day, and sim-i-lar roles as-sist-ing col-leagues and pro-mot-ing the
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 441.
-[6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 441.
-(./cv.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 441.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 441.
-Package rerunfilecheck Info: File `cv.out' has not changed.
-(rerunfilecheck)             Checksum: 303E5CC682C22CF31F06D78B5B575E29;5284.
-Package logreq Info: Writing requests to 'cv.run.xml'.
-\openout1 = `cv.run.xml'.
+[4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 418.
+[5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 418.
+(./nonac_cv.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 418.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 418.
+Package rerunfilecheck Info: File `nonac_cv.out' has not changed.
+(rerunfilecheck)             Checksum: 56746961F4A5B9A5C91FEB504DFD7480;2578.
+Package logreq Info: Writing requests to 'nonac_cv.run.xml'.
+\openout1 = `nonac_cv.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 441.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 418.
  ) 
 Here is how much of TeX's memory you used:
- 30548 strings out of 494553
- 536166 string characters out of 6176715
- 974852 words of memory out of 5000000
- 33880 multiletter control sequences out of 15000+600000
+ 30466 strings out of 494553
+ 533791 string characters out of 6176715
+ 970170 words of memory out of 5000000
+ 33828 multiletter control sequences out of 15000+600000
  602769 words of font info for 52 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,19n,63p,3571b,1365s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,19n,63p,3577b,1363s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/reka/Library/TinyTeX/texmf-dist/fonts/enc/dvips/carlito/crlt_z7vml3.e
 nc}{/Users/reka/Library/TinyTeX/texmf-dist/fonts/enc/dvips/fontawesome/fontawes
 omethree.enc}{/Users/reka/Library/TinyTeX/texmf-dist/fonts/enc/dvips/fontawesom
@@ -1351,11 +1377,12 @@ e/fontawesometwo.enc}</Users/reka/Library/TinyTeX/texmf-dist/fonts/type1/typola
 nd/carlito/Carlito-Bold.pfb></Users/reka/Library/TinyTeX/texmf-dist/fonts/type1
 /typoland/carlito/Carlito-Italic.pfb></Users/reka/Library/TinyTeX/texmf-dist/fo
 nts/type1/typoland/carlito/Carlito.pfb></Users/reka/Library/TinyTeX/texmf-dist/
-fonts/type1/public/fontawesome/FontAwesome.pfb>
-Output written on cv.pdf (6 pages, 113427 bytes).
+fonts/type1/public/fontawesome/FontAwesome.pfb></Users/reka/Library/TinyTeX/tex
+mf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on nonac_cv.pdf (5 pages, 110803 bytes).
 PDF statistics:
- 238 PDF objects out of 1000 (max. 8388607)
- 223 compressed objects within 3 object streams
- 95 named destinations out of 1000 (max. 500000)
- 185 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 175 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -399,11 +399,11 @@ tribble(
 tribble(
 	~title, ~start_date, ~desc, 
 	
-"Open Data Manchester", 2020, "Open Data Manchester is a Community Interest Company interested in open data and promoting data literacy and suporting data analysis for good. I have been collaborating with them for a while and recently they have come on-board to co-supervise my PhD student Nathan Khadaroo.", 
+"Open Data Manchester", 2020, "I am actively collaborating with Open Data Manchester, a Community Interest Company interested in open data and promoting data literacy and suporting data analysis for good. We have a joint PhD student (see Nathan Khadaroo in research students).", 
 
-	"Wirral Hospitals' School Joseph Paxton Campus", "", "One-hour career oriented session for students enrolled in a community school for students unable to attend mainstream school introducing them to crime analysis.",
+	"Wirral Hospitals' School", 2020, "One-hour career oriented session about data analysis for students enrolled in a community school, introducing them to crime analysis.",
 
-"Greater Manchester Police",2019, "Co-supervision of PhD student with Greater Manchester Police's Force Intelligence Bureau and colleagues in University College London working to improve horizon scanning processes within the organisation and wider in policing", 
+"Greater Manchester Police",2019, "Co-supervision of PhD student with Greater Manchester Police's Force Intelligence Bureau and colleagues in University College London working to improve horizon scanning processes within the organisation and wider in policing.", 
 
 "N8 Analyst Training", 2018, "Training workshop on data visualisation and GIS as part of the N8 Policing Research Partnership training course for police analysts from across northern police forces.", 
 
