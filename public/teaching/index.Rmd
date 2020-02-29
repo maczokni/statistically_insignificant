@@ -27,6 +27,11 @@ Introduction to spatial data analysis and visualisation for criminology students
 
 # Short courses
 
+### Monash University Masterclass
+
+1-day introduction to data analysis and a gentle intro to R and R Studio using R Studio Cloud. [See here for more info and course websie](https://rekadata.site/teaching/monash_masterclass/). 
+
+
 ### Getting Started in R
 
 One-week introductory course for students to become familiar with data import, wrangling, analysis and visualisation as part of the [methods@manchester](https://www.methods.manchester.ac.uk/connect/events/summer-school-2020/) summer school. See course materials [here](https://rcatlord.github.io/GSinR/)

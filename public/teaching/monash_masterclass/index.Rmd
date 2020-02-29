@@ -1,0 +1,32 @@
+---
+title: "Monash Masterclass"
+author: 
+output:
+  html_document:
+    css: "../../rekadata.css"
+---
+
+## Welcome to the website for the masterclass 'A gentle introduction to data analysis for social scientists using R' held at Monash University. 
+
+This masterclass is aimed at anyone curious about exploring how the increasingly available volumes of quantitative data can bring about new insights into topics interesting to social science researchers. We will explore some recent examples of creative forms of data collection, visualisation, and analysis aimed to inspire ideas for applications to participants' own research. We will then follow with a hands-on introduction to R and R Studio, to provide a first experience with writing and editing R code, and cumulate in attendees producing their own data visualisations. We will end with some resources for anyone interested to learn more, and hopefully with a renewed enthusiasm for data analysis. There are no prerequisite skills required for this masterclass, and attendees will be provided computers with R and R Studio already installed for the hands-on exercise.
+
+### Below are some resources you may need for the class, or after:
+
+- The [Slides](https://www.dropbox.com/s/ksv8fnpxlqgzywn/getting_friendly_with_data.pptx?dl=1)
+
+- Link to the R Studio Cloud workspace:  [click here](https://rstudio.cloud/spaces/53522/join?access_code=M08YYAUtEQKJSvGDgOaXEABbXDX52zrRkCj%2BQmIB) 
+
+- Step-by-step guide on how to sign up:
+
+### Here are some additional materials for moving forwards: 
+
+- [Wickham, H., & Grolemund, G. (2016). R for data science: import, tidy, transform, visualize, and model data. " O'Reilly Media, Inc.".](https://r4ds.had.co.nz/)
+
+- [Getting Started in R materials from University of Manchester](https://rcatlord.github.io/GSinR/)
+
+- [Modelling Criminological Data module from University of Manchester](https://jjmedinaariza.github.io/modelling_book/)
+
+- [Melbourne R meetup](https://www.meetup.com/MelbURN-Melbourne-Users-of-R-Network/)
+
+- [Melbourne R Ladies meetup](https://www.meetup.com/rladies-melbourne/)
+
