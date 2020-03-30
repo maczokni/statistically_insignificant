@@ -5,10 +5,19 @@
     <link>https://rekadata.site/</link>
     <description>Recent content on Dr Reka Solymosi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 29 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 29 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rekadata.site/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hot Routes Tutorial</title>
+      <link>https://rekadata.site/blog/hot-routes-tutorial/</link>
+      <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://rekadata.site/blog/hot-routes-tutorial/</guid>
+      <description>Crime concentrates in place and time, and it is the task of the crime analyst to identify where and when these hotspots emerge. This is often achieved by producing density maps. Kernel density estimation is one methdod for producing such maps, which involves applying a function (known as a “kernel”) to each data point, which averages the location of that point with respect to the location of other data points.</description>
+    </item>
     
     <item>
       <title>Exploring public engagement with missing person appeals on Twitter</title>
