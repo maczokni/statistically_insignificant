@@ -16,13 +16,13 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE)
 Crime concentrates in place and time, and it is the task of the crime analyst to identify where and when these hotspots emerge. This is often achieved by producing density maps. Kernel density estimation is one methdod for producing such maps, which  involves applying a function (known as a “kernel”) to each data point, which averages the location of that point with respect to the location of other data points. The surface that results from this model allows us to produce isarithmic maps, also referred to in common parlor as heatmaps (see [our crime mapping textbook on GitHub](https://maczokni.github.io/crimemapping_textbook_bookdown/studying-spatial-point-patterns.html#density-estimates) for more on Kernel Density Mapping and a "how-to-in-R" tutorial).  
 
 
-However, often we might be interested in how crime concentrates along a particular network such as along streets, bus routes, train nextworks, and others. In order to map hot spots along a network, [Henry Partridge](https://www.trafforddatalab.io/about.html) and [Lisa Tompson](https://twitter.com/Lisa_Tompson) have developed a spatial technique called *hot routes*. Hot Routes was devised to be a straightforward spatial technique that analyses crime patterns that are associated with a linear network (e.g. streets and other transportation networks). It allows an analyst to map crime concentrations along different segments of the network and visualise this through colour. 
+However, often we might be interested in how crime concentrates along a particular network such as along streets, bus routes, train nextworks, and others. In order to map hot spots along a network, we can use a technique called *hot routes*. It was used as early as 2003 by [Andrew Newton](https://www.ntu.ac.uk/staff-profiles/social-sciences/andy-newton) to map [crime and disorder on the bus network in Merseyside](https://ethos.bl.uk/OrderDetails.do?uin=uk.bl.ethos.400407). A useful how-to guide was later produced by [Henry Partridge](https://www.trafforddatalab.io/about.html) and [Lisa Tompson](https://twitter.com/Lisa_Tompson) and can be accessed in the associated [JDI brief](https://www.ucl.ac.uk/jdibrief/documents/hot-routes/Hot-Routes-All) or [journal article](https://discovery.ucl.ac.uk/id/eprint/20057/1/Hot_Routes_Tompson_Partridge_Shepherd.pdf).  
 
 
-To read more about the theory and background around hot routes, see the associated [JDI brief](https://www.ucl.ac.uk/jdibrief/documents/hot-routes/Hot-Routes-All) or [journal article](https://discovery.ucl.ac.uk/id/eprint/20057/1/Hot_Routes_Tompson_Partridge_Shepherd.pdf). 
+Hot Routes was devised to be a straightforward spatial technique that analyses crime patterns that are associated with a linear network (e.g. streets and other transportation networks). It allows an analyst to map crime concentrations along different segments of the network and visualise this through colour. 
 
 
-Here I will go through an example of how to apply hot routes in R. We will follow the 4 steps outlined by Henry Partridge and Lisa Tompson in their papers: 
+Here I will go through an example of how to apply hot routes in R. We will follow the 4 steps outlined by Henry Partridge and Lisa Tompson in the JDI brief:
 
 **Step 1: Prepare the network layer** 
 **Step 2. Link crime events to street segments**

@@ -4,7 +4,7 @@ blogdown::new_site(theme = "gcushen/hugo-academic")
 blogdown::new_site()
 blogdown::install_theme("koirand/pulp", force = TRUE, theme_example = TRUE)
 blogdown::serve_site()
-blogdown::new_post(title="Hot Routes Tutorial", 
+blogdown::new_post(title="Street Profiles Tutorial", 
          ext = getOption("blogdown.ext", ".Rmd"))
 
 

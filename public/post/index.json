@@ -1,5 +1,13 @@
 [
     {
+        "ref": "https://rekadata.site/post/street-profiles-tutorial/",
+        "title": "Street Profiles Tutorial",
+        "section": "post",
+        "date" : "2020.04.01",
+        "body": " A few days ago I posted [this tutorial about hot routes] for visualising crime along a network (eg tube line). But I mentioned at the end, it may not always be necessary to include the geographic component of this visualisation. Instead, another approach could be to make use of street profile analysis.\n"
+    }
+,
+    {
         "ref": "https://rekadata.site/post/hello-world/",
         "title": "Hello world",
         "section": "post",
