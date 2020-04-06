@@ -9,7 +9,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="{{ .Site.Author }}" />
+  <meta name="author" content="{{ .Site.Params.Author }}" />
   <link rel="shortcut icon" type="image/x-icon" href="/img/{{ .Site.Params.favicon }}">
 
   <!-- css -->
@@ -17,7 +17,11 @@
   {{ $markdown := resources.Get "css/markdown.css" }}
   {{ $syntaxHighlight := resources.Get "css/syntax-highlight.css" }}
   {{ $css := slice $style $markdown $syntaxHighlight | resources.Concat "style.css" | resources.Minify | resources.Fingerprint }}
-  <link rel="stylesheet" href="{{ $css.Permalink }}">
+  <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ $styleDark := resources.Get "css/style-dark.css" }}
+  {{ $markdownDark := resources.Get "css/markdown-dark.css" }}
+  {{ $cssDark := slice $styleDark $markdownDark | resources.Concat "style-dark.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $cssDark.Permalink }}" media="(prefers-color-scheme: dark)" integrity="{{ $cssDark.Data.Integrity }}">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
   <!-- custom css -->
@@ -29,7 +33,8 @@
   {{- template "_internal/opengraph.html" . -}}
   {{- template "_internal/google_news.html" . -}}
   {{- template "_internal/schema.html" . -}}
-  {{- template "_internal/twitter_cards.html" . -}}
+  <!-- {{- template "_internal/twitter_cards.html" . -}} -->
+  {{- partial "twitter_cards.html" . -}}
 
   <!-- Polyfill for old browsers -->
   {{ `<!--[if lte IE 9]>

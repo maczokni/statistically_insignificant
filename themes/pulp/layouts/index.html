@@ -7,25 +7,20 @@
         <header>
           <!-- avator -->
           <div class="avatar">
-            <img class="avatarMask" src="/img/{{ .Site.Params.avatar }}" alt="avatar">
-            <img src="/img/avatar-border.svg" alt="avatar-border">
+            <img class="avatarMask" src="/img/{{ .Site.Params.avatar }}" alt="{{ .Site.Params.avatarDescription }}">
+            <img src="/img/avatar-border.svg" class="avatar-border" alt="">
           </div>
           <!-- author -->
           <h1 class="author">{{ .Site.Params.Author }}</h1>
         </header>
         <!-- description -->
         <p>
-          {{ .Site.Params.description }}
+          {{ .Site.Params.description | safeHTML }}
         </p>
         <!-- navigation -->
         <nav>
           <ul>
-            {{ range first 4 .Site.Menus.main }}
-            <li><a href="{{ .URL }}" aria-label="{{ .Identifier }}">{{ .Pre }}<br>{{ .Name }}</a></li>
-            {{ end }}
-          </ul>
-          <ul>
-            {{ range after 4 .Site.Menus.main }}
+            {{ range .Site.Menus.main }}
             <li><a href="{{ .URL }}" aria-label="{{ .Identifier }}">{{ .Pre }}<br>{{ .Name }}</a></li>
             {{ end }}
           </ul>

@@ -2,123 +2,123 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dr Reka Solymosi</title>
-    <link>https://rekadata.site/</link>
+    <link>/</link>
     <description>Recent content on Dr Reka Solymosi</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 01 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://rekadata.site/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Street Profiles Tutorial</title>
-      <link>https://rekadata.site/post/street-profiles-tutorial/</link>
+      <link>/post/street-profiles-tutorial/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://rekadata.site/post/street-profiles-tutorial/</guid>
+      <guid>/post/street-profiles-tutorial/</guid>
       <description>A few days ago I posted [this tutorial about hot routes] for visualising crime along a network (eg tube line). But I mentioned at the end, it may not always be necessary to include the geographic component of this visualisation. Instead, another approach could be to make use of street profile analysis.</description>
     </item>
     
     <item>
       <title>Hot Routes Tutorial</title>
-      <link>https://rekadata.site/blog/hot-routes-tutorial/</link>
+      <link>/blog/hot-routes-tutorial/</link>
       <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://rekadata.site/blog/hot-routes-tutorial/</guid>
+      <guid>/blog/hot-routes-tutorial/</guid>
       <description>Crime concentrates in place and time, and it is the task of the crime analyst to identify where and when these hotspots emerge. This is often achieved by producing density maps. Kernel density estimation is one methdod for producing such maps, which involves applying a function (known as a “kernel”) to each data point, which averages the location of that point with respect to the location of other data points.</description>
     </item>
     
     <item>
       <title>Exploring public engagement with missing person appeals on Twitter</title>
-      <link>https://rekadata.site/blog/exploring-public-engagement-with-missing-person-appeals-on-twitter/</link>
+      <link>/blog/exploring-public-engagement-with-missing-person-appeals-on-twitter/</link>
       <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://rekadata.site/blog/exploring-public-engagement-with-missing-person-appeals-on-twitter/</guid>
+      <guid>/blog/exploring-public-engagement-with-missing-person-appeals-on-twitter/</guid>
       <description>About this time last year I received funding from the Manchester Statistical Society Campion Grant to carry out some research looking into appeals for informaion made about missing persons on Twitter.
 The motivation behind this is that police agencies globally are seeing an increase in reports of people going missing. These people are often vulnerable, and their safe and early return can be a key factor in preventing them from coming to serious harm.</description>
     </item>
     
     <item>
       <title>Introducing data and crime analysis to Wirral Hospitals&#39; School</title>
-      <link>https://rekadata.site/blog/crime-analysis-for-schools/</link>
+      <link>/blog/crime-analysis-for-schools/</link>
       <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://rekadata.site/blog/crime-analysis-for-schools/</guid>
+      <guid>/blog/crime-analysis-for-schools/</guid>
       <description>On Monday (13th January) I gave a talk introducing pupils of Wirral Hospitals’ School to the world of data analysis, and specifically crime analysis. It was my first time speaking to a younger audience, so I had a bit of a task trying to think about what is the appropriate amount of content to include, and level to pitch to. I didn’t want to be too simplistic and therefore condescending, but I also didn’t want to bore them with jargon and technical details.</description>
     </item>
     
     <item>
       <title>ASC 2019</title>
-      <link>https://rekadata.site/blog/asc-2019/</link>
+      <link>/blog/asc-2019/</link>
       <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://rekadata.site/blog/asc-2019/</guid>
+      <guid>/blog/asc-2019/</guid>
       <description>Last week I was at the 2019 annual meeting of the American Society of Criminology (ASC). It was a great opportunity to see friends and colleagues, learn about new developments in the field, and present my paper on environmental features associated with sexual harassment.
 This was my 3rd ASC (2nd in sunny San Francisco) but my first without a “crime and place“ stream. This meant that instead of sitting in one room and waiting for the presentations to come to me, I had to curate my own experience.</description>
     </item>
     
     <item>
       <title>Halloween MCR</title>
-      <link>https://rekadata.site/blog/halloween-mcr/</link>
+      <link>/blog/halloween-mcr/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://rekadata.site/blog/halloween-mcr/</guid>
+      <guid>/blog/halloween-mcr/</guid>
       <description>On 29 October 2019 I gave a short presentation at PyData Manchester and Open Data Manchester joint meetup on the topic of Data Horror Stories. My talk was a data-driven exploration of the massive inflatable Halloween monsters of Manchester.
 Halloween is the best  Boys and girls of every age Wouldn’t you like to see something strange Come with us and you will see, This our town of Halloween - The Nightmare Before Christmas</description>
     </item>
     
     <item>
       <title>Webscraping and some sampling &amp; mapping in R</title>
-      <link>https://rekadata.site/blog/webscraping-and-some-sampling-mapping-in-r/</link>
+      <link>/blog/webscraping-and-some-sampling-mapping-in-r/</link>
       <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://rekadata.site/blog/webscraping-and-some-sampling-mapping-in-r/</guid>
+      <guid>/blog/webscraping-and-some-sampling-mapping-in-r/</guid>
       <description>Presenting at R Sheffield Last week I had the pleasure to present at the Sheffield R User Group alongside former PhD colleague (and roommate) Joanna Hill who is currently based in Uganda, working remotely at Rutgers University. It was a great event, set in a meeting room upstairs in The Red Deer pub, which gave it a nice informal feel. The attendees were all welcoming, knowedgeable, and very engaged and engaging, so it was a great experience and I recommend to anyone in the area.</description>
     </item>
     
     <item>
       <title>Data Visualisation Summer School</title>
-      <link>https://rekadata.site/blog/data-visualisation-summer-school/</link>
+      <link>/blog/data-visualisation-summer-school/</link>
       <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://rekadata.site/blog/data-visualisation-summer-school/</guid>
+      <guid>/blog/data-visualisation-summer-school/</guid>
       <description>Learning to visualise data Last week I had the opportunity to take a one-week course by Andy Kirk about data visualisation, hosted by Methods at Manchester as part of the Summer School programme. It was a fantastic experience to be a student again, and I learned a lot about practical considerations that go into producing effective visualisations that are trustworthy, accessible, and elegant.
 I will not (and cannot) summarise the course here, I recomment anyone interested in creating data visuailisations to get in touch with Andy for courses.</description>
     </item>
     
     <item>
       <title>Hello world</title>
-      <link>https://rekadata.site/post/hello-world/</link>
+      <link>/post/hello-world/</link>
       <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://rekadata.site/post/hello-world/</guid>
+      <guid>/post/hello-world/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>https://rekadata.site/post/markdown-syntax/</link>
+      <link>/post/markdown-syntax/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://rekadata.site/post/markdown-syntax/</guid>
+      <guid>/post/markdown-syntax/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Rich Content</title>
-      <link>https://rekadata.site/post/rich-content/</link>
+      <link>/post/rich-content/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://rekadata.site/post/rich-content/</guid>
+      <guid>/post/rich-content/</guid>
       <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Placeholder Text</title>
-      <link>https://rekadata.site/post/placeholder-text/</link>
+      <link>/post/placeholder-text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://rekadata.site/post/placeholder-text/</guid>
+      <guid>/post/placeholder-text/</guid>
       <description>&lt;h2 id=&#34;mole-et-vultus-populifer-quaque-primoque-non&#34;&gt;Mole et vultus populifer quaque primoque non&lt;/h2&gt;
 
 &lt;p&gt;Lorem est tota propiore conpellat pectoribus de
@@ -127,19 +127,19 @@ pectora summo.&lt;/p&gt;</description>
     
     <item>
       <title>Math Typesetting</title>
-      <link>https://rekadata.site/post/math-typesetting/</link>
+      <link>/post/math-typesetting/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://rekadata.site/post/math-typesetting/</guid>
+      <guid>/post/math-typesetting/</guid>
       <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Emoji Support</title>
-      <link>https://rekadata.site/post/emoji-support/</link>
+      <link>/post/emoji-support/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://rekadata.site/post/emoji-support/</guid>
+      <guid>/post/emoji-support/</guid>
       <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
     </item>
     
