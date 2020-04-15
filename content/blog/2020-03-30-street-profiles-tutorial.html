@@ -1,0 +1,117 @@
+---
+title: Street Profile Analysis Tutorial
+author: ~
+date: '2020-04-06'
+slug: street-profiles-tutorial
+categories: []
+tags: []
+images: []
+---
+
+
+
+<p>A few days ago I posted <a href="https://rekadata.site/blog/hot-routes-tutorial/">this tutorial about hot routes</a> for visualising crime along a network (eg tube line). But I mentioned at the end, it may not always be necessary to include the geographic component of this visualisation. Instead, another approach could be to make use of <a href="https://www.researchgate.net/publication/297605497_Street_profile_analysis_A_new_method_for_mapping_crime_on_major_roadways">street profile analysis</a>.</p>
+<p>Street profile analysis was initially developed as a method for visualising temporal and spatial crime patterns along major roadways in metropolitan areas. The idea is that the geographical location of the street may not actually be as important as the ability to visualise data from multiple years in a comparable way. So the approach is to treat the street in question as the x-axis of a graph, with a start point (A) and end point (B) breaking it into some interval (I think they use 100m intervals). Then, you can visualise how crime is distributed along this street by plotting count or rate of crimes on the y-axis, and have multiple lines for different years for example. You can add context by re-introducing some key intersections for example</p>
+<p>In their paper, Spicer and colleagues demonstrate this using the example of Kingsway Avenue in Vancouver, BC</p>
+<p><img src="/img/kingsway_spa.jpeg" /></p>
+<p>When I was working as a crime analyst at TfL, I adapted this method to use this to visualise crime along a bus route, but instead of breaking up the route into 100m intervals from start to finish, I used bus stops to represent ticks along the axis. Also instead of using crime from different years, I compared data from different sources. It was very easy to adapt street profile analysis in this way, and it proved a simple yet powerful way to tell the story of how crime was distributed along the specific bus line. So in what follows I will describe how to carry out Street Profile Analysis using R. I’m going to pick on the Bakerloo line once again, and use some data from the British Transport police once again.</p>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>Like last week, let’s start with a breakdown of the steps we will need to follow.</p>
+<p><strong>Step 1: Prepare the network layer</strong>
+<strong>Step 2. Link crime events to points of interest</strong>
+<strong>Step 3: Calculate a rate</strong>
+<strong>Step 4: Visualise the results</strong></p>
+<p>Exactly like last week for the <a href="https://rekadata.site/blog/hot-routes-tutorial/">hot routes tutorial</a>, I will use the example dataset of the London Underground network, spatial data for which can be downloaded using the <a href="https://api-portal.tfl.gov.uk/docs">Transport for London API</a>, and crime from British Transport Police for February 2020 available via <a href="https://data.police.uk/">data.police.uk</a>.</p>
+</div>
+<div id="step-1-prepare-the-network-layer" class="section level2">
+<h2>Step 1: Prepare the network layer</h2>
+<p>This step is the same as last week’s tutorial so I won’t dwell on it too much, essentially we get the stops for the bakerloo line from the TfL API, make it an sf object, and create a connected line. I’ve created a function called <code>getBakerlooLine()</code> which I just run here. If you want to see the function it is on <a href="">github here</a> but better to have a look at step 1 of the <a href="https://rekadata.site/blog/hot-routes-tutorial/">hot routes tutorial</a> for a breakdown and explanation.</p>
+<pre class="r"><code>library(rjson)
+library(dplyr)
+library(sf)
+
+bakerloo_stops &lt;- getBakerlooStops()</code></pre>
+<pre><code>## Warning in readLines(&quot;https://api.tfl.gov.uk/line/bakerloo/route/sequence/
+## outbound&quot;): incomplete final line found on &#39;https://api.tfl.gov.uk/line/
+## bakerloo/route/sequence/outbound&#39;</code></pre>
+<pre class="r"><code>bakerloo_line &lt;- getBakerlooLine(bakerloo_stops)</code></pre>
+<p>We can plot these to make sure everything looks okay:</p>
+<pre class="r"><code>library(ggplot2)
+
+ggplot()+ 
+  geom_sf(data = bakerloo_stops) + 
+  geom_sf(data = bakerloo_line) + 
+  theme_void() + 
+  theme(panel.grid.major = element_line(colour = &quot;white&quot;))</code></pre>
+<p><img src="/blog/2020-03-30-street-profiles-tutorial_files/figure-html/plotlinestops2-1.png" width="672" /></p>
+<p>Yepp, looking good! In this case we don’t really need to split our line into segments, so that’s it for prepping our network layer!</p>
+</div>
+<div id="step-2.-link-crime-events-to-points-of-interest" class="section level2">
+<h2>Step 2. Link crime events to points of interest</h2>
+<p>For step 2, we start once again with importing some data from the British Transport Police.</p>
+<pre class="r"><code>crimes &lt;- read.csv(&quot;data/2020-02-btp-street.csv&quot;)
+crimes_sf &lt;- st_as_sf(crimes, coords = c(&quot;Longitude&quot;, &quot;Latitude&quot;), crs = 4326)</code></pre>
+<p>We also want to subset this larger dataset of crimes to only those that are on or near the Bakerloo line</p>
+<pre class="r"><code>bakerloo_line_buff &lt;- st_buffer(bakerloo_line, 0.005)</code></pre>
+<pre><code>## Warning in st_buffer.sfc(bakerloo_line, 0.005): st_buffer does not correctly
+## buffer longitude/latitude data</code></pre>
+<pre class="r"><code>crimes_sf &lt;- st_intersection(bakerloo_line_buff, crimes_sf)</code></pre>
+<p>And make sure it’s all looking good</p>
+<pre class="r"><code>ggplot()+ 
+  geom_sf(data = bakerloo_line_buff) + 
+  geom_sf(data = bakerloo_line) + 
+  geom_sf(data = bakerloo_stops) + 
+  geom_sf(data = crimes_sf, col = &quot;blue&quot;) + 
+  theme_void() + 
+  theme(panel.grid.major = element_line(colour = &quot;white&quot;))</code></pre>
+<p><img src="/blog/2020-03-30-street-profiles-tutorial_files/figure-html/plotalltogether2-1.png" width="672" /></p>
+<p>Now we can snap each crime point to the closest tube station using the <code>st_nearest_feature()</code> function. This will return, for each point, the ID of the nearest segment.</p>
+<pre class="r"><code>closest_stop &lt;- st_nearest_feature(crimes_sf, bakerloo_stops)
+
+closest_stop</code></pre>
+<pre><code>##   [1] 16 21 21 25 25 25 25 25 25 13 13 24 24 24 24 24 20 20 20 20 15 14 14 14 14
+##  [26] 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23
+##  [51] 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23
+##  [76] 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 12
+## [101] 12 12 12 12 12 12 12 12 12 12 12 12 12  6 17 17 17 17 17 17 17 17 17 17 17
+## [126] 17 17 17 17 17  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  3  3  3
+## [151]  3  3  9  9  9  9  9  9  9  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7
+## [176]  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7
+## [201]  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7 19 19 19 19 19 19
+## [226] 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19
+## [251] 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19
+## [276] 19 19 19 19 19 19 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11
+## [301] 11 11 11 11 11 11 11 11 11 11 11 11  8  8 11  8 11 11 11  8  8  8 11 11 11
+## [326] 11  8  8  8  8  8  8  8  8  8  8  8  8  8  8  8  8 11  8 11 11  2  2  2  2
+## [351]  2  2  2  2  2  2</code></pre>
+<p>In the results above, we see printed the stop ID for the closest stop to each crime incident.</p>
+<p>Now we need to count the frequency of each stop ID (as this tells us the number of crimes that are close to it, therefore assigned to it), and join this with out stops dataframe:</p>
+<pre class="r"><code>library(tidyr)
+
+#make list of nearest into df of frequency
+stops_w_crimes &lt;- as.data.frame(table(closest_stop))
+
+#join to sections object and replace NAs with 0s
+bakerloo_stops &lt;- left_join(bakerloo_stops %&gt;% mutate(stopnum = rownames(.)), 
+                            stops_w_crimes, 
+                            by = c( &quot;stopnum&quot; = &quot;closest_stop&quot;)) %&gt;% 
+  mutate(Freq = replace_na(Freq, 0)) </code></pre>
+<pre><code>## Warning: Column `stopnum`/`closest_stop` joining character vector and factor,
+## coercing into character vector</code></pre>
+<p>Great now we have a dataframe of each stop and the number of crimes that happened closest possibly to it. We could make a street profile of it with this count (in fact we will in a moment) but first let’s discuss about rates!</p>
+</div>
+<div id="step-3-calculate-a-rate" class="section level2">
+<h2>Step 3: Calculate a rate</h2>
+<p>In order to calculate a crime rate for each station, we need to think about what is an acceptable denominator. How can we best estimate the number of opportunities present for the particular crime type we are interested in, and how might that be captured in some available data set?</p>
+<p>In an upcoming paper “Alternative denominators in transport crime rates” <a href="https://osf.io/5qv38/">the pre-print for which is available on OSF here</a> we considered the various types of denominators that may be available to crime analysts focusing on estimating ambient populations to calculate crime risk. These can be:</p>
+<ul>
+<li>residential population in the area surrounding the station (available from the Census)</li>
+<li>workplace population in the area surrounding the station (also available from the Census)</li>
+<li>number of lines passing through each station (available from station information, or even a network map)</li>
+<li>number of trains passing through each station (available from station information, maybe a timetable)</li>
+<li>number of passengers entering/exiting each station (available from transit authority, maybe via a survey like the <a href="https://data.london.gov.uk/dataset/tfl-rolling-origin-and-destination-survey">Rolling Origin Destination Survey</a>, or smartcard data (eg Oyster card in London))</li>
+</ul>
+<p>and possibly some other options that we have not thought of.</p>
+<p>Here, for simplicity we can use the</p>
+</div>

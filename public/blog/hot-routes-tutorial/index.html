@@ -17,7 +17,7 @@
   
   
   
-  <link rel="stylesheet" href="../../style.min.63822a3257eaab81b78b5d5fc6e45112b4ca6f4c287acdd1f19760310b3dcb19.css" integrity="sha256-Y4IqMlfqq4G3i11fxuRRErTKb0woes3R8ZdgMQs9yxk=">
+  <link rel="stylesheet" href="../../style.min.6f642c5866835106e8a19b94463576436c99be9e41a8714ab3df3daa95f6bf90.css" integrity="sha256-b2QsWGaDUQbooZuURjV2Q2yZvp5BqHFKs989qpX2v5A=">
   
   
   
@@ -30,21 +30,18 @@
   <meta property="og:title" content="Hot Routes Tutorial" />
 <meta property="og:description" content="Crime concentrates in place and time, and it is the task of the crime analyst to identify where and when these hotspots emerge. This is often achieved by producing density maps. Kernel density estimation is one methdod for producing such maps, which involves applying a function (known as a “kernel”) to each data point, which averages the location of that point with respect to the location of other data points." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/blog/hot-routes-tutorial/" /><meta property="article:published_time" content="2020-03-29T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-03-29T00:00:00&#43;00:00"/>
-
+<meta property="og:url" content="/blog/hot-routes-tutorial/" />
+<meta property="article:published_time" content="2020-03-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-29T00:00:00+00:00" />
 <meta itemprop="name" content="Hot Routes Tutorial">
 <meta itemprop="description" content="Crime concentrates in place and time, and it is the task of the crime analyst to identify where and when these hotspots emerge. This is often achieved by producing density maps. Kernel density estimation is one methdod for producing such maps, which involves applying a function (known as a “kernel”) to each data point, which averages the location of that point with respect to the location of other data points.">
-
-
 <meta itemprop="datePublished" content="2020-03-29T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-03-29T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2724">
+<meta itemprop="wordCount" content="2736">
 
 
 
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:image" content="//img/avatar.jpg"/>
 <meta name="twitter:title" content="Hot Routes Tutorial"/>
 <meta name="twitter:description" content="Crime concentrates in place and time, and it is the task of the crime analyst to identify where and when these hotspots emerge. This is often achieved by producing density maps. Kernel density estimation is one methdod for producing such maps, which involves applying a function (known as a “kernel”) to each data point, which averages the location of that point with respect to the location of other data points."/>
@@ -129,9 +126,8 @@ for (i in 1:length(api_call$stations)) {
 bakerloo_stops &lt;- do.call(rbind, datalist)</code></pre>
 <p>Now you can see we have an object called <code>bakerloo_stops</code> which has 25 observations of 4 variables (station name, latitude, longitude, and line).</p>
 <p>In order to carry out our spatial operations, we will be making use of the <code>sf</code> package. So I will load the sf package and also convert this list of stops to an sf object using <code>st_as_sf()</code> and build the line between the stops using <code>group_by()</code> (from dplyr package), <code>st_union()</code> and <code>st_cast()</code> (from sf):</p>
-<pre class="r"><code>library(dplyr)</code></pre>
-<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.5.2</code></pre>
-<pre class="r"><code>library(sf)
+<pre class="r"><code>library(dplyr)
+library(sf)
 
 bakerloo_stops &lt;- st_as_sf(bakerloo_stops, coords = c(&quot;stn_lon&quot;, &quot;stn_lat&quot;), crs = 4326)
 
@@ -151,17 +147,19 @@ ggplot()+
 <p>NOTE: I have added <code>theme_void()</code> AND <code>theme(panel.grid.major = element_line(colour = &quot;white&quot;))</code> because apprently theme_void() + geom_sf() have some issues together.</p>
 <p>Right, so that’s looking good. But here we have only one line. What we want is to break our line into sections. How you do this depends really much on what you want to show. In this case, it might be meaningful to consider each segment of the line between stops. In this case, we can use the shapefile of the stops (<code>bakerloo_stops</code>) to break up our line (<code>bakerloo_line</code>). However, as Henry and Lisa note, network layers typically contain streets of unequal length. This means that longer segments might show up as hot simply because they have more space to contain more crimes. Therefore in such cases it is advisable in this analysis to use equal length street segments, where possible.
 In this case however, let’s stick to the stops. To split our linestring (<code>bakerloo_line</code>) into many linestrings using the stops (<code>bakerloo_stops</code>) we can use the <code>st_split()</code> function from the <code>lwgeom</code> package and <code>st_collection_extract()</code> function from <code>sf</code>. Furter, as the <code>st_split()</code> function is expecting a blade argument of length 1, we can use the <code>st_combine()</code> (from sf) function to group our tube stations alltogether:</p>
-<pre class="r"><code>library(lwgeom)
-
-parts &lt;- st_split(bakerloo_line, st_combine(bakerloo_stops$geometry)) %&gt;% st_collection_extract(&quot;LINESTRING&quot;)
+<pre class="r"><code>library(lwgeom)</code></pre>
+<pre><code>## Warning in fun(libname, pkgname): GEOS versions differ: lwgeom has 3.7.2 sf has
+## 3.8.1</code></pre>
+<pre><code>## Warning in fun(libname, pkgname): PROJ versions differ: lwgeom has 5.2.0 sf has
+## 4.9.1</code></pre>
+<pre class="r"><code>parts &lt;- st_split(bakerloo_line, st_combine(bakerloo_stops$geometry)) %&gt;% st_collection_extract(&quot;LINESTRING&quot;)
 
 parts</code></pre>
 <pre><code>## Geometry set for 24 features 
 ## geometry type:  LINESTRING
 ## dimension:      XY
 ## bbox:           xmin: -0.334896 ymin: 51.4945 xmax: -0.099185 ymax: 51.59222
-## epsg (SRID):    4326
-## proj4string:    +proj=longlat +datum=WGS84 +no_defs
+## CRS:            EPSG:4326
 ## First 5 geometries:</code></pre>
 <p>You can see we now have a new object called <code>parts</code> which is a linestring containing 24 features, the segments between our 25 tube stations, all as unique lines. You can also see that this is a geometry set of 24 features, let’s turn it into a simple features collection, and label each of the segments with a number by taking each element of parts and binding it together as a dataframe.</p>
 <pre class="r"><code>datalist = list()
@@ -184,8 +182,8 @@ crimes_sf &lt;- st_as_sf(crimes, coords = c(&quot;Longitude&quot;, &quot;Latitud
 <p>Here I just went with a coarse buffer of 0.005 arc degrees. The dist argument is assumed to be in <a href="https://en.wikipedia.org/wiki/Decimal_degrees">decimal degrees</a> (arc_degrees). This buffer distance is a units object, it should be convertible to arc_degree if x has geographic coordinates, and to st_crs(x)$units otherwise.</p>
 <p>So I build a buffer of 0.005 decimal degrees around the line using <code>st_buffer()</code>, and keep only the crimes that fall within this buffer using <code>st_intersection()</code>:</p>
 <pre class="r"><code>bakerloo_line_buff &lt;- st_buffer(bakerloo_line, 0.005)</code></pre>
-<pre><code>## Warning in st_buffer.sfc(bakerloo_line, 0.005): st_buffer does not
-## correctly buffer longitude/latitude data</code></pre>
+<pre><code>## Warning in st_buffer.sfc(bakerloo_line, 0.005): st_buffer does not correctly
+## buffer longitude/latitude data</code></pre>
 <pre class="r"><code>crimes_sf &lt;- st_intersection(bakerloo_line_buff, crimes_sf)</code></pre>
 <p>I can plot it all to see if it looks good:</p>
 <pre class="r"><code>ggplot()+ 
@@ -201,22 +199,21 @@ crimes_sf &lt;- st_as_sf(crimes, coords = c(&quot;Longitude&quot;, &quot;Latitud
 <pre class="r"><code>bline_segments &lt;- st_nearest_feature(crimes_sf, bakerloo_sections)
 
 bline_segments</code></pre>
-<pre><code>##   [1] 21 13 13 20 20 20 20 20 20 13 13 23 23 23 23 23 19 19 19 19 19 15 15
-##  [24] 15 15  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6
-##  [47]  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6
-##  [70]  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6
-##  [93]  6  6  6  6  6  6  6  1  1  1  1  1  1  1  1  1  1  1  1  1  1  7  2
-## [116]  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2 10 10 10 10 10 10 10 10
-## [139] 10 10 10 10 10 10 10 10 10  4  4  4  4 16  8  8  8  8  8  8  8  9  9
-## [162]  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9
-## [185]  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9
-## [208]  9  9  9  9  9  9  9  9  9  9  9  9 18 18 18 18 18 18 18 18 18 18 18
-## [231] 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18
-## [254] 18 18 18 18 18 18 18 18 18 18 18  4  4  4  4  4  4  4  4  4  4  4  4
-## [277]  4  4  4  4  4 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12
-## [300] 12 12 12  3  3  3  3  3  3  3  3  3  3  9  9  3  9  3  3  3  9  9  9
-## [323]  3  3  3  3  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  3  9  3
-## [346]  3 22 22 22 22 22 22 22 22 22 22</code></pre>
+<pre><code>##   [1] 21 13 13 20 20 20 20 20 20 13 13 23 23 23 23 23 19 19 19 19 19 15 15 15 15
+##  [26]  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6
+##  [51]  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6
+##  [76]  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  1
+## [101]  1  1  1  1  1  1  1  1  1  1  1  1  1  7  2  2  2  2  2  2  2  2  2  2  2
+## [126]  2  2  2  2  2 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10  4  4  4
+## [151]  4 16  8  8  8  8  8  8  8  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9
+## [176]  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9
+## [201]  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9 18 18 18 18 18 18
+## [226] 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18
+## [251] 18 18 18 18 18 18 18 18 18 18 18 18 18 18  4  4  4  4  4  4  4  4  4  4  4
+## [276]  4  4  4  4  4  4 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12
+## [301] 12 12  3  3  3  3  3  3  3  3  3  3  9  9  3  9  3  3  3  9  9  9  3  3  3
+## [326]  3  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  3  9  3  3 22 22 22 22
+## [351] 22 22 22 22 22 22</code></pre>
 <p>It is simply a list of the ID numbers of matched line segments for each of the 356 crime points in the <code>crimes_sf</code> object. We can use this to create a frequency table and save this in a dataframe to be joined to the linesegment object. We will also need to replace our missing values with 0s, since in this case the segments which do not appear in our frequency table had 0 crimes snapped to them. We use the <code>replace_na()</code> function from the tidyr package.</p>
 <pre class="r"><code>library(tidyr)
 

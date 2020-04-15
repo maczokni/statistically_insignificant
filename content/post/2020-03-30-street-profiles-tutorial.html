@@ -1,7 +1,7 @@
 ---
-title: Street Profiles Tutorial
+title: Street Profile Analysis Tutorial
 author: ~
-date: '2020-04-01'
+date: '2020-04-06'
 slug: street-profiles-tutorial
 categories: []
 tags: []
@@ -10,4 +10,31 @@ images: []
 
 
 
-<p>A few days ago I posted [this tutorial about hot routes] for visualising crime along a network (eg tube line). But I mentioned at the end, it may not always be necessary to include the geographic component of this visualisation. Instead, another approach could be to make use of <a href="">street profile analysis</a>.</p>
+<p>A few days ago I posted <a href="https://rekadata.site/blog/hot-routes-tutorial/">this tutorial about hot routes</a> for visualising crime along a network (eg tube line). But I mentioned at the end, it may not always be necessary to include the geographic component of this visualisation. Instead, another approach could be to make use of <a href="https://www.researchgate.net/publication/297605497_Street_profile_analysis_A_new_method_for_mapping_crime_on_major_roadways">street profile analysis</a>.</p>
+<p>Street profile analysis was initially developed as a method for visualising temporal and spatial crime patterns along major roadways in metropolitan areas. The idea is that the geographical location of the street may not actually be as important as the ability to visualise data from multiple years in a comparable way. So the approach is to treat the street in question as the x-axis of a graph, with a start point (A) and end point (B) breaking it into some interval (I think they use 100m intervals). Then, you can visualise how crime is distributed along this street by plotting count or rate of crimes on the y-axis, and have multiple lines for different years for example. You can add context by re-introducing some key intersections for example</p>
+<p>In their paper, Spicer and colleagues demonstrate this using the example of Kingsway Avenue in Vancouver, BC</p>
+<p><img src="/img/kingsway_spa.jpeg" /></p>
+<p>When I was working as a crime analyst at TfL, I adapted this method to use this to visualise crime along a bus route, but instead of breaking up the route into 100m intervals from start to finish, I used bus stops to represent ticks along the axis. Also instead of using crime from different years, I compared data from different sources. It was very easy to adapt street profile analysis in this way, and it proved a simple yet powerful way to tell the story of how crime was distributed along the specific bus line. So in what follows I will describe how to carry out Street Profile Analysis using R. I’m going to pick on the Bakerloo line once again, and use some data from the British Transport police once again.</p>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>Like last week, let’s start with a breakdown of the steps we will need to follow.</p>
+<p><strong>Step 1: Prepare the network layer</strong>
+<strong>Step 2. Link crime events to points of interest</strong>
+<strong>Step 3: Calculate a rate</strong>
+<strong>Step 4: Visualise the results</strong></p>
+<p>Exactly like last week for the <a href="https://rekadata.site/blog/hot-routes-tutorial/">hot routes tutorial</a>, I will use the example dataset of the London Underground network, spatial data for which can be downloaded using the <a href="https://api-portal.tfl.gov.uk/docs">Transport for London API</a>, and crime from British Transport Police for February 2020 available via <a href="https://data.police.uk/">data.police.uk</a>.</p>
+</div>
+<div id="step-1-prepare-the-network-layer" class="section level2">
+<h2>Step 1: Prepare the network layer</h2>
+<p>This step is the same as last week’s tutorial so I won’t dwell on it too much, essentially we get the stops for the bakerloo line from the TfL API, make it an sf object, and create a connected line. I’ve created a function called <code>getBakerlooLine()</code> which I just run here. If you want to see the function it is on <a href="">github here</a> but better to have a look at step 1 of the <a href="https://rekadata.site/blog/hot-routes-tutorial/">hot routes tutorial</a> for a breakdown and explanation.</p>
+<pre class="r"><code>library(rjson)
+library(dplyr)</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.5.2</code></pre>
+<pre class="r"><code>library(sf)
+
+bakerloo_stops &lt;- getBakerlooStops()</code></pre>
+<pre><code>## Warning in readLines(&quot;https://api.tfl.gov.uk/line/bakerloo/route/sequence/
+## outbound&quot;): incomplete final line found on &#39;https://api.tfl.gov.uk/line/
+## bakerloo/route/sequence/outbound&#39;</code></pre>
+<pre class="r"><code>bakerloo_line &lt;- getBakerlooLine(bakerloo_stops)</code></pre>
+</div>
