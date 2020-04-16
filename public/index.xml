@@ -5,7 +5,7 @@
     <link>/</link>
     <description>Recent content on Dr Reka Solymosi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 06 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,11 +13,10 @@
     <item>
       <title>Street Profile Analysis Tutorial</title>
       <link>/blog/street-profiles-tutorial/</link>
-      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>/blog/street-profiles-tutorial/</guid>
-      <description>A few days ago I posted this tutorial about hot routes for visualising crime along a network (eg tube line). But I mentioned at the end, it may not always be necessary to include the geographic component of this visualisation. Instead, another approach could be to make use of street profile analysis.
-Street profile analysis was initially developed as a method for visualising temporal and spatial crime patterns along major roadways in metropolitan areas.</description>
+      <description>A while back I posted this tutorial about hot routes for visualising crime along a network (eg tube line). But I mentioned at the end, it may not always be necessary to include the geographic component of this visualisation. Instead, another approach could be to make use of street profile analysis introduced by Valerie Spicer, Justin Song, Patricia Brantingham, Andrew Park, and Martin Andresen in their 2016 paper in Applied Geography.</description>
     </item>
     
     <item>
