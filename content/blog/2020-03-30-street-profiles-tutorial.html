@@ -10,11 +10,11 @@ images: []
 
 
 
-<p>A while back I posted <a href="https://rekadata.site/blog/hot-routes-tutorial/">this tutorial about hot routes</a> for visualising crime along a network (eg tube line). But I mentioned at the end, it may not always be necessary to include the geographic component of this visualisation. Instead, another approach could be to make use of <a href="https://www.researchgate.net/publication/297605497_Street_profile_analysis_A_new_method_for_mapping_crime_on_major_roadways">street profile analysis</a> introduced by Valerie Spicer, Justin Song, Patricia Brantingham, Andrew Park, and Martin Andresen in their 2016 paper in Applied Geography.</p>
-<p>Street profile analysis was initially developed as a method for visualising temporal and spatial crime patterns along major roadways in metropolitan areas. The idea is that the geographical location of the street may not actually be as important as the ability to visualise data from multiple years in a comparable way. So the approach is to treat the street in question as the x-axis of a graph, with a start point (A) and end point (B) breaking it into some interval (I think they use 100m intervals). Then, you can visualise how crime is distributed along this street by plotting count or rate of crimes on the y-axis, and have multiple lines for different years for example. You can add context by re-introducing some key intersections for example</p>
+<p>A while back I posted <a href="https://rekadata.site/blog/hot-routes-tutorial/">this tutorial about hot routes</a> for visualising crime along a network (eg tube line). But I mentioned at the end, it may not always be necessary to include the geographic component of this visualisation. Instead, another approach could be to make use of <a href="https://www.researchgate.net/publication/297605497_Street_profile_analysis_A_new_method_for_mapping_crime_on_major_roadways">street profile analysis</a> introduced by Valerie Spicer, Justin Song, Patricia Brantingham, Andrew Park, and Martin Andresen in their 2016 paper ‘Street profile analysis: A new method for mapping crime on major roadways’ published in Applied Geography.</p>
+<p>Street profile analysis was initially developed as a method for visualising temporal and spatial crime patterns along major roadways in metropolitan areas. The idea is that the geographical location of the street may not actually be as important as the ability to visualise data from multiple years in a comparable way. So the approach is to treat the street in question as the x-axis of a graph, with a start point (A) and end point (B) breaking it into some interval (I think they use 100m intervals). Then, you can visualise how crime is distributed along this street by plotting count or rate of crimes on the y-axis, and have multiple lines for different years for example. You can add context by re-introducing some key intersections, or other points of interest.</p>
 <p>In their paper, Spicer and colleagues demonstrate this using the example of Kingsway Avenue in Vancouver, BC</p>
 <p><img src="/img/kingsway_spa.jpeg" /></p>
-<p>When I was working as a crime analyst at TfL, I adapted this method to use this to visualise crime along a bus route, but instead of breaking up the route into 100m intervals from start to finish, I used bus stops to represent ticks along the axis. Also instead of using crime from different years, I compared data from different sources. It was very easy to adapt street profile analysis in this way, and it proved a simple yet powerful way to tell the story of how crime was distributed along the specific bus line. So in what follows I will describe how to carry out Street Profile Analysis using R. I’m going to pick on the Bakerloo line once again, and use some data from the British Transport police once again.</p>
+<p>When I was working as a crime analyst at TfL, I adapted this method to visualise fare evasion along various bus routes, but instead of breaking up the route into 100m intervals from start to finish, I used bus stops to represent ticks along the axis. Also instead of using crime from different years, I compared data from different sources. It was very easy to adapt street profile analysis in this way, and it proved a simple yet powerful way to tell the story of how fare evasion was distributed along the specific bus line. So for anyone who wants to implement this in their work, I tought it could be helpful to demonstrate in a quick tutorial how to carry out Street Profile Analysis using R.</p>
 <div id="overview" class="section level2">
 <h2>Overview</h2>
 <p>Like last time, let’s start with a breakdown of the steps we will need to follow.</p>
@@ -28,7 +28,7 @@ images: []
 </div>
 <div id="step-1-prepare-the-network-layer" class="section level2">
 <h2>Step 1: Prepare the network layer</h2>
-<p>This step is the same as last week’s tutorial so I won’t dwell on it too much, essentially we get the stops for the bakerloo line from the TfL API, make it an sf object, and create a connected line. I’ve created a function called <code>getBakerlooLine()</code> which I just run here. If you want to see the function it is on <a href="">github here</a> but better to have a look at step 1 of the <a href="https://rekadata.site/blog/hot-routes-tutorial/">hot routes tutorial</a> for a breakdown and explanation.</p>
+<p>This step is the same as last week’s tutorial so I won’t dwell on it here, essentially we get the stops for the bakerloo line from the TfL API, make it an sf object, and create a connected line. I’ve created a function that does this all called <code>getBakerlooLine()</code> and one called <code>getBakerlooStops()</code> which I just run here. If you want to see the function it is on <a href="https://github.com/maczokni/statistically_insignificant/blob/master/public/blog/data/getbakerloolinefunctions.R">github here</a> but better to have a look at step 1 of the <a href="https://rekadata.site/blog/hot-routes-tutorial/">hot routes tutorial</a> for a breakdown and explanation.</p>
 <pre class="r"><code>library(rjson)
 library(dplyr)
 library(sf)
@@ -71,7 +71,7 @@ other_crimes &lt;- st_intersection(bakerloo_line_buff, crimes_sf %&gt;% filter( 
   theme_void() + 
   theme(panel.grid.major = element_line(colour = &quot;white&quot;))</code></pre>
 <p><img src="/blog/2020-03-30-street-profiles-tutorial_files/figure-html/plotalltogether2-1.png" width="672" /></p>
-<p>Now we can snap each crime point to the closest tube station using the <code>st_nearest_feature()</code> function. This will return, for each point, the ID of the nearest segment. We can do this once for violent crime and one for other crimes</p>
+<p>Now we can snap each crime point to the closest tube station using the <code>st_nearest_feature()</code> function. This will return, for each point, the ID of the nearest segment. We can do this once for violent crime and once for other crimes:</p>
 <pre class="r"><code>violent_crimes_closest &lt;- st_nearest_feature(violent_crimes, bakerloo_stops)
 
 other_crimes_closest &lt;- st_nearest_feature(other_crimes, bakerloo_stops)</code></pre>
@@ -125,7 +125,7 @@ download.file(&quot;http://tfl.gov.uk/tfl/syndication/feeds/rods.zip&quot;, dest
 unzip(&quot;data/rods.zip&quot;, exdir = &quot;./data&quot;)
 #delete zip file
 unlink(&quot;data/rods.zip&quot;)</code></pre>
-<p>Once we have our data, we want specifically the excel file “Total entries and exits by borough-time of day 2017.xls”. The entry and exit data sets are two separate sheets in this excel file, so we will have to read them in one sheet at a time, using <code>read_xls()</code> function from the <code>readxl</code> package. From having seen the data before, I also know that 1) the variable names are in line 4 so we can skip up to there (the <code>skip=</code> argument in the <code>read_xls()</code> function), and I know also that the names are messy, so we clean them up using the <code>clean_names()</code> function in the <code>janitor</code> package. Finally for some reason the ‘station’ variable is in two columns, so we have to name these as station number and station name using <code>rename()</code> function in the <code>dplyr</code> library (loaded earlier). It seems like a lot, but we’re really just cleaning the data to suit our purposes.</p>
+<p>Once we have our data, we want specifically the excel file “Total entries and exits by borough-time of day 2017.xls”. The entry and exit data sets are two separate sheets in this excel file, so we will have to read them in one sheet at a time, using <code>read_xls()</code> function from the <code>readxl</code> package. From having seen the data before, I also know that 1) the variable names are in line 4 so we can skip up to there (the <code>skip=</code> argument in the <code>read_xls()</code> function), 2) that the names are messy, so we clean them up using the <code>clean_names()</code> function in the <code>janitor</code> package, and 3) that for some reason the ‘station’ variable is in two columns, so we have to name these as station number and station name using <code>rename()</code> function in the <code>dplyr</code> library (loaded earlier). It seems like a lot of cleaning of the data, but it could be worse, and there will be more cleaning later…</p>
 <pre class="r"><code>library(readxl)
 library(janitor)
 #load entries and exits data
@@ -137,7 +137,7 @@ rods_entries &lt;- read_xls(&quot;data/RODS_2017/Misc/Total entries and exits by
 rods_exits &lt;- read_xls(&quot;data/RODS_2017/Misc/Total entries and exits by borough-time of day 2017.xls&quot;, sheet = &quot;exits&quot;,
                          skip = 4, col_names = TRUE) %&gt;% clean_names() %&gt;% rename(stn_num = station, 
                                                                                   stn_name = x3)</code></pre>
-<p>Then finally we can link the entry and exit data together with <code>left_join()</code> from dplyr, and sum them together to get the whole day’s worth of entries and exits (because we don’t care about time of day for our purposes here), then combine them for a final variable that tells us how many trips we can expect to go through that station on a given day, giving us a nice denominator to calculate crime rate!</p>
+<p>Then finally we can link the entry and exit data together with <code>left_join()</code> from dplyr, and sum them together to get the whole day’s worth of entries and exits (because we don’t care about time of day for our purposes here) using <code>group_by()</code> and <code>summarise()</code>, then create a final variable called <code>total_pax</code> using the <code>mutate()</code> function. The <code>total_pax</code> variable that tells us how many trips we can expect to go through that station on a given day, giving us a nice denominator to calculate crime rate!</p>
 <pre class="r"><code>rods &lt;- rods_exits %&gt;%                    
   left_join(., rods_entries) %&gt;%                            # join up the exit and entry data
   group_by(borough, stn_num, stn_name) %&gt;%                  # sum all time periods within the day
@@ -150,13 +150,36 @@ rods_exits &lt;- read_xls(&quot;data/RODS_2017/Misc/Total entries and exits by b
 <pre class="r"><code>bakerloo_stops_try1 &lt;- left_join(bakerloo_stops, rods)</code></pre>
 <pre><code>## Warning: Column `stn_name` joining factor and character vector, coercing into
 ## character vector</code></pre>
-<p>Ha-ha this dataset has 10 NA values, that is for 10 stations we did not find a corresponding match! Well we can have a look at which stations don’t match:</p>
-<pre class="r"><code>View(bakerloo_stops_try1 %&gt;% filter(is.na(total_pax)))</code></pre>
+<p>Ha-ha this dataset has 10 NA values, that is for 10 stations we did not find a corresponding match! I told you there will be more data cleaning to be doe… Well we can have a look at which stations don’t match for ourselves:</p>
+<pre class="r"><code>bakerloo_stops_try1 %&gt;% filter(is.na(total_pax)) %&gt;% select(stn_name)</code></pre>
+<pre><code>## Simple feature collection with 10 features and 1 field
+## geometry type:  POINT
+## dimension:      XY
+## bbox:           xmin: -0.194232 ymin: 51.49881 xmax: -0.112315 ymax: 51.53498
+## CRS:            EPSG:4326
+##                                       stn_name                   geometry
+## 1             Baker Street Underground Station  POINT (-0.15713 51.52288)
+## 2               Embankment Underground Station POINT (-0.122666 51.50706)
+## 3  Edgware Road (Bakerloo) Underground Station   POINT (-0.17015 51.5203)
+## 4             Kilburn Park Underground Station POINT (-0.194232 51.53498)
+## 5            Lambeth North Underground Station POINT (-0.112315 51.49881)
+## 6               Maida Vale Underground Station POINT (-0.185758 51.52978)
+## 7            Oxford Circus Underground Station POINT (-0.141903 51.51522)
+## 8        Piccadilly Circus Underground Station POINT (-0.133798 51.51005)
+## 9            Regent&#39;s Park Underground Station POINT (-0.146444 51.52334)
+## 10          Warwick Avenue Underground Station POINT (-0.183783 51.52326)</code></pre>
 <p>We may notice a pattern, they all seem to have the suffix “Underground Station” in our <code>bakerloo_stops</code> dataset but not in the <code>rods</code> data. Let’s get rid of this, and try to match again:</p>
 <pre class="r"><code>bakerloo_stops$stn_name &lt;- gsub(&quot; Underground Station&quot;, &quot;&quot;, bakerloo_stops$stn_name)
 bakerloo_stops_try2 &lt;- left_join(bakerloo_stops, rods)</code></pre>
 <p>NEARLY THERE! Now we have only one station which did not join. Which is it?</p>
-<pre class="r"><code>View(bakerloo_stops_try2 %&gt;% filter(is.na(total_pax)))</code></pre>
+<pre class="r"><code>bakerloo_stops_try2 %&gt;% filter(is.na(total_pax)) %&gt;% select(stn_name)</code></pre>
+<pre><code>## Simple feature collection with 1 feature and 1 field
+## geometry type:  POINT
+## dimension:      XY
+## bbox:           xmin: -0.17015 ymin: 51.5203 xmax: -0.17015 ymax: 51.5203
+## CRS:            EPSG:4326
+##                  stn_name                 geometry
+## 1 Edgware Road (Bakerloo) POINT (-0.17015 51.5203)</code></pre>
 <p>Ahhh it’s “Edgware Road (Bakerloo)”, which apparently, in the rods dataset is labelled “Edgware Road (Bak)”. *sigh* One last try:</p>
 <pre class="r"><code>bakerloo_stops$stn_name &lt;- gsub(&quot;Bakerloo&quot;, &quot;Bak&quot;, bakerloo_stops$stn_name)
 bakerloo_stops &lt;- left_join(bakerloo_stops, rods)</code></pre>
@@ -227,5 +250,5 @@ bakerloo_stops$other_crime_rate &lt;- bakerloo_stops$num_other_crimes/ bakerloo_
 </div>
 <div id="final-remarks" class="section level2">
 <h2>Final remarks</h2>
-<p>This has been one work-through of using Street Profile Analysis to visualise crime rate across a network like a tube line. This could be applied to any sort of route (eg bus route, or street network like the original paper describes) following very similar steps. As always, if there are any comments questions suggestions ammendments just reach out on twitter (<span class="citation">[@r_solymosi]</span>(<a href="https://twitter.com/r_solymosi" class="uri">https://twitter.com/r_solymosi</a>)) or by email <a href="mailto:reka.solymosi@manchester.ac.uk">reka.solymosi@manchester.ac.uk</a>.</p>
+<p>This has been one work-through of using Street Profile Analysis to visualise crime rate across a network like a tube line. This could be applied to any sort of route (eg bus route, or street network like the original paper describes) following very similar steps. As always, if there are any comments questions suggestions ammendments just reach out on twitter ( <span class="citation">[@r_solymosi]</span>(<a href="https://twitter.com/r_solymosi" class="uri">https://twitter.com/r_solymosi</a>) ) or by email <a href="mailto:reka.solymosi@manchester.ac.uk">reka.solymosi@manchester.ac.uk</a>.</p>
 </div>

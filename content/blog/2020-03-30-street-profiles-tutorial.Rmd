@@ -42,16 +42,16 @@ getBakerlooLine <- function(x){
 
 ```
 
-A while back I posted [this tutorial about hot routes](https://rekadata.site/blog/hot-routes-tutorial/) for visualising crime along a network (eg tube line). But I mentioned at the end, it may not always be necessary to include the geographic component of this visualisation. Instead, another approach could be to make use of [street profile analysis](https://www.researchgate.net/publication/297605497_Street_profile_analysis_A_new_method_for_mapping_crime_on_major_roadways) introduced by Valerie Spicer, Justin Song, Patricia Brantingham, Andrew Park, and Martin Andresen in their 2016 paper in Applied Geography. 
+A while back I posted [this tutorial about hot routes](https://rekadata.site/blog/hot-routes-tutorial/) for visualising crime along a network (eg tube line). But I mentioned at the end, it may not always be necessary to include the geographic component of this visualisation. Instead, another approach could be to make use of [street profile analysis](https://www.researchgate.net/publication/297605497_Street_profile_analysis_A_new_method_for_mapping_crime_on_major_roadways) introduced by Valerie Spicer, Justin Song, Patricia Brantingham, Andrew Park, and Martin Andresen in their 2016 paper 'Street profile analysis: A new method for mapping crime on major roadways' published in Applied Geography. 
 
 
-Street profile analysis was initially developed as a method for visualising temporal and spatial crime patterns along major roadways in metropolitan areas. The idea is that the geographical location of the street may not actually be as important as the ability to visualise data from multiple years in a comparable way. So the approach is to treat the street in question as the x-axis of a graph, with a start point (A) and end point (B) breaking it into some interval (I think they use 100m intervals). Then, you can visualise how crime is distributed along this street by plotting count or rate of crimes on the y-axis, and have multiple lines for different years for example. You can add context by re-introducing some key intersections for example
+Street profile analysis was initially developed as a method for visualising temporal and spatial crime patterns along major roadways in metropolitan areas. The idea is that the geographical location of the street may not actually be as important as the ability to visualise data from multiple years in a comparable way. So the approach is to treat the street in question as the x-axis of a graph, with a start point (A) and end point (B) breaking it into some interval (I think they use 100m intervals). Then, you can visualise how crime is distributed along this street by plotting count or rate of crimes on the y-axis, and have multiple lines for different years for example. You can add context by re-introducing some key intersections, or other points of interest.
 
 In their paper, Spicer and colleagues demonstrate this using the example of Kingsway Avenue in Vancouver, BC
 
 ![](/img/kingsway_spa.jpeg)
 
-When I was working as a crime analyst at TfL, I adapted this method to use this to visualise crime along a bus route, but instead of breaking up the route into 100m intervals from start to finish, I used bus stops to represent ticks along the axis. Also instead of using crime from different years, I compared data from different sources. It was very easy to adapt street profile analysis in this way, and it proved a simple yet powerful way to tell the story of how crime was distributed along the specific bus line. So in what follows I will describe how to carry out Street Profile Analysis using R. I'm going to pick on the Bakerloo line once again, and use some data from the British Transport police once again.
+When I was working as a crime analyst at TfL, I adapted this method to visualise fare evasion along various bus routes, but instead of breaking up the route into 100m intervals from start to finish, I used bus stops to represent ticks along the axis. Also instead of using crime from different years, I compared data from different sources. It was very easy to adapt street profile analysis in this way, and it proved a simple yet powerful way to tell the story of how fare evasion was distributed along the specific bus line. So for anyone who wants to implement this in their work, I tought it could be helpful to demonstrate in a quick tutorial how to carry out Street Profile Analysis using R. 
 
 
 ## Overview
@@ -68,7 +68,7 @@ Much like for the [hot routes tutorial](https://rekadata.site/blog/hot-routes-tu
 
 ## Step 1: Prepare the network layer
 
-This step is the same as last week's tutorial so I won't dwell on it too much, essentially we get the stops for the bakerloo line from the TfL API, make it an sf object, and create a connected line. I've created a function called `getBakerlooLine()` which I just run here. If you want to see the function it is on [github here]() but better to have a look at step 1 of the [hot routes tutorial](https://rekadata.site/blog/hot-routes-tutorial/) for a breakdown and explanation. 
+This step is the same as last week's tutorial so I won't dwell on it here, essentially we get the stops for the bakerloo line from the TfL API, make it an sf object, and create a connected line. I've created a function that does this all called `getBakerlooLine()` and one called `getBakerlooStops()` which I just run here. If you want to see the function it is on [github here](https://github.com/maczokni/statistically_insignificant/blob/master/public/blog/data/getbakerloolinefunctions.R) but better to have a look at step 1 of the [hot routes tutorial](https://rekadata.site/blog/hot-routes-tutorial/) for a breakdown and explanation. 
 
 ```{r getnetwork2}
 
@@ -142,7 +142,7 @@ ggplot()+
 
 ```
 
-Now we can snap each crime point to the closest tube station using the `st_nearest_feature()` function. This will return, for each point, the ID of the nearest segment. We can do this once for violent crime and one for other crimes
+Now we can snap each crime point to the closest tube station using the `st_nearest_feature()` function. This will return, for each point, the ID of the nearest segment. We can do this once for violent crime and once for other crimes:
 
 ```{r snaptoclosest}
 
@@ -222,7 +222,8 @@ unlink("data/rods.zip")
 ```
 
 
-Once we have our data, we want specifically the excel file "Total entries and exits by borough-time of day 2017.xls". The entry and exit data sets are two separate sheets in this excel file, so we will have to read them in one sheet at a time, using `read_xls()` function from the `readxl` package. From having seen the data before, I also know that 1) the variable names are in line 4 so we can skip up to there (the `skip=` argument in the `read_xls()` function), and I know also that the names are messy, so we clean them up using the `clean_names()` function in the `janitor` package. Finally for some reason the 'station' variable is in two columns, so we have to name these as station number and station name using `rename()` function in the `dplyr` library (loaded earlier). It seems like a lot, but we're really just cleaning the data to suit our purposes. 
+Once we have our data, we want specifically the excel file "Total entries and exits by borough-time of day 2017.xls". The entry and exit data sets are two separate sheets in this excel file, so we will have to read them in one sheet at a time, using `read_xls()` function from the `readxl` package. From having seen the data before, I also know that 1) the variable names are in line 4 so we can skip up to there (the `skip=` argument in the `read_xls()` function), 2) that the names are messy, so we clean them up using the `clean_names()` function in the `janitor` package, and 3) that for some reason the 'station' variable is in two columns, so we have to name these as station number and station name using `rename()` function in the `dplyr` library (loaded earlier). It seems like a lot of cleaning of the data, but it could be worse, and there will be more cleaning later... 
+
 
 ```{r getrods2}
 
@@ -241,7 +242,7 @@ rods_exits <- read_xls("data/RODS_2017/Misc/Total entries and exits by borough-t
 ```
 
 
-Then finally we can link the entry and exit data together with `left_join()` from dplyr, and sum them together to get the whole day's worth of entries and exits (because we don't care about time of day for our purposes here), then combine them for a final variable that tells us how many trips we can expect to go through that station on a given day, giving us a nice denominator to calculate crime rate! 
+Then finally we can link the entry and exit data together with `left_join()` from dplyr, and sum them together to get the whole day's worth of entries and exits (because we don't care about time of day for our purposes here) using `group_by()` and `summarise()`, then create a final variable called `total_pax` using the `mutate()` function. The `total_pax` variable that tells us how many trips we can expect to go through that station on a given day, giving us a nice denominator to calculate crime rate! 
 
 
 ```{r linkrods}
@@ -270,11 +271,11 @@ bakerloo_stops_try1 <- left_join(bakerloo_stops, rods)
 
 ```
 
-Ha-ha this dataset has `r nrow(bakerloo_stops_try1 %>% filter(is.na(total_pax)))` NA values, that is for `r nrow(bakerloo_stops_try1 %>% filter(is.na(total_pax)))` stations we did not find a corresponding match! Well we can have a look at which stations don't match: 
+Ha-ha this dataset has `r nrow(bakerloo_stops_try1 %>% filter(is.na(total_pax)))` NA values, that is for `r nrow(bakerloo_stops_try1 %>% filter(is.na(total_pax)))` stations we did not find a corresponding match! I told you there will be more data cleaning to be doe... Well we can have a look at which stations don't match for ourselves:  
 
-```{r viewthisshiz, eval=FALSE}
+```{r viewthisshiz}
 
-View(bakerloo_stops_try1 %>% filter(is.na(total_pax)))
+bakerloo_stops_try1 %>% filter(is.na(total_pax)) %>% select(stn_name)
 
 ```
 
@@ -292,9 +293,9 @@ bakerloo_stops_try2 <- left_join(bakerloo_stops, rods)
 
 NEARLY THERE! Now we have only one station which did not join. Which is it?
 
-```{r viewthisshiz2, eval=FALSE}
+```{r viewthisshiz2}
 
-View(bakerloo_stops_try2 %>% filter(is.na(total_pax)))
+bakerloo_stops_try2 %>% filter(is.na(total_pax)) %>% select(stn_name)
 
 ```
 
@@ -417,7 +418,7 @@ We could also compare different data sources (for example for the bus routes I c
 
 ## Final remarks
 
-This has been one work-through of using Street Profile Analysis to visualise crime rate across a network like a tube line. This could be applied to any sort of route (eg bus route, or street network like the original paper describes) following very similar steps. As always, if there are any comments questions suggestions ammendments just reach out on twitter ([@r_solymosi](https://twitter.com/r_solymosi)) or by email [reka.solymosi@manchester.ac.uk](mailto:reka.solymosi@manchester.ac.uk).
+This has been one work-through of using Street Profile Analysis to visualise crime rate across a network like a tube line. This could be applied to any sort of route (eg bus route, or street network like the original paper describes) following very similar steps. As always, if there are any comments questions suggestions ammendments just reach out on twitter ( [@r_solymosi](https://twitter.com/r_solymosi) ) or by email [reka.solymosi@manchester.ac.uk](mailto:reka.solymosi@manchester.ac.uk).
 
 
 
