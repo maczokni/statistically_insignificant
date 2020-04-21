@@ -1,0 +1,25 @@
+---
+title: "GDPR Tidy Tuesday"
+author: "null"
+date: '2020-04-21'
+output: word_document
+images: []
+slug: gdpr-tidy-tuesday
+tags: []
+categories: []
+---
+
+
+Together with 
+
+```{r}
+library(readr)
+
+gdpr_violations <- read_tsv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-04-21/gdpr_violations.tsv')
+
+gdpr_text <-read_tsv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-04-21/gdpr_text.tsv')
+
+
+```
+
+
