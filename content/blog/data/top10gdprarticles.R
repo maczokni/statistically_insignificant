@@ -35,7 +35,8 @@ ggplot(articles_df, aes(x = reorder(value, n), y = n)) +
   xlab("") + 
   ylab("Number of violations") + 
   labs(title = "Number of violations of the top 10 most violated articles of GDPR",
-        subtitle = "Note: the same fine might be for more than one article violation.") + 
+        subtitle = "Note: the same fine might be for more than one article violation.", 
+        caption = "Data from https://www.privacyaffairs.com/gdpr-fines/ via #TidyTuesday challenge" ) + 
   theme_bw() + 
   theme(text = element_text(size = 14), 
         plot.title = element_text(hjust = 0.35), 
