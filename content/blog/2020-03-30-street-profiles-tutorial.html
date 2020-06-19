@@ -148,8 +148,6 @@ rods_exits &lt;- read_xls(&quot;data/RODS_2017/Misc/Total entries and exits by b
 <p>Now we have our denominator for calculating the crime rate! Let’s join it to our Bakerloo Line stations to do so.</p>
 <p>Here we have another stumbling block (or teachable moment?) To join our data, we need corresponding columns in each one. For example here the denominator dataset (<code>rods</code>) and the stops with the crime data (<code>bakerloo_stops</code>) both contain a column that has station names (<code>stn_name</code>). Normally, we would expect of course that the <code>stn_name</code> variable in both data sets should match; ie that “Elephant &amp; Castle” appears in both data sets, spelled the same way. How naive of us… if we go ahead and try to join our datasets under this assumption, 10 stations will be unmatched. See for yourself:</p>
 <pre class="r"><code>bakerloo_stops_try1 &lt;- left_join(bakerloo_stops, rods)</code></pre>
-<pre><code>## Warning: Column `stn_name` joining factor and character vector, coercing into
-## character vector</code></pre>
 <p>Ha-ha this dataset has 10 NA values, that is for 10 stations we did not find a corresponding match! I told you there will be more data cleaning to be doe… Well we can have a look at which stations don’t match for ourselves:</p>
 <pre class="r"><code>bakerloo_stops_try1 %&gt;% filter(is.na(total_pax)) %&gt;% select(stn_name)</code></pre>
 <pre><code>## Simple feature collection with 10 features and 1 field
@@ -222,8 +220,6 @@ bakerloo_stops$other_crime_rate &lt;- bakerloo_stops$num_other_crimes/ bakerloo_
 )</code></pre>
 <p>Now we can join this to the original dataframe to have a sequence to order our stops by:</p>
 <pre class="r"><code>bakerloo_stops &lt;- left_join(bakerloo_stops, bakerloo_order)</code></pre>
-<pre><code>## Warning: Column `stn_name` joining character vector and factor, coercing into
-## character vector</code></pre>
 <p>And then we can use this to order our stop names, and finally present the Street (or rather Route) Profile for the Bakerloo line considering violent and sexual offences:</p>
 <pre class="r"><code>ggplot(bakerloo_stops, aes(x = reorder(stn_name, stop_num), y = violent_crime_rate, group = line)) + 
   geom_point() + 

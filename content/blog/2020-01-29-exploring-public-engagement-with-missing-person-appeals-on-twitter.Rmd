@@ -48,8 +48,10 @@ To achieve this goal we analysed 1,008 Tweets made by Greater Manchester Police 
 
 **Related materials:**
 
+- The paper is now published in Policing & Society here: [Reka Solymosi, Oana Petcu & Jack Wilkinson (2020) Exploring public engagement with missing person appeals on Twitter, Policing and Society, DOI: 10.1080/10439463.2020.1782409](https://www.tandfonline.com/doi/abs/10.1080/10439463.2020.1782409)
 
-- The paper is available as a pre-print on OSF here: [https://osf.io/preprints/socarxiv/wugxs](https://osf.io/preprints/socarxiv/wugxs)
+
+- A pre-print is availabe on OSF here: [https://osf.io/preprints/socarxiv/wugxs](https://osf.io/preprints/socarxiv/wugxs)
 
 
 - All of the materials (including data, data dictionary, the paper markdown) are on OSF here: [https://osf.io/4w5eg/](https://osf.io/4w5eg/). The data was anonymised using [NETANOS](https://www.theoj.org/joss-papers/joss.00293/10.21105.joss.00293.pdf). 

@@ -17,11 +17,11 @@
   
   
   
-  <link rel="stylesheet" href="../../style.min.6f642c5866835106e8a19b94463576436c99be9e41a8714ab3df3daa95f6bf90.css" integrity="sha256-b2QsWGaDUQbooZuURjV2Q2yZvp5BqHFKs989qpX2v5A=">
+  <link rel="stylesheet" href="https://rekadata.site/style.min.6f642c5866835106e8a19b94463576436c99be9e41a8714ab3df3daa95f6bf90.css" integrity="sha256-b2QsWGaDUQbooZuURjV2Q2yZvp5BqHFKs989qpX2v5A=">
   
   
   
-  <link rel="stylesheet" href="../../style-dark.min.0a647fb6c07e04b77b54fa0515d0a683d39ecdb251dba960fe1f966f7ff36fc2.css" media="(prefers-color-scheme: dark)" integrity="sha256-CmR/tsB&#43;BLd7VPoFFdCmg9OezbJR26lg/h&#43;Wb3/zb8I=">
+  <link rel="stylesheet" href="https://rekadata.site/style-dark.min.0a647fb6c07e04b77b54fa0515d0a683d39ecdb251dba960fe1f966f7ff36fc2.css" media="(prefers-color-scheme: dark)" integrity="sha256-CmR/tsB&#43;BLd7VPoFFdCmg9OezbJR26lg/h&#43;Wb3/zb8I=">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
   
@@ -30,19 +30,19 @@
   <meta property="og:title" content="Hot Routes Tutorial" />
 <meta property="og:description" content="Crime concentrates in place and time, and it is the task of the crime analyst to identify where and when these hotspots emerge. This is often achieved by producing density maps. Kernel density estimation is one methdod for producing such maps, which involves applying a function (known as a “kernel”) to each data point, which averages the location of that point with respect to the location of other data points." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/blog/hot-routes-tutorial/" />
+<meta property="og:url" content="https://rekadata.site/blog/hot-routes-tutorial/" />
 <meta property="article:published_time" content="2020-03-29T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-03-29T00:00:00+00:00" />
 <meta itemprop="name" content="Hot Routes Tutorial">
 <meta itemprop="description" content="Crime concentrates in place and time, and it is the task of the crime analyst to identify where and when these hotspots emerge. This is often achieved by producing density maps. Kernel density estimation is one methdod for producing such maps, which involves applying a function (known as a “kernel”) to each data point, which averages the location of that point with respect to the location of other data points.">
 <meta itemprop="datePublished" content="2020-03-29T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-03-29T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2736">
+<meta itemprop="wordCount" content="2706">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:image" content="//img/avatar.jpg"/>
+<meta name="twitter:image" content="https://rekadata.site/img/avatar.jpg"/>
 <meta name="twitter:title" content="Hot Routes Tutorial"/>
 <meta name="twitter:description" content="Crime concentrates in place and time, and it is the task of the crime analyst to identify where and when these hotspots emerge. This is often achieved by producing density maps. Kernel density estimation is one methdod for producing such maps, which involves applying a function (known as a “kernel”) to each data point, which averages the location of that point with respect to the location of other data points."/>
 
@@ -74,11 +74,11 @@ if (!doNotTrack) {
   <header>
   
   <div class="avatar">
-    <img class="avatarMask" src="//img/avatar.jpg" alt="">
-    <a href="../../"><img class="avatar-border" src="//img/avatar-border.svg" alt=""></a>
+    <img class="avatarMask" src="https://rekadata.site/img/avatar.jpg" alt="">
+    <a href="https://rekadata.site"><img class="avatar-border" src="https://rekadata.site/img/avatar-border.svg" alt=""></a>
   </div>
   
-  <h2><a class="author" href="../../">Dr Reka Solymosi</a></h2>
+  <h2><a class="author" href="https://rekadata.site">Dr Reka Solymosi</a></h2>
 </header>
 
   
@@ -144,15 +144,12 @@ ggplot()+
   theme_void() + 
   theme(panel.grid.major = element_line(colour = &quot;white&quot;))</code></pre>
 <p><img src="../../blog/2020-03-29-hot-routes-tutorial_files/figure-html/plotlinestops-1.png" width="672" /></p>
-<p>NOTE: I have added <code>theme_void()</code> AND <code>theme(panel.grid.major = element_line(colour = &quot;white&quot;))</code> because apprently theme_void() + geom_sf() have some issues together.</p>
+<p>NOTE: I have added <code>theme_void()</code> AND <code>theme(panel.grid.major = element_line(colour = "white"))</code> because apprently theme_void() + geom_sf() have some issues together.</p>
 <p>Right, so that’s looking good. But here we have only one line. What we want is to break our line into sections. How you do this depends really much on what you want to show. In this case, it might be meaningful to consider each segment of the line between stops. In this case, we can use the shapefile of the stops (<code>bakerloo_stops</code>) to break up our line (<code>bakerloo_line</code>). However, as Henry and Lisa note, network layers typically contain streets of unequal length. This means that longer segments might show up as hot simply because they have more space to contain more crimes. Therefore in such cases it is advisable in this analysis to use equal length street segments, where possible.
 In this case however, let’s stick to the stops. To split our linestring (<code>bakerloo_line</code>) into many linestrings using the stops (<code>bakerloo_stops</code>) we can use the <code>st_split()</code> function from the <code>lwgeom</code> package and <code>st_collection_extract()</code> function from <code>sf</code>. Furter, as the <code>st_split()</code> function is expecting a blade argument of length 1, we can use the <code>st_combine()</code> (from sf) function to group our tube stations alltogether:</p>
-<pre class="r"><code>library(lwgeom)</code></pre>
-<pre><code>## Warning in fun(libname, pkgname): GEOS versions differ: lwgeom has 3.7.2 sf has
-## 3.8.1</code></pre>
-<pre><code>## Warning in fun(libname, pkgname): PROJ versions differ: lwgeom has 5.2.0 sf has
-## 4.9.1</code></pre>
-<pre class="r"><code>parts &lt;- st_split(bakerloo_line, st_combine(bakerloo_stops$geometry)) %&gt;% st_collection_extract(&quot;LINESTRING&quot;)
+<pre class="r"><code>library(lwgeom)
+
+parts &lt;- st_split(bakerloo_line, st_combine(bakerloo_stops$geometry)) %&gt;% st_collection_extract(&quot;LINESTRING&quot;)
 
 parts</code></pre>
 <pre><code>## Geometry set for 24 features 

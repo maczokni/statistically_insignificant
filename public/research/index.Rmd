@@ -11,7 +11,7 @@ output:
 
 ### [Appeal for Information about Missing Persons](https://rekadata.site/blog/exploring-public-engagement-with-missing-person-appeals-on-twitter/)
 
-This project, funded by the [Manchester Statistical Society](https://manstatsoc.org/) is looking at Tweets made by Greater Manchester Police Twitter accounts which are appeals for information about missing persons, in order to determine what features are associated with increased engagement (in the form of retweets) from the public. 
+This project, funded by the [Manchester Statistical Society](https://manstatsoc.org/) is looking at Tweets made by Greater Manchester Police Twitter accounts which are appeals for information about missing persons, in order to determine what features are associated with increased engagement (in the form of retweets) from the public. Publication here: [Reka Solymosi, Oana Petcu & Jack Wilkinson (2020) Exploring public engagement with missing person appeals on Twitter, Policing and Society, DOI: 10.1080/10439463.2020.1782409](https://www.tandfonline.com/doi/abs/10.1080/10439463.2020.1782409)
 
 
 ### [Using App-Based and Sensing Measures to Map Fear of Crime and Perception of Place](https://rekadata.site/research/ba_fearofcrime/)

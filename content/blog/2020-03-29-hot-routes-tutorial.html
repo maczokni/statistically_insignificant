@@ -61,15 +61,12 @@ ggplot()+
   theme_void() + 
   theme(panel.grid.major = element_line(colour = &quot;white&quot;))</code></pre>
 <p><img src="/blog/2020-03-29-hot-routes-tutorial_files/figure-html/plotlinestops-1.png" width="672" /></p>
-<p>NOTE: I have added <code>theme_void()</code> AND <code>theme(panel.grid.major = element_line(colour = &quot;white&quot;))</code> because apprently theme_void() + geom_sf() have some issues together.</p>
+<p>NOTE: I have added <code>theme_void()</code> AND <code>theme(panel.grid.major = element_line(colour = "white"))</code> because apprently theme_void() + geom_sf() have some issues together.</p>
 <p>Right, so that’s looking good. But here we have only one line. What we want is to break our line into sections. How you do this depends really much on what you want to show. In this case, it might be meaningful to consider each segment of the line between stops. In this case, we can use the shapefile of the stops (<code>bakerloo_stops</code>) to break up our line (<code>bakerloo_line</code>). However, as Henry and Lisa note, network layers typically contain streets of unequal length. This means that longer segments might show up as hot simply because they have more space to contain more crimes. Therefore in such cases it is advisable in this analysis to use equal length street segments, where possible.
 In this case however, let’s stick to the stops. To split our linestring (<code>bakerloo_line</code>) into many linestrings using the stops (<code>bakerloo_stops</code>) we can use the <code>st_split()</code> function from the <code>lwgeom</code> package and <code>st_collection_extract()</code> function from <code>sf</code>. Furter, as the <code>st_split()</code> function is expecting a blade argument of length 1, we can use the <code>st_combine()</code> (from sf) function to group our tube stations alltogether:</p>
-<pre class="r"><code>library(lwgeom)</code></pre>
-<pre><code>## Warning in fun(libname, pkgname): GEOS versions differ: lwgeom has 3.7.2 sf has
-## 3.8.1</code></pre>
-<pre><code>## Warning in fun(libname, pkgname): PROJ versions differ: lwgeom has 5.2.0 sf has
-## 4.9.1</code></pre>
-<pre class="r"><code>parts &lt;- st_split(bakerloo_line, st_combine(bakerloo_stops$geometry)) %&gt;% st_collection_extract(&quot;LINESTRING&quot;)
+<pre class="r"><code>library(lwgeom)
+
+parts &lt;- st_split(bakerloo_line, st_combine(bakerloo_stops$geometry)) %&gt;% st_collection_extract(&quot;LINESTRING&quot;)
 
 parts</code></pre>
 <pre><code>## Geometry set for 24 features 
