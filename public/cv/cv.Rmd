@@ -21,6 +21,17 @@ library("vitae")
 library("tidyverse")
 
 my_orcid <- "0000-0001-8689-1526"
+
+#Matt's workaround because biber cannot handle filepaths with space in them, and UoM dropbox doesn't let me change its name
+#copy citation files into temporary locations where biber can read from:
+citations_1 <- tempfile(fileext = ".bib")
+file.copy(from = here::here("public/cv/published.bib"), to = citations_1)
+citations_2 <- tempfile(fileext = ".bib")
+file.copy(from = here::here("public/cv/accepted.bib"), to = citations_2)
+citations_3 <- tempfile(fileext = ".bib")
+file.copy(from = here::here("public/cv/underreview.bib"), to = citations_3)
+citations_4 <- tempfile(fileext = ".bib")
+file.copy(from = here::here("public/cv/otherpubs.bib"), to = citations_4)
 ```
 
 
@@ -118,7 +129,7 @@ ORCID: `r my_orcid`
 
 
 ```{r publications}
-bibliography_entries("published.bib") %>% 
+bibliography_entries(citations_1) %>% 
 	mutate(journal = ifelse(is.na(journal) & bibtype == "Article",
 													paste("pre-print on", publisher),
 													journal))
@@ -131,7 +142,7 @@ bibliography_entries("published.bib") %>%
 OSF profile: [osf.io/3nzk2](osf.io/3nzk2).
 
 ```{r accepted}
-bibliography_entries("accepted.bib") %>% 
+bibliography_entries(citations_2) %>% 
 	mutate(journal = ifelse(is.na(journal) & bibtype == "Article",
 													paste("pre-print on", publisher),
 													journal))
@@ -140,7 +151,7 @@ bibliography_entries("accepted.bib") %>%
 ### Forthcoming publications pending submission. 
 
 ```{r underreview}
-bibliography_entries("underreview.bib") %>% 
+bibliography_entries(citations_3) %>% 
 	mutate(journal = ifelse(is.na(journal) & bibtype == "Article",
 													paste("pre-print on", publisher),
 													journal))
@@ -150,7 +161,7 @@ bibliography_entries("underreview.bib") %>%
 ### Media and other outputs
 
 ```{r otherpubs}
-bibliography_entries("otherpubs.bib")
+bibliography_entries(citations_4)
 ```
 
 ## Research Grants
