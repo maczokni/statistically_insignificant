@@ -1,6 +1,6 @@
 [
     {
-        "ref": "https://rekadata.site/post/street-profiles-tutorial/",
+        "ref": "/post/street-profiles-tutorial/",
         "title": "Street Profile Analysis Tutorial",
         "section": "post",
         "tags": [],
@@ -9,7 +9,7 @@
     }
 ,
     {
-        "ref": "https://rekadata.site/post/hello-world/",
+        "ref": "/post/hello-world/",
         "title": "Hello world",
         "section": "post",
         "tags": [],
@@ -18,7 +18,7 @@
     }
 ,
     {
-        "ref": "https://rekadata.site/post/markdown-syntax/",
+        "ref": "/post/markdown-syntax/",
         "title": "Markdown Syntax Guide",
         "section": "post",
         "tags": null,
@@ -27,7 +27,7 @@
     }
 ,
     {
-        "ref": "https://rekadata.site/post/rich-content/",
+        "ref": "/post/rich-content/",
         "title": "Rich Content",
         "section": "post",
         "tags": null,
@@ -36,7 +36,7 @@
     }
 ,
     {
-        "ref": "https://rekadata.site/post/placeholder-text/",
+        "ref": "/post/placeholder-text/",
         "title": "Placeholder Text",
         "section": "post",
         "tags": null,
@@ -45,7 +45,7 @@
     }
 ,
     {
-        "ref": "https://rekadata.site/post/math-typesetting/",
+        "ref": "/post/math-typesetting/",
         "title": "Math Typesetting",
         "section": "post",
         "tags": null,
@@ -54,7 +54,7 @@
     }
 ,
     {
-        "ref": "https://rekadata.site/post/emoji-support/",
+        "ref": "/post/emoji-support/",
         "title": "Emoji Support",
         "section": "post",
         "tags": null,
