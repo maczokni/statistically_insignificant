@@ -1,4 +1,4 @@
-baseurl = "https://rekadata.net"
+baseurl = "www.rekadata.net"
 relativeurls = true
 title = "Dr Reka Solymosi"
 theme = "pulp"
