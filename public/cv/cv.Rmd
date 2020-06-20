@@ -3,7 +3,7 @@ name: Reka Solymosi
 position: "Lecturer in Quantitative Methods"
 address: "School of Social Sciences, University of Manchester"
 phone: +44 161 275 3468
-www: rekadata.site
+www: rekadata.net
 email: reka.solymosi@manchester.ac.uk
 twitter: r_solymosi
 github: maczokni

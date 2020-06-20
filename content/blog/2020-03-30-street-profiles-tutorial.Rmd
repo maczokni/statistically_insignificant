@@ -42,7 +42,7 @@ getBakerlooLine <- function(x){
 
 ```
 
-A while back I posted [this tutorial about hot routes](https://rekadata.site/blog/hot-routes-tutorial/) for visualising crime along a network (eg tube line). But I mentioned at the end, it may not always be necessary to include the geographic component of this visualisation. Instead, another approach could be to make use of [street profile analysis](https://www.researchgate.net/publication/297605497_Street_profile_analysis_A_new_method_for_mapping_crime_on_major_roadways) introduced by Valerie Spicer, Justin Song, Patricia Brantingham, Andrew Park, and Martin Andresen in their 2016 paper 'Street profile analysis: A new method for mapping crime on major roadways' published in Applied Geography. 
+A while back I posted [this tutorial about hot routes](https://rekadata.net/blog/hot-routes-tutorial/) for visualising crime along a network (eg tube line). But I mentioned at the end, it may not always be necessary to include the geographic component of this visualisation. Instead, another approach could be to make use of [street profile analysis](https://www.researchgate.net/publication/297605497_Street_profile_analysis_A_new_method_for_mapping_crime_on_major_roadways) introduced by Valerie Spicer, Justin Song, Patricia Brantingham, Andrew Park, and Martin Andresen in their 2016 paper 'Street profile analysis: A new method for mapping crime on major roadways' published in Applied Geography. 
 
 
 Street profile analysis was initially developed as a method for visualising temporal and spatial crime patterns along major roadways in metropolitan areas. The idea is that the geographical location of the street may not actually be as important as the ability to visualise data from multiple years in a comparable way. So the approach is to treat the street in question as the x-axis of a graph, with a start point (A) and end point (B) breaking it into some interval (I think they use 100m intervals). Then, you can visualise how crime is distributed along this street by plotting count or rate of crimes on the y-axis, and have multiple lines for different years for example. You can add context by re-introducing some key intersections, or other points of interest.
@@ -63,12 +63,12 @@ Like last time, let's start with a breakdown of the steps we will need to follow
 - **Step 3: Calculate a rate**
 - **Step 4: Visualise the results**
 
-Much like for the [hot routes tutorial](https://rekadata.site/blog/hot-routes-tutorial/), I will use the example dataset of the London Underground network, spatial data for which can be downloaded using the [Transport for London API](https://api-portal.tfl.gov.uk/docs), and crime from British Transport Police for February 2020 available via [data.police.uk](https://data.police.uk/). 
+Much like for the [hot routes tutorial](https://rekadata.net/blog/hot-routes-tutorial/), I will use the example dataset of the London Underground network, spatial data for which can be downloaded using the [Transport for London API](https://api-portal.tfl.gov.uk/docs), and crime from British Transport Police for February 2020 available via [data.police.uk](https://data.police.uk/). 
 
 
 ## Step 1: Prepare the network layer
 
-This step is the same as last week's tutorial so I won't dwell on it here, essentially we get the stops for the bakerloo line from the TfL API, make it an sf object, and create a connected line. I've created a function that does this all called `getBakerlooLine()` and one called `getBakerlooStops()` which I just run here. If you want to see the function it is on [github here](https://github.com/maczokni/statistically_insignificant/blob/master/public/blog/data/getbakerloolinefunctions.R) but better to have a look at step 1 of the [hot routes tutorial](https://rekadata.site/blog/hot-routes-tutorial/) for a breakdown and explanation. 
+This step is the same as last week's tutorial so I won't dwell on it here, essentially we get the stops for the bakerloo line from the TfL API, make it an sf object, and create a connected line. I've created a function that does this all called `getBakerlooLine()` and one called `getBakerlooStops()` which I just run here. If you want to see the function it is on [github here](https://github.com/maczokni/statistically_insignificant/blob/master/public/blog/data/getbakerloolinefunctions.R) but better to have a look at step 1 of the [hot routes tutorial](https://rekadata.net/blog/hot-routes-tutorial/) for a breakdown and explanation. 
 
 ```{r getnetwork2}
 

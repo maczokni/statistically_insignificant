@@ -9,12 +9,12 @@ output:
 
 # Ongoing Research Projects
 
-### [Appeal for Information about Missing Persons](https://rekadata.site/blog/exploring-public-engagement-with-missing-person-appeals-on-twitter/)
+### [Appeal for Information about Missing Persons](https://rekadata.net/blog/exploring-public-engagement-with-missing-person-appeals-on-twitter/)
 
 This project, funded by the [Manchester Statistical Society](https://manstatsoc.org/) is looking at Tweets made by Greater Manchester Police Twitter accounts which are appeals for information about missing persons, in order to determine what features are associated with increased engagement (in the form of retweets) from the public. Publication here: [Reka Solymosi, Oana Petcu & Jack Wilkinson (2020) Exploring public engagement with missing person appeals on Twitter, Policing and Society, DOI: 10.1080/10439463.2020.1782409](https://www.tandfonline.com/doi/abs/10.1080/10439463.2020.1782409)
 
 
-### [Using App-Based and Sensing Measures to Map Fear of Crime and Perception of Place](https://rekadata.site/research/ba_fearofcrime/)
+### [Using App-Based and Sensing Measures to Map Fear of Crime and Perception of Place](https://rekadata.net/research/ba_fearofcrime/)
 
 This project, funded by [The British Academy](https://www.thebritishacademy.ac.uk/small-research-grants-past-awards-2016-17) explores the feasibility of using mobile applications and physiological sensing in order to measure fear of crime as a situation-specific experience. The first part of the project was to take stock of existing work making use of mobile applications in order to measure fear of crime **in-situ**. The preprint for this paper is available [on Soc ArXiv here](https://osf.io/preprints/socarxiv/h3n9w). The second part of the paper explores the feasibility of using Galvanic Skin Response and Heart Rate as indicators of fear of crime experienced, and how these correlate with self-report measures and with contextual features measured with eye-tracking. 
 

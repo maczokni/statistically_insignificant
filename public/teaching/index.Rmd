@@ -12,7 +12,7 @@ Below is a list of the modules and couses which I have developed and taught.
 
 ### Making Sense of Criminological Data
 
-10 week 2nd-year Undergraduate introduction to data analysis for BA Criminology and Social Science students at University of Manchester. [See here for more info](https://rekadata.site/teaching/mscd/)
+10 week 2nd-year Undergraduate introduction to data analysis for BA Criminology and Social Science students at University of Manchester. [See here for more info](https://rekadata.net/teaching/mscd/)
 
 ### Designing Criminological Research
 
@@ -29,7 +29,7 @@ Introduction to spatial data analysis and visualisation for criminology students
 
 ### Monash University Masterclass
 
-1-day introduction to data analysis and a gentle intro to R and R Studio using R Studio Cloud. [See here for more info and course websie](https://rekadata.site/teaching/monash_masterclass/). 
+1-day introduction to data analysis and a gentle intro to R and R Studio using R Studio Cloud. [See here for more info and course websie](https://rekadata.net/teaching/monash_masterclass/). 
 
 
 ### Getting Started in R

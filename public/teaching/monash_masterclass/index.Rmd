@@ -16,7 +16,7 @@ This masterclass is aimed at anyone curious about exploring how the increasingly
 
 - Link to the R Studio Cloud workspace:  [click here](https://rstudio.cloud/spaces/53522/join?access_code=M08YYAUtEQKJSvGDgOaXEABbXDX52zrRkCj%2BQmIB) 
 
-- Step-by-step guide on how to sign up: [R Studio Cloud Sign up](https://rekadata.site/teaching/monash_masterclass/rsc_signup.html)
+- Step-by-step guide on how to sign up: [R Studio Cloud Sign up](https://rekadata.net/teaching/monash_masterclass/rsc_signup.html)
 
 ### Here are some additional materials for moving forwards: 
 
