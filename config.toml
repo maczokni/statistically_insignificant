@@ -46,19 +46,27 @@ My research focuses on making use of new forms of data to gain insight into peop
     url = "/teaching/"
     weight = 2
     
-[[menu.main]]
-    identifier = "CV"
-    name = "CV" #If display text link, cancel comment out
-    pre = "<i class='fa fa-id-card fa-lg'></i>" #Choose your favorite font from Font Awesome
-    url = "/cv/cv.pdf"
-    weight = 3    
 
 [[menu.main]]
     identifier = "blog"
     name = "Blog" #If display text link, cancel comment out
     pre = "<i class='fa fa-book-open fa-lg'></i>" 
     url = "/blog/"
+    weight = 3
+    
+[[menu.main]]
+    identifier = "talks"
+    name = "Talks" #If display text link, cancel comment out
+    pre = "<i class='fas fa-volume-up'></i>" 
+    url = "/talks/"
     weight = 4
+    
+[[menu.main]]
+    identifier = "CV"
+    name = "CV" #If display text link, cancel comment out
+    pre = "<i class='fa fa-id-card fa-lg'></i>" #Choose your favorite font from Font Awesome
+    url = "/cv/cv.pdf"
+    weight = 5    
     
 
 [[menu.main]]
@@ -66,25 +74,25 @@ My research focuses on making use of new forms of data to gain insight into peop
     name = "Twitter"
     pre = "<i class='fab fa-twitter fa-lg'></i>"
     url = "https://twitter.com/r_solymosi"
-    weight = 5
+    weight = 6
 
 [[menu.main]]
     identifier = "publications"
     name = "Publications"
     pre = "<i class='fa fa-newspaper fa-lg'></i>"
     url = "https://scholar.google.com/citations?user=IXexMmEAAAAJ&hl=en"
-    weight = 6
+    weight = 7
 
 [[menu.main]]
     identifier = "github"
     name = "GitHub"
     pre = "<i class='fab fa-github fa-lg'></i>"
     url = "https://github.com/maczokni"
-    weight = 7
+    weight = 8
 
 [[menu.main]]
     identifier = "email"
     name = "Email"
     pre = "<i class='fa fa-envelope fa-lg'></i>"
     url = "mailto:reka.solymosi@manchester.ac.uk"
-    weight = 8
+    weight = 9

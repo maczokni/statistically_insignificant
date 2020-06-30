@@ -1,0 +1,45 @@
+---
+title: "Talks"
+author: 
+output:
+  html_document:
+    css: "../rekadata.css"
+---
+
+
+# Below is a selected list of talks
+
+From 2020 on I will try to collect all my talks here, but for earlier years it's really just going to be the talks which were recorded by the organisers (usually the larger venues). For a full list of talks please see my CV at [rekadata.net/cv/cv.pdf](https://rekadata.net/cv/cv.pdf)
+
+
+# 2020
+
+#### R Ladies Brisbane
+
+- Title: Spatial Data Analysis with R
+- Meetup link: [https://www.meetup.com/rladies-brisbane/events/271201146](https://www.meetup.com/rladies-brisbane/events/271201146)
+Slides: 
+
+# 2019
+
+#### Women In Data Science Zurich
+
+- Title: The role of innovative data collection methods in advancing understanding, and the importance of considering the biases within
+- Video: [https://www.youtube.com/watch?v=uqAX5Bd_BPU](https://www.youtube.com/watch?v=uqAX5Bd_BPU)
+
+#### Berlin Legal Tech Conference
+
+- Title: The data-driven economy and what it means for lawyers and policy makers
+- Video: [https://www.youtube.com/watch?v=nIaQyeDKvhU](https://www.youtube.com/watch?v=nIaQyeDKvhU)
+
+# 2018
+
+#### TicTec 2018: The Impacts of Civic Technology Conference from mySociety
+
+- Title: Crowdsourcing subjective perceptions of neighbourhood disorder
+- Video: [https://www.youtube.com/watch?v=laYx0GOUuaU](https://www.youtube.com/watch?v=laYx0GOUuaU)
+
+#### Methods @ manchester
+
+- Title: What is crowdsourced data?
+- Video: [https://www.youtube.com/watch?v=SQQLrQNA8Gk](https://www.youtube.com/watch?v=SQQLrQNA8Gk)
