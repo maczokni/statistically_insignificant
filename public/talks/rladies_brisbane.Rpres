@@ -578,4 +578,4 @@ leaflet() %>%
   addRasterImage(r1, opacity = 0.8)
 ```
 
-Map here: []()
+Map here: [rekadata.net/talks/leaflet_kde_map.html](rekadata.net/talks/leaflet_kde_map.html)
