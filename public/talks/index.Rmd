@@ -18,7 +18,7 @@ From 2020 on I will try to collect all my talks here, but for earlier years it's
 
 - Title: Spatial Data Analysis with R
 - Meetup link: [https://www.meetup.com/rladies-brisbane/events/271201146](https://www.meetup.com/rladies-brisbane/events/271201146)
-Slides: 
+Slides: [https://rekadata.net/talks/rladies_brisbane.html](https://rekadata.net/talks/rladies_brisbane.html)
 
 # 2019
 

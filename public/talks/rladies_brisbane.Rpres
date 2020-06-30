@@ -302,7 +302,7 @@ tm_shape(cov_map) +
 ```
 
 
-Need a reference...
+Add context
 ===================================
 
 ```{r, fig.align="center"}
@@ -314,15 +314,14 @@ tm_shape(cov_map) +
 ```
 
 
-Interactive?
-======================================
+More shapes
+==================================
 
-```{r, fig.align="center", eval = FALSE}
-
-tmap_mode("view")
-
+```{r fig.align="center", fig.height = 1, echo=FALSE}
+   knitr::include_graphics('img/cartohexpaper.png')
 ```
 
+[https://journals.sagepub.com/doi/abs/10.1177/2399808319873923](https://journals.sagepub.com/doi/abs/10.1177/2399808319873923) (or [pre-print](https://osf.io/preprints/socarxiv/t6agd/))
 
 
 What about points?
@@ -479,16 +478,15 @@ bur_ppp <- ppp(x = sf_bur_fal_coords[,1], y = sf_bur_fal_coords[,2],
 
 Duplicates?
 ==============================================
-We can check the duplication in a `ppp` object with the following syntax:
+We can check the duplication in a `ppp` object:
 
 ```{r}
 any(duplicated(bur_ppp))
 ```
 
-To count the number of coincidence points we use the `multiplicity()` function. 
+And count the number of coincidence points: 
 
 ```{r, eval=FALSE}
-
 sum(multiplicity(bur_ppp) > 1)
 ```
 
@@ -578,4 +576,4 @@ leaflet() %>%
   addRasterImage(r1, opacity = 0.8)
 ```
 
-Map here: [rekadata.net/talks/leaflet_kde_map.html](rekadata.net/talks/leaflet_kde_map.html)
+Map here: [rekadata.net/talks/leaflet_kde_map](https://rekadata.net/talks/leaflet_kde_map)
