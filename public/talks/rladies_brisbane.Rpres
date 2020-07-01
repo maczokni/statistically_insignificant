@@ -25,11 +25,25 @@ How did I get to Brisbane?
    knitr::include_graphics('img/researchleave.png')
 ```
 
+
+Also visited Paula at UQ
+========================================================
+incremental: false
+```{r fig.align="center", echo=FALSE}
+   knitr::include_graphics('img/uq.jpg')
+```
+
+--
+***
+```{r fig.align="center", echo=FALSE}
+   knitr::include_graphics('img/bcs.jpg')
+```
+
 Bystander intervention in sexual harassment
 ========================================================
 incremental: false
 
-
+<br><br>
 The Project: How do victims of sexual harassment perceive ‘indirect’ intervention by bystanders?
 
 ***
@@ -93,7 +107,7 @@ packages
 
 ```{r, eval = FALSE}
 
-install.packages('sf','tmap','leaflet','spatstat')
+install.packages('rnaturalearth', 'sf', 'tmap', 'spatstat', 'raster', 'leaflet', 'dplyr')
 
 
 ```
@@ -107,9 +121,21 @@ What is spatial information?
 - Objects (points, lines, areas (polygons))
 
 
+Points, lines, polygons
+=======================================================
+<div align="center">
+<img src="img/bakerloo_line_ptlinepoly.png" height=400>
+</div>
+
+
+
+[https://rekadata.net/blog/hot-routes-tutorial/](https://rekadata.net/blog/hot-routes-tutorial/)
+
+
+An example
+========================================================
 
 Get some data
-========================================================
 
 ```{r}
 
@@ -317,8 +343,13 @@ tm_shape(cov_map) +
 More shapes
 ==================================
 
-```{r fig.align="center", fig.height = 1, echo=FALSE}
-   knitr::include_graphics('img/cartohexpaper.png')
+```{r fig.align="center",  echo=FALSE}
+   knitr::include_graphics('img/cartohexpaper1.png')
+```
+
+***
+```{r fig.align="center",  echo=FALSE}
+   knitr::include_graphics('img/cartohexpaper2.png')
 ```
 
 [https://journals.sagepub.com/doi/abs/10.1177/2399808319873923](https://journals.sagepub.com/doi/abs/10.1177/2399808319873923) (or [pre-print](https://osf.io/preprints/socarxiv/t6agd/))
@@ -576,4 +607,13 @@ leaflet() %>%
   addRasterImage(r1, opacity = 0.8)
 ```
 
-Map here: [rekadata.net/talks/leaflet_kde_map](https://rekadata.net/talks/leaflet_kde_map)
+Map here: [https://rekadata.net/talks/leaflet_kde_map.html](https://rekadata.net/talks/leaflet_kde_map.html)
+
+
+Resources
+===========================================
+- Crime Mapping Textbook in progress: [https://maczokni.github.io/crime_mapping/](https://maczokni.github.io/crime_mapping/)
+- Cartograms hexograms etc: [https://journals.sagepub.com/doi/abs/10.1177/2399808319873923](https://journals.sagepub.com/doi/abs/10.1177/2399808319873923) (or [pre-print](https://osf.io/preprints/socarxiv/t6agd/)))
+- [Hot routes tutorial](https://rekadata.net/blog/hot-routes-tutorial/)
+- [Spatstat vignette](https://cran.r-project.org/web/packages/spatstat/vignettes/shapefiles.pdf)
+- [Geocomputation with R](https://geocompr.robinlovelace.net/)

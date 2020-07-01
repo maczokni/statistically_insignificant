@@ -23,26 +23,36 @@ How did I get to Brisbane?
 ========================================================
 <img src="img/researchleave.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
+
+Also visited Paula at UQ
+========================================================
+incremental: false
+<img src="img/uq.jpg" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
+
+--
+***
+<img src="img/bcs.jpg" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
+
 Bystander intervention in sexual harassment
 ========================================================
 incremental: false
 
-
+<br><br>
 The Project: How do victims of sexual harassment perceive ‘indirect’ intervention by bystanders?
 
 ***
 
-<img src="img/respvic.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
+<img src="img/respvic.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
 
 
 Exciting research design
 ========================================================
 
-<img src="img/gsr.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
+<img src="img/gsr.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" />
 
 --
 
-<img src="img/scenario_2.gif" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
+<img src="img/scenario_2.gif" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" />
 
 Project progress
 ========================================================
@@ -63,12 +73,12 @@ X Data collection with pilot participants
 COVID-19 struck
 ========================================================
 
-<img src="img/tp.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" />
+<img src="img/tp.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" style="display: block; margin: auto;" />
 
 Talk was canceled :(
 ========================================================
 
-<img src="img/cancelled.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" />
+<img src="img/cancelled.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" style="display: block; margin: auto;" />
 
 
 ... until now!
@@ -81,7 +91,7 @@ packages
 
 
 ```r
-install.packages('sf','tmap','leaflet','spatstat')
+install.packages('rnaturalearth', 'sf', 'tmap', 'spatstat', 'raster', 'leaflet', 'dplyr')
 ```
 
 
@@ -93,9 +103,21 @@ What is spatial information?
 - Objects (points, lines, areas (polygons))
 
 
+Points, lines, polygons
+=======================================================
+<div align="center">
+<img src="img/bakerloo_line_ptlinepoly.png" height=400>
+</div>
+
+
+
+[https://rekadata.net/blog/hot-routes-tutorial/](https://rekadata.net/blog/hot-routes-tutorial/)
+
+
+An example
+========================================================
 
 Get some data
-========================================================
 
 
 ```r
@@ -129,8 +151,8 @@ head(covid19)
   Country     maxcd
   <chr>       <int>
 1 Afghanistan   733
-2 Albania        58
-3 Algeria       897
+2 Albania        62
+3 Algeria       905
 4 Andorra        52
 5 Angola         11
 6 Anguilla        0
@@ -183,7 +205,7 @@ library(sf)
 plot(st_geometry(world))
 ```
 
-<img src="rladies_brisbane-figure/unnamed-chunk-13-1.png" title="plot of chunk unnamed-chunk-13" alt="plot of chunk unnamed-chunk-13" style="display: block; margin: auto;" />
+<img src="rladies_brisbane-figure/unnamed-chunk-15-1.png" title="plot of chunk unnamed-chunk-15" alt="plot of chunk unnamed-chunk-15" style="display: block; margin: auto;" />
 
 
 View attributes of 'world'
@@ -322,7 +344,7 @@ tm_shape(cov_map) +
   tm_polygons("maxcd")
 ```
 
-<img src="rladies_brisbane-figure/unnamed-chunk-17-1.png" title="plot of chunk unnamed-chunk-17" alt="plot of chunk unnamed-chunk-17" style="display: block; margin: auto;" />
+<img src="rladies_brisbane-figure/unnamed-chunk-19-1.png" title="plot of chunk unnamed-chunk-19" alt="plot of chunk unnamed-chunk-19" style="display: block; margin: auto;" />
 
 
 Missing? 
@@ -417,7 +439,7 @@ tm_shape(cov_map) +
   tm_polygons("maxcd")
 ```
 
-<img src="rladies_brisbane-figure/unnamed-chunk-22-1.png" title="plot of chunk unnamed-chunk-22" alt="plot of chunk unnamed-chunk-22" style="display: block; margin: auto;" />
+<img src="rladies_brisbane-figure/unnamed-chunk-24-1.png" title="plot of chunk unnamed-chunk-24" alt="plot of chunk unnamed-chunk-24" style="display: block; margin: auto;" />
 
 
 Other shapes
@@ -429,7 +451,7 @@ tm_shape(cov_map) +
   tm_bubbles("maxcd")
 ```
 
-<img src="rladies_brisbane-figure/unnamed-chunk-23-1.png" title="plot of chunk unnamed-chunk-23" alt="plot of chunk unnamed-chunk-23" style="display: block; margin: auto;" />
+<img src="rladies_brisbane-figure/unnamed-chunk-25-1.png" title="plot of chunk unnamed-chunk-25" alt="plot of chunk unnamed-chunk-25" style="display: block; margin: auto;" />
 
 
 Add context
@@ -442,13 +464,16 @@ tm_shape(cov_map) +
   tm_bubbles("maxcd")
 ```
 
-<img src="rladies_brisbane-figure/unnamed-chunk-24-1.png" title="plot of chunk unnamed-chunk-24" alt="plot of chunk unnamed-chunk-24" style="display: block; margin: auto;" />
+<img src="rladies_brisbane-figure/unnamed-chunk-26-1.png" title="plot of chunk unnamed-chunk-26" alt="plot of chunk unnamed-chunk-26" style="display: block; margin: auto;" />
 
 
 More shapes
 ==================================
 
-<img src="img/cartohexpaper.png" title="plot of chunk unnamed-chunk-25" alt="plot of chunk unnamed-chunk-25" style="display: block; margin: auto;" />
+<img src="img/cartohexpaper1.png" title="plot of chunk unnamed-chunk-27" alt="plot of chunk unnamed-chunk-27" style="display: block; margin: auto;" />
+
+***
+<img src="img/cartohexpaper2.png" title="plot of chunk unnamed-chunk-28" alt="plot of chunk unnamed-chunk-28" style="display: block; margin: auto;" />
 
 [https://journals.sagepub.com/doi/abs/10.1177/2399808319873923](https://journals.sagepub.com/doi/abs/10.1177/2399808319873923) (or [pre-print](https://osf.io/preprints/socarxiv/t6agd/))
 
@@ -496,7 +521,7 @@ Plot
 plot(st_geometry(burglary_spatial))
 ```
 
-<img src="rladies_brisbane-figure/unnamed-chunk-28-1.png" title="plot of chunk unnamed-chunk-28" alt="plot of chunk unnamed-chunk-28" style="display: block; margin: auto;" />
+<img src="rladies_brisbane-figure/unnamed-chunk-31-1.png" title="plot of chunk unnamed-chunk-31" alt="plot of chunk unnamed-chunk-31" style="display: block; margin: auto;" />
 
 
 Subset based on location
@@ -524,7 +549,7 @@ fallowfield <- manchester_ward %>% filter(wd16nm == "Fallowfield")
 plot(st_geometry(fallowfield))
 ```
 
-<img src="rladies_brisbane-figure/unnamed-chunk-29-1.png" title="plot of chunk unnamed-chunk-29" alt="plot of chunk unnamed-chunk-29" style="display: block; margin: auto;" />
+<img src="rladies_brisbane-figure/unnamed-chunk-32-1.png" title="plot of chunk unnamed-chunk-32" alt="plot of chunk unnamed-chunk-32" style="display: block; margin: auto;" />
 
 
 CRS
@@ -637,7 +662,7 @@ tm_shape(fallowfield) +
   tm_dots()
 ```
 
-<img src="rladies_brisbane-figure/unnamed-chunk-36-1.png" title="plot of chunk unnamed-chunk-36" alt="plot of chunk unnamed-chunk-36" style="display: block; margin: auto;" />
+<img src="rladies_brisbane-figure/unnamed-chunk-39-1.png" title="plot of chunk unnamed-chunk-39" alt="plot of chunk unnamed-chunk-39" style="display: block; margin: auto;" />
 
 
 
@@ -716,7 +741,7 @@ tm_shape(fallowfield) +
   tm_dots(alpha=0.4, size=1)
 ```
 
-<img src="rladies_brisbane-figure/unnamed-chunk-44-1.png" title="plot of chunk unnamed-chunk-44" alt="plot of chunk unnamed-chunk-44" style="display: block; margin: auto;" />
+<img src="rladies_brisbane-figure/unnamed-chunk-47-1.png" title="plot of chunk unnamed-chunk-47" alt="plot of chunk unnamed-chunk-47" style="display: block; margin: auto;" />
 
 
 Jitter
@@ -727,7 +752,7 @@ jitter_bur <- rjitter(bur_ppp, retry=TRUE, nsim=1, drop=TRUE)
 plot(jitter_bur)
 ```
 
-<img src="rladies_brisbane-figure/unnamed-chunk-45-1.png" title="plot of chunk unnamed-chunk-45" alt="plot of chunk unnamed-chunk-45" style="display: block; margin: auto;" />
+<img src="rladies_brisbane-figure/unnamed-chunk-48-1.png" title="plot of chunk unnamed-chunk-48" alt="plot of chunk unnamed-chunk-48" style="display: block; margin: auto;" />
 
 
 Quadrants
@@ -740,12 +765,12 @@ plot(jitter_bur)
 plot(Q, add = TRUE, cex = 2)
 ```
 
-<img src="rladies_brisbane-figure/unnamed-chunk-46-1.png" title="plot of chunk unnamed-chunk-46" alt="plot of chunk unnamed-chunk-46" style="display: block; margin: auto;" />
+<img src="rladies_brisbane-figure/unnamed-chunk-49-1.png" title="plot of chunk unnamed-chunk-49" alt="plot of chunk unnamed-chunk-49" style="display: block; margin: auto;" />
 
 Kernel Density Estimation maps
 ==============================================
 
-<img src="img/kde.png" title="plot of chunk unnamed-chunk-47" alt="plot of chunk unnamed-chunk-47" style="display: block; margin: auto;" />
+<img src="img/kde.png" title="plot of chunk unnamed-chunk-50" alt="plot of chunk unnamed-chunk-50" style="display: block; margin: auto;" />
 
 
 Making KDE maps
@@ -756,7 +781,7 @@ ds <- density(jitter_bur)
 plot(ds, main='Burglary density in Fallowfield')
 ```
 
-<img src="rladies_brisbane-figure/unnamed-chunk-48-1.png" title="plot of chunk unnamed-chunk-48" alt="plot of chunk unnamed-chunk-48" style="display: block; margin: auto;" />
+<img src="rladies_brisbane-figure/unnamed-chunk-51-1.png" title="plot of chunk unnamed-chunk-51" alt="plot of chunk unnamed-chunk-51" style="display: block; margin: auto;" />
 
 
 Adding context: turn the KDE map into a raster layer
@@ -802,4 +827,13 @@ leaflet() %>%
   addRasterImage(r1, opacity = 0.8)
 ```
 
-Map here: [rekadata.net/talks/leaflet_kde_map](https://rekadata.net/talks/leaflet_kde_map)
+Map here: [https://rekadata.net/talks/leaflet_kde_map.html](https://rekadata.net/talks/leaflet_kde_map.html)
+
+
+Resources
+===========================================
+- Crime Mapping Textbook in progress: [https://maczokni.github.io/crime_mapping/](https://maczokni.github.io/crime_mapping/)
+- Cartograms hexograms etc: [https://journals.sagepub.com/doi/abs/10.1177/2399808319873923](https://journals.sagepub.com/doi/abs/10.1177/2399808319873923) (or [pre-print](https://osf.io/preprints/socarxiv/t6agd/)))
+- [Hot routes tutorial](https://rekadata.net/blog/hot-routes-tutorial/)
+- [Spatstat vignette](https://cran.r-project.org/web/packages/spatstat/vignettes/shapefiles.pdf)
+- [Geocomputation with R](https://geocompr.robinlovelace.net/)
