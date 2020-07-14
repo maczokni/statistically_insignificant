@@ -14,6 +14,14 @@ From 2020 on I will try to collect all my talks here, but for earlier years it's
 
 # 2020
 
+#### Open Data Manchester Pick N Mix Sessions
+
+- Title: Accessing open data through APIs
+- Webpage: []()
+- Content: [https://rekadata.net/talks/odm_apis.html](https://rekadata.net/talks/odm_apis.html)
+
+
+
 #### R Ladies Brisbane
 
 - Title: Spatial Data Analysis with R
