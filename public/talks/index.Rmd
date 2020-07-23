@@ -17,8 +17,8 @@ From 2020 on I will try to collect all my talks here, but for earlier years it's
 #### Open Data Manchester Pick N Mix Sessions
 
 - Title: Accessing open data through APIs
-- Webpage: []()
-- Content: [https://rekadata.net/talks/odm_apis.html](https://rekadata.net/talks/odm_apis.html)
+- Recording: [https://vimeo.com/438506088](https://vimeo.com/438506088)
+- Materials: [https://rekadata.net/talks/odm_apis.html](https://rekadata.net/talks/odm_apis.html)
 
 
 
@@ -26,28 +26,28 @@ From 2020 on I will try to collect all my talks here, but for earlier years it's
 
 - Title: Spatial Data Analysis with R
 - Meetup link: [https://www.meetup.com/rladies-brisbane/events/271201146](https://www.meetup.com/rladies-brisbane/events/271201146)
-Slides: [https://rekadata.net/talks/rladies_brisbane.html](https://rekadata.net/talks/rladies_brisbane.html)
+- Slides: [https://rekadata.net/talks/rladies_brisbane.html](https://rekadata.net/talks/rladies_brisbane.html)
 
 # 2019
 
 #### Women In Data Science Zurich
 
 - Title: The role of innovative data collection methods in advancing understanding, and the importance of considering the biases within
-- Video: [https://www.youtube.com/watch?v=uqAX5Bd_BPU](https://www.youtube.com/watch?v=uqAX5Bd_BPU)
+- Recording: [https://www.youtube.com/watch?v=uqAX5Bd_BPU](https://www.youtube.com/watch?v=uqAX5Bd_BPU)
 
 #### Berlin Legal Tech Conference
 
 - Title: The data-driven economy and what it means for lawyers and policy makers
-- Video: [https://www.youtube.com/watch?v=nIaQyeDKvhU](https://www.youtube.com/watch?v=nIaQyeDKvhU)
+- Recording: [https://www.youtube.com/watch?v=nIaQyeDKvhU](https://www.youtube.com/watch?v=nIaQyeDKvhU)
 
 # 2018
 
 #### TicTec 2018: The Impacts of Civic Technology Conference from mySociety
 
 - Title: Crowdsourcing subjective perceptions of neighbourhood disorder
-- Video: [https://www.youtube.com/watch?v=laYx0GOUuaU](https://www.youtube.com/watch?v=laYx0GOUuaU)
+- Recording: [https://www.youtube.com/watch?v=laYx0GOUuaU](https://www.youtube.com/watch?v=laYx0GOUuaU)
 
 #### Methods @ manchester
 
 - Title: What is crowdsourced data?
-- Video: [https://www.youtube.com/watch?v=SQQLrQNA8Gk](https://www.youtube.com/watch?v=SQQLrQNA8Gk)
+- Recording: [https://www.youtube.com/watch?v=SQQLrQNA8Gk](https://www.youtube.com/watch?v=SQQLrQNA8Gk)
