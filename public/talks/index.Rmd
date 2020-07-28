@@ -14,6 +14,12 @@ From 2020 on I will try to collect all my talks here, but for earlier years it's
 
 # 2020
 
+#### PyData Manchester 
+
+- Title: Even beautiful maps can be misleading: How decisions about spatial data visualisation affect map legibility
+- Slides: [https://rekadata.net/talks/pydatamcr.html](https://rekadata.net/talks/pydatamcr.html)
+
+
 #### Open Data Manchester Pick N Mix Sessions
 
 - Title: Accessing open data through APIs
