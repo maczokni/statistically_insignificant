@@ -1,7 +1,7 @@
 ---
 title: "Even beautiful maps can be misleading"
 subtitle: "How decisions about spatial data visualisation affect map legibility"
-author: "Reka Solymosi"
+author: "Réka Solymosi"
 institute: "University of Manchester"
 date: "28/07/2020"
 output:
@@ -122,7 +122,32 @@ Image credit: [Flowing data](https://flowingdata.com/2012/11/09/incredibly-divid
 ]
 
 ---
-# No, really, a LOT of bad maps out there
+
+# Obligatory XKCD
+
+.center[
+
+![](https://imgs.xkcd.com/comics/heatmap.png)
+]
+
+???
+
+Image credit: [XKCD](https://xkcd.com/1138/)
+
+---
+
+# Sometimes bad maps are funny
+
+.center[
+```{r, echo=FALSE,out.height=500}
+
+knitr::include_graphics("https://i.redd.it/63l70c76cwq01.jpg")
+
+```
+]
+
+---
+# Some people collect bad maps 
 
 .pull-left[
 ![](img/terriblemaps.png)
@@ -131,6 +156,14 @@ Image credit: [Flowing data](https://flowingdata.com/2012/11/09/incredibly-divid
 .pull-right[
 [twitter.com/TerribleMaps](https://twitter.com/TerribleMaps)
 ]
+
+
+---
+
+# Terrible(/y funny) maps
+
+![](https://pbs.twimg.com/media/EeAunCGXsAcV2qA?format=jpg&name=small)
+
 ---
 class: center, middle
 
@@ -151,6 +184,8 @@ class: center, middle
 
 ### - cartography
 
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Kepler-world.jpg/250px-Kepler-world.jpg)
+
 ]
 
 --
@@ -158,7 +193,14 @@ class: center, middle
 .pull-right[
 
 ### - (non-spatial) data visualisation
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Nightingale-mortality.jpg/120px-Nightingale-mortality.jpg)
 ]
+
+
+???
+
+Image credit: [Wikimedia commons](https://commons.wikimedia.org/wiki/Category:Coxcomb_(Florence_Nightingale))
 
 ---
 class: inverse, center, middle
@@ -207,8 +249,9 @@ class: inverse, middle, center
 ```{r, echo = FALSE, message=FALSE, warning=FALSE}
 library(rnaturalearth)
 library(sf)
+library(dplyr)
 
-plot(st_geometry(ne_states(country = "United States of America", returnclass = "sf")))
+plot(st_geometry(ne_states(geounit = "United States of America", returnclass = "sf") %>% filter(woe_name != "Alaska", woe_name != "Hawaii")))
 
 ```
 ]
@@ -303,6 +346,12 @@ balcarto <- cartogram::cartogram(map, "scaleby", maxSizeError = 1.1, prepare = "
 
 ---
 
+.center[
+
+![](img/map_a.png)
+]
+---
+
 # (b) Hexogram
 
 - same idea as balanced carto, with minimum value being what allows each area to be represented as its own hexagon
@@ -324,6 +373,14 @@ harris.29  <- hexogram(LAE.sp, 29)
 # Extract the hexograms
 harris.29.hex.sp <- harris.29[[2]]   # 2 is hexo
 ```
+
+---
+
+.center[
+
+![](img/map_b.png)
+
+]
 
 ---
 
@@ -353,6 +410,14 @@ LAE.reg <- calculate_grid(shape = LAE.sp, grid_type = "regular", seed = 1) #1 wa
 LAE.reg <- assign_polygons(LAE.sp, LAE.reg) 
 ```
 
+
+---
+
+.center[
+
+![](img/map_c.png)
+]
+
 ---
 
 # (d) geogrid hexagonal grid
@@ -367,6 +432,13 @@ LAE.hex <- calculate_grid(shape = LAE.sp, grid_type = "hexagonal", seed = 1)
 LAE.hex <- assign_polygons(LAE.sp, LAE.hex)
 
 ```
+
+---
+
+.center[
+
+![](img/map_d.png)
+]
 
 ---
 .center[

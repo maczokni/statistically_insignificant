@@ -3,7 +3,7 @@
   <head>
     <title>Even beautiful maps can be misleading</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Reka Solymosi" />
+    <meta name="author" content="Réka Solymosi" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
@@ -12,7 +12,7 @@ class: center, middle, inverse, title-slide
 
 # Even beautiful maps can be misleading
 ## How decisions about spatial data visualisation affect map legibility
-### Reka Solymosi
+### Réka Solymosi
 ### University of Manchester
 ### 28/07/2020
 
@@ -118,7 +118,28 @@ Image credit: [Flowing data](https://flowingdata.com/2012/11/09/incredibly-divid
 ]
 
 ---
-# No, really, a LOT of bad maps out there
+
+# Obligatory XKCD
+
+.center[
+
+![](https://imgs.xkcd.com/comics/heatmap.png)
+]
+
+???
+
+Image credit: [XKCD](https://xkcd.com/1138/)
+
+---
+
+# Sometimes bad maps are funny
+
+.center[
+&lt;img src="https://i.redd.it/63l70c76cwq01.jpg" height="500" /&gt;
+]
+
+---
+# Some people collect bad maps 
 
 .pull-left[
 ![](img/terriblemaps.png)
@@ -127,6 +148,14 @@ Image credit: [Flowing data](https://flowingdata.com/2012/11/09/incredibly-divid
 .pull-right[
 [twitter.com/TerribleMaps](https://twitter.com/TerribleMaps)
 ]
+
+
+---
+
+# Terrible(/y funny) maps
+
+![](https://pbs.twimg.com/media/EeAunCGXsAcV2qA?format=jpg&amp;name=small)
+
 ---
 class: center, middle
 
@@ -147,6 +176,8 @@ class: center, middle
 
 ### - cartography
 
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Kepler-world.jpg/250px-Kepler-world.jpg)
+
 ]
 
 --
@@ -154,7 +185,14 @@ class: center, middle
 .pull-right[
 
 ### - (non-spatial) data visualisation
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Nightingale-mortality.jpg/120px-Nightingale-mortality.jpg)
 ]
+
+
+???
+
+Image credit: [Wikimedia commons](https://commons.wikimedia.org/wiki/Category:Coxcomb_(Florence_Nightingale))
 
 ---
 class: inverse, center, middle
@@ -200,21 +238,21 @@ class: inverse, middle, center
 # Eg: USA States
 
 .center[
-![](pydatamcr_files/figure-html/unnamed-chunk-1-1.png)&lt;!-- --&gt;
+![](pydatamcr_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
 ]
 ---
 
 # Eg: UK Local Authorities
 
 .center[
-![](pydatamcr_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
+![](pydatamcr_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
 ]
 ---
 
 # Message often obscured
 
 .center[
-![](pydatamcr_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
+![](pydatamcr_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
 ]
 ---
 # A fix: distort polygons
@@ -280,6 +318,12 @@ balcarto &lt;- cartogram::cartogram(map, "scaleby", maxSizeError = 1.1, prepare 
 
 ---
 
+.center[
+
+![](img/map_a.png)
+]
+---
+
 # (b) Hexogram
 
 - same idea as balanced carto, with minimum value being what allows each area to be represented as its own hexagon
@@ -302,6 +346,14 @@ harris.29  &lt;- hexogram(LAE.sp, 29)
 # Extract the hexograms
 harris.29.hex.sp &lt;- harris.29[[2]]   # 2 is hexo
 ```
+
+---
+
+.center[
+
+![](img/map_b.png)
+
+]
 
 ---
 
@@ -332,6 +384,14 @@ LAE.reg &lt;- calculate_grid(shape = LAE.sp, grid_type = "regular", seed = 1) #1
 LAE.reg &lt;- assign_polygons(LAE.sp, LAE.reg) 
 ```
 
+
+---
+
+.center[
+
+![](img/map_c.png)
+]
+
 ---
 
 # (d) geogrid hexagonal grid
@@ -346,6 +406,13 @@ LAE.hex &lt;- calculate_grid(shape = LAE.sp, grid_type = "hexagonal", seed = 1)
 # step 2 calculate assignments
 LAE.hex &lt;- assign_polygons(LAE.sp, LAE.hex)
 ```
+
+---
+
+.center[
+
+![](img/map_d.png)
+]
 
 ---
 .center[
@@ -370,7 +437,7 @@ LAE.hex &lt;- assign_polygons(LAE.sp, LAE.hex)
 # Results
 
 .center[
-![](pydatamcr_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+![](pydatamcr_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
 
 ]
 ---
@@ -379,7 +446,7 @@ LAE.hex &lt;- assign_polygons(LAE.sp, LAE.hex)
 
 .center[
 
-![](pydatamcr_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+![](pydatamcr_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
 
 ]
 
