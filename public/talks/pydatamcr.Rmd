@@ -470,7 +470,7 @@ plot_model(fitl_1, sort.est = T, title = "Disgree or Agree", axis.lim = c(0.1,10
 
 - These slides: [https://rekadata.net/talks/pydatamcr.html](https://rekadata.net/talks/pydatamcr.html)
 
-- Questions? Contact myself ([@r_solymosi](twitter.com/r_solymosi)) or Sam ([@sh_langton](twitter.com/sh_langton))
+- Questions? Contact myself ([@r_solymosi](https://twitter.com/r_solymosi)) or Sam ([@sh_langton](https://twitter.com/sh_langton))
 
 
 
@@ -480,5 +480,5 @@ plot_model(fitl_1, sort.est = T, title = "Disgree or Agree", axis.lim = c(0.1,10
 
 
 .small[
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan). The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.org/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+- Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan). The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.org/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
 ]
