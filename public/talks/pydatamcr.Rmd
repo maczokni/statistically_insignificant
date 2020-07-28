@@ -105,10 +105,19 @@ Image credit: [BBC News](https://www.bbc.com/news/world-51235105)
 
 ]
 
+---
+
+# Some are very useful!
+
+Optimal Manchester brewery crawl (see [https://www.ncalvert.uk/posts/drunkensalesman/](https://www.ncalvert.uk/posts/drunkensalesman/))
+
+![](https://www.ncalvert.uk/images/OptimalBreweryCrawl.png)
+
+
 
 ---
 
-# And many are bad
+# But many are bad
 
 .center[
 
