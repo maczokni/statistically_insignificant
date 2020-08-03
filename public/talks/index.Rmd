@@ -17,6 +17,7 @@ From 2020 on I will try to collect all my talks here, but for earlier years it's
 #### PyData Manchester 
 
 - Title: Even beautiful maps can be misleading: How decisions about spatial data visualisation affect map legibility
+- Recording: [https://www.youtube.com/watch?v=xUWDBQ4wCqU](https://www.youtube.com/watch?v=xUWDBQ4wCqU)
 - Slides: [https://rekadata.net/talks/pydatamcr.html](https://rekadata.net/talks/pydatamcr.html)
 
 

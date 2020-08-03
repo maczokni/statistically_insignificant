@@ -1,0 +1,105 @@
+---
+title: 'Towards a Place-based Measure of Fear of Crime: A Systematic Review of App-based
+  and Crowdsourcing Approaches'
+author: ~
+date: '2020-08-03'
+slug: towards-a-place-based-measure-of-fear-of-crime-a-systematic-review-of-app-based-and-crowdsourcing-approaches
+categories: []
+tags: []
+images: []
+---
+
+> This post is about the paper [Towards a Place-based Measure of Fear of Crime: A Systematic Review of App-based and Crowdsourcing Approaches](https://journals.sagepub.com/doi/full/10.1177/0013916520947114) available to read on the journal page or pre-print on [https://osf.io/49sv7/](https://osf.io/49sv7/)
+
+
+A place-based and context-specific approach to the study of fear of crime is something that I had been thinking about since my PhD when it seemed to me that among the wealth of work on 'crime and place' there seems to be little translation of these situational perspectives to the study of fear of crime. 
+
+To address this, I developed a mobile application ([see more about FOCA here](https://onlinelibrary.wiley.com/doi/full/10.1111/lcrp.12076)) to allow people to report how they feel in specific time and place. Since then however, more and more scholars have taken this approach, (actually some even before then, just in other fields!) and the time has come to move from showing off this flashy 'new' approach and instead to take stock, and establish what is known and what areas need to be further explored by those interested in furthering this field. 
+
+Our newest paper [Towards a Place-based Measure of Fear of Crime: A Systematic Review of App-based and Crowdsourcing Approaches](https://journals.sagepub.com/doi/full/10.1177/0013916520947114), out this week in [Environment and Behaviour](https://journals.sagepub.com/home/eab) does exactly that. In this post I will illustrate some highlights from the paper. 
+
+## Taking stock
+
+To identify what is known (regarding strengths and limitations) about mobile app-based and crowdsourcing approaches to operationalise fear of crime, we conducted a systematic search of 3 major publication databases, and used our pre-defined selection and screening rules to filter studies. The flow chart below illustrates this process. 
+
+![](https://journals.sagepub.com/na101/home/literatum/publisher/sage/journals/content/eaba/0/eaba.ahead-of-print/0013916520947114/20200731/images/medium/10.1177_0013916520947114-fig1.gif)
+
+
+We then extracted and synthesised key limitations and strengths. 
+
+### Study characteristics
+
+Before going into strengths and limitations it's worth noting that we found some very interesting patters in our descriptive exploration of these studies. To me what sticks out the most is the incredibly wide range of ways to measure 'fear of crime'. 
+
+This should be familiar to anyone interested in 'fear of crime' literature. Already in the 1980s scholars lamented that *"the phrase 'fear of crime' has acquired so many divergent  meanings that its current utility is  negligible."*^[ [Ferraro, K. F., & Grange, R. L. (1987). The measurement of fear of crime. Sociological inquiry, 57(1), 70-97.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1475-682X.1987.tb01181.x)]
+
+But even on this new frontied of "apps" and "crowdsourcing" we fail to arrive on a consistent way of measurement and instead we have things like: 
+
+- Evaluate the momentary sense of security on a scale from 1 to 5
+- Green or red tag to indicate locations where they feel comfortable or uncomfortable
+- Choose 'which place looks safer?' from two images
+- Choose between two scared/safe emoticons
+- Answer: 'In this moment, how worried are you about becoming a victim of crime?'
+
+...and many many more!
+
+
+### Strengths
+
+We arrived on the following themes for strengths identified by studies presenting these approaches:
+
+- Capture the spatial-temporal specific nature of attitudes and emotions towards crime.
+- Record data on individual variables and specific types of fear/disorder.
+- Record data on architectural features.
+- Reduced cost of data collection.
+- Oriented to evidence-based policy making/urban planning. 
+
+
+The paper details these and highlights examples, but one really exciting one is the ability to produce point-level maps of people's experiences, and then associate these with the environmental features of these environments in day and night times. 
+
+
+For example, [my paper in London](https://onlinelibrary.wiley.com/doi/full/10.1111/lcrp.12076), and the study of David Buil-Gil in Elche^[Buil-Gil, D. (2016). InseguridApp: Estudio piloto de los patrones de distribución espacio-temporal de los enclaves del miedo (al crimen) en Elche a partir de una nueva aplicación móvil [Unpublished master’s thesis]. Miguel Hernández University.] both resulted in such maps:
+
+![](https://journals.sagepub.com/na101/home/literatum/publisher/sage/journals/content/eaba/0/eaba.ahead-of-print/0013916520947114/20200731/images/medium/10.1177_0013916520947114-fig5.gif)
+
+![](https://journals.sagepub.com/na101/home/literatum/publisher/sage/journals/content/eaba/0/eaba.ahead-of-print/0013916520947114/20200731/images/medium/10.1177_0013916520947114-fig6.gif)
+
+Then David went further to explore through Google Street View the environmental context in which these reports were made: 
+
+![](https://journals.sagepub.com/na101/home/literatum/publisher/sage/journals/content/eaba/0/eaba.ahead-of-print/0013916520947114/20200731/images/medium/10.1177_0013916520947114-fig7.gif)
+
+
+
+### Limitations
+
+We also wanted to highlight what were the weaknesses of the approach identified by the studies we selected, and what sort of future work these might insire to address them. Limitations emerged in the following themes: 
+
+- Sample issues	Participation inequality. Specifically:
+	- No screening questions.
+	- Participation decrease
+	- Small sample sizes and low response rates. 
+- Under-representation of certain areas and times.
+- Difficult to interpret results. 
+- Limitations to generalise results. 
+- Repeatedly asking about fear might increase/cause fear.
+- Lack of temporal variability in some web-based measures. 
+
+
+Again we detail each one of these in the paper in deatail, but I want to highlight one. Sampling is of course a huge issue here, which I know there is work being done to address, but one issue that is not to do with sampling of people, but with sampling of places, presents an interesting problem. One response to this bias in sampling of places (rather than sampling of people) is a study design implemented by Laura Vozmediano and colleagues^[Vozmediano, L., Azanza, M., Villamane, M. (2017). Desarrollando y probando una app para analizar la influencia de la seguridad percibida en la movilidad a pie: un trabajo multidisciplinar con profesorado y alumnado de Psicología e Ingeniería. In Proceedings of the Seminar “La educación, base para los Objetivos de Desarrollo Sostenible, Grupo 4 Paz y participación” (p. 13). University of the Basque Country UPV/EHU] where instead of asking people to self report areas they are in, they tracked people's movements across the entire study period, resulting in all of the routes. Then these routes were randomly sampled to be shown back to people to ask 'when you walked this route earlier today, how safe did you feel?'. This is one way to create more representative samples of areas people have been to, rather than asking people to choose where they report. 
+
+![](https://journals.sagepub.com/na101/home/literatum/publisher/sage/journals/content/eaba/0/eaba.ahead-of-print/0013916520947114/20200731/images/medium/10.1177_0013916520947114-fig9.gif)
+
+## Next steps
+
+We conclude by suggesting areas for researchers interested in this area to pursue. Overarchingly, the limitations synthesised in our review identified a need to improve the reliability, validity, and generalisability of these measures. The most prominent theme was around issues with sampling bias and generalisability. 
+
+To address this some future work ideas are: 
+
+- to explore participation motivation, 
+- the use of sensors, or interviews or follow-up questionnaires
+- the use of statistical or computational modeling approaches to mitigate bias
+- research on the contextual elements that trigger fear of crime may benefit from the increased use of eye tracking techniques to help address the “difficulty to interpret results” limitation.
+
+## Conclusion
+
+Overall, the papers in this review all share an approach that allows the understanding of fear of crime as a place-based, contextually specific event, captured in people’s emotional and behavioral responses, that may lend itself to problem-solving approaches. Much like a place-based approach for crime, applying these methodologies to fear of crime make possible its operationalisation in a way that allows such exploration. By building on the strengths and working to address the limitations discussed in this review, we can explore fear of crime as a function of people’s experiences in their immediate environments, and inform evidence-based policy making and urban planning for safer places.
