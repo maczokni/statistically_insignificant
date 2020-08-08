@@ -14,11 +14,11 @@ The course is made up of 10 labs and 10 lectures, and is assessed by weekly home
 
 For more details please see:
 
-- The [Syllabus](https://rekadata.site/teaching/mscd/syllabus.html)
+- The [Syllabus](https://rekadata.net/teaching/mscd/syllabus.html)
 
 For required reading for each week, please see: 
 
-- The [Reading list](https://rekadata.site/teaching/mscd/reading_list.html)
+- The [Reading list](https://rekadata.net/teaching/mscd/reading_list.html)
 
 For the lab worksheets, please see:
 
