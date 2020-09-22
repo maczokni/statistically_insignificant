@@ -27,6 +27,10 @@ Introduction to spatial data analysis and visualisation for criminology students
 
 # Short courses
 
+### KTH University Guest Lecture
+
+1-day lecture and lab session serving as an introduction to open data, crowdsourced data, and social media data in place-based research. See the laboratory exercise in QGIS here: [https://rekadata.net/teaching/kth_seminar_2020/](https://rekadata.net/teaching/kth_seminar_2020/)
+
 ### Monash University Masterclass
 
 1-day introduction to data analysis and a gentle intro to R and R Studio using R Studio Cloud. [See here for more info and course websie](https://rekadata.net/teaching/monash_masterclass/). 
