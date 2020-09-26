@@ -3,8 +3,9 @@ title: "Crowdsourced and social media data for research"
 author: "Reka Solymosi"
 date: "16/09/2020"
 output:
+  word_document: default
   html_document:
-    css: "../rekadata.css"
+    css: ../rekadata.css
 ---
 
 ```{r setup, include=FALSE}
@@ -471,6 +472,20 @@ It is slightly more difficult on a Mac that on Windows, but if you are not afrai
 [https://gis.stackexchange.com/questions/351280/installing-python-modules-for-qgis-3-on-mac](https://gis.stackexchange.com/questions/351280/installing-python-modules-for-qgis-3-on-mac)
 
 
+#### Here is a tutorial specifically for using OSGeo4W in the lab PCs:
+
+Start by closing QGIS and start the OSGeo4W Shell program by searching for it in the start menu 
+Type “py3_env”:
+
+![](img/osgeo4w_1.png)
+ 
+Press enter. You should now see the path which QGIS installed its python module.
+Type “python -m pip install Tweepy” to start the installation.
+
+![](img/osgeo4w_2.png)
+ 
+After a few seconds, the installation should be finished. You can now open QGIS and Install QweetGIS.
+
 
 ## Authenticate 
 
@@ -536,4 +551,83 @@ When you do this, you will see the Tweets streaming in! Once you are happy with 
 
 ![](img/streaming_tweets.gif)
 
-# Conclusions
+**Note:** You might need to leave the stream open for a while in order to collect enough Tweets that you have some useful ones in there!
+
+
+In my case, I ended up with 18 Tweets that were made in Camden. You can zoom to your camden crimes layer, and select only the Tweets made in this area by using the manual select tool: 
+
+![](img/manualselect.png)
+
+And then dragging the contents of your window: 
+
+
+![](img/select_camden_tweets.gif)
+
+You can then save these Tweets like we did when selecting by keyword search earlier, by right clicking the tweets layer and selecting "Export > Save selected features as..." and saving it in your working directory. 
+
+**Note:** in case you didn't manage to get any useful Tweets in this exercise, I have saved my results as a geojson file, which you can download from here: [https://www.dropbox.com/s/l9ywxupzi8kmypw/camden_tweets.geojson?dl=0](https://www.dropbox.com/s/l9ywxupzi8kmypw/camden_tweets.geojson?dl=0)
+
+
+# Bringing it all together
+
+So now we have some open source police data from the UK Home Office, we have some crowdsourced data about the location of stations on the Northern Line, from Open Street Map, and we have some Tweets made by people in this local area from Twitter using the Qweetgis plugin. Not bad for a day's work!
+
+
+So let's have a look at what we can learn from this. 
+
+
+Let's first look at which stations have crimes near them?
+
+To look at this, we can build a buffer around the stations. You can do this using Vector > Geoprocessing tools > Buffer
+
+![](img/gettobuffer.png)
+
+This will open a window where you must select what layer to buffer (the one that has your Northern Line stations) and also asks you how big to make this buffer area. Normally we would try to reproject the coordinates to a projected system (in the UK this would be British National Grid) but this is outside the scope of this tutorial, so we will work with degrees and use 0.005 degrees which I arrived at with trial and error. You can change this if you'd like to get bigger or smaller buffers!
+
+![](img/buffer_params.png)
+
+Click "Run", and when it's done "Close" you will see a layer of buffers around the stations. We can now count how many crimes fall within each one of the stations' 0.005 degree radius (you can see why we want to project and use meters...!). To count how many crimes are within each buffer you use the 'points in polygons' function: 
+
+
+![](img/point_in_poly.png)
+This will bring a pop-up window, where you have to set your polygon layer (the buffers we just created) and the point layer to count (the crimes layer). Specify those and click "Run" and when you are ready "Close": 
+
+![](img/count_pip.png)
+
+
+Now you will see a new layer appear called "Count". Double click this layer, and on the menu which opens, choose "Symbology". On the top bar change single symbol to graduated, and under value pick our newly created NUMPOINTS column, which contains the number of points (crimes) we just counted in each of our polygons (buffers around stations). We can use this column to shade our polygons. You can play around here with how you want the color ramp to look, try different styles, see what you like best! Make sure though to choose "Natural breaks (jenks)" under mode. Again it's outside the scope of this session to learn more about these, but I suggest reading about thematic maps to undersand these options. 
+
+![](img/symbology.png)
+
+When you are happy with your choices click Apply, and OK. You will now see your stations in Camden colour coded by the number of crimes that happened within some radius of each station: 
+
+
+![](img/them_stns.png)
+
+
+So now we can look to our social media data for some context. We can use the select tool we learned above to select Tweets in the red station. I only got one such Tweet: 
+
+![](img/red_stn_tweets.png)
+
+I can view it highlighted in the Attribute table: 
+
+![](img/red_stn_tweets_2.png)
+
+
+It seems to be a Tweet about a music venue, we know these areas can get crowded, there is often alcohol involved, so we can start drawing conclusions about what sort of factors might contribute to crime in this area. 
+
+
+To compare we can look at Tweets made near blue stations: 
+
+![](img/blue_stn_tweets.png)
+In this case we see one Tweet is about a theatre, and the other is a link to a photo: 
+
+![](img/blue_stn_tweets2.png)
+
+If we follow the link to the photo (I suggest yes unless you're hungry): [Just posted a photo @ Soho https://t.co/axub2o4OIY](https://t.co/axub2o4OIY) then we can see what sorts of activities people are participating in this area, and we can start to once again draw conclusions about levels of crime in the area. 
+
+
+# Conclusion
+
+In conclusion this tutorial aimed to introduce you to open data, specifically crowdsourced and social media data. We acquired data using direct download, API query through a graphical user interface on the web, and API query through a QGIS plugin. We then mapped these data, and with a simple example demonstrated how you might draw conclusions from them all together. I hope this has been a fun exercise, and if you have any questions, don't hesitate to keep in touch and ask!
+
