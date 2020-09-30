@@ -3,9 +3,9 @@ title: "Crowdsourced and social media data for research"
 author: "Reka Solymosi"
 date: "16/09/2020"
 output:
-  word_document: default
   html_document:
     css: ../rekadata.css
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
