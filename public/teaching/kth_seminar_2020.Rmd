@@ -5,7 +5,6 @@ date: "16/09/2020"
 output:
   html_document:
     css: ../rekadata.css
-  word_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -549,7 +548,7 @@ When we are happy with this, click on the little play icon:
 When you do this, you will see the Tweets streaming in! Once you are happy with the amount of Tweets you have, click on the pause button, and close the window. You will see you have a new layer now, which contains all the tweets you have collected. If you want to see them, right click the layer and select "Open Attribute Table" - you will now see your Tweets. 
 
 
-![](img/streaming_tweets.gif)
+<!-- ![](img/streaming_tweets.gif) -->
 
 **Note:** You might need to leave the stream open for a while in order to collect enough Tweets that you have some useful ones in there!
 
