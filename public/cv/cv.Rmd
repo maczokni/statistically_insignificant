@@ -172,6 +172,7 @@ bibliography_entries(citations_4)
 ```{r fundingpi}
 tribble(
 	~title, ~start_date, ~end_date, ~value, ~funder,
+	"Understanding changing demand for police during the coronavirus pandemic", 2020, 2021, "GBP 20,000", "N8 Policing Research Partnership",	
 	"Identifying features that affect public engagement with appeals for information about missing persons on Twitter", 2019, 2019, "GBP 5,000", "Manchester Statistical Society Campion Grant",
 	"Measuring fear of crime using app-based and sensing methodologies", 2017, 2020, "GBP 10,000", "British Academy and Leverhulme Small Grants",
 	"Using Bayesian Surprise maps to explore debt and insolvency across the UK", 2018, 2019, "GBP 10,000", "Consumer Data Research Centre, Economic and Social Research Council",
