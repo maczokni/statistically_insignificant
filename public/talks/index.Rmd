@@ -12,6 +12,15 @@ output:
 From 2020 on I will try to collect all my talks here, but for earlier years it's really just going to be the talks which were recorded by the organisers (usually the larger venues). For a full list of talks please see my CV at [rekadata.net/cv/cv.pdf](https://rekadata.net/cv/cv.pdf)
 
 
+# 2021
+
+#### Mexico National Institute of Statistics and Geography (INEGI)
+
+- Title: New forms of data for public safety
+- Slides: [https://rekadata.net/talks/newformsofdataforsafety](https://rekadata.net/talks/newformsofdataforsafety.html)
+
+
+
 # 2020
 
 #### PyData Manchester 
