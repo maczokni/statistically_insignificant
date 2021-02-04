@@ -1,0 +1,31 @@
+body {
+    background-color: #efefef;
+    color: #707070;
+  }
+
+a:link{color:#1f253c}
+a:visited{color:#3c1f1f}
+a:hover{color:#b03434}  
+
+.img-smol img{
+  width: 70%;
+  
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  -ms-transform: translate(-25%, -25%);
+  transform: translate(-25%, -25%);
+}
+
+
+.small {
+  font-size: 70%;
+}
+
+.bigger {
+  font-size: 110%;
+}
