@@ -7,5 +7,4 @@ blogdown::serve_site()
 blogdown::stop_server()
 blogdown::new_post(title="A response to: on the safety of women", ext = ".Rmarkdown", subdir = 'blog')
 
-
-
+blogdown::check_site()
