@@ -4,8 +4,8 @@ blogdown::new_site(theme = "gcushen/hugo-academic")
 blogdown::new_site()
 blogdown::install_theme("koirand/pulp", force = TRUE)
 blogdown::serve_site()
-blogdown::new_post(title="Towards a Place-based Measure of Fear of Crime: A Systematic Review of App-based and Crowdsourcing Approaches", 
-         ext = getOption("blogdown.ext", ".Rmd"))
+blogdown::stop_server()
+blogdown::new_post(title="A response to: on the safety of women", ext = ".Rmarkdown", subdir = 'blog')
 
 
 
