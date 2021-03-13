@@ -83,7 +83,7 @@ This framework of focussing on the most extreme outcome as the "rare event" comb
 In fields such [Aviation, Nuclear Power Technology, Military operation and Air Transport](https://www.bmj.com/content/320/7237/759.short),  [Railway Safety](https://www.sciencedirect.com/science/article/pii/S0304389404000937) and many others, it is common to consider the reporting and study of near-misses in order to gain insight into otherwise rare events. The underlying assumption (proposed by HW Heinrich in the book [Industrial Accident Prevention. A Scientific Approach](https://www.cabdirect.org/cabdirect/abstract/19432701767)) is that the same causal mechanisms underlie the near-misses as the serious accidents which result in fatality/injury. So by studying the near-misses, we can eventually understand and ideally prevent the fatalities/injuries. 
 
 
-I explored the idea of near-misses in [my PhD thesis](https://core.ac.uk/download/pdf/81675678.pdf). Working with [Camden LGBT forum](https://cindex.camden.gov.uk/kb5/camden/cd/service.page?id=6AaW523TZYQ), we asked peple to report specific incidents of *worry about* hate crime. People reported situations which they did not consider crimes (although many were) but made them feel worries. Based on these "near-misses" we identified problematic hotspots where the more rare serious violence incidents may occur. 
+I explored the idea of near-misses in [my PhD thesis](https://core.ac.uk/download/pdf/81675678.pdf). Working with [Camden LGBT forum](https://cindex.camden.gov.uk/kb5/camden/cd/service.page?id=6AaW523TZYQ), we asked peple to report specific incidents of *worry about* hate crime. People reported situations which they did not consider crimes (although many were) but which made them feel worried. Based on these "near-misses" we identified problematic hotspots where the more rare serious violence incidents may occur. 
 
 
 
@@ -93,7 +93,7 @@ Applied here, we could consider the many experiences which the women of Twitter 
 - 2) collect information about situational features of the opportunities for these incidents to occur. 
 
 
-But the problem is  [sexual offences are massively under-reported](https://link.springer.com/article/10.1057/s41300-017-0032-5). This is a known issue, and one which campaigns such as TfL's [Report it To Stop It](https://tfl.gov.uk/travel-information/safety/report-it-to-stop-it) have tried to address. They did this successfully (see our paper on this [here](https://link.springer.com/article/10.1057/s41284-017-0117-y) (or open access [here](http://irep.ntu.ac.uk/id/eprint/39107/)) which shows how the campaign affected reporting patterns). But even with this, the data we have are unlikely to be comprehensive. However, we can take a look at some patterns. 
+But the problem is  [sexual offences are massively underreported](https://link.springer.com/article/10.1057/s41300-017-0032-5). This is a known issue, and one which campaigns such as TfL's [Report it To Stop It](https://tfl.gov.uk/travel-information/safety/report-it-to-stop-it) have tried to address. They did this successfully (see our paper on this [here](https://link.springer.com/article/10.1057/s41284-017-0117-y) (or open access [here](http://irep.ntu.ac.uk/id/eprint/39107/)) which shows how the campaign affected reporting patterns). But even with this, the data we have are unlikely to be comprehensive. However, we can take a look at some patterns. 
 
 
 ### Prevalence of sex offences on London transport
