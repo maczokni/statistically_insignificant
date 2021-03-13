@@ -39,84 +39,100 @@ btpData <- btpData %>% mutate(recorded_date = ymd(recorded_date),
                                                         )
                               )
 
+btp_withinweek <- btpData %>%  filter(diff <= period(days = 7))
+btp_withinweek <- btp_withinweek %>% mutate(nm_orno = case_when(
+  crime_desc_clean %in% c("Voyeurism Additional Offences (Upskirting)", "Commit An Offence With Intent To Commit A Sexual Offence", "Indecent Exposure Insult Female", "Voyeurism", "Exposure", "Sexual Assault On A Female Aged 13 And Over No Penetration", "Sexual Offences - Committing An Act Outraging Public Decency" , "Sexual Assault On A Male Aged 13 And Over No Penetration" ) ~ "Near-miss",
+  crime_desc_clean %in% c("Sexual Activity Involving a Child under 13 (Offender over 18)", "Rape/attempted rape of a female - multiple undefined offenders", "Trafficking Into The Uk For Sexual Exploitation", "Exploitation Of Prostitution (Causing Or Incites Activities Of A Prostitute For Gain)", "Sexual Activity With A Person With A Mental Disorder", "Administering A Substance With Intent To Commit A Sexual Offence E.G. Drugs In Alcoholic Drink In A Bar", "Causing A Female Person To Engage In Sexual Activity No Penetration (No Consent)", "Abuse Of Children Through Prostitution & Pornography" ,"Sexual Grooming - Male", "Rape Of A Male Aged 16 And Over", "Causing A Male Person To Engage In Sexual Activity No Consent No Penetration", "Rape Of A Female Child Under 16" , "Sexual Grooming - Female", "Causing Or Inciting S A Child Under 16 To Engage In Sexual Activity" , "Causing Or Inciting S A Child Under 13 To Engage In Sexual Activity", "Rape Of A Female Aged 16 And Over" , "Sexual Assault On A Male Child Under 13 No Penetration" , "Sexual Assault On A Female Child Under 13 No Penetration", "Assault On A Female Aged Over 13 By Penetration",  "Sexual Assault On A Male Aged 13 And Over By Penetration"    ) ~ "Other",
+  TRUE ~ NA_character_
+  
+)) %>% filter(nm_orno == "Near-miss")
 
 ```
 
 
-On 3rd March, 2021, Sarah Everard left her friend's house, and was then not seen again. After extensive searching, the Metropolitan police have arrested a man on suspicion of her murder, and found human remains in Ashford, Kent. You can read the statement [here](https://news.met.police.uk/news/commissioners-update-on-sarah-everard-investigation-422983).
+The murder of Sarah Everard has horrified everyone across the UK, and has re-ignited discussions about **women's safety in public places**. While many point out that something so horrific as murder by a stranger is a rare event, one reaction has been an outpouring of shared experiences of harassment and victimisation. 
 
 
-As we learn more about Sarah Everard, women everywhere are coming forward sharing their stories and expressing anger and feelings of unsafety. I find it so striking that in response to such a horrific and extreme event, almost every woman I know or follow on Twitter has an experience they can share, in the fashion of #MeToo. It seems everyone has a story that fits the profile of a "near-miss" of such an event. 
+I wanted to write this post to present the idea of **near-misses** and highlight that sexual harassment is still something that is hugely **underreported**. To get a better picture of these crimes and inform prevention measures, we need to get more and better data about them. We need to support women in making these reports.
 
 
-Yesterday, I received an email circulated to myself and my colleagues in Criminology at University of Manchester (and I assume others around the country) containing a request from the BBC. The email came from a journalist on BBC TV's 6 and 10 o’clock news, who explained that the request was for a piece looking at the safety of women in light of the murder of Sarah Everard. Specifically, the email said: 
+
+### Background: Sarah Everard and the women of Twitter
+
+Sarah Everard was last seen on 3rd March, and since then the picture of the violence committed against her has been revealed to the public, cumilating in the arrest of a man in his 40s (see statements [here](https://news.met.police.uk/news/commissioners-update-on-sarah-everard-investigation-422983) and [here](https://news.met.police.uk/news/latest-a-police-officer-has-been-charged-with-murder-and-kidnap-423202).
+
+
+As we learn more about Sarah Everard, women everywhere are coming forward sharing their stories and expressing anger and feelings of unsafety. I find it so striking that in response to such a horrific and extreme event, almost every woman I know or follow on Twitter has an experience they can share, in the fashion of [#MeToo](https://en.wikipedia.org/wiki/Me_Too_movement.
+
+
+![Tweet by Caroline Criado-Perez at https://twitter.com/CCriadoPerez/status/1369678790289424387](/img/ccp_tweet.png)
+
+It seems everyone has a story that fits the profile of a "near-miss" of such an event. 
+
+
+Yesterday, an email was circulated around my department containing a request from the BBC for a piece looking at the safety of women in light of the murder of Sarah Everard. Specifically, the email said: 
 
 
 > We wanted to do a short pre-recorded interview with a criminologist to talk about how rare it is for women to be murdered by strangers and whether women face any more safety risks these days than they have over the past decades.
 
 
-My first thought was that this was an *odd* angle to take, especially weighed up against the absolute flood of shared experiences that I am watching sweep over my Twitter feed.
+This framework of focussing on the most extreme outcome as the "rare event" combined with the sharing of the shared experiences on twitter brings to mind the idea of **near-misses**. 
+
+### Framework: the idea of near-misses
+
+In fields such [Aviation, Nuclear Power Technology, Military operation and Air Transport](https://www.bmj.com/content/320/7237/759.short),  [Railway Safety](https://www.sciencedirect.com/science/article/pii/S0304389404000937) and many others, it is common to consider the reporting and study of near-misses in order to gain insight into otherwise rare events. The underlying assumption (proposed by HW Heinrich in the book [Industrial Accident Prevention. A Scientific Approach](https://www.cabdirect.org/cabdirect/abstract/19432701767)) is that the same causal mechanisms underlie the near-misses as the serious accidents which result in fatality/injury. So by studying the near-misses, we can eventually understand and ideally prevent the fatalities/injuries. 
 
 
-Specifically activating my research nerd spidey senses, this whole situation made me think of literature on the topic of **"near-misses"**. In fields such [Aviation, Nuclear Power Technology, Military operation and Air Transport](https://www.bmj.com/content/320/7237/759.short),  [Railway Safety](https://www.sciencedirect.com/science/article/pii/S0304389404000937) and many others, it is common to consider the reporting and study of near misses in order to gain insight into otherwise rare events. The underlying assumption (proposed by HW Heinrich in the book [Industrial Accident Prevention. A Scientific Approach](https://www.cabdirect.org/cabdirect/abstract/19432701767)) is that the same causal mechanisms underlie the near-misses as the more rare but serious accidents. This idea was what interests me in measuring fear of crime experiences for example, and something I explored in [my PhD thesis](https://core.ac.uk/download/pdf/81675678.pdf) specifically a case study working with [Camden LGBT forum](https://cindex.camden.gov.uk/kb5/camden/cd/service.page?id=6AaW523TZYQ) looking at reporting of *worry about* hate crime and how that can identify problematic hotspots and hot times for possible victimisation. 
+I explored the idea of near-misses in [my PhD thesis](https://core.ac.uk/download/pdf/81675678.pdf). Working with [Camden LGBT forum](https://cindex.camden.gov.uk/kb5/camden/cd/service.page?id=6AaW523TZYQ), we asked peple to report specific incidents of *worry about* hate crime. People reported situations which they did not consider crimes (although many were) but made them feel worries. Based on these "near-misses" we identified problematic hotspots where the more rare serious violence incidents may occur. 
 
 
 
-Anyway, I think my point is, just because the ultimate most horrible outcome (*Fatality/injury*) may be rare, the many other incidents (*Damage and  Near-misses*) are much more common, and in themselves have serious consequences  (just read some of the stories people are posting on Twitter) show that there is an existing problem, and dismissing this as a 'rare event' seems to me to undermine the extent of the problem. 
+Applied here, we could consider the many experiences which the women of Twitter are sharing as these "near-misses" (although many are sharing more serious examples too!). And we should take these seriously in order to: 
+
+- 1) understand the extent of the problem 
+- 2) collect information about situational features of the opportunities for these incidents to occur. 
 
 
-Now I definitely wouldn't write this post if I didn't have some underlying data to back this up, so let's get to it. I've been interested in under-reported crimes, of which sexual harassment is one of the most well-known ones. And so I actually have on hand have some data from British Transport Police I acquired from a FOI request a while ago, to have a look at what is going on with Sexual Offences in London (those which are reported). 
-
+But the problem is  [sexual offences are massively under-reported](https://link.springer.com/article/10.1057/s41300-017-0032-5). This is a known issue, and one which campaigns such as TfL's [Report it To Stop It](https://tfl.gov.uk/travel-information/safety/report-it-to-stop-it) have tried to address. They did this successfully (see our paper on this [here](https://link.springer.com/article/10.1057/s41284-017-0117-y) (or open access [here](http://irep.ntu.ac.uk/id/eprint/39107/)) which shows how the campaign affected reporting patterns). But even with this, the data we have are unlikely to be comprehensive. However, we can take a look at some patterns. 
 
 
 ### Prevalence of sex offences on London transport
 
+To explore the prevalence of the types of victimisation the women of Twitter are reporting (specifically cases of sexual harassment on transport) I consider data on `r nrow(btp_withinweek)` reports of sex offences made to the British Transport Police in London between `r min(btp_withinweek$recorded_date)` and `r max(btp_withinweek$recorded_date)` (acquired via a Freedom Of Information request). 
 
 
-I have data on `r nrow(btpData)` reports of sex offences made to the British Transport Police in London between `r min(btpData$recorded_date)` and `r max(btpData$recorded_date)`. 
 
-```{r}
+Figure 1 shows that over time, recorded sex offences on London Underground/ DLR/ National Rail in London have been on the increase. (Note an obvious drop once [COVID-19 shut down public transport](https://www.bbc.co.uk/news/uk-england-london-51946409)).
 
-btp_withinweek <- btpData %>%  filter(diff <= period(days = 7))
-
-```
-
-
-Some of these reports are of historic offences. Here I will concentrate on the `r nrow(btp_withinweek)` which were reported within 7 days of the incident. 
-
-
-According to these data, recorded sex offences on London Underground/ DLR/ National Rail in London have been on the increase. (Note an obvious drop once [COVID-19 shut down public transport](https://www.bbc.co.uk/news/uk-england-london-51946409)).
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.cap= "Figure 1: Sex offences over time"}
 
 btp_withinweek %>% 
   group_by(yearweek(committed_date_time)) %>%
   summarise(n=n()) %>% 
   rename(week_year = `yearweek(committed_date_time)`) %>% 
   ggplot(.) + 
-  geom_line(aes(week_year, n)) + 
-  stat_smooth(data = . %>% filter(week_year < yearweek(ymd("2020-03-19"))), aes(week_year, n)) + 
-  stat_smooth(data = . %>% filter(week_year > yearweek(ymd("2020-03-19"))), aes(week_year, n)) + 
-  geom_vline(xintercept = as.numeric(ymd("2020-03-19")), col = "red") + 
-  geom_label(aes(x = yearweek(ymd("2020-03-19")), y = 60, label = "First stations\nclose"), col = "red") +
+  geom_line(aes(week_year, n), col = "#808080") + 
+  stat_smooth(data = . %>% filter(week_year < yearweek(ymd("2020-03-19"))), aes(week_year, n), col = "black") + 
+  stat_smooth(data = . %>% filter(week_year > yearweek(ymd("2020-03-19"))), aes(week_year, n), col = "black") + 
+  geom_vline(xintercept = as.numeric(ymd("2020-03-19")), col = "black", lty = "dashed") + 
+  geom_label(aes(x = yearweek(ymd("2020-03-19")), y = 60, label = "First stations\nclose\n(COVID-19)"), col = "black") +
   theme_bw() +
   theme(text = element_text(size=rel(4)))  + 
   xlab("Date") + 
-  ylab("Number of reports")
+  ylab("Number of reports")+
+  ylim(c(0,65))
   
 ```
 
-Of course this is *recorded crime* and it is influenced by factors other than prevalence of victimisation, specifically reporting patterns. 
-
-In an earlier paper we explored how specifically TfL's [Report it To Stop It](https://tfl.gov.uk/travel-information/safety/report-it-to-stop-it) Campaign had a positive effect on reporting of sexual offences on transport, specifically LU/DLR/National Rail. You can read the full paper here: [https://link.springer.com/article/10.1057/s41284-017-0117-y](https://link.springer.com/article/10.1057/s41284-017-0117-y) (or open access version here: [http://irep.ntu.ac.uk/id/eprint/39107/](http://irep.ntu.ac.uk/id/eprint/39107/)), but I copy below our change point analysis which demonstrates how reported sexual offences increased specifically with waves of activity around Report It To Stop It: 
-
-![](/img/ritsi_change.png)
 
 
-So it does seem that better reporting is one reason why we see this increase in recorded sexual offences. So while concluding that these are on the rise may not be appropriate, there is really no way that we can say that this is a problem which is resolved, or going away. I mean, just look specifically at how sexual offences do pick back up again on transport once the transport modes open again after the COVID-19 lockdown. Here is a zoom in on what happened since lockdown: 
+While we must keep in mind that some of the change should be [attributed to the Report It To Stop It campaign](https://link.springer.com/article/10.1057/s41284-017-0117-y), **there is really no way that we could claim that the problem is resolved, or going away.** 
 
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+I mean, just look specifically at how sexual offences do pick back up again on transport once the transport modes open again after the COVID-19 lockdown (Figure 2): 
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Figure 2: Sex offences since lockdown"}
 
 btp_withinweek %>% 
   filter(committed_date_time > ymd("2020-03-19")) %>% 
@@ -124,14 +140,15 @@ btp_withinweek %>%
   summarise(n=n()) %>% 
   rename(week_year = `yearweek(committed_date_time)`) %>% 
   ggplot(.) + 
-  geom_line(aes(week_year, n)) + 
-  stat_smooth(aes(week_year, n)) + 
-  geom_vline(xintercept = as.numeric(ymd("2020-06-08")), col = "red") + 
-  geom_label(aes(x = yearweek(ymd("2020-06-08")), y = 30, label = "First stations\nre-open"), col = "red") +
+  geom_line(aes(week_year, n), col = "#808080") + 
+  stat_smooth(aes(week_year, n), col = "black") + 
+  geom_vline(xintercept = as.numeric(ymd("2020-06-08")), col = "black", lty = "dashed") + 
+  geom_label(aes(x = yearweek(ymd("2020-06-08")), y = 27, label = "First stations\nre-open\n(COVID-19)"), col = "black") +
   theme_bw() +
   theme(text = element_text(size=rel(4)))  + 
   xlab("Date") + 
-  ylab("Number of reports")
+  ylab("Number of reports")+
+  ylim(c(0,30))
   
 ```
 
@@ -156,106 +173,93 @@ btp_monthly_so <- btp_withinweek %>%
 ```
 
 
-*Is that a big number?* To compare, we need to look at the montly rate, since for other crime types I have to use the open data from [police.uk](https://data.police.uk/data/) (only available at month as a temporal resolution). So if we look at the past year, from March 2019 to March 2020 there were about `r btp_monthly_so %>% pull(n) %>% mean() %>% round(., 0)` sexual offences reported per month. This is higher than the monthly average recorded incidents of Robbery (`r montly_crimes %>% filter(Crime.type == "Robbery") %>% pull(mean)`). On the other hand, it is about 1/8th of the prevalence of the most commonly reported crime, theft from person (`r montly_crimes %>% filter(Crime.type == "Theft from the person") %>% pull(mean)`). While theft person (which includes pickpocketing) may be more common, it is also more likely to be reported (less of a barrier) and arguably less harmful, as theft person includes crimes that involve theft directly from the victim (including handbag, wallet, cash, mobile phones) but without the use or threat of physical force ([police.uk](https://www.police.uk/pu/about-police.uk-crime-data/)). On the other hand, the offences in the sex offences data I have include things like Rape, Assault by Penetration, and Sexual Assault on a Child Under 13. 
+### Is that a big number?
+
+Let's put this into context. The most common crime recorded by British Transport Police in London (taken from open data at [police.uk](https://data.police.uk/data/)) is "Theft from person (without use or threat of force)". This is a very widely reported crime, as most of the time when someone's wallet is stolen, their travel card is stolen with it, and this will need to be addressed when leaving the station. In total, between March 2019 and March 2020, a total of `r montly_crimes %>% filter(Crime.type == "Theft from the person") %>% pull(mean)` theft from person incidents were reported. This is about 8 times the montly average for sex offences (`r btp_monthly_so %>% pull(n) %>% mean() %>% round(., 0)` sexual offences reported per month). 
 
 
-### Types of sex offences
 
-So in the data set which I have we can look at the different typse of Sexual Offences which had been reported. Let's focus on the data collected from after the last wave of the Report It To Stop It campaign (February 2016) up to the March 2019 when the first COVID-19 lockdown changed our travel and going outside behaviours, so we get some "typical" data. The rest of this post will be working with these data. 
-
-```{r}
-
-btp_df <- btp_withinweek %>% filter(committed_date_time > ymd("2016-02-01") & committed_date_time < ymd("2019-03-01") )
-
-```
+On the other hand, when we include violence in there by looking at the crime type of robbery, we see an average of `r montly_crimes %>% filter(Crime.type == "Robbery") %>% pull(mean)` cases of robbery per month. This is less common than sex offences (remember that comes to average of `r btp_monthly_so %>% pull(n) %>% mean() %>% round(., 0)` offences per month). 
 
 
-In total that is `r nrow(btp_df)` observations (incidents). 
+```{r, fig.cap="Figure 3: Reported number of sex offences compared with other cirmes"}
 
+thing <- rbind(montly_crimes, data.frame(Crime.type = "Sex offences", 
+                    mean = round(mean(btp_monthly_so$n),0)))
+thing$highlight <- case_when(thing$Crime.type == "Sex offences" ~ "so", 
+                             thing$Crime.type == "Violence and sexual offences" ~ "vo",
+                             TRUE ~ "rest")
 
-```{r}
+a <- ifelse(thing$Crime.type == "Violence and sexual offences","#a9a9a9" , "black")
 
-type_fr <- btp_df %>% group_by(crime_desc_clean) %>% count()
-
-```
-
-
-Of these, the most common type of incident is `r type_fr %>% filter(n == max(type_fr$n)) %>% pull(crime_desc_clean)` with `r max(type_fr$n)` incidents in total. 
-
-
-All the crime types in the data can be seen here:
-
-
-**QUESTION: should I log the axis?**
-
-No log: 
-
-```{r}
-
-ggplot(type_fr, aes (x = reorder(crime_desc_clean, n), y = n)) + 
+ggplot(thing, aes( x = reorder(Crime.type,mean), y = mean, fill = highlight)) + 
   geom_bar(stat = "identity") + 
-  coord_flip()
+  scale_fill_manual(values = c("black", "orange", "#a9a9a9")) + 
+  coord_flip() +
+  theme_bw() +
+  theme(text = element_text(size=rel(4)), 
+        legend.position = "none", 
+        axis.text.x = element_text(colour = a))  + 
+  xlab("") + 
+  ylab("Average offences per month")
+
+
 
 ```
 
-Log: 
+Figure 3 shows we have more recorded incidents of many crimes, including bicycle theft, than we do of sexual offences. (I greyed out the category of "violent and sexual offences" which lumps together far too many crime types, and will include everying I have in the 'sex offences' category (in orange)). Does this mean that sexual offences are more infrequent? In the recorded data - yes. In underported experience? 
 
-```{r}
+[According to the ONS](https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/articles/sexualoffencesinenglandandwales/yearendingmarch2017#reporting-of-sexual-assault-by-rape-or-penetration) only 17% of people who had experienced rape or assault by penetration (including attempts) reported to the police. I assume the number is lower for the near-misses considered less serious. But let's try with 17%, if we were to assume that the `r btp_monthly_so %>% pull(n) %>% mean() %>% round(., 0)` offences are 17% of what is actually experienced, we would be at an average of `r round(btp_monthly_so %>% pull(n) %>% mean()/0.17,0)` offences per month, changing our chart significantly (Figure 4): 
 
-ggplot(type_fr, aes (x = reorder(crime_desc_clean, n), y = n)) + 
+
+```{r, fig.cap="Figure 4: hypothetical reported number accounting for underreporting from CSEW"}
+
+thing <- rbind(montly_crimes, data.frame(Crime.type = "Sex offences", 
+                    mean = round(mean(btp_monthly_so$n)/0.17,0)))
+thing$highlight <- case_when(thing$Crime.type == "Sex offences" ~ "so", 
+                             thing$Crime.type == "Violence and sexual offences" ~ "vo",
+                             TRUE ~ "rest")
+
+a <- ifelse(thing$Crime.type == "Violence and sexual offences","#a9a9a9" , "black")
+
+ggplot(thing, aes( x = reorder(Crime.type,mean), y = mean, fill = highlight)) + 
   geom_bar(stat = "identity") + 
-  scale_y_log10() + 
-  coord_flip()
+  scale_fill_manual(values = c("black", "orange", "#a9a9a9")) + 
+  coord_flip() +
+  theme_bw() +
+  theme(text = element_text(size=rel(4)), 
+        legend.position = "none", 
+        axis.text.x = element_text(colour = a))  + 
+  xlab("") + 
+  ylab("Average offences per month")
+
+
 
 ```
 
-**QUESTION: ANYTHING EXCITING ABOUT CRIME TYPES?**
+Clearly there is scope to learn more about women's experiences. 
 
-
-### Women's victimisation 
-
-Now of course I am looking here at *all* sexual offences, and we are talking about women's safety, and if reading/following [Caroline Criado Perez](https://twitter.com/CCriadoPerez) has taught me anything it is that **we need to look at the sex-disaggregated data**. For the victim gender variable, I grouped "not specified", "Unknown", "Indeterminate", and NA all as missing `NA` values.               
-
-
-Some crime types specify the gender in the description, so that will be of course only one of the other, but for those who don't we can replicate the crime type looking at victimisation by gender: 
-
-
-**Q: for this definitely log???**
-
-
-```{r}
-
- btp_df %>% 
-  filter(!is.na(victim_gender)) %>% 
-  mutate(crime_desc_clean = stringr::str_wrap(crime_desc_clean, width = 40)) %>% 
-  group_by(crime_desc_clean, victim_gender) %>% count() %>% 
-  ggplot(., aes(x = reorder(crime_desc_clean,n), y = n, fill = victim_gender)) + 
-  geom_bar(stat = "identity") + 
-  coord_flip() + 
-  scale_y_log10()
-
-```
-
-
-**QUESTION: OH MY GOD BTP WHAT IS THIS DATA QUALITY?!?!? - seriously though what should I do? which variable to trust?**
 
 
 
 ### Victim profile?
 
-Now there are often conversations about how women behave/dress/other nonsense that can be broadly summarised under the category of "victim blaming" that often gets brought up in conversations about womens' safety. So let's have a look at whether there is a typical victim profile. 
+Building on the data we do have, we can address some other comments on Twitter about *who* is victimised. 
 
 
-Overall in our dataset, or the incidents where the crime was not a Regina Offense (n = `r nrow(btp_df %>% filter(victim_gender != "Regina Offence"))`) and victim gender was recorded (n = `r nrow(btp_df %>% filter(victim_gender != "Regina Offence" & !is.na(victim_gender)))`),  `r nrow(btp_df %>% filter(victim_gender == "Female"))` of the cases the victim was Female (`r round(nrow(btp_df %>% filter(victim_gender == "Female"))/nrow(btp_df %>% filter(victim_gender != "Regina Offence" & !is.na(victim_gender)))*100,1)`%), while only `r nrow(btp_df %>% filter(victim_gender == "Male"))`  (`r round(nrow(btp_df %>% filter(victim_gender == "Male"))/nrow(btp_df %>% filter(victim_gender != "Regina Offence" & !is.na(victim_gender)))*100,1)`%) cases was the victim Male. 
+Overall in our dataset, or the incidents where the crime was not a Regina Offense (n = `r nrow(btp_withinweek %>% filter(victim_gender != "Regina Offence"))`) and victim gender was recorded (n = `r nrow(btp_withinweek %>% filter(victim_gender != "Regina Offence" & !is.na(victim_gender)))`),  `r nrow(btp_withinweek %>% filter(victim_gender == "Female"))` of the cases the victim was Female (`r round(nrow(btp_withinweek %>% filter(victim_gender == "Female"))/nrow(btp_withinweek %>% filter(victim_gender != "Regina Offence" & !is.na(victim_gender)))*100,1)`%), while only `r nrow(btp_withinweek %>% filter(victim_gender == "Male"))`  (`r round(nrow(btp_withinweek %>% filter(victim_gender == "Male"))/nrow(btp_withinweek %>% filter(victim_gender != "Regina Offence" & !is.na(victim_gender)))*100,1)`%) cases was the victim Male. 
 
 
-The youngest victim in the data set was `r min(btp_df$age_n, na.rm = TRUE)` years old, while the oldest was `r max(btp_df$age_n, na.rm = TRUE)`. If we look at the age distribution we can see that it follows a normal distribution, skewed slightly right. 
+The youngest victim in the data set was `r min(btp_withinweek$age_n, na.rm = TRUE)` years old, while the oldest was `r max(btp_withinweek$age_n, na.rm = TRUE)`. If we look at the age distribution we can see that it follows a normal distribution, skewed slightly right. 
 
 
 ```{r}
 
-ggplot(btp_df, aes(x = age_n)) + 
-  geom_histogram()
+ggplot(btp_withinweek, aes(x = age_n)) + 
+  geom_histogram() + 
+  theme_bw() + 
+  xlab("age") + 
+  ylab("count")
 
 ```
 
@@ -268,16 +272,16 @@ While I don't have more demographic data in my data set, I am feeling pretty con
 
 
 
-### Walking alone late at night...
+### Walking alone late at night...?
 
 Okay well what if it has to do with walking around (or taking public transport) alone late at night? We can look at the times of day: 
 
 ```{r}
 
 
-btp_df <- btp_df %>%  mutate(hour = hour(committed_date_time)) 
+btp_withinweek <- btp_withinweek %>%  mutate(hour = hour(committed_date_time)) 
 
-thing <- rbind(rep(600,10) , rep(0,10) , btp_df %>% 
+thing <- rbind(rep(1200,10) , rep(0,10) , btp_withinweek %>% 
   group_by(hour) %>% 
   count() %>% pivot_wider(names_from = hour, values_from = n))
 
@@ -286,21 +290,26 @@ fmsb::radarchart(thing)
 ```
 
 
-Surprise surprise, the peak victimisation incidents are happening at rush hour!!!
+Surprise surprise, the peak victimisation incidents are happening at rush hour!!! 
+For reference here is a chart of trips made by London residents in London, by start time (hour), weekday only (based on data from [london datastore](https://data.london.gov.uk/dataset/trips-made-in-london-by-time-of-day): 
 
-Now it's likely that there are different profiles for the different crime types. Let's take the most common one out as an example:  
+![](/img/london_traveltime.png)
+
+So not walking alone late at night does not at all guarantee that these crimes will not be experienced!
 
 
-**QUESTION: SHOULD I DO THIS FOR ALL? DOes it make sense just for the most common? That will obvs dominate the alltogether one**
+### What can be done?
 
 
-```{r}
+To prevent the fatal outcomes, however rare they may be, the more frequent similar events, which may be considered **near-misses** need to be taken seriously. 
 
-thing <- rbind(rep(600,10) , rep(0,10) , btp_df %>% filter(crime_desc_clean == "Sexual Assault On A Female Aged 13 And Over No Penetration") %>% 
-  group_by(hour) %>% 
-  count() %>% pivot_wider(names_from = hour, values_from = n))
 
-fmsb::radarchart(thing)
+In order to do this though, we need **better data**. Sexual harassment remains a largely underreported crime. Initiatives like the [Report It To Stop It](https://tfl.gov.uk/travel-information/safety/report-it-to-stop-it) campaign and Project Guardian are a good start as [we know they increase reporting](https://link.springer.com/article/10.1057/s41284-017-0117-y). 
 
-```
-**QUESTION: What else is interesting for me to include??**
+
+Other initiatives, like crowdsourced platforms offer another solution to collect data on many of these **near-misses** in order to better understand the situational factors associated with crime opportunities. One example is [Safecity.in](https://webapp.safecity.in/). This could be rolled out widely, and supported in a way that encourages women to report their experiences. 
+
+
+By collecting better data we can understand the opportunities better, and support prevention initiatives so women can feel safe when walking, travelling, and generally living their lives. 
+
+
