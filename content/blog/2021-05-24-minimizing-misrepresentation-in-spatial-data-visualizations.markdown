@@ -19,12 +19,14 @@ To contribute to this resource, I teamed up with Sage to summarise the key learn
 This is now online and abailable here: [http://methods.sagepub.com/video/srmpromo/MfaJ2O/minimizing-misrepresentation-in-spatial-data-visualizations](http://methods.sagepub.com/video/srmpromo/MfaJ2O/minimizing-misrepresentation-in-spatial-data-visualizations)
 
 ![Screengrab of Sage video](/img/sage_vid_screenshot.png)
+- *Screengrab of Sage video*
 
 ## Transforming polygons: a summary
 
 The premise of the paper and the video is that in some cases, the size and the shape of the polygons in our data may distract our viewers from our intended key message.  For example, looking at Local Authorities across the country makes London look very small: 
 
 ![Map of Local Authorities in England using Original Boundaries (note London LAs barely visible).](/img/original_la_map.png)
+- *Map of Local Authorities in England using Original Boundaries (note London LAs barely visible).*
 
 In these cases, we might wish to change this through transforming these polygons. Here we discuss 4 transformations: balanced area cartogram, hexogram, and uniform hexagonal and rectangular grids.  
 
@@ -35,16 +37,17 @@ In these cases, we might wish to change this through transforming these polygons
 
 The four transformations result in these augmented maps: 
 
-![Transformed maps of Local Authority areas in England using (a) balanced cartogram, (b) hexogram, (c) square grid, (d) hexagonal grid.](img/transformed_la_maps.png)
+![Transformed maps of Local Authority areas in England using (a) balanced cartogram, (b) hexogram, (c) square grid, (d) hexagonal grid.](/img/transformed_la_maps.png)
+- *Transformed maps of Local Authority areas in England using (a) balanced cartogram, (b) hexogram, (c) square grid, (d) hexagonal grid.*
+
 
 After asking a sample of 600+ strangers on the internet to view these maps and either agree or disagree with the statement which we indeneded to communicate with the map overall, we were able to compare whether there were differences between the map transformations in the extent to which people agreed with the intended message. 
 
 We found that depending on which map we used, people either agreed more or less with the statement, compared with the original geographic boundaries. 
 
-<div class="figure">
-<img src="/blog/2021-05-24-minimizing-misrepresentation-in-spatial-data-visualizations_files/figure-html/unnamed-chunk-1-1.png" alt="Proportion who agree to disagree with our statement which we think the map should convey. Higher agreement means a better map." width="672" />
-<p class="caption">Figure 1: Proportion who agree to disagree with our statement which we think the map should convey. Higher agreement means a better map.</p>
-</div>
+<img src="/blog/2021-05-24-minimizing-misrepresentation-in-spatial-data-visualizations_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+- *Proportion who agree to disagree with our statement which we think the map should convey. Higher agreement means a better map.*
+
 
 The key message from this is that these transformations do indeed affect how your audiences will read your map, and the kind of transformation applied will have an effect on the extent and direction of this. Therefore we recommend trying out multiple approaches, and making sure that the chosen approach best represents the message being communicated. 
 
