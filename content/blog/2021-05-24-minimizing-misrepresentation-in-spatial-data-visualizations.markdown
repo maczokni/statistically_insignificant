@@ -53,8 +53,8 @@ The key message from this is that these transformations do indeed affect how you
 
 ## The video
 
-To watch the video summary of this, visit the Sage Research Methods website or go directly with the link here: [http://methods.sagepub.com/video/srmpromo/MfaJ2O/minimizing-misrepresentation-in-spatial-data-visualizations](http://methods.sagepub.com/video/srmpromo/MfaJ2O/minimizing-misrepresentation-in-spatial-data-visualizations). 
+To watch the video summary, visit the Sage Research Methods website or go directly with the link here: [http://methods.sagepub.com/video/srmpromo/MfaJ2O/minimizing-misrepresentation-in-spatial-data-visualizations](http://methods.sagepub.com/video/srmpromo/MfaJ2O/minimizing-misrepresentation-in-spatial-data-visualizations). 
 
 ## The code
 
-If you wanted to have a look at the code behind the transformations, you can see the GitHub repository here: [https://github.com/langtonhugh/EPB_maps](https://github.com/langtonhugh/EPB_maps) or watch the talk I gabe at PyData Manchester in July [https://youtu.be/xUWDBQ4wCqU?t=3245](https://youtu.be/xUWDBQ4wCqU?t=3245)
+To learn more about the R code behind the transformations, see our GitHub repository: [https://github.com/langtonhugh/EPB_maps](https://github.com/langtonhugh/EPB_maps) or watch my talk at PyData Manchester from last July [https://youtu.be/xUWDBQ4wCqU?t=3245](https://youtu.be/xUWDBQ4wCqU?t=3245)
