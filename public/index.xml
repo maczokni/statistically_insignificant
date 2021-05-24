@@ -5,10 +5,21 @@
     <link>/</link>
     <description>Recent content on Dr Reka Solymosi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 12 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 May 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Minimizing Misrepresentation in Spatial Data Visualizations</title>
+      <link>/blog/2021-05-24-minimizing-misrepresentation-in-spatial-data-visualizations/</link>
+      <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2021-05-24-minimizing-misrepresentation-in-spatial-data-visualizations/</guid>
+      <description>Early last autumn I was contacted by the team at Sage Research Methods about their project putting together a Data Visualisation Collection of online resources.
+The idea is to create online teaching material (video tutorials, text entries, datasets, and so on) introducing fundamentals of data and design necessary to create impactful visualizations.
+To contribute to this resource, I teamed up with Sage to summarise the key learnings from our paper with Dr Sam Langton, Cartograms, hexograms and regular grids: Minimising misrepresentation in spatial data visualisations  in a short video clip.</description>
+    </item>
     
     <item>
       <title>A response to: on the safety of women</title>
