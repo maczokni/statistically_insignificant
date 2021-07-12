@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/blog/2021-07-12-understanding-knife-crime-and-trust-in-police-with-young-people-in-east-london/</loc>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/blog/2021-05-24-minimizing-misrepresentation-in-spatial-data-visualizations/</loc>
     <lastmod>2021-05-24T00:00:00+00:00</lastmod>
   </url>
@@ -94,13 +99,13 @@
   
   <url>
     <loc>/blog/index.json</loc>
-    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
