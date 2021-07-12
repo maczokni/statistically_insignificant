@@ -66,4 +66,6 @@ Second, **engage young people in developing knife-crime prevention practices** i
 
 And third, **carry out further research on how young people interpret qualities which promote trust** (i.e., professionalism, accountability, transparency, respect, fairness, empathy and protect, and serve attitudes) **in specific local contexts**. This may be particularly important in promoting a shared understanding and appreciation of these attributes in police forces and could be used to inform training and guidance on the way police-youth interactions are handled.
 
+## The paper
 
+For full details on methodology, data, results, and recommendations, read the paper available in full open access here: [https://journals.sagepub.com/doi/10.1177/00111287211029873](https://journals.sagepub.com/doi/10.1177/00111287211029873)
