@@ -38,18 +38,18 @@ The experience sampling mobile application collected 85 reports, of which 65 rep
 
 Interestingly, the locations of these worry incidents were almost all outside of the study area (Hackney). This suggests that young people experience worrying incidents across their entire activity space, rather than in their immediate local areas. 
 
-![Map of young people’s experiences with worry about knife related incidents across London. Hackney borough is highlighted in red.](\img\cincity_fig1.gif)
+![Map of young people’s experiences with worry about knife related incidents across London. Hackney borough is highlighted in red.](/img/cincity_fig1.gif)
 
 Regarding mental models, our mental models revealed a larger overlap between the perceptions of police and young people than initially anticipated. 
 
-![Top level mental model—Expert and young people’s perceptions of knife crime and motives. Singled-lined circles show expert concepts and dash-lined circles the concepts of young people. Squares do not symbolize concepts but they are being used to visualize how concepts are linked with each other and to whom they refer.](\img\cincity_fig2.jpeg)
+![Top level mental model—Expert and young people’s perceptions of knife crime and motives. Singled-lined circles show expert concepts and dash-lined circles the concepts of young people. Squares do not symbolize concepts but they are being used to visualize how concepts are linked with each other and to whom they refer.](/img/cincity_fig2.jpeg)
 
 A prominent feature in young people's mental models was the role of deprivation and social marginalization in knife crime, a knowledge they have mostly gained through their personal experiences and those of their peers and communities. Considering how strongly all young people we interviewed felt about this, regardless of their own ethnicity or personal experience, we suggest that those shaping the broader public health approach or work at the local level take this aspect into account. Young people are willing to engage in the knife-crime debate and cooperate in identifying solutions—but only if they feel included in the process and not targeted by it. 
 
 
 We found that young people proved extremely knowledgeable, especially regarding risks and motives of knife crime. Both young people and police experts highlight a lack of trust that leads to a lack of cooperation. This increases feelings of unsafety, leading to more knife-carrying. Interestingly, expert and lay interviews describe trust differently. Experts focus on “effectiveness” as both a source of trust and a requirement in “fighting crime” while young people emphasize the need of “fairness” to establish trust. 
 
-![Expert and young people’s perceptions of policing activities and trust. Singled-lined circles show expert concepts and dash-lined circles the concepts of young people. Note that the size of the circle has no semantic interpretation.](\img\cincity_fig3.jpeg)
+![Expert and young people’s perceptions of policing activities and trust. Singled-lined circles show expert concepts and dash-lined circles the concepts of young people. Note that the size of the circle has no semantic interpretation.](/img/cincity_fig3.jpeg)
 
 Another interesting finding from the mental models of young people was that their awareness was not equal across all types of policing activities. While young people know about enforcement-based activities (they are particularly knowledgeable of police enforcement procedures for which they carry negative perceptions, most prominently stop-and-search, “Section 60” and the “Gang Matrix”) they are mostly unaware of community-building initiatives.
 
