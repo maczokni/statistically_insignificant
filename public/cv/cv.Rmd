@@ -24,6 +24,8 @@ my_orcid <- "0000-0001-8689-1526"
 
 #Matt's workaround because biber cannot handle filepaths with space in them, and UoM dropbox doesn't let me change its name
 #copy citation files into temporary locations where biber can read from:
+citations_0 <- tempfile(fileext = ".bib")
+file.copy(from = here::here("public/cv/books.bib"), to = citations_0)
 citations_1 <- tempfile(fileext = ".bib")
 file.copy(from = here::here("public/cv/published.bib"), to = citations_1)
 citations_2 <- tempfile(fileext = ".bib")
@@ -124,15 +126,18 @@ My research areas include perception of crime and place, spatial crime analysis,
 
 ORCID: `r my_orcid`
 
+### Books
+
+
+```{r books}
+bibliography_entries(citations_0) 
+```
 
 ### Peer reviewed publications
 
 
 ```{r publications}
-bibliography_entries(citations_1) %>% 
-	mutate(journal = ifelse(is.na(journal) & bibtype == "Article",
-													paste("pre-print on", publisher),
-													journal))
+bibliography_entries(citations_1) 
 ```
 
 
@@ -143,18 +148,13 @@ OSF profile: [osf.io/3nzk2](osf.io/3nzk2).
 
 ```{r accepted}
 bibliography_entries(citations_2) %>% 
-	mutate(journal = ifelse(is.na(journal) & bibtype == "Article",
-													paste("pre-print on", publisher),
-													journal))
+	mutate(journal = paste("pre-print on", publisher))
 ```
 
 ### Forthcoming publications pending submission. 
 
 ```{r underreview}
-bibliography_entries(citations_3) %>% 
-	mutate(journal = ifelse(is.na(journal) & bibtype == "Article",
-													paste("pre-print on", publisher),
-													journal))
+bibliography_entries(citations_3) 
 ```
 
 

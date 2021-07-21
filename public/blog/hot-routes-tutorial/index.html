@@ -39,7 +39,7 @@
 
 <meta itemprop="datePublished" content="2020-03-29T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-03-29T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2706">
+<meta itemprop="wordCount" content="2709">
 
 
 
@@ -94,6 +94,7 @@ if (!doNotTrack) {
   
   <div id="contentBody">
     
+<script src="../../rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <p>Crime concentrates in place and time, and it is the task of the crime analyst to identify where and when these hotspots emerge. This is often achieved by producing density maps. Kernel density estimation is one methdod for producing such maps, which involves applying a function (known as a “kernel”) to each data point, which averages the location of that point with respect to the location of other data points. The surface that results from this model allows us to produce isarithmic maps, also referred to in common parlor as heatmaps (see <a href="https://maczokni.github.io/crimemapping_textbook_bookdown/studying-spatial-point-patterns.html#density-estimates">our crime mapping textbook on GitHub</a> for more on Kernel Density Mapping and a “how-to-in-R” tutorial).</p>
@@ -156,10 +157,10 @@ parts &lt;- st_split(bakerloo_line, st_combine(bakerloo_stops$geometry)) %&gt;% 
 
 parts</code></pre>
 <pre><code>## Geometry set for 24 features 
-## geometry type:  LINESTRING
-## dimension:      XY
-## bbox:           xmin: -0.334896 ymin: 51.4945 xmax: -0.099185 ymax: 51.59222
-## CRS:            EPSG:4326
+## Geometry type: LINESTRING
+## Dimension:     XY
+## Bounding box:  xmin: -0.334896 ymin: 51.4945 xmax: -0.099185 ymax: 51.59222
+## Geodetic CRS:  WGS 84
 ## First 5 geometries:</code></pre>
 <p>You can see we now have a new object called <code>parts</code> which is a linestring containing 24 features, the segments between our 25 tube stations, all as unique lines. You can also see that this is a geometry set of 24 features, let’s turn it into a simple features collection, and label each of the segments with a number by taking each element of parts and binding it together as a dataframe.</p>
 <pre class="r"><code>datalist = list()
@@ -279,7 +280,7 @@ ggplot() +
 </div>
 <div id="final-remarks" class="section level2">
 <h2>Final remarks</h2>
-<p>This has been a very simple application of the hot routes technique in R, and I hope this tutorial is helpful and can be applied to many other sets of data! If anyone is following along and gets stuck just get in touch with me on twitter (<span class="citation">[@r_solymosi]</span>(<a href="https://twitter.com/r_solymosi" class="uri">https://twitter.com/r_solymosi</a>)) or by email <a href="mailto:reka.solymosi@manchester.ac.uk">reka.solymosi@manchester.ac.uk</a>. Also many of the solutions here are possibly hacky, if someone has better ways of doing this please just let me know, I am happy to improve it. As is always the case there are more sophisticated ways to do this, for example using the <code>spatstat</code> package (for a quick intro see <a href="https://maczokni.github.io/crimemapping_textbook_bookdown/studying-spatial-point-patterns.html#spatial-point-patterns-along-networks">section 6.7</a> in our crime mapping textbook), and probably many more, but this also does the job…!</p>
+<p>This has been a very simple application of the hot routes technique in R, and I hope this tutorial is helpful and can be applied to many other sets of data! If anyone is following along and gets stuck just get in touch with me on twitter (<span class="citation">[@r_solymosi]</span>(<a href="https://twitter.com/r_solymosi" class="uri">https://twitter.com/r_solymosi</a>)) or by email <a href="mailto:reka.solymosi@manchester.ac.uk">reka.solymosi@manchester.ac.uk</a>. Also many of the solutions here are possibly hacky, if someone has better ways of doing this please just let me know, I am happy to improve it. As is always the case there are more sophisticated ways to do this, for example using the <code>spatstat</code> package (for a quick intro see <a href="https://maczokni.github.io/crime_mapping_textbook/studying-spatial-point-patterns.html#spatial-point-patterns-along-networks">section 6.7</a> in our crime mapping textbook), and probably many more, but this also does the job…!</p>
 <p>Further, while hot routes is a really neat way to visualise crime rates along a network for sure, it may be the case that the geographic location of each segment or stop is not so important, and instead it is the ditribution of crime along a route that is the focus. In this case another visualisation technique that may be useful is street profile analysis introduced by Valerie Spicer and colleagues, detailed in <a href="https://www.researchgate.net/publication/297605497_Street_profile_analysis_A_new_method_for_mapping_crime_on_major_roadways">this paper</a>. I can always write another tutorial on this one in R, if there’s interest.</p>
 <p>Anyway, happy mapping friends!</p>
 </div>
