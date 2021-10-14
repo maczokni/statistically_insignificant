@@ -11,7 +11,7 @@ images: []
 
 
 
-*See the full paper [Ceccato V, Solymosi R, Müller O. The Use of Twitter by Police Officers in Urban and Rural Contexts in Sweden. International Criminal Justice Review. October 2021. doi:10.1177/10575677211041926](https://journals.sagepub.com/doi/10.1177/10575677211041926) here: [https://journals.sagepub.com/doi/10.1177/10575677211041926](https://journals.sagepub.com/doi/10.1177/10575677211041926)*
+> This blog post is about the full paper:  [Ceccato V, Solymosi R, Müller O. The Use of Twitter by Police Officers in Urban and Rural Contexts in Sweden. International Criminal Justice Review. October 2021. doi:10.1177/10575677211041926](https://journals.sagepub.com/doi/10.1177/10575677211041926) which can be accessed here: [https://journals.sagepub.com/doi/10.1177/10575677211041926](https://journals.sagepub.com/doi/10.1177/10575677211041926). 
 
 
 Together with [Professor Vania Ceccato](https://www.kth.se/profile/vace?l=en) from [KTH](https://www.kth.se/en) and her student Oskar Müller we set out to explore how Twitter profiles of police in Sweden build [“exhibitions”](https://doi.org/10.1177/0270467610385893) of policing for the public to view and interact with. We figured as people's lives are increasingly influenced by online content, this will apply also to their ["crime talk"](https://onlinelibrary.wiley.com/doi/10.1111/j.1467-9523.2011.00557.x): the process by which members of the public make sense of information around them relating to crime.
@@ -120,7 +120,7 @@ Another contribution of this paper, which I'm pleased with, is the approach we t
 
 -----
 
-The full apper has more detail about our findings on topics and themes as well as engagement, and greater detail on our methodology too. It can be found online here: [https://journals.sagepub.com/doi/10.1177/10575677211041926](https://journals.sagepub.com/doi/10.1177/10575677211041926). 
+The full paper has more detail about our findings on topics and themes as well as engagement, and greater detail on our methodology too. It can be found online here: [https://journals.sagepub.com/doi/10.1177/10575677211041926](https://journals.sagepub.com/doi/10.1177/10575677211041926). 
 
 As always, comments and questions welcome, do not hesitate to get in touch!
 
