@@ -1,0 +1,128 @@
+---
+title: The Use of Twitter by Police Officers in Urban and Rural Contexts in Sweden
+author: ~
+date: '2021-10-14'
+slug: twitter-by-police-officers-in-urban-and-rural-contexts-in-sweden
+categories: []
+tags: []
+images: []
+---
+
+
+
+
+*See the full paper [Ceccato V, Solymosi R, Müller O. The Use of Twitter by Police Officers in Urban and Rural Contexts in Sweden. International Criminal Justice Review. October 2021. doi:10.1177/10575677211041926](https://journals.sagepub.com/doi/10.1177/10575677211041926) here: [https://journals.sagepub.com/doi/10.1177/10575677211041926](https://journals.sagepub.com/doi/10.1177/10575677211041926)*
+
+
+Together with [Professor Vania Ceccato](https://www.kth.se/profile/vace?l=en) from [KTH](https://www.kth.se/en) and her student Oskar Müller we set out to explore how Twitter profiles of police in Sweden build [“exhibitions”](https://doi.org/10.1177/0270467610385893) of policing for the public to view and interact with. We figured as people's lives are increasingly influenced by online content, this will apply also to their ["crime talk"](https://onlinelibrary.wiley.com/doi/10.1111/j.1467-9523.2011.00557.x): the process by which members of the public make sense of information around them relating to crime.
+
+
+We collected 14,583 Tweets made over the course of just under 8 years by 20 accounts listed on the [official Police Sweden website](https://polisen.se/aktuellt/sociala-medier/) which belong to our study area [“Region South” (Region Syd)](https://journals.sagepub.com/na101/home/literatum/publisher/sage/journals/content/icja/0/icja.ahead-of-print/10575677211041926/20211012/images/medium/10.1177_10575677211041926-fig1.gif).  Of these, 5 were official accounts representing a force (for example, \@polisen_malmo is the Twitter account of the Malmö police force) and 15 personal accounts of individual police officers use social media (with personal accounts) while clearly identifying themselves as members of a police organization (as well as being listed on the official website).  We further distinguished between accounts which police **urban** and **rural** areas. 
+
+
+We found that while official accounts stick closely to the guidelines, personal accounts deviate more, however personal accounts have greater engagement from the public (measured as likes and retweets). These online "exhibitions" of policing social media may inform "crime talk" more, and this might be especially important in rural contexts, where face to face interaction is likely less frequent than in urban areas. 
+
+
+## Official guidance
+
+
+We looked first at the Swedish Police Authority guidelines on social media use which states the main purpose is for such things as: 
+
+- sharing information, 
+- calling for support, 
+- warning messages, 
+- reflective of the organization, 
+- recruiting, establishing/ reinforcing cooperation with stakeholders and civil society, and
+- for putting a face on the police, humanizing the police authority, supporting each other in the organization.
+
+It further states that users should:
+
+- “Avoid value-laden words and words that may be perceived as derogatory or offensive - be objective,” and
+- “Show humility and respect, avoid irony, an employee in the police should never express himself condescendingly or have an attitude that can be perceived as offensive or superior,”
+- “Be careful with humor, as this is something very personal that can easily be misunderstood” and
+- “The police should not link to any other organization” and photographs should be avoided,
+- “Photographs or pictures of minors must be approved by the guardian” (SPA, 2016, pp. 10–11).
+
+
+With this in mind, we then identified what were the key themes which Tweets discussed. 
+
+## Themes
+
+We identified the following themes:
+
+### Crimes, facts and dialogue
+
+Tweets from official accounts mostly focused on a priority to reveal *“the facts”,* such as the most common types of crime problems, or notification of individual crime events. For example:
+
+
+> Detonation at [LOCATION] police station shortly after 5. The detonation caused minor damage to the door to the property but fortunately no injuries (urban, official)
+
+
+These Tweets present raw information, and do not offer any interpretation or discussion of the topics. In contrast, in personal accounts it was more common with examples of a dialogue being established between police officers and the public:
+
+> This is how we should work against #organizedcrime also in our local police areas (rural, personal)
+
+We find that personal accounts present information in a way that shows dialogue (e.g. responding to the “crime talk” of the public by addressing an incorrect assumption) and demonstrate their perspective (using the word “should”).
+
+### Use of language
+
+All Tweets from the official accounts in our sample adhere to the national guidelines, as they mostly fall within the “facts” category as presented above. However, for personal accounts, some of the wording might go against the guidelines. For example:
+
+> Never trust social democrats. They would sell their grandmother to stay in power (urban, personal)
+
+or
+
+> Can look at her hair and know what she is going to write [LINK] (urban, personal)
+
+This last one also contains a link to an outside source, which is discouraged in official guidelines. 
+
+###  Opinions, emotions, and public engagement
+
+This theme included expressed opinions and emotions, for example about the police organization and job conditions:
+
+> The work environment now is worse than ever in my opinion. Listen now, some colleagues in the core business are extremely tired. (urban, personal)
+
+or gender issues:
+
+> Just read the Police's action plan for increased gender equality - it looks good. Maybe we can upset the male norm?! (rural, personal)
+
+or other emotions ranging from public grief to humor and jokes:
+
+> It is hardly possible to find words for the tragedy in today's fatal shooting. Poor family and relatives. It is not possible to understand their grief. …Heavy. (urban, personal)
+
+## Public engagement
+
+So we saw that personal accounts deviate from the guidance while the official accounts do not. How is this perceived? Other studies ([1](https://onlinelibrary.wiley.com/doi/abs/10.2202/1944-2866.1130), [2](https://dl.acm.org/doi/10.1145/2470654.2466477)) have found that public prefer a more "genuine" interaction with police online, and we see the same here. 
+
+<img src="/blog/2021-10-14-the-use-of-twitter-by-police-officers-in-urban-and-rural-contexts-in-sweden_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+
+Number of Retweets and number of likes per tweet are much greater for the personal accounts than the official ones in both urban and rural contexts. This suggests that personal accounts, which display Tweets like follow-ups of all sorts, replies, information, but also anecdotes about crimes, opinions about daily events and politics are more “popular” (measured by likes and Retweets) than the official accounts simply reporting crime incidents with no reflection. 
+
+## So what?
+
+Well, why is all this important? 
+
+
+The presence of the police contributes to public reassurance. The online presence, characterised by the exhibitions built up on social media is one way to contribute to this reassurance. We found that the tone and theme of personal accounts, while may be seen to go against the guidance, received greater interaction from the public. This was the case in both urban and rural settings. 
+
+
+This is important, especially in rural areas, where the public may not see police face to face very frequently at all. There are indications of the presence of “enthusiasts” (eldsjälar) in rural communities who tend to attract followers and reactions, such as likes and Retweets. These active officers are the ones dominating the local discourse and feeding the “crime talk,” and are possibly the key faces of community policing.
+
+
+Therefore, one recommendation from our study is to consider the balance between following the Police Authority guidelines on social media use and engaging genuinely with the public. A balance is needed, as while we found increased engagement with personal accounts, we did also find examples of derogatory comments among the personal Tweets, indicating an issue where police officers are not following the principles outlined within the national guidelines in terms of when they Tweet (e.g., duty or off duty), how they Tweet (e.g., language and expression of values and emotions) or what they Tweet about (e.g., issues of privacy, disclosure).
+
+
+## A methodological note
+
+Another contribution of this paper, which I'm pleased with, is the approach we took to build the sample of accounts from which to collect Tweets. We adopted the [PRISMA method](http://prisma-statement.org/) used for systematic reviews, as a framework for collecting appropriate Twitter accounts. The applicability for this to social media research was smooth, as many concepts translated well. For example, we could use "mention chasing" as an adaptation of "citation chasing". The process is detailed in [the PRISMA flow diagram](https://journals.sagepub.com/na101/home/literatum/publisher/sage/journals/content/icja/0/icja.ahead-of-print/10575677211041926/20211012/images/medium/10.1177_10575677211041926-fig2.gif).  
+
+![](https://journals.sagepub.com/na101/home/literatum/publisher/sage/journals/content/icja/0/icja.ahead-of-print/10575677211041926/20211012/images/medium/10.1177_10575677211041926-fig2.gif)
+
+-----
+
+The full apper has more detail about our findings on topics and themes as well as engagement, and greater detail on our methodology too. It can be found online here: [https://journals.sagepub.com/doi/10.1177/10575677211041926](https://journals.sagepub.com/doi/10.1177/10575677211041926). 
+
+As always, comments and questions welcome, do not hesitate to get in touch!
+
+
+
