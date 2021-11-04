@@ -5,6 +5,6 @@ blogdown::new_site()
 blogdown::install_theme("koirand/pulp", force = TRUE)
 blogdown::serve_site()
 blogdown::stop_server()
-blogdown::new_post(title="The Use of Twitter by Police Officers in Urban and Rural Contexts in Sweden", ext = ".Rmarkdown", subdir = 'blog')
+blogdown::new_post(title="Peak's Altitude X conference", ext = ".Rmarkdown", subdir = 'blog')
 
 blogdown::check_site()
