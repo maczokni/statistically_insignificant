@@ -11,12 +11,12 @@ images: []
 
 I had the chance to attend an *in-person* conference organised by [Peak](https://peak.ai/): [Altitude X](https://altitudex.live/). The conference aimed to bring together business and data communities, and I also snuck in as an undercover academic. 
 
-![First conference coffee since 2019!](/img/altitudex.jpg)
+![First conference coffee since 2019!](/img/altitudex.jpg =x250)
 
 
 My sneaking in was facilitated very kindly by [Her+Data Manchester](http://herplusdata.org/herdata-manchester-mcr/), so I want to say a big big thank you for this opportunity! 
 
-![Her+Data stickers](/img/her_plus_data_stickers.jpg)
+![Her+Data stickers](/img/her_plus_data_stickers.jpg =x250)
 
 
 ## Highlights
@@ -36,7 +36,7 @@ I also learned that those 10-minute segments at the end of [David Attenborough n
 
 ### Leanne Fitzpatrick - Why data alone isn’t enough
 
-[Leanne Fitzpatrick](https://twitter.com/LK_Fitzpatrick) is head of data science at the Financial Times. Her talk focused on the importance of context, not just around data, but also around the building and implementation of our models. This is really important because we talk a lot about data quality, constraints of the data, but this needs to be considered and monitored also for the model. 
+[Leanne Fitzpatrick](https://twitter.com/LK_Fitzpatrick =250x) is head of data science at the Financial Times. Her talk focused on the importance of context, not just around data, but also around the building and implementation of our models. This is really important because we talk a lot about data quality, constraints of the data, but this needs to be considered and monitored also for the model. 
 
 ![Leanne Fitzpatrick - Why data alone isn’t enough](/img/leanne_fitzpatrick.jpg)
 
@@ -52,7 +52,7 @@ Definitely the most crowded of the talks, the conversation with data privacy exp
 
 He mentioned how tech, especially early on was all about disruption, but it now appears some of the things which were being disrupted are essential societal elements, like social cohesion. 
 
-![Conversation with Christopher Wylie](/img/christopher_wylie.jpg)
+![Conversation with Christopher Wylie](/img/christopher_wylie.jpg =x250)
 
 > "Society is aware that there is "a problem" but there is no clarity on what the problem is."
 
