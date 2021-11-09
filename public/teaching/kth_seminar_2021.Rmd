@@ -399,100 +399,15 @@ Now, if you untick the osm_stations layer and zoom right in you will see your no
 
 
 
-## Twitter data with Qweetgis
+## Getting Twitter data using Python
 
-Qweetgis is a QGIS 3 plugin for Twitter that allows you to access the Twitter API once you have already got your developer account. 
+To get Twitter data, we are going to step outside of the QGIS environment, and move instead to some coding in Python. Don't worry, it will be nothing too dangerous, I have created a python notebook on google collab, which you can play around with to follow along. 
+
+So first things first, you need to have your Twitter developer credentials ready. 
 
 
 > IMPORTANT: you will have needed to get your Twitter Developer Account credentials in order to be able to follow along with the rest of this tutorial!
 
-
-###Plugins
-
-QGIS has a variety of plugins that you can download, and use for your work. Plugins in QGIS add useful features to the software. Plugins are written by QGIS developers and other independent users who want to extend the core functionality of the software. These plugins are made available in QGIS for all the users.
-
-You can see a tutorial for installing and using plugins [here](http://www.qgistutorials.com/en/docs/using_plugins.html)
-
-
-The plugin we'll be using is called Qweetgis and it is for getting data from Twitter into QGIS. To install plugins find "Plugins" on the top menu bar of QGIS and click on "Manage and Install Plugins..."
-
-![](img/manage_install_plugins.png)
-
-
-This will open a plugin windown which you can use to browse plugins: 
-
-![](img/plugin_window.png)
-
-
-Now Qweepy is actually an *experimental* plugin. The plugins that are available to you for installation depend on which plugin repositories you are configured to use. QGIS plugins are stored online in repositories. By default, only the official repositories are active, meaning that you can only access official plugins. These are usually the first plugins you want, because they have been tested thoroughly and are often included in QGIS by default. It is possible, however, to try out more plugins than the default ones. To see experimental plugins you open the *Settings* tab in the *Plugin Manager* dialog:
-
-![](img/show_exp_plugins.png)
-
-Select the option to display Experimental Plugins by selecting the Show also experimental plugins checkbox.
-
-To install Qweetgis now click on the *All* tab, and in the search bar, type in "Qweetgis". 
-
-![](img/search_qweetgis.png)
-
-
-You will see the plugin appear. 
-
-![](img/install_qweetgis.png)
-
-
-Select and then install it by clicking on using *Install Experimental Plugin*. 
-
-
-#### Tweepy
-
-
-***NOTE*** Qweetgis uses a Python package called Tweepy that makes the requests to the Twitter streaming API. Standard QGIS Python does not come with Tweepy and it has to be installed separately. If you don't already have this you will see a warning like this: 
-
-![](img/tweepy_error.png)
-
-
-Tweepy can be installed using pip, a Python package manager. For more information on pip, check out [What Is Pip? A Guide for New Pythonistas](https://realpython.com/what-is-pip/).
-
-
-To install Tweepy you can follow any of the following tutorials: 
-
-**For Windows:** 
-
-This tutorial involves downloading a file and working within the QGIS environment: [https://www.lutraconsulting.co.uk/blog/2016/03/02/installing-third-party-python-modules-in-qgis-windows/](https://www.lutraconsulting.co.uk/blog/2016/03/02/installing-third-party-python-modules-in-qgis-windows/)
-
-Make sure you change the path (`C:\Users\Pete\Downloads\ez_setup.py` here) to your path to where you downloaded the file, and to replace `'lxml'` with `'tweepy'`!
-
-If you run into some issues there is some handy trouble shooting here:
-[https://gis.stackexchange.com/questions/282685/installing-external-python-packages-for-qgis-3](https://gis.stackexchange.com/questions/282685/installing-external-python-packages-for-qgis-3)
-
-**For Mac:** 
-
-It is slightly more difficult on a Mac that on Windows, but if you are not afraid to get technical you should be able to follow along with the process in the answer to the question posed here: 
-[https://gis.stackexchange.com/questions/351280/installing-python-modules-for-qgis-3-on-mac](https://gis.stackexchange.com/questions/351280/installing-python-modules-for-qgis-3-on-mac)
-
-
-#### Here is a tutorial specifically for using OSGeo4W in the lab PCs:
-
-Start by closing QGIS and start the OSGeo4W Shell program by searching for it in the start menu 
-Type “py3_env”:
-
-![](img/osgeo4w_1.png)
- 
-Press enter. You should now see the path which QGIS installed its python module.
-Type “python -m pip install Tweepy” to start the installation.
-
-![](img/osgeo4w_2.png)
- 
-After a few seconds, the installation should be finished. You can now open QGIS and Install QweetGIS.
-
-
-## Authenticate 
-
-Once you have your plugin installed, you will see it under the plugins tab: 
-
-![](img/find_qweetgis.png)
-
-Click on this, and you will be presented the window where you have to authenticate yourself. This is why you needed your Twitter developer account! Before you can progress you must log in with your Twitter developer credentials. 
 
 To find your credentials, log into your developer account [https://developer.twitter.com/](https://developer.twitter.com/), and find your Developer Dashboard: [https://developer.twitter.com/en/portal/dashboard](https://developer.twitter.com/en/portal/dashboard). You can see already created apps here. For example, I have one called "Social media in policing and safeguarding": 
 
@@ -519,127 +434,246 @@ When you do this you will see you have your consumer keys - these are the api ke
 ![](img/generate_tokens.png)
 
 
-These values will pop up. Once again **MAKE SURE TO SAVE THESE** as you will not be shown them again. Once you have these saved, we can go back to QGIS. 
+These values will pop up. Once again **MAKE SURE TO SAVE THESE** as you will not be shown them again. Once you have these saved, we can go to our collab worksheet. 
 
+Open this link in your browser (ideally Firefox or Google Chrome): [https://colab.research.google.com/drive/1N3Ifc_e0Ca-6F4bKlzG6tj2sFT7dLK3V?usp=sharing](https://colab.research.google.com/drive/1N3Ifc_e0Ca-6F4bKlzG6tj2sFT7dLK3V?usp=sharing)
 
+When you are there you will see some code. Please **DO NOT EDIT** this document. Instead, you will need to create a copy. 
 
-So once you're back in QGIS and wanting to log in with your Twitter credentials, you'll see this is what Qweepy is asking you for: 
+To do this, click on File > and Save a copy in drive: 
 
+![](img/save_notebook_copy.png)
 
-![](img/qweetgis_auth.png)
 
+You will need a google account for this, so log into your google account to continue. If you do not have a google account, you can make one quickly, or you can work with a friend. 
 
-These are however just different names for the same thing. I have created an annotated version of the Qweepy request to help clarify: 
+Once you have copied this into your google account, you will be able to make changes. Follow the instructions on the notebook, and you will be rewarded with some Tweets!
 
 
-![](img/qweetgis_auth_annot.png)
-
-So for each field, copy and paste the appropriate value which you have saved from your Twitter page. When you are done, click OK and you should be ready to get some Tweets!
-
-## Get some Tweets
-
-Once you have authenticated, you should be able to set a "stream" of Tweets. 
-
-To open the data stream to have Tweets delivered, you need to send a connection request to the API. In the streaming model, this connection opens up the pipeline for data to be delivered to you as it happens, and will exist for an indefinite period of time.
-
-
-In our case, Qweepy will open this connection. You will notice once you clicked "OK" in the previous step (and any time in the future you use this plugin) you will see a window that allows you to stream these tweets, like this: 
-
-
-![](img/qweetgis_main.png)
-
-Here you can choose your *request type* which can be either keyword (you want Tweets anywhere which contain a specific key word) or geo (you want Tweets about anything but in a particular location). 
-
-
-Here let's select Geo, and we will use the extent of the current map view. When we do this, QGIS takes the coordinates of the currently displayed map view and uses this as a bounding box, and searches for Tweets made within this space. You can zoom in or out to change this bounding box. 
-
-
-When we are happy with this, click on the little play icon: 
-
-![](img/qweetgis_main_play.png)
-
-When you do this, you will see the Tweets streaming in! Once you are happy with the amount of Tweets you have, click on the pause button, and close the window. You will see you have a new layer now, which contains all the tweets you have collected. If you want to see them, right click the layer and select "Open Attribute Table" - you will now see your Tweets. 
-
-
-<!-- ![](img/streaming_tweets.gif) -->
-
-**Note:** You might need to leave the stream open for a while in order to collect enough Tweets that you have some useful ones in there!
-
-
-In my case, I ended up with 18 Tweets that were made in Camden. You can zoom to your camden crimes layer, and select only the Tweets made in this area by using the manual select tool: 
-
-![](img/manualselect.png)
-
-And then dragging the contents of your window: 
-
-
-![](img/select_camden_tweets.gif)
-
-You can then save these Tweets like we did when selecting by keyword search earlier, by right clicking the tweets layer and selecting "Export > Save selected features as..." and saving it in your working directory. 
-
-**Note:** in case you didn't manage to get any useful Tweets in this exercise, I have saved my results as a geojson file, which you can download from here: [https://www.dropbox.com/s/l9ywxupzi8kmypw/camden_tweets.geojson?dl=0](https://www.dropbox.com/s/l9ywxupzi8kmypw/camden_tweets.geojson?dl=0)
-
-
-# Bringing it all together
-
-So now we have some open source police data from the UK Home Office, we have some crowdsourced data about the location of stations on the Northern Line, from Open Street Map, and we have some Tweets made by people in this local area from Twitter using the Qweetgis plugin. Not bad for a day's work!
-
-
-So let's have a look at what we can learn from this. 
-
-
-Let's first look at which stations have crimes near them?
-
-To look at this, we can build a buffer around the stations. You can do this using Vector > Geoprocessing tools > Buffer
-
-![](img/gettobuffer.png)
-
-This will open a window where you must select what layer to buffer (the one that has your Northern Line stations) and also asks you how big to make this buffer area. Normally we would try to reproject the coordinates to a projected system (in the UK this would be British National Grid) but this is outside the scope of this tutorial, so we will work with degrees and use 0.005 degrees which I arrived at with trial and error. You can change this if you'd like to get bigger or smaller buffers!
-
-![](img/buffer_params.png)
-
-Click "Run", and when it's done "Close" you will see a layer of buffers around the stations. We can now count how many crimes fall within each one of the stations' 0.005 degree radius (you can see why we want to project and use meters...!). To count how many crimes are within each buffer you use the 'points in polygons' function: 
-
-
-![](img/point_in_poly.png)
-This will bring a pop-up window, where you have to set your polygon layer (the buffers we just created) and the point layer to count (the crimes layer). Specify those and click "Run" and when you are ready "Close": 
-
-![](img/count_pip.png)
-
-
-Now you will see a new layer appear called "Count". Double click this layer, and on the menu which opens, choose "Symbology". On the top bar change single symbol to graduated, and under value pick our newly created NUMPOINTS column, which contains the number of points (crimes) we just counted in each of our polygons (buffers around stations). We can use this column to shade our polygons. You can play around here with how you want the color ramp to look, try different styles, see what you like best! Make sure though to choose "Natural breaks (jenks)" under mode. Again it's outside the scope of this session to learn more about these, but I suggest reading about thematic maps to undersand these options. 
-
-![](img/symbology.png)
-
-When you are happy with your choices click Apply, and OK. You will now see your stations in Camden colour coded by the number of crimes that happened within some radius of each station: 
-
-
-![](img/them_stns.png)
-
-
-So now we can look to our social media data for some context. We can use the select tool we learned above to select Tweets in the red station. I only got one such Tweet: 
-
-![](img/red_stn_tweets.png)
-
-I can view it highlighted in the Attribute table: 
-
-![](img/red_stn_tweets_2.png)
-
-
-It seems to be a Tweet about a music venue, we know these areas can get crowded, there is often alcohol involved, so we can start drawing conclusions about what sort of factors might contribute to crime in this area. 
-
-
-To compare we can look at Tweets made near blue stations: 
-
-![](img/blue_stn_tweets.png)
-In this case we see one Tweet is about a theatre, and the other is a link to a photo: 
-
-![](img/blue_stn_tweets2.png)
-
-If we follow the link to the photo (I suggest yes unless you're hungry): [Just posted a photo @ Soho https://t.co/axub2o4OIY](https://t.co/axub2o4OIY) then we can see what sorts of activities people are participating in this area, and we can start to once again draw conclusions about levels of crime in the area. 
+Besides the examples in the notebook, you can explore Twitter data in other ways. You might like to explore the tutorials available from Twitter, to give you some inspiration for future work: [https://developer.twitter.com/en/docs/twitter-api/tutorials](https://developer.twitter.com/en/docs/twitter-api/tutorials). 
 
 
 # Conclusion
 
-In conclusion this tutorial aimed to introduce you to open data, specifically crowdsourced and social media data. We acquired data using direct download, API query through a graphical user interface on the web, and API query through a QGIS plugin. We then mapped these data, and with a simple example demonstrated how you might draw conclusions from them all together. I hope this has been a fun exercise, and if you have any questions, don't hesitate to keep in touch and ask!
+In conclusion this tutorial aimed to introduce you to open data, specifically crowdsourced and social media data. We acquired data using direct download, API query through a graphical user interface on the web, and API query through some Python programming. I hope this has been a fun exercise, and if you have any questions, don't hesitate to keep in touch and ask!
+
+
+
+
+
+
+<!-- # Optional extra stuff for the very interested:  -->
+
+<!-- For those of you who want to pursue this a little further, there is a way to get Twitter data directly into QGIS, using a plug in. This is **completely optional**, and is recommended to do on your own machine, as the lab computers might have some permission issues. But if you are brave, then give it a go! -->
+
+<!-- ## Twitter data with Qweetgis -->
+
+<!-- Qweetgis is a QGIS 3 plugin for Twitter that allows you to access the Twitter API once you have already got your developer account. -->
+
+
+
+<!-- ###Plugins -->
+
+<!-- QGIS has a variety of plugins that you can download, and use for your work. Plugins in QGIS add useful features to the software. Plugins are written by QGIS developers and other independent users who want to extend the core functionality of the software. These plugins are made available in QGIS for all the users. -->
+
+<!-- You can see a tutorial for installing and using plugins [here](http://www.qgistutorials.com/en/docs/using_plugins.html) -->
+
+
+<!-- The plugin we'll be using is called Qweetgis and it is for getting data from Twitter into QGIS. To install plugins find "Plugins" on the top menu bar of QGIS and click on "Manage and Install Plugins..." -->
+
+<!-- ![](img/manage_install_plugins.png) -->
+
+
+<!-- This will open a plugin windown which you can use to browse plugins: -->
+
+<!-- ![](img/plugin_window.png) -->
+
+
+<!-- Now Qweepy is actually an *experimental* plugin. The plugins that are available to you for installation depend on which plugin repositories you are configured to use. QGIS plugins are stored online in repositories. By default, only the official repositories are active, meaning that you can only access official plugins. These are usually the first plugins you want, because they have been tested thoroughly and are often included in QGIS by default. It is possible, however, to try out more plugins than the default ones. To see experimental plugins you open the *Settings* tab in the *Plugin Manager* dialog: -->
+
+<!-- ![](img/show_exp_plugins.png) -->
+
+<!-- Select the option to display Experimental Plugins by selecting the Show also experimental plugins checkbox. -->
+
+<!-- To install Qweetgis now click on the *All* tab, and in the search bar, type in "Qweetgis". -->
+
+<!-- ![](img/search_qweetgis.png) -->
+
+
+<!-- You will see the plugin appear. -->
+
+<!-- ![](img/install_qweetgis.png) -->
+
+
+<!-- Select and then install it by clicking on using *Install Experimental Plugin*. -->
+
+
+<!-- #### Tweepy -->
+
+
+<!-- ***NOTE*** Qweetgis uses a Python package called Tweepy that makes the requests to the Twitter streaming API. Standard QGIS Python does not come with Tweepy and it has to be installed separately. If you don't already have this you will see a warning like this: -->
+
+<!-- ![](img/tweepy_error.png) -->
+
+
+<!-- Tweepy can be installed using pip, a Python package manager. For more information on pip, check out [What Is Pip? A Guide for New Pythonistas](https://realpython.com/what-is-pip/). -->
+
+
+<!-- To install Tweepy you can follow any of the following tutorials: -->
+
+<!-- **For Windows:** -->
+
+<!-- This tutorial involves downloading a file and working within the QGIS environment: [https://www.lutraconsulting.co.uk/blog/2016/03/02/installing-third-party-python-modules-in-qgis-windows/](https://www.lutraconsulting.co.uk/blog/2016/03/02/installing-third-party-python-modules-in-qgis-windows/) -->
+
+<!-- Make sure you change the path (`C:\Users\Pete\Downloads\ez_setup.py` here) to your path to where you downloaded the file, and to replace `'lxml'` with `'tweepy'`! -->
+
+<!-- If you run into some issues there is some handy trouble shooting here: -->
+<!-- [https://gis.stackexchange.com/questions/282685/installing-external-python-packages-for-qgis-3](https://gis.stackexchange.com/questions/282685/installing-external-python-packages-for-qgis-3) -->
+
+<!-- **For Mac:** -->
+
+<!-- It is slightly more difficult on a Mac that on Windows, but if you are not afraid to get technical you should be able to follow along with the process in the answer to the question posed here: -->
+<!-- [https://gis.stackexchange.com/questions/351280/installing-python-modules-for-qgis-3-on-mac](https://gis.stackexchange.com/questions/351280/installing-python-modules-for-qgis-3-on-mac) -->
+
+
+<!-- #### Here is a tutorial specifically for using OSGeo4W in the lab PCs: -->
+
+<!-- Start by closing QGIS and start the OSGeo4W Shell program by searching for it in the start menu -->
+<!-- Type “py3_env”: -->
+
+<!-- ![](img/osgeo4w_1.png) -->
+
+<!-- Press enter. You should now see the path which QGIS installed its python module. -->
+<!-- Type “python -m pip install Tweepy” to start the installation. -->
+
+<!-- ![](img/osgeo4w_2.png) -->
+
+<!-- After a few seconds, the installation should be finished. You can now open QGIS and Install QweetGIS. -->
+
+
+<!-- ## Authenticate -->
+
+<!-- Once you have your plugin installed, you will see it under the plugins tab: -->
+
+<!-- ![](img/find_qweetgis.png) -->
+
+<!-- Click on this, and you will be presented the window where you have to authenticate yourself. This is why you needed your Twitter developer account! Before you can progress you must log in with your Twitter developer credentials. -->
+
+
+<!-- So once you're back in QGIS and wanting to log in with your Twitter credentials, you'll see this is what Qweepy is asking you for: -->
+
+
+<!-- ![](img/qweetgis_auth.png) -->
+
+
+<!-- These are however just different names for the same thing. I have created an annotated version of the Qweepy request to help clarify: -->
+
+
+<!-- ![](img/qweetgis_auth_annot.png) -->
+
+<!-- So for each field, copy and paste the appropriate value which you have saved from your Twitter page. When you are done, click OK and you should be ready to get some Tweets! -->
+
+<!-- ## Get some Tweets -->
+
+<!-- Once you have authenticated, you should be able to set a "stream" of Tweets. -->
+
+<!-- To open the data stream to have Tweets delivered, you need to send a connection request to the API. In the streaming model, this connection opens up the pipeline for data to be delivered to you as it happens, and will exist for an indefinite period of time. -->
+
+
+<!-- In our case, Qweepy will open this connection. You will notice once you clicked "OK" in the previous step (and any time in the future you use this plugin) you will see a window that allows you to stream these tweets, like this: -->
+
+
+<!-- ![](img/qweetgis_main.png) -->
+
+<!-- Here you can choose your *request type* which can be either keyword (you want Tweets anywhere which contain a specific key word) or geo (you want Tweets about anything but in a particular location). -->
+
+
+<!-- Here let's select Geo, and we will use the extent of the current map view. When we do this, QGIS takes the coordinates of the currently displayed map view and uses this as a bounding box, and searches for Tweets made within this space. You can zoom in or out to change this bounding box. -->
+
+
+<!-- When we are happy with this, click on the little play icon: -->
+
+<!-- ![](img/qweetgis_main_play.png) -->
+
+<!-- When you do this, you will see the Tweets streaming in! Once you are happy with the amount of Tweets you have, click on the pause button, and close the window. You will see you have a new layer now, which contains all the tweets you have collected. If you want to see them, right click the layer and select "Open Attribute Table" - you will now see your Tweets. -->
+
+
+<!-- <!-- ![](img/streaming_tweets.gif) --> -->
+
+<!-- **Note:** You might need to leave the stream open for a while in order to collect enough Tweets that you have some useful ones in there! -->
+
+
+<!-- In my case, I ended up with 18 Tweets that were made in Camden. You can zoom to your camden crimes layer, and select only the Tweets made in this area by using the manual select tool: -->
+
+<!-- ![](img/manualselect.png) -->
+
+<!-- And then dragging the contents of your window: -->
+
+
+<!-- ![](img/select_camden_tweets.gif) -->
+
+<!-- You can then save these Tweets like we did when selecting by keyword search earlier, by right clicking the tweets layer and selecting "Export > Save selected features as..." and saving it in your working directory. -->
+
+<!-- **Note:** in case you didn't manage to get any useful Tweets in this exercise, I have saved my results as a geojson file, which you can download from here: [https://www.dropbox.com/s/l9ywxupzi8kmypw/camden_tweets.geojson?dl=0](https://www.dropbox.com/s/l9ywxupzi8kmypw/camden_tweets.geojson?dl=0) -->
+
+
+<!-- # Bringing it all together -->
+
+<!-- So now we have some open source police data from the UK Home Office, we have some crowdsourced data about the location of stations on the Northern Line, from Open Street Map, and we have some Tweets made by people in this local area from Twitter using the Qweetgis plugin. Not bad for a day's work! -->
+
+
+<!-- So let's have a look at what we can learn from this. -->
+
+
+<!-- Let's first look at which stations have crimes near them? -->
+
+<!-- To look at this, we can build a buffer around the stations. You can do this using Vector > Geoprocessing tools > Buffer -->
+
+<!-- ![](img/gettobuffer.png) -->
+
+<!-- This will open a window where you must select what layer to buffer (the one that has your Northern Line stations) and also asks you how big to make this buffer area. Normally we would try to reproject the coordinates to a projected system (in the UK this would be British National Grid) but this is outside the scope of this tutorial, so we will work with degrees and use 0.005 degrees which I arrived at with trial and error. You can change this if you'd like to get bigger or smaller buffers! -->
+
+<!-- ![](img/buffer_params.png) -->
+
+<!-- Click "Run", and when it's done "Close" you will see a layer of buffers around the stations. We can now count how many crimes fall within each one of the stations' 0.005 degree radius (you can see why we want to project and use meters...!). To count how many crimes are within each buffer you use the 'points in polygons' function: -->
+
+
+<!-- ![](img/point_in_poly.png) -->
+<!-- This will bring a pop-up window, where you have to set your polygon layer (the buffers we just created) and the point layer to count (the crimes layer). Specify those and click "Run" and when you are ready "Close": -->
+
+<!-- ![](img/count_pip.png) -->
+
+
+<!-- Now you will see a new layer appear called "Count". Double click this layer, and on the menu which opens, choose "Symbology". On the top bar change single symbol to graduated, and under value pick our newly created NUMPOINTS column, which contains the number of points (crimes) we just counted in each of our polygons (buffers around stations). We can use this column to shade our polygons. You can play around here with how you want the color ramp to look, try different styles, see what you like best! Make sure though to choose "Natural breaks (jenks)" under mode. Again it's outside the scope of this session to learn more about these, but I suggest reading about thematic maps to undersand these options. -->
+
+<!-- ![](img/symbology.png) -->
+
+<!-- When you are happy with your choices click Apply, and OK. You will now see your stations in Camden colour coded by the number of crimes that happened within some radius of each station: -->
+
+
+<!-- ![](img/them_stns.png) -->
+
+
+<!-- So now we can look to our social media data for some context. We can use the select tool we learned above to select Tweets in the red station. I only got one such Tweet: -->
+
+<!-- ![](img/red_stn_tweets.png) -->
+
+<!-- I can view it highlighted in the Attribute table: -->
+
+<!-- ![](img/red_stn_tweets_2.png) -->
+
+
+<!-- It seems to be a Tweet about a music venue, we know these areas can get crowded, there is often alcohol involved, so we can start drawing conclusions about what sort of factors might contribute to crime in this area. -->
+
+
+<!-- To compare we can look at Tweets made near blue stations: -->
+
+<!-- ![](img/blue_stn_tweets.png) -->
+<!-- In this case we see one Tweet is about a theatre, and the other is a link to a photo: -->
+
+<!-- ![](img/blue_stn_tweets2.png) -->
+
+<!-- If we follow the link to the photo (I suggest yes unless you're hungry): [Just posted a photo @ Soho https://t.co/axub2o4OIY](https://t.co/axub2o4OIY) then we can see what sorts of activities people are participating in this area, and we can start to once again draw conclusions about levels of crime in the area. -->
+
+
 
