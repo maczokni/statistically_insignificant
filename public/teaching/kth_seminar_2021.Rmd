@@ -234,7 +234,7 @@ Here are some examples of data sets made available to request from using APIs, a
 Often, developers who work with APIs will share their code, and release them in the form of a package or module, so that other people can use it. This is called a _wrapper_ because it uses code that 'wraps' around the API to make it a neater, more usable package. Wrappers remove (or at least lower) many of the obstacles to accessing open data noted earlier. The wrapper can take many forms, such as a Python module, or an R package. It could even be a web interface that provides a graphical user interface (GUI) for accessing the API in question. 
 
 
-To demonstrate this, we will be accessing data from Open Street Map, using its web-based GUI called [Overpass Turbo](https://overpass-turbo.eu/), and from Twitter using [Qweetgis](https://medium.com/@compatt84/qweetgis-qgis-3-plugin-for-twitter-93005f2e5ec8) a QGIS 3 plugin for Twitter. The former is a wrapper in a web interface, while the latter makes use of a Python module. 
+To demonstrate this, we will be accessing data from Open Street Map, using its web-based GUI called [Overpass Turbo](https://overpass-turbo.eu/). 
 
 
 ## Open Street Map API wrapper: Overpass Turbo
