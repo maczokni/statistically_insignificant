@@ -494,23 +494,36 @@ Once you have your plugin installed, you will see it under the plugins tab:
 
 Click on this, and you will be presented the window where you have to authenticate yourself. This is why you needed your Twitter developer account! Before you can progress you must log in with your Twitter developer credentials. 
 
-To find your credentials, log into your developer account [https://developer.twitter.com/](https://developer.twitter.com/), and find your Apps. You can find these unders the top menu bar select your name, and in the dropdown menu select "Apps".
+To find your credentials, log into your developer account [https://developer.twitter.com/](https://developer.twitter.com/), and find your Developer Dashboard: [https://developer.twitter.com/en/portal/dashboard](https://developer.twitter.com/en/portal/dashboard). You can see already created apps here. For example, I have one called "Social media in policing and safeguarding": 
 
 
 ![](img/find_twitter_apps.png)
 
 
-If you don't have any yet, you should click on 'Create an app'. You can follow this tutorial on how to create an app: [https://docs.inboundnow.com/guide/create-twitter-application/](https://docs.inboundnow.com/guide/create-twitter-application/).
-
-
-Once you have your app, click on "Details" and navigate to "Keys and Tokens". This is the information you need to enter into QGIS. 
-
-You might notice they look slightly different. This is how you see your Twitter credentials: 
+If you don't have any yet, you should click on 'Add App'. Here choose to **'Create a new App'** option. Then give your app a name you like. Be creative, because many app names are already taken! Once you have given your app a name, you will be taken to the **Keys & Tokens** page. Here you will see your API Key and your API Key Secret: 
 
 ![](img/twitter_creds.png)
 
+ 
+NOTE: **COPY THESE DOWN NOW** you won't be able to access these again. You need them to search Tweets from within QGIS later, so make sure you copy them and store them somewhere safe, like you would a password. 
 
-And this is what Qweepy is asking you for: 
+Once you've noted these down, go to your app. You can always access this app later, by clicking on the projects & apps tab later, and selecting the app name. Mine is (uncreatively) named rekastestapp: 
+
+![](img/rekastestapp.png)
+
+Here you can change the settings of your app, like permissions, but let's not worry about that for now. FOr now, click on "Keys and tokens" on the top unders your app name. 
+
+When you do this you will see you have your consumer keys - these are the api key and the api secret, which you noted down earlier, when you were creating the app. But we also need the Access Token and Secret. To generate these, click on the button next to it which says 'generate':
+
+
+![](img/generate_tokens.png)
+
+
+These values will pop up. Once again **MAKE SURE TO SAVE THESE** as you will not be shown them again. Once you have these saved, we can go back to QGIS. 
+
+
+
+So once you're back in QGIS and wanting to log in with your Twitter credentials, you'll see this is what Qweepy is asking you for: 
 
 
 ![](img/qweetgis_auth.png)
@@ -521,7 +534,7 @@ These are however just different names for the same thing. I have created an ann
 
 ![](img/qweetgis_auth_annot.png)
 
-So for each field, copy and paste the appropriate value from your Twitter page. When you are done, click OK and you should be ready to get some Tweets!
+So for each field, copy and paste the appropriate value which you have saved from your Twitter page. When you are done, click OK and you should be ready to get some Tweets!
 
 ## Get some Tweets
 
