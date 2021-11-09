@@ -17,11 +17,9 @@ Welcome to the course page for Crowdsourced and social media data for research S
 - Find and download relevant crowdsourced data from Open Street Map using the API query tool OverpassTurbo 
 - Load the data into QGIS
 - Map the data and draw conclusions about substantive topics 
-- Query the Twitter API to obtain Twitter data using Qweetgis plugin
-- Map the Twitter data in QGIS and overlay onto Open Street Map layer
-- Produce a legible map for sharing findings
+- Query the Twitter API to obtain Twitter data using Python
 
-I hope that you enjoy this exercise. The material will remain online for you to access, and myself or Oskar will be around in the lab session to ansewr any of yoru questions. If you have questions outside of this time, please do not hesitate to get in touch, my email is [reka.solymosi@manchester.ac.uk](mailto:reka.solymosi@manchester.ac.uk). 
+I hope that you enjoy this exercise. The material will remain online for you to access, and myself or Jacob will be around in the lab session to answer any of your questions. If you have questions outside of this time, please do not hesitate to get in touch, my email is [reka.solymosi@manchester.ac.uk](mailto:reka.solymosi@manchester.ac.uk). 
 
 
 # Preparation
@@ -55,13 +53,13 @@ In this exercise you will acquire a number of different skills, including:
 
 # Our aim
 
-In this exercise we will explore crime and Tweets in and around London Underground stations. We know that environmental features are important when it comes to public transport areas being more or less criminogenic. Studies in Sweden, for instance, have shown the importance of environmental and neighborhood characteristics in determining crime concentrations at underground stations in Stockholm, along with the positioning of stations on the line [@ceccato2013security]. Similar work has been carried out exploring bus stops in Los Angeles [@loukaitou1999hot] and the impact of intensive policing along bus corridors in Merseyside, England [@newton2004crime], amongst others. 
+In this exercise we will explore crime in and around London Underground stations. We know that environmental features are important when it comes to public transport areas being more or less criminogenic. Studies in Sweden, for instance, have shown the importance of environmental and neighborhood characteristics in determining crime concentrations at underground stations in Stockholm, along with the positioning of stations on the line [@ceccato2013security]. Similar work has been carried out exploring bus stops in Los Angeles [@loukaitou1999hot] and the impact of intensive policing along bus corridors in Merseyside, England [@newton2004crime], amongst others. 
 
-Here, we will consider the case of London. Specifically, we will examine crime in and around London Underground stations, and explore what can we find out about this using social media data from Twitter. We will use various sources of open data to answer this question. This will allow us to explore the strengths and limitations of crowdsourced open data sources. 
+Here, we will consider the case of London. Specifically, we will examine crime in and around London Underground stations. We will also query Tweets made in London, and explore what can we find out about what people think of police using social media data from Twitter. We will use various sources of open data to answer this question. This will allow us to explore the strengths and limitations of crowdsourced open data sources. 
 
 # Accessing data
 
-We will be using three different types of open data in this exercise: public sector data (police recorded crime data and local transport authority data), crowdsourced data (from Open Street Map) and social media data (Twitter). To access them, we will use three different methods, namely, (1) direct download, (2) request to an API interface online, 3) request to an API using a wrapper in Python. This will give you a few different ideas about how you might go about accessing other open data sets relevant to your research. Locating, identifying and learning to access open data is a skill in itself.
+We will be using three different types of open data in this exercise: public sector data (police recorded crime data and local transport authority data), crowdsourced data (from Open Street Map) and social media data (Twitter). To access them, we will use three different methods, namely, (1) direct download, (2) request to an API interface online, 3) request to an API using Python. This will give you a few different ideas about how you might go about accessing other open data sets relevant to your research. Locating, identifying and learning to access open data is a skill in itself.
 
 ## Direct download
 
@@ -445,13 +443,48 @@ To do this, click on File > and Save a copy in drive:
 ![](img/save_notebook_copy.png)
 
 
-You will need a google account for this, so log into your google account to continue. If you do not have a google account, you can make one quickly, or you can work with a friend. 
+You will need a google account for this, so **log into your google account to continue**. If you do not have a google account, you can make one quickly, or you can work with a friend. 
 
 Once you have copied this into your google account, you will be able to make changes. Follow the instructions on the notebook, and you will be rewarded with some Tweets!
 
 
 Besides the examples in the notebook, you can explore Twitter data in other ways. You might like to explore the tutorials available from Twitter, to give you some inspiration for future work: [https://developer.twitter.com/en/docs/twitter-api/tutorials](https://developer.twitter.com/en/docs/twitter-api/tutorials). 
 
+Now have a look at the .csv file you downloaded. You can open this with Excel. Mine looks like this: 
+
+![](img/police_tweets_in_excel.png)
+You can see the place column contains all sorts of different place resolutions, from London, UK to mode specific ones like Haringey, North London, and so on. If we wanted to look at a frequency table, we can create a pivot table in Excel to do this: 
+
+First, click on the "Insert" tab, and then click on "Pivot Table":
+
+![](img/pivot_table_1.png)
+
+When the popup window appears, click "OK":
+
+![](img/pivot_table_2.png)
+Then, when the pivot table appears drag the 'place' variable to rows, and again to the values boxes: 
+
+![](img/pivot_table_3.png)
+
+This will create a frequency table of the places which the Tweets are linked to. You can see, they are mostly vague, the top three most common being London, England, London, and London, UK (although I also get one that is "the globe"). 
+
+![](img/pivot_table_4.png)
+
+Mapping at this level would not add too much here. But there is other valuable data in here. We can read through the tweets and see what people are talking about when they tweet about police. 
+
+Some are reporting events they observe. For example: 
+
+> Damn police already on campus
+
+Some are reporting news stories: 
+
+> Metropolitan Police officer cleared of rape https://t.co/Vu8N7CiL26 Get NewsPlayer+ #breakingnews #livestreaming #newsplayerplus
+
+And others may be more difficult to categorise...
+
+> D woman was wrong learn to mind your bizness around init kids if police cones the woman sef don get yawa b dat o 
+
+In any case, there is plenty of rich data there, to start thinking about to use for research projects!
 
 # Conclusion
 
