@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Even beautiful maps can be misleading</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Sam Langton &amp; Réka Solymosi" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Even beautiful maps can be misleading
+## How decisions about spatial data visualisation affect map legibility
+### Sam Langton &amp; Réka Solymosi
+### NSCR &amp; University of Manchester
+### 19/01/2022
+
+---
+
+
+background-image: url(img/covid19map.png)
+
+
+
+
+background-image: url(img/covid19mapcontext.png)
+
+???
+
+Image credit: [Andisheh Nouraee](https://twitter.com/andishehnouraee/status/1284237474831761408)
+
+---
+class: center, middle
+
+# Maps: visual representation of spatial data
+
+---
+
+# About us
+
+.pull-left[
+
+Réka Solymosi
+
+- [@r_solymosi](https://twitter.com/r_solymosi)
+
+- [rekadata.net](https://rekadata.net/)
+
+![UoM Logo](http://assets.manchester.ac.uk/logos/lo-res/UniLlogoTable_whitebackgrounds.jpg)
+
+![SSI Logo](https://www.software.ac.uk/themes/ssi/images/ssi_logo_with_name-small2.png)
+
+]
+
+--
+.pull-right[
+
+Sam Langton
+
+- [@sh_langton](https://twitter.com/sh_langton)
+
+- [samlangton.info](https://www.samlangton.info/)
+
+![NSCR Logo](https://nscr.nl/app/themes/nscr/out/assets/images/logos/logo_NSCR-EN.svg)
+
+]
+
+---
+
+# Crime Mapping
+
+Forthcoming textbook based on our UoM Crime Mapping module:
+
+.center[
+[https://maczokni.github.io/crime_mapping/](https://maczokni.github.io/crime_mapping/)
+]
+
+---
+class: inverse, center, middle
+
+# Why maps?
+
+---
+class: center, middle
+# Much of human activity happens 'somewhere'
+
+---
+# So we see maps everywhere
+
+.center[
+
+![](img/bbcmap.png)
+
+???
+
+Image credit: [BBC News](https://www.bbc.com/news/world-51235105)
+
+]
+
+---
+
+# Some are very useful!
+
+Optimal Manchester brewery crawl (see [https://www.ncalvert.uk/posts/drunkensalesman/](https://www.ncalvert.uk/posts/drunkensalesman/))
+
+![](https://www.ncalvert.uk/images/OptimalBreweryCrawl.png)
+
+---
+
+# But maps can pose issues
+
+.center[
+
+![](https://imgs.xkcd.com/comics/heatmap.png)
+]
+
+???
+
+Image credit: [XKCD](https://xkcd.com/1138/)
+
+---
+
+# Sometimes bad maps are funny
+
+.center[
+&lt;img src="https://i.redd.it/63l70c76cwq01.jpg" height="500" /&gt;
+]
+
+---
+# Some people collect bad maps 
+
+.pull-left[
+![](img/terriblemaps.png)
+]
+
+.pull-right[
+[twitter.com/TerribleMaps](https://twitter.com/TerribleMaps)
+]
+
+---
+class: center, middle
+
+# Key considerations
+
+--
+### - What is the intended message?
+--
+
+### - How do different maps convey this message?
+
+---
+
+# Two key fields
+
+--
+.pull-left[
+
+### - cartography
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Kepler-world.jpg/250px-Kepler-world.jpg)
+
+]
+
+--
+
+.pull-right[
+
+### - (non-spatial) data visualisation
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Nightingale-mortality.jpg/120px-Nightingale-mortality.jpg)
+]
+
+
+???
+
+Image credit: [Wikimedia commons](https://commons.wikimedia.org/wiki/Category:Coxcomb_(Florence_Nightingale))
+
+---
+class: inverse, center, middle
+
+# Empirical understanding of how people perceive different "viz"
+
+---
+# Example 1: Pie charts
+
+--
+![](https://eagereyes.org/wp-content/uploads/2016/07/simplevis-abserror-relative.png)
+
+Image credit: [Robert Kosara](https://eagereyes.org/blog/2016/a-reanalysis-of-a-study-about-square-pie-charts-from-2009)
+
+---
+# Example 2: Tufte charts
+
+--
+.center[
+![](img/chartjunk.png)
+]
+
+Image credit: [Bateman, S., Mandryk, R. L., Gutwin, C., Genest, A., McDine, D., &amp; Brooks, C. (2010, April). Useful junk? The effects of visual embellishment on comprehension and memorability of charts. In Proceedings of the SIGCHI conference on human factors in computing systems (pp. 2573-2582).](https://dl.acm.org/doi/abs/10.1145/1753326.1753716)
+
+---
+# Examples in cartography
+
+--
+.center[
+![](img/gradsymb1.png)
+
+]
+
+Image credit: [Flannery, JJ (1971) The relative effectiveness of some common graduated point symbols in the presentation of quantitative data](https://files.eric.ed.gov/fulltext/ED045469.pdf)
+
+---
+class: inverse, middle, center
+
+# Addressing a specific problem: variation in the size and shape of areas 
+
+---
+
+# Eg: USA States
+
+.center[
+![](mod_presentation_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
+]
+---
+
+# Eg: UK Local Authorities
+
+.center[
+![](mod_presentation_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
+]
+---
+
+# Message often obscured
+
+.center[
+![](mod_presentation_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+]
+---
+# A fix: distort polygons
+
+.center[
+![](img/cartos1.png)
+]
+
+---
+
+.center[
+![](img/cartos2.png)
+]
+
+---
+class: inverse, center, middle
+
+# How does this affect perception?
+
+---
+# Our focus: EU referendum results
+
+.center[
+![](https://journals.sagepub.com/na101/home/literatum/publisher/sage/journals/content/epbb/0/epbb.ahead-of-print/2399808319873923/20190909/images/medium/10.1177_2399808319873923-fig1.gif)
+]
+
+---
+
+# 4 types of distortions
+
+.center[
+![](https://journals.sagepub.com/na101/home/literatum/publisher/sage/journals/content/epbb/0/epbb.ahead-of-print/2399808319873923/20190909/images/medium/10.1177_2399808319873923-fig2.gif)
+]
+
+---
+
+# (a) Balanced cartogram
+
+- From [Harris, R (2017) Hexograms: Better maps of area based data.](https://rpubs.com/profrichharris/hexograms)
+
+--
+
+- Scale by min value to balance **invisibility** and **distortion**
+
+--
+
+- Eg if SIU is 0.02 inches on a 5inch map:
+
+
+```r
+siu &lt;- 0.02 # the smallest interpretable unit
+height &lt;- 5
+bb &lt;- sp::bbox(map)
+width &lt;- (bb[1,2] - bb[1,1]) / (bb[2,2] - bb[2,1]) * height
+bbA &lt;- (bb[1,2] - bb[1,1]) * (bb[2,2] - bb[2, 1])
+mapA &lt;- rgeos::gArea(map)
+minA &lt;- (siu * bbA) / (height * width)
+map$scaleby &lt;- rgeos::gArea(map, byid = TRUE)
+map$scaleby[map$scaleby &lt; minA] &lt;- minA
+# Use this to scale cartogram
+balcarto &lt;- cartogram::cartogram(map, "scaleby", maxSizeError = 1.1, prepare = "none")
+```
+
+---
+
+.center[
+
+![](img/map_a.png)
+]
+---
+
+# (b) Hexogram
+
+- same idea as balanced carto, with minimum value being what allows each area to be represented as its own hexagon
+
+--
+
+- hexagons are produced using the hexagonal binning function in R’s fMultivar package, based on the centroids of each polygon
+
+--
+
+- our example: 
+
+```r
+# Get the function needed
+script &lt;- RCurl::getURL("https://raw.githubusercontent.com/profrichharris/Rhexogram/master/functions.R")
+eval(parse(text = script))
+# Number of bins guided by the -binN- function for a visual plot.
+# 29 is also used by Harris in example.
+harris.29  &lt;- hexogram(LAE.sp, 29)
+# Extract the hexograms
+harris.29.hex.sp &lt;- harris.29[[2]]   # 2 is hexo
+```
+
+---
+
+.center[
+
+![](img/map_b.png)
+
+]
+
+---
+
+# (c) geogrid squre grid
+
+- From [Joseph Bailey](https://cran.r-project.org/web/packages/geogrid/readme/README.html)
+
+--
+
+- Calculates a grid that strives to preserve the original geography.
+
+--
+
+- 2 steps to using this
+
+  - 1 - Generate grid by varying the seed
+  
+  - 2 - Efficiently calculate the assignments from the original geography to the new geography
+  
+--
+
+- Our example: 
+
+```r
+# step 1 generate grid
+LAE.reg &lt;- calculate_grid(shape = LAE.sp, grid_type = "regular", seed = 1) #1 was our fave seed
+# step 2 calculate assignments
+LAE.reg &lt;- assign_polygons(LAE.sp, LAE.reg) 
+```
+
+
+---
+
+.center[
+
+![](img/map_c.png)
+]
+
+---
+
+# (d) geogrid hexagonal grid
+
+- Same idea as with grids but for hexagons:
+
+
+```r
+# step 1 generate grid
+LAE.hex &lt;- calculate_grid(shape = LAE.sp, grid_type = "hexagonal", seed = 1)
+
+# step 2 calculate assignments
+LAE.hex &lt;- assign_polygons(LAE.sp, LAE.hex)
+```
+
+---
+
+.center[
+
+![](img/map_d.png)
+]
+
+---
+.center[
+# "High values (in yellow) appear to be clustered near one another, with a handful of outliers elsewhere in the country"
+]
+
+--
+
+### - 5-point Likert scale (strongly agree, slightly agree, neither agree nor disagree, slightly disagree, strongly disagree). 
+
+--
+
+- Higher agreement = better representation of statement in map 
+
+--
+
+- Convenience sample (internet) of 768 respondents
+
+
+---
+
+# Results
+
+.center[
+![](mod_presentation_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+
+]
+---
+
+# Results (contd.)
+
+.center[
+
+![](mod_presentation_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+
+]
+
+---
+
+# Conclusions
+
+- New methods to visualise geographic information **can** convey a message more accurately than original thematic maps.
+
+- But choose the method with consideration to the research question and the data!
+
+---
+
+# Thanks!
+
+- The paper: [Langton, S. H., &amp; Solymosi, R. (2019). Cartograms, hexograms and regular grids: Minimising misrepresentation in spatial data visualisations. Environment and Planning B: Urban Analytics and City Science.](https://journals.sagepub.com/doi/full/10.1177/2399808319873923)
+
+- These slides: [https://rekadata.net/talks/pydatamcr.html](https://rekadata.net/talks/pydatamcr.html)
+
+- Questions? Contact myself ([@r_solymosi](https://twitter.com/r_solymosi)) or Sam ([@sh_langton](https://twitter.com/sh_langton))
+
+
+
+
+
+
+
+
+.small[
+- Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan). The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.org/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
