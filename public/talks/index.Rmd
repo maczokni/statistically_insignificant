@@ -11,6 +11,14 @@ output:
 
 From 2020 on I will try to collect all my talks here, but for earlier years it's really just going to be the talks which were recorded by the organisers (usually the larger venues). For a full list of talks please see my CV at [rekadata.net/cv/cv.pdf](https://rekadata.net/cv/cv.pdf)
 
+# 2022
+
+#### MOD DST Lecture series
+
+- Title: Even beautiful maps can be misleading
+- Slides: [https://rekadata.net/talks/mod_presentation.html](https://rekadata.net/talks/mod_presentation.html)
+
+
 
 # 2021
 
