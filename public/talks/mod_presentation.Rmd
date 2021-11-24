@@ -522,9 +522,9 @@ plot_model(fitl_1, sort.est = T, title = "Disgree or Agree", axis.lim = c(0.1,10
 
 - The paper: [Langton, S. H., & Solymosi, R. (2019). Cartograms, hexograms and regular grids: Minimising misrepresentation in spatial data visualisations. Environment and Planning B: Urban Analytics and City Science.](https://journals.sagepub.com/doi/full/10.1177/2399808319873923)
 
-- These slides: [https://rekadata.net/talks/pydatamcr.html](https://rekadata.net/talks/pydatamcr.html)
+- These slides: [https://rekadata.net/talks/mod_presentation.html](https://rekadata.net/talks/mod_presentation.html)
 
-- Questions? Contact myself ([@r_solymosi](https://twitter.com/r_solymosi)) or Sam ([@sh_langton](https://twitter.com/sh_langton))
+- Questions? Contact Réka ([@r_solymosi](https://twitter.com/r_solymosi)) or Sam ([@sh_langton](https://twitter.com/sh_langton))
 
 
 
