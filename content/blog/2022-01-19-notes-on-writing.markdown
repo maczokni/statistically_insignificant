@@ -25,7 +25,7 @@ So in no particular order, here are some key things I've learned.
 
 [Writing for Social Scientists](https://www.goodreads.com/book/show/136541.Writing_for_Social_Scientists) and [Writing for Research](https://www.goodreads.com/book/show/21326560-writing-for-research) are both clear on this.
 
-> If you want to be a good writer, the first thing you have to do is *write*. 
+> "If you want to be a good writer, the first thing you have to do is *write*". 
 
 This can be daunting, and many people will priorities other tasks (cleaning the house, baking cookies) because they find it hard to get started. 
 
@@ -57,7 +57,7 @@ Another approach is to **tailor your writing to the environment** in which you w
 
 ## The first draft of everything is shit
 
-I had originally seen this quote attributed to Hemingway but I saw this quoted again in [Writing for Research](https://www.goodreads.com/book/show/21326560-writing-for-research) as *"The first draft is always shit."* said by Elmore Leonard^[Side note: there is an actual book called 'Hemmingway did not say that' for quoted misattributed to him apparently...].
+I had originally seen this quote attributed to Hemingway but I saw this quoted again in [Writing for Research](https://www.goodreads.com/book/show/21326560-writing-for-research) as *"The first draft is always shit."* said by Elmore Leonard^[Side note: there is an actual book called 'Hemmingway did not say that' for quotes misattributed to Hemingway apparently...].
 
 Anyway the point is that editing is a crucial part of the writing process. In [Elements of Style](https://www.goodreads.com/book/show/33514.The_Elements_of_Style) Strunk and White say:
 
