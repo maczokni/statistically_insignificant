@@ -1,7 +1,7 @@
 ---
 title: Notes on writing
 author: ~
-date: '2021-11-27'
+date: '2022-01-19'
 slug: [notes-on-writing]
 categories: []
 tags: []
