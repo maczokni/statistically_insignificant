@@ -53,13 +53,13 @@ But there is really no wrong place to start writing a paper. In [Writing for Soc
 > "Do whatever is easiest first".
 
 
-Another approach is to **tailor your writing to the environment** in which you will be working. In [Writing for Research](https://www.goodreads.com/book/show/21326560-writing-for-research), Kara gives the example of working on a train: with no access to internet or reference material, she will write a section which doesn't need these resources. She also suggests leaving notes such as *"reference this later"* or *"link this section to the next"* as a solution not to get stuck, but be able to continue the flow of writing, when you come across something that requires something your environment does not at this time allow. 
+Another approach is to **tailor your writing to the environment** in which you will be working. In [Writing for Research](https://www.goodreads.com/book/show/21326560-writing-for-research), Kara gives the example of working on a train: with no access to internet or reference material, she will write a section which doesn't need these resources. She also suggests leaving notes such as *"reference this later"* or *"link this section to the next"* as a solution not to get stuck, but be able to continue the flow of writing. 
 
 ## The first draft of everything is shit
 
 I had originally seen this quote attributed to Hemingway but I saw this quoted again in [Writing for Research](https://www.goodreads.com/book/show/21326560-writing-for-research) as *"The first draft is always shit."* said by Elmore Leonard^[Side note: there is an actual book called 'Hemmingway did not say that' for quotes misattributed to Hemingway apparently...].
 
-Anyway the point is that editing is a crucial part of the writing process. In [Elements of Style](https://www.goodreads.com/book/show/33514.The_Elements_of_Style) Strunk and White say:
+This snappy line drives home the point that **editing is a crucial part of the writing process**. Writing is not just the creation of the content, but the rearranging and deleting of that content as well. In [Elements of Style](https://www.goodreads.com/book/show/33514.The_Elements_of_Style) Strunk and White say:
 
 > "Revising is part of writing.".
 
