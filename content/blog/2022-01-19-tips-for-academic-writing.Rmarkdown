@@ -13,7 +13,7 @@ Writing is a big part of my job. I write lectures, papers, book chapters (...boo
 Like any good nerd, I decided that reading up on the topic is the best solution. I actually started thinking about a need to improve my writing after a friend recommended me the book [Elements of Story](https://www.goodreads.com/book/show/6438611-the-elements-of-story) in March 2021. Since then, I expanded my reading list with Strunk and White's classic reference book [Elements of Style](https://www.goodreads.com/book/show/33514.The_Elements_of_Style), Howard Becker's [Writing for Social Scientists](https://www.goodreads.com/book/show/136541.Writing_for_Social_Scientists), and Helen Kara's [Writing for Research](https://www.goodreads.com/book/show/21326560-writing-for-research). 
 
 
-A key ingredient for better writing suggested by all these books is **editing**. Everything comes down to editing and revising your writing over and over and over again. I also found some specific issues which help with key questions such as: where to start?, how to be clear? and how to be engaging?. I detail these key takeaways below. 
+A key ingredient for better writing suggested by all these books is **editing**. Everything comes down to editing and revising your writing over and over and over again. I also found some specific issues which help with key questions such as: where to start?, how to be clear? and how to be engaging? I detail these key takeaways below. 
 
 
 **DISCLAIMER:** This is by no means a summary of the content of these books, it's just some notes for my future self (and anyone interested) on what I thought I would focus on. For anyone with the interest and time, I would recommend reading these books for themselves, as they all offer unique and helpful insights into different but related elements of the writing process. 
@@ -25,13 +25,13 @@ So in no particular order, here are some key things I've learned.
 
 [Writing for Social Scientists](https://www.goodreads.com/book/show/136541.Writing_for_Social_Scientists) and [Writing for Research](https://www.goodreads.com/book/show/21326560-writing-for-research) are both clear on this.
 
-> "If you want to be a good writer, the first thing you have to do is *write*". 
+> "If you want to be a good writer, the first thing you have to do is *write*." 
 
 This can be daunting, and many people will priorities other tasks (cleaning the house, baking cookies) because they find it hard to get started. 
 
 One reason might be that academics expect their writing to be flawless at the moment they put pen to paper (fingertip to keyboard?). This is a myth. The sooner you allow yourself to just write, without the pressure for it to be perfect, the sooner you can start to actually write. In [Writing for Social Scientists](https://www.goodreads.com/book/show/136541.Writing_for_Social_Scientists) Becker says to just "write anything": 
 
-> "Once you know that writing a sentence down wont hurt you, know it because you have tried it, you can do what I usually ask people to try: write whatever comes into your head, as fast as you can type, without reference to outlines, notes, data, books, or any other aids. The aim is to find out what you would like to say".
+> "Once you know that writing a sentence down wont hurt you, know it because you have tried it, you can do what I usually ask people to try: write whatever comes into your head, as fast as you can type, without reference to outlines, notes, data, books, or any other aids. The aim is to find out what you would like to say."
 
 In [Writing for Research](https://www.goodreads.com/book/show/21326560-writing-for-research), Helen Kara recommends trying out the technique of **"Freewriting"**. In freewriting you set a prompt related to your project, and then write for ten minutes about it, writing anything that comes to your mind. It doesn't have to be good, it just has to be written. 
 
@@ -45,12 +45,12 @@ My students tend to think writing is a linear process, so I find myself explaini
 
 For data analysis coursework, I usually advise students to start with their research question, their methods, and then their results. This fits with Kara's observation in [Writing for Research](https://www.goodreads.com/book/show/21326560-writing-for-research) that:
 
-> "[writing] often starts in the middle". 
+> "[writing] often starts in the middle." 
 
 
 But there is really no wrong place to start writing a paper. In [Writing for Social Scientists](https://www.goodreads.com/book/show/136541.Writing_for_Social_Scientists), Becker suggests to:  
 
-> "Do whatever is easiest first".
+> "Do whatever is easiest first."
 
 
 Another approach is to **tailor your writing to the environment** in which you will be working. In [Writing for Research](https://www.goodreads.com/book/show/21326560-writing-for-research), Kara gives the example of working on a train: with no access to internet or reference material, she will write a section which doesn't need these resources. She also suggests leaving notes such as *"reference this later"* or *"link this section to the next"* as a solution not to get stuck, but be able to continue the flow of writing. 
@@ -61,7 +61,7 @@ I had originally seen this quote attributed to Hemingway but I saw this quoted a
 
 This snappy line drives home the point that **editing is a crucial part of the writing process**. Writing is not just the creation of the content, but the rearranging and deleting of that content as well. In [Elements of Style](https://www.goodreads.com/book/show/33514.The_Elements_of_Style) Strunk and White say:
 
-> "Revising is part of writing.".
+> "Revising is part of writing.."
 
 In [Writing for Social Scientists](https://www.goodreads.com/book/show/136541.Writing_for_Social_Scientists), Becker explains that in undergraduate education, students work to tight deadlines^[often self imposed: if you are a procrastinator, I recommend a full read of Helen Kara's Writing for Research for helpful tips]. This means that the first draft is often what is handed in, and this puts us into a *bad habit of expecting a first draft to be good*. Splitting with this notion will greatly help your writing. 
 
@@ -71,11 +71,11 @@ Understanding this is a big step in moving from the writing process typically us
 
 The schedule for editing can vary. Ideally, you want to leave as much time between writing and editing as you possibly can. Becker describes his process in [Writing for Social Scientists](https://www.goodreads.com/book/show/136541.Writing_for_Social_Scientists) where he writes over summer, then edits throughout the semester, when demands on his time are greater (i.e. teaching). Helen Kara gives this general guideline: 
 
-> "You need to leave your draft alone for a while so you can come back to it with fresh eyes. A month is good; six weeks is better".
+> "You need to leave your draft alone for a while so you can come back to it with fresh eyes. A month is good; six weeks is better."
 
 How many iterations your paper will go through will vary. Based on my reading of [Writing for Social Scientists](https://www.goodreads.com/book/show/136541.Writing_for_Social_Scientists) it sounds like an upper bound on the number of revisions may not exist. More tangibly, [Writing for Research](https://www.goodreads.com/book/show/21326560-writing-for-research) suggests three drafts (although this is qualified as *at least* three drafts): 
 
-> "The first draft where you churn out the words, the second where you knock it into shape, and the third where you review your word choices, grammar, and structure".
+> "The first draft where you churn out the words, the second where you knock it into shape, and the third where you review your word choices, grammar, and structure."
 
 And you don't have to be alone in the editing process either. You can make use of your network of colleagues, friends, supervisors, mentors, etc to help with this process. 
 
@@ -85,7 +85,7 @@ Editing really is the key remedy to almost all issues of writing. It seems so si
 
 It really is. If you take away anything from reading this it's this: **EDIT YOUR WRITING !!!** 
 
-## Give away the ending. 
+## Give away the ending
 
 Student essays (and many academic papers) often start with vague introductions which don't really say anything, and certainly do not contribute to the reader's understanding of their argument. In  [Elements of Story](https://www.goodreads.com/book/show/6438611-the-elements-of-story) Flaherty calls such an introduction the *"um lead"*: 
 
@@ -160,7 +160,7 @@ We get attached to locutions and formats, but it is important to reflect on what
 
 Besides classy locution, I wanted to add a point here about writing with numbers that is mentioned in  [Elements of Story](https://www.goodreads.com/book/show/6438611-the-elements-of-story): **avoid needless complexity**. Consider this example of miniature Eiffel Tower figurines: 
 
-> "The nation may have imported 340,684 miniature Eiffel Towers in the last year, but the reader will more easily absorb a round number "about 340,000". 
+> "The nation may have imported 340,684 miniature Eiffel Towers in the last year, but the reader will more easily absorb a round number "about 340,000." 
 
 When we talk about communicating statistics, we often present estimates surrounded by uncertainty, but print these estimates to 3 decimal places. This sends a message of certainty where there is none. Not to mention, sometimes decimals detract from what the numbers actually mean. The average number of burglaries per neighbourhood might be 3.752 burglaries per 100 households, but there is no such thing as three quarters of a burglary, so we might as well round up to a whole number, which better corresponds to what we are quantifying in the first place. 
 
@@ -171,7 +171,7 @@ Another way to reduce complexity is by **interpreting numbers** for your reader.
 
 When presenting numbers, I expect to have some context as a reader to help me interpret the numbers presented. Flaherty in [Elements of Story](https://www.goodreads.com/book/show/6438611-the-elements-of-story) suggests a way to do this by finding *smart ways to compare magnitudes*:
 
-> "'[A] million is to a billion as 11 days to 31 years', and use familiar referents, like 'A rhino weighs as much as 20 Michael Phelpses'".  
+> "'[A] million is to a billion as 11 days to 31 years', and use familiar referents, like 'A rhino weighs as much as 20 Michael Phelpses'."  
 
 Whether presenting numbers or writing about concepts and theory, keep things simple, define and interpret things in their context, and impress the reader with clarity, rather than fancy language. 
 
@@ -196,7 +196,7 @@ Another issue I see in essays is the loss of the main argument in a sea of other
 
 Becker observes in [Writing for Social Scientists](https://www.goodreads.com/book/show/136541.Writing_for_Social_Scientists):
 
-> "Perhaps as a result of my experiences in teaching, I have become more and more convinced of the importance of stories - good examples - in the presentation of ideas". 
+> "Perhaps as a result of my experiences in teaching, I have become more and more convinced of the importance of stories - good examples - in the presentation of ideas." 
 
 Stories in the form of "good examples" could be told by **including actors** [Elements of Story](https://www.goodreads.com/book/show/6438611-the-elements-of-story): 
 
@@ -205,25 +205,25 @@ Stories in the form of "good examples" could be told by **including actors** [El
 This probably more relevant to journalists, but may apply to some academic papers, or conference presentations as well. Flaherty suggests to **put actors, not just talkers in your story**. For example: *"The tight housing market is also the old lady evicted with her four cats"*. But, while such a "face" might not always be possible, the importance of having a focused story is relevant to any academic paper. Flaherty suggests that all stories are divided into two parts, **the action** and **the commentary**. It is important to balance these, giving enough detail (context) but maintaining **profluence** - the sense that things are moving, getting somewhere, flowing forward: 
 
 
-> "Keep the boat moving and, at the same time, describe and explain the scenery to its pasenger".
+> "Keep the boat moving and, at the same time, describe and explain the scenery to its pasenger."
 
 
 To keep your story focused, you might think about it in terms of **the trunk and the branches**. If your paper is a tree, the main argument is the trunk, and any details are the branches. To make writing clear, don't leave your reader wondering: *"What's the trunk and what's the branch?"*. 
 
-This is especially common to see in literature review sections. The source of the problem is highlighted by Becker in  [Writing for Social Scientists](https://www.goodreads.com/book/show/136541.Writing_for_Social_Scientists): *"Scholars must say something new while connecting what they say to whats already been said, and this must be done in such a way that people will understand the point"*. So while we must engage with what had been done and recognise that *"[o]ther people have worked on your problem, or problems related to it ... you just have to fit them in where they belong"*, we must take care, as *"...paying too much attention to [the literature] can deform the argument you want to make. It might bend your argument out of shape"*. The literature review must engage with existing scholarship in the area, but this should be all done with the aim to motivate the main argument of the paper. To achieve this, Becker suggests:
+This is especially common to see in literature review sections. The source of the problem is highlighted by Becker in  [Writing for Social Scientists](https://www.goodreads.com/book/show/136541.Writing_for_Social_Scientists): *"Scholars must say something new while connecting what they say to whats already been said, and this must be done in such a way that people will understand the point"*. So while we must engage with what had been done and recognise that *"[o]ther people have worked on your problem, or problems related to it ... you just have to fit them in where they belong"*, we must take care, as *."..paying too much attention to [the literature] can deform the argument you want to make. It might bend your argument out of shape"*. The literature review must engage with existing scholarship in the area, but this should be all done with the aim to motivate the main argument of the paper. To achieve this, Becker suggests:
 
-> "The logic of your argument should guide your paper". 
+> "The logic of your argument should guide your paper." 
 
 How to do this? Flaherty in [Elements of Story](https://www.goodreads.com/book/show/6438611-the-elements-of-story) suggests that the struggle over trunk and branch is often one of relative length. 
 
-> "Branches are slender, trunks are thick". 
+> "Branches are slender, trunks are thick." 
 
 
 If a main idea is set out in three paragraphs, the qualifications should get about one paragraph. If the main idea is one paragraph the qualifications only one sentence. The further the topic is from the heart of the story (your main argument), the fewer words it merits.
 
 Keeping branches slender is achieved most effectively through **exclusion**.
 
-> "To write is to choose, which is to exclude. (...) Choose your main theme and position it, uncrowded, at centre stage". 
+> "To write is to choose, which is to exclude. (...) Choose your main theme and position it, uncrowded, at centre stage." 
 
 You choose a theme, an argument, a focus which will guide the writing. This doesn't mean to ignore all the unchosen themes, you can nod to these. But devote most of your space to the big focus. 
 
