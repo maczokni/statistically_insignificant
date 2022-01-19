@@ -15,7 +15,7 @@ Like any good nerd, I decided that reading up on the topic is the best solution.
 
 A key ingredient for better writing suggested by all these books is **editing**. Everything comes down to editing and revising your writing over and over and over again. I also found some specific issues which help with key questions such as: where to start?, how to be clear? and how to be engaging? I detail these key takeaways below. 
 
-![](img/writing_books.jpg)
+![The 4 books I read: Writing for Social Scientists, Elements of Story, Elements of Style, Writing for Research](/img/writing_books.jpg)
 
 **DISCLAIMER:** This is by no means a summary of the content of these books, it's just some notes for my future self (and anyone interested) on what I thought I would focus on. For anyone with the interest and time, I would recommend reading these books for themselves, as they all offer unique and helpful insights into different but related elements of the writing process. 
 
