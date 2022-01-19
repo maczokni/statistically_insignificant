@@ -15,6 +15,7 @@ Like any good nerd, I decided that reading up on the topic is the best solution.
 
 A key ingredient for better writing suggested by all these books is **editing**. Everything comes down to editing and revising your writing over and over and over again. I also found some specific issues which help with key questions such as: where to start?, how to be clear? and how to be engaging? I detail these key takeaways below. 
 
+![](img/writing_books.jpg)
 
 **DISCLAIMER:** This is by no means a summary of the content of these books, it's just some notes for my future self (and anyone interested) on what I thought I would focus on. For anyone with the interest and time, I would recommend reading these books for themselves, as they all offer unique and helpful insights into different but related elements of the writing process. 
 
@@ -249,7 +250,7 @@ This revelation really drives home the point to prefer active over passive voice
 
 ## Final thoughts
 
-It was good to read a little about writing, and learn some techniques to implement going forward. I'm sure there are many other books I could have learned from, and I look forward to finding more resources and eventually building up even more confidence in this area in the future, but for now, taking these points on board will definitely improve my writing. Not just the quality of the writing, but my experience of the process, and hopefully my productivity as well. And I hope that it is useful for others as well. Now let's start editing this process rather than ramble on trying to reach some conclusion. As Strunk and White say: 
+It was good to read a little about writing, and learn some techniques to implement going forward. I'm sure there are many other books I could have learned from, and I look forward to finding more resources and eventually building up even more confidence in this area in the future, but for now, taking these points on board will definitely improve my writing. Not just the quality of the writing, but my experience of the process, and hopefully my productivity as well. And I hope that it is useful for others who want to improve their writing. Now let's start this editing process rather than ramble on trying to reach some conclusion. As Strunk and White say: 
 
 > "Omit needless words!"
 
