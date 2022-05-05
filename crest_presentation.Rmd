@@ -1,0 +1,138 @@
+---
+title: "Near Misses in Research on Crime and Fear of Crime"
+subtitle: ""
+author: "Réka Solymosi"
+institute: "University of Manchester"
+date: "10/05/2022"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+
+---
+class: center, middle
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+# My research
+
+- Fear of crime (place-based approach)
+- New (?) or alternative (?) forms of data
+- Underreported crimes
+
+---
+class: inverse, center, middle
+
+# Near Misses
+
+--
+
+- What is a near miss? 
+
+--
+
+- Why is this interesting? 
+
+---
+class: middle
+
+.pull-left[
+
+The safety pyramid has a long history dating back to 1931 and H.W. Heinrich with his pioneering book *Industrial Accident Prevention: A Scientific Approach*
+
+]
+
+.pull-right[
+```{r vertical, echo=FALSE,out.width="80%"}
+library(ggplot2)
+ggplot() +
+  geom_segment(aes(x = 0, xend = 1.5, y = 0, yend = 3), lwd = 3, colour = "#660099") + 
+  geom_segment(aes(x = 1.5, xend = 3, y = 3, yend = 0), lwd = 3, colour = "#660099") +
+  geom_segment(aes(x = 0, xend = 3, y = 0, yend = 0), lwd = 3, colour = "#660099") + 
+  geom_segment(aes(x = 0.5, xend = 2.5, y = 1, yend = 1), lwd = 3, colour = "#660099") + 
+    geom_segment(aes(x = 1, xend = 2, y = 2, yend = 2), lwd = 3, colour = "#660099") + 
+  geom_label(aes(x = 1.5, y = 2.5, label = "1 major injury"), size = 10) + 
+   geom_label(aes(x = 1.5, y = 1.5, label = "29 minor injury"), size = 10) +
+   geom_label(aes(x = 1.5, y = 0.5, label = "300 near misses"), size = 10) +
+  theme_void() 
+``` 
+
+]
+
+---
+
+- Variations and discussions about the ratios
+- 1966 Frank Bird and George Germain published their book Damage Control, and proposed a new triangle and new ratios. This was followed by U.K. studies in 1972 by Fletcher who studied 50 plants owned by one multinational company that operated in 12 countries. In 1975, Tye completed a study of incidents from reporting at 2,000 enterprises (Health & Safety Executive, 1994). U.K. national data were used in another study published in 1999.
+
+All of these studies used large groups and expressed the results in triangles or pyramids
+
+
+```{r, echo=FALSE}
+
+pyramid_dfs <- tibble::tibble(Level = c("Fatal injury", "Major injury", "Minor injury", 
+                                    "First aid only", "Property damage", "Noninjury"), 
+                          `Heinrich 1931` = c(" ", 1, 29, " ", " ", 300), 
+                          `Bird & Germain 1969` = c(" ", 1, 10, " ", 30, 600), 
+                          `Fletcher 1972` = c(" ", 1, 19, " ", " ", 175), 
+                          `Tye 1975` = c(1, " ", 3, 50, 80, 400))
+
+knitr::kable(pyramid_dfs) 
+```
+
+
+---
+
+General idea: paying attention to and understanding the near misses can possibly lead to understanding and preventing serious incidents.
+
+---
+
+So why is this important? 
+
+
+
+---
+
+Reason 1: Even if near misses do not "predict" more serious incidents, they have consequences in themselves
+
+---
+
+Near misses and fear in cycling
+
+---
+
+Fear of crime and its impacts on: 
+
+- equal access to public space
+- sustainable travel
+- individual and community wellbeing. 
+
+---
+
+Reason 2: If near misses to predict serious incidents, we can study spatial and temporal patterns of incidents on which we otherwise have sparse data
+
+
+---
+
+Reason 3: By becoming interested in the near misses, we "lower the barrier" to reporting something, providing insight into crimes which are traditionally underreported
+
+---
+
+Example: Black cap camden
+
+---
+
+# App for reporting *fear* of crime
+
+![](/img/foca_phone.gif)
+
+---
+
+Conclusions: 
+
+Near misses

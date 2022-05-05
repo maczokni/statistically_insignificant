@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Near Misses in Research on Crime and Fear of Crime</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Réka Solymosi" />
+    <meta name="date" content="2022-10-05" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Near Misses in Research on Crime and Fear of Crime
+### Réka Solymosi
+### University of Manchester
+### 10/05/2022
+
+---
+
+class: center, middle
+
+
+
+
+# My research
+
+- Fear of crime (place-based approach)
+- New (?) or alternative (?) forms of data
+- Underreported crimes
+
+---
+class: inverse, center, middle
+
+# Near Misses
+
+--
+
+- What is a near miss? 
+
+--
+
+- Why is this interesting? 
+
+---
+class: middle
+
+.pull-left[
+
+The safety pyramid has a long history dating back to 1931 and H.W. Heinrich with his pioneering book *Industrial Accident Prevention: A Scientific Approach*
+
+]
+
+.pull-right[
+&lt;img src="crest_presentation_files/figure-html/vertical-1.png" width="80%" /&gt;
+
+]
+
+---
+
+- Variations and discussions about the ratios
+- 1966 Frank Bird and George Germain published their book Damage Control, and proposed a new triangle and new ratios. This was followed by U.K. studies in 1972 by Fletcher who studied 50 plants owned by one multinational company that operated in 12 countries. In 1975, Tye completed a study of incidents from reporting at 2,000 enterprises (Health &amp; Safety Executive, 1994). U.K. national data were used in another study published in 1999.
+
+All of these studies used large groups and expressed the results in triangles or pyramids
+
+
+
+|Level           |Heinrich 1931 |Bird &amp; Germain 1969 |Fletcher 1972 |Tye 1975 |
+|:---------------|:-------------|:-------------------|:-------------|:--------|
+|Fatal injury    |              |                    |              |1        |
+|Major injury    |1             |1                   |1             |         |
+|Minor injury    |29            |10                  |19            |3        |
+|First aid only  |              |                    |              |50       |
+|Property damage |              |30                  |              |80       |
+|Noninjury       |300           |600                 |175           |400      |
+
+
+---
+
+General idea: paying attention to and understanding the near misses can possibly lead to understanding and preventing serious incidents.
+
+---
+
+So why is this important? 
+
+
+
+---
+
+Reason 1: Even if near misses do not "predict" more serious incidents, they have consequences in themselves
+
+---
+
+Near misses and fear in cycling
+
+---
+
+Fear of crime and its impacts on: 
+
+- equal access to public space
+- sustainable travel
+- individual and community wellbeing. 
+
+---
+
+Reason 2: If near misses to predict serious incidents, we can study spatial and temporal patterns of incidents on which we otherwise have sparse data
+
+
+---
+
+Reason 3: By becoming interested in the near misses, we "lower the barrier" to reporting something, providing insight into crimes which are traditionally underreported
+
+---
+
+Example: Black cap camden
+
+---
+
+# App for reporting *fear* of crime
+
+![](/img/foca_phone.gif)
+
+---
+
+Conclusions: 
+
+Near misses
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

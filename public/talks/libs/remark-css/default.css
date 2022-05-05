@@ -41,7 +41,7 @@ a, a > code {
   float: right;
   width: 47%;
 }
-.pull-right ~ * {
+.pull-right + * {
   clear: both;
 }
 img, video, iframe {
@@ -70,7 +70,3 @@ th, td { padding: 5px; }
     left: 0 !important;
   }
 }
-
-
-.large { font-size: 130% }
-.small { font-size: 70% }
