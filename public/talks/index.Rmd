@@ -13,6 +13,13 @@ From 2020 on I will try to collect all my talks here, but for earlier years it's
 
 # 2022
 
+
+#### Crest Advisory 
+
+- Title: Near Misses in Research on Crime and Fear of Crime
+- Slides: [https://rekadata.net/talks/crest_presentation.html](https://rekadata.net/talks/crest_presentation.html)
+
+
 #### MOD DST Lecture series
 
 - Title: Even beautiful maps can be misleading

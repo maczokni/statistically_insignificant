@@ -23,7 +23,7 @@ options(htmltools.dir.version = FALSE)
 # My research
 
 - Fear of crime (place-based approach)
-- New (?) or alternative (?) forms of data
+- New (?) / alternative (?) forms of data
 - Under-reported crimes
 
 
@@ -84,7 +84,7 @@ background-size: contain
 ---
 class: center, middle
 
-# Overall: learned a lot about fear of crime as a context specific, place based experience.
+# Overall: learned about fear of crime as a context specific, place based experience.
 
 ---
 class: inverse, center, middle
