@@ -1,138 +1,79 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>/blog/2022-01-19-tips-for-academic-writing/</loc>
+    <loc>/blog/</loc>
     <lastmod>2022-01-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/2021-11-04-peak-s-altitude-x-conference/</loc>
-    <lastmod>2021-11-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/twitter-by-police-officers-in-urban-and-rural-contexts-in-sweden/</loc>
-    <lastmod>2021-10-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/2021-07-12-understanding-knife-crime-and-trust-in-police-with-young-people-in-east-london/</loc>
-    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/2021-05-24-minimizing-misrepresentation-in-spatial-data-visualizations/</loc>
-    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/a-response-to-on-the-safety-of-women/</loc>
-    <lastmod>2021-03-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/towards-a-place-based-measure-of-fear-of-crime-a-systematic-review-of-app-based-and-crowdsourcing-approaches/</loc>
-    <lastmod>2020-08-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/reading-for-presentation-skills/</loc>
-    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/street-profiles-tutorial/</loc>
-    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/street-profiles-tutorial/</loc>
-    <lastmod>2020-04-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/hot-routes-tutorial/</loc>
-    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/exploring-public-engagement-with-missing-person-appeals-on-twitter/</loc>
-    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/crime-analysis-for-schools/</loc>
-    <lastmod>2020-01-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/asc-2019/</loc>
-    <lastmod>2019-11-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/halloween-mcr/</loc>
-    <lastmod>2019-10-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/webscraping-and-some-sampling-mapping-in-r/</loc>
-    <lastmod>2019-08-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/data-visualisation-summer-school/</loc>
-    <lastmod>2019-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/hello-world/</loc>
-    <lastmod>2019-07-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/markdown-syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/placeholder-text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/math-typesetting/</loc>
-    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/emoji-support/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/index.json</loc>
-    <lastmod>2022-01-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/</loc>
     <lastmod>2022-01-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/index.json</loc>
+  </url><url>
+    <loc>/blog/2022-01-19-tips-for-academic-writing/</loc>
+    <lastmod>2022-01-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/2021-11-04-peak-s-altitude-x-conference/</loc>
+    <lastmod>2021-11-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/twitter-by-police-officers-in-urban-and-rural-contexts-in-sweden/</loc>
+    <lastmod>2021-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/2021-07-12-understanding-knife-crime-and-trust-in-police-with-young-people-in-east-london/</loc>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/2021-05-24-minimizing-misrepresentation-in-spatial-data-visualizations/</loc>
+    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/a-response-to-on-the-safety-of-women/</loc>
+    <lastmod>2021-03-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/towards-a-place-based-measure-of-fear-of-crime-a-systematic-review-of-app-based-and-crowdsourcing-approaches/</loc>
+    <lastmod>2020-08-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/reading-for-presentation-skills/</loc>
+    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/street-profiles-tutorial/</loc>
+    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
     <lastmod>2020-04-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/post/street-profiles-tutorial/</loc>
+    <lastmod>2020-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/hot-routes-tutorial/</loc>
+    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/exploring-public-engagement-with-missing-person-appeals-on-twitter/</loc>
+    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/crime-analysis-for-schools/</loc>
+    <lastmod>2020-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/asc-2019/</loc>
+    <lastmod>2019-11-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/halloween-mcr/</loc>
+    <lastmod>2019-10-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/webscraping-and-some-sampling-mapping-in-r/</loc>
+    <lastmod>2019-08-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/data-visualisation-summer-school/</loc>
+    <lastmod>2019-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/hello-world/</loc>
+    <lastmod>2019-07-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/markdown-syntax/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/placeholder-text/</loc>
+    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/emoji-support/</loc>
+    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/series/</loc>
-    <priority>0</priority>
   </url>
-  
 </urlset>

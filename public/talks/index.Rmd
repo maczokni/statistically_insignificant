@@ -13,6 +13,11 @@ From 2020 on I will try to collect all my talks here, but for earlier years it's
 
 # 2022
 
+#### NSCR 
+
+- Title: Hot Routes and Street Profiles
+- Slides: [https://rekadata.net/talks/nscr_talk.html](https://rekadata.net/talks/nscr_talk.html)
+
 
 #### Crest Advisory 
 
