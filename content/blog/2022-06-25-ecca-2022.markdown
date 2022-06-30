@@ -49,7 +49,7 @@ Then the conference closed with what was one of my favourite talks, [Andy Newton
 ![Example of the FACETS framework](/img/newton_facets.JPG)
 
 
-# Methods for crime analysis
+# Methods for crime analysis and investigation
 
 I always learn a lot of neat methods stuff at ECCA, and sometimes the aim maybe isn't methodological innovation but I tend to focus on that, so I may have some bias here... Anyway, this year, [Kim Rossmo](https://faculty.txstate.edu/profile/1921046) presented a method of Bayesian analysis for GIS in search optimisation. Specifically focusing on searches for missing persons in wilderness search and rescue. Presented the case study of [Bill Ewasku](https://www.strangeoutdoors.com/mysterious-stories-blog/2020/3/15/bill-ewasko) a hiker who went missing in a large national park. His search was informed by his mobile phone which pinged on tower and narrowed search, but still deployed 100s of personnel, SAR teams, dogs, horses, helicopter etc - 1772 person-miles searched overall (they wear GPS trackers while searching). To help, Kim and team generated an **optimal probability search map** - combining 3 sources of information - range of cellphone tower, reception spots, and search radius. Bayes’ theorem provides a method for combining these different types of evidence to produce an optimal search strategy. This paper is actually published in the [journal of search and rescue](https://journalofsar.com/wp-content/uploads/2019/11/vol3iss2_rossmo_et_al.pdf) but recently the remains were found by hikers very closer to the peak area predicted, validating the probability map. 
 
