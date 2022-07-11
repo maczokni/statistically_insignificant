@@ -1,6 +1,6 @@
 ---
 name: Reka Solymosi
-position: "Lecturer in Quantitative Methods"
+position: "Senior Lecturer in Quantitative Methods"
 address: "School of Social Sciences, University of Manchester"
 phone: +44 161 275 3468
 www: rekadata.net
@@ -172,6 +172,8 @@ bibliography_entries(citations_4)
 ```{r fundingpi}
 tribble(
 	~title, ~start_date, ~end_date, ~value, ~funder,
+	"Exploring perceptions of direct and indirect bystander intervention", 2022, 2022, "GBP 8,930", "School of Social Sciences Research Support Funds 2021-22",
+	"Geoprivacy, confidentiality and data sharing in research & practice", 2022, 2022, "GBP 4,293", "KTH Royal Institute of Technology and Stockholm University Joint Research Seed Fund",
 	"Understanding changing demand for police during the coronavirus pandemic", 2020, 2021, "GBP 20,000", "N8 Policing Research Partnership",	
 	"Identifying features that affect public engagement with appeals for information about missing persons on Twitter", 2019, 2019, "GBP 5,000", "Manchester Statistical Society Campion Grant",
 	"Measuring fear of crime using app-based and sensing methodologies", 2017, 2020, "GBP 10,000", "British Academy and Leverhulme Small Grants",
@@ -209,13 +211,11 @@ tribble(
 ```{r phdsups}
 tribble(
 	~name, ~start_date, ~end_date, ~title, ~funder,
+	"Nicola Fox", 2022, 2026, "Identifying vulnerability, harm, and useful police intelligence in interviews with missing children in England", "Funded by School of Social Sciences, University of Manchester",
+	
 	"Nathan Khadaroo", 2019, 2023, "Citizen Data Science for Public Good", "Funded by Data Analytics and Society Centre for Doctoral Training, University of Manchester",
 
-		"Mohammed Patel", 2019, 2023, "Health-related behaviour and working conditions", "Funded by Data Analytics and Society Centre for Doctoral Training, University of Manchester",
-	
-		"Sebastian Acevedo", 2018, 2021, "Unequal Distribution of Access to Public Safety: The Case of Local Governments in Chile", "Funded by Capital Humano Avanzado Conicyt - Becas Chile",
-	
-	"Daniel Hammocks", 2018, 2022, "Innovation in Police Intelligence Practice: Horizon Scanning Tools and Processes for Finding Signals within the Noise.", "Funded by the Dawes Centre for Future Crimes (and based in University College London)",
+		"Sebastian Acevedo", 2018, 2022, "Unequal Distribution of Access to Public Safety: The Case of Local Governments in Chile", "Funded by Capital Humano Avanzado Conicyt - Becas Chile",
 	
 			"Oskar Enghoff", 2017, 2020, "Consumer culture in an illicit digital economy: the production of demand, risk perceptions and trust among digital consumers of illicit drugs", "Funded by Engineering and Physical Research Council"
 	
@@ -237,6 +237,14 @@ tribble(
 ```{r invitedtalks}
 tribble(
 	~title, ~date, ~venue, 
+	"Hot Routes and Street Profiles", "2022", "Netherlands Institute for the Study of Crime and Law Enforcement",
+	
+	"Near Misses in Research on Crime and Fear of Crime", "2022", "Crest Advisory Internal Seminar",
+	
+	"Even beautiful maps can be misleading", "2022", "Ministry of Defence, Defence Science and Technology Lecture Series",
+	
+	"New forms of data for public safety", "2021", "Mexico National Institute of Statistics and Geography (INEGI)",
+	
 	"Understanding people's experiences and perceptions of place, crime, and victimisation using crowdsourced data", "2020", "Monash University, Melbourne, Australia", 
 	
 		"Exploring the role of crowdsourced data in criminal justice research", "", "Queensland University of Technology, Melbourne, Australia", 

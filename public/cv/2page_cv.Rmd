@@ -1,0 +1,170 @@
+---
+name: Reka Solymosi
+position: "Senior Lecturer in Quantitative Methods"
+address: "School of Social Sciences, University of Manchester"
+phone: +44 161 275 3468
+www: rekadata.net
+email: reka.solymosi@manchester.ac.uk
+twitter: r_solymosi
+github: maczokni
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::hyndman
+---
+
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library("lubridate")
+library("rorcid")
+library("vitae")
+library("tidyverse")
+
+my_orcid <- "0000-0001-8689-1526"
+
+#Matt's workaround because biber cannot handle filepaths with space in them, and UoM dropbox doesn't let me change its name
+#copy citation files into temporary locations where biber can read from:
+citations_0 <- tempfile(fileext = ".bib")
+file.copy(from = here::here("public/cv/books.bib"), to = citations_0)
+citations_1 <- tempfile(fileext = ".bib")
+file.copy(from = here::here("public/cv/published.bib"), to = citations_1)
+citations_2 <- tempfile(fileext = ".bib")
+file.copy(from = here::here("public/cv/accepted.bib"), to = citations_2)
+citations_3 <- tempfile(fileext = ".bib")
+file.copy(from = here::here("public/cv/underreview.bib"), to = citations_3)
+citations_4 <- tempfile(fileext = ".bib")
+file.copy(from = here::here("public/cv/otherpubs.bib"), to = citations_4)
+```
+
+
+# Education and Qualifications
+
+```{r education}
+
+orcid_educations(my_orcid) %>% 
+	pluck(my_orcid, "affiliation-group", "summaries") %>% 
+	{ do.call("rbind", .) } %>% 
+	brief_entries(
+    what = `education-summary.role-title`,
+    when = glue::glue("{`education-summary.start-date.year.value`}-{`education-summary.end-date.year.value`}"),
+    with = `education-summary.organization.name`
+	)
+```
+
+
+# Present and previous appointments
+
+```{r employment}
+orcid_employments(my_orcid) %>% 
+	pluck(my_orcid, "affiliation-group", "summaries") %>% 
+	{ do.call("bind_rows", .) } %>%
+	brief_entries(
+		what = `employment-summary.role-title`,
+		when = paste0(
+			format(ymd(paste(`employment-summary.start-date.year.value`,
+											 `employment-summary.start-date.month.value`,
+											 `employment-summary.start-date.day.value`)), "%b %Y"), 
+			"-",
+			ifelse(is.na(`employment-summary.end-date.year.value`),
+						 "present",
+						 format(ymd(paste(`employment-summary.end-date.year.value`,
+											 `employment-summary.end-date.month.value`,
+											 `employment-summary.end-date.day.value`)), "%b %Y"))
+		),
+		with = glue::glue("{`employment-summary.department-name`}, {`employment-summary.organization.name`}")
+	)
+```
+
+<!-- # Professional qualifications -->
+
+<!-- ```{r qualifications} -->
+<!-- orcid_qualifications(my_orcid) %>%  -->
+<!-- 	pluck(my_orcid, "affiliation-group", "summaries") %>%  -->
+<!-- 	{ do.call("rbind", .) } %>%  -->
+<!-- 	brief_entries( -->
+<!-- 		what = `qualification-summary.role-title`, -->
+<!-- 		when = `qualification-summary.start-date.year.value`, -->
+<!-- 		with = `qualification-summary.organization.name` -->
+<!-- 	) -->
+<!-- ``` -->
+
+# Publications
+
+
+My research areas include perception of crime and place, spatial crime analysis, environmental criminology, social data science, transport crime, crowdsourcing, and geographical information analysis.
+
+
+ORCID: `r my_orcid`
+
+## Books
+
+
+```{r books}
+bibliography_entries(citations_0) 
+```
+
+## Peer reviewed publications
+
+
+```{r publications}
+bibliography_entries(citations_1) 
+```
+
+# Research Grants
+
+```{r fundingpi}
+tribble(
+	~title, ~start_date, ~end_date, ~value, ~funder,
+	"Exploring perceptions of direct and indirect bystander intervention", 2022, 2022, "GBP 8,930", "School of Social Sciences Research Support Funds 2021-22",
+	"Geoprivacy, confidentiality and data sharing in research & practice", 2022, 2022, "GBP 4,293", "KTH Royal Institute of Technology and Stockholm University Joint Research Seed Fund",
+	"Understanding changing demand for police during the coronavirus pandemic", 2020, 2021, "GBP 20,000", "N8 Policing Research Partnership",	
+	"Civic InnovatioN in CommunITY: safety, policing and trust with young people", 2019, 2020, "GBP 60,000", "EPSRC Network+: Social Justice through the Digital Economy",
+	"Identifying features that affect public engagement with appeals for information about missing persons on Twitter", 2019, 2019, "GBP 5,000", "Manchester Statistical Society Campion Grant",
+	"Measuring fear of crime using app-based and sensing methodologies", 2017, 2020, "GBP 10,000", "British Academy and Leverhulme Small Grants",
+	"Using Bayesian Surprise maps to explore debt and insolvency across the UK", 2018, 2019, "GBP 10,000", "Consumer Data Research Centre, Economic and Social Research Council",
+	"Building Tools and Training for Crime Analysts using R", 2017, 2017, "GBP 3,000", "N8 Policing Research Partnership", 
+	"Data Visualisation in Criminal Courts", 2017, 2017, "GBP 1,000", "Economic Social Research Council, Festival of Social Sciences"
+) %>% 
+	arrange(desc(start_date)) %>% 
+	brief_entries(
+		what = glue::glue("{`title`}"),
+		when = glue::glue("{`start_date`}-{`end_date`}"),
+		with = glue::glue("{`value`} funding from {`funder`}")
+	)
+```
+
+# Invited talks
+
+```{r invitedtalks}
+tribble(
+	~title, ~date, ~venue, 
+	"Hot Routes and Street Profiles", "2022", "Netherlands Institute for the Study of Crime and Law Enforcement",
+	
+	"Near Misses in Research on Crime and Fear of Crime", "", "Crest Advisory Internal Seminar",
+	
+	"Even beautiful maps can be misleading", "", "Ministry of Defence, Defence Science and Technology Lecture Series",
+	
+	"New forms of data for public safety", "2021", "Mexico National Institute of Statistics and Geography (INEGI)",
+	
+	"Understanding people's experiences and perceptions of place, crime, and victimisation using crowdsourced data", "2020", "Monash University, Melbourne, Australia", 
+	
+		"Exploring the role of crowdsourced data in criminal justice research", "", "Queensland University of Technology, Melbourne, Australia", 
+	
+	"Mapping and spatial modelling in R for crime prevention and conservation", "2019","Sheffield R User Group, UK",
+	
+	"The role of innovative data collection methods in advancing understanding, and the importance of considering the biases within", "","Women in Data Science: Zurich, Switzerland",
+	
+	"Keynote: Data-driven insights in law: opportunities and cautions", "","Berlin Legal Tech Conference 2019, Germany",
+	
+	"The role of innovative data collection methods in advancing behavioural understanding", "", "Cognitive and Decision Sciences, University of Basel, Switzerland",
+	
+	"The role of innovative data collection methods in advancing criminological understanding","","Manchester Metropolitan University Big Data Centre Seminar Series, UK",
+	
+) %>% 
+	brief_entries(
+		what = glue::glue("{`title`}"),
+		when = glue::glue("{`date`}"),
+		with = glue::glue("{`venue`}")
+	)
+```
+
