@@ -27,6 +27,15 @@
     }
 ,
     {
+        "ref": "/blog/on-outliers/",
+        "title": "On Outliers",
+        "section": "blog",
+        "tags": [],
+        "date" : "2021.10.18",
+        "body": "In exploratory data analysis, we talk about getting to know our data through measures of central tendency (mean, median, weighted mean, weighted median), and measures of spread (range, interquartile range, variance, standard deviation). It is at this time that students of data analysis get introduced to the concept of \u0026ldquo;outliers\u0026rdquo;. However, at this point, depending on the textbook and/or discipline used, they might encounter different definitions of what is an outlier, and different techniques for addressing these outliers. In this post, I want to try to consolidate some of these, and explore to what extent this matters.\nWhat makes an observation an outlier? Practical Statistics for Data Scientists defines an outlier as:\n A data value that is very different from most of the data.\n Later on, the authors say \u0026ldquo;[t]he exact definition of an outlier is somewhat subjective\u0026rdquo;\nWaiter, there is an outlier in my boxplot! A common way outliers are detected is when we plot the data using a box plot.\nSo what should we do about outliers? The question is usually boiled down to whether we want to include or excludethe outliers in our analysis.\n"
+    }
+,
+    {
         "ref": "/blog/twitter-by-police-officers-in-urban-and-rural-contexts-in-sweden/",
         "title": "The Use of Twitter by Police Officers in Urban and Rural Contexts in Sweden",
         "section": "blog",

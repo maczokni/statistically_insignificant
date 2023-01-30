@@ -17,7 +17,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown", "_files$", "_cache$"]
     avatar = "avatar.jpg"
     favicon = "favicon.ico"
     description = """
-        I am a Lecturer in Quantitative Methods at the Department of Criminology at University of Manchester. I am a member of the Software Sustainability Institute and an Honorary Lecturer at University College London.
+        I am a Senior Lecturer in Quantitative Methods at the Department of Criminology at University of Manchester. I am a member of the Software Sustainability Institute and an Honorary Lecturer at University College London.
 
 My research focuses on making use of new forms of data to gain insight into people's behaviour and subjective experiences, particularly focusing on crime, victimisation, transport, and spatial research. I am also dedicated to promoting data literacy in social science study and practice.
     """

@@ -8,3 +8,4 @@ blogdown::stop_server()
 blogdown::new_post(title="ECCA 2022", ext = ".Rmarkdown", subdir = 'blog')
 
 blogdown::check_site()
+blogdown::hugo_version()

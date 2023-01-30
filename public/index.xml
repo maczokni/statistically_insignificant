@@ -36,6 +36,15 @@ Highlights I wanted to quickly write up the main highlights (besides catching up
     </item>
     
     <item>
+      <title>On Outliers</title>
+      <link>/blog/on-outliers/</link>
+      <pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/on-outliers/</guid>
+      <description>In exploratory data analysis, we talk about getting to know our data through measures of central tendency (mean, median, weighted mean, weighted median), and measures of spread (range, interquartile range, variance, standard deviation). It is at this time that students of data analysis get introduced to the concept of &amp;ldquo;outliers&amp;rdquo;. However, at this point, depending on the textbook and/or discipline used, they might encounter different definitions of what is an outlier, and different techniques for addressing these outliers.</description>
+    </item>
+    
+    <item>
       <title>The Use of Twitter by Police Officers in Urban and Rural Contexts in Sweden</title>
       <link>/blog/twitter-by-police-officers-in-urban-and-rural-contexts-in-sweden/</link>
       <pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate>
