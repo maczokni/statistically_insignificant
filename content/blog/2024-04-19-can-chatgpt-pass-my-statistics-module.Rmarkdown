@@ -181,18 +181,19 @@ I particularly like how it says **clarity** was achieved by this roundabout and 
 And chatGPT says: 
 
 ![Error analysing message](/img/error_analysing.png)
-And from this point we just got this message over and over again. 
+
+And from this point we just got this message over and over again. I think if I were showing this to students as a "simpler alternative" to statistical software I would now have egg on my face. 
 
 ## Conclusions from this small experiment
 
 This small experiment suggests that while ChatGPT can efficiently handle straightforward questions, it struggles with complex analytical tasks. When pressed, it does a very verbose and superficially convincing-looking attempt at justifying incorrect answers or unnecessary steps, but upon closer inspection we can see these are essentially nonsense. 
 
-In sum? Can chatGPT pass my statistics module? No, probably not. 
+In sum? Can chatGPT pass my statistics module? No, probably not. Can it help students pass? Probably only the ones who were going to pass anyway, with or without chatGPT help. 
 
 ## Implications for using generative AI in statistics teaching
 
-This inconsistency highlights the current limitations of using AI as a standalone educational tool. The failures and the confident but nonsensical justifications mean that for not this would just confuse and mislead students, rather than clarify or simplify analysis for them. 
+I hope this small example highlights the current limitations of using AI as a standalone educational tool. The failures and the confident but nonsensical justifications mean that this would likely just confuse and mislead students, rather than clarify or simplify analysis for them. 
 
 This doesn't mean that I am siding with "ban" over "embrace". It just means that we have to be careful and that we have to make it clear to students that for now, this tool is not as reliable as they might initially think. It might be closer to "fancy autocomplete" than to Iron Man's [J.A.R.V.I.S.](https://en.wikipedia.org/wiki/J.A.R.V.I.S.) still, and therefore they should exercise caution in putting their trust (and grades) in it's proverbial hands.  
 
-This was a very small experiment, and I am sure we can use this in more clever ways, and that students are already using it in more clever ways to help their learning. Ultimately I assume we are now entering a time of many discussions on integrating AI to complement traditional teaching methods without undermining learning objectives. Most important is that these discussions are evidence-based, and they consider exactly what the current technology can and cannot do well. 
+This was a very small experiment, and I am sure we can use this in more clever ways, and that students are already using it in more clever ways to help their learning. Ultimately I assume we are now entering a time of many discussions on integrating AI to complement traditional teaching methods without undermining learning objectives. My main contribution here is to demonstrate how we can gather evidence and experience to inform evidence-based discussions, and caution educators to test out and then consider exactly what the current technology can and cannot do well. 
