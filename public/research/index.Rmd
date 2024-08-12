@@ -9,6 +9,8 @@ output:
 
 # Ongoing Research Projects
 
+### [Mapping Safe and Unsafe Places](https://rekadata.net/research/safe_places/)
+
 ### [Appeal for Information about Missing Persons](https://rekadata.net/blog/exploring-public-engagement-with-missing-person-appeals-on-twitter/)
 
 This project, funded by the [Manchester Statistical Society](https://manstatsoc.org/) is looking at Tweets made by Greater Manchester Police Twitter accounts which are appeals for information about missing persons, in order to determine what features are associated with increased engagement (in the form of retweets) from the public. Publication here: [Reka Solymosi, Oana Petcu & Jack Wilkinson (2020) Exploring public engagement with missing person appeals on Twitter, Policing and Society, DOI: 10.1080/10439463.2020.1782409](https://www.tandfonline.com/doi/abs/10.1080/10439463.2020.1782409)

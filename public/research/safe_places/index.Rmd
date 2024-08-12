@@ -1,0 +1,47 @@
+---
+title: "Mapping safe and unsafe places"
+author: 
+output:
+  html_document:
+    css: "../../rekadata.css"
+---
+
+**This page is a summary website for the project *"Mapping safe and unsafe places"* run between the University of Manchester, Óbuda University, and University of Porto. **
+
+Esta página é um resumo do projeto "Mapeando Lugares Seguros e Inseguros", conduzido entre a Universidade de Manchester, a Universidade Óbuda e a Universidade do Porto.
+
+**PI**: Dr Reka Solymosi, University of Manchester
+
+## Project Summary
+
+Please see [here]() for the detailed participant information sheet
+
+Por favor, consulte [aqui]() para a ficha de informações detalhadas para os participantes.
+
+## Questionnaire/ questionário
+
+**To participate, we will ask you a few questions about your eligibility (your city of residence and your consent to participate) before taking you to the questionnaire. Please click here for the English survey.** 
+
+Para participar, faremos algumas perguntas sobre sua elegibilidade (sua cidade de residência e seu consentimento para participar) antes de direcioná-lo ao questionário. Por favor, clique aqui para a pesquisa em português.
+
+
+## IMPORTANT/ IMPORTANTE
+
+**We understand that some people may feel distressed after thinking about safety, unsafety, and recent victimisation. Please see the following resources relevant to England:**
+
+- Victim Support: 0808 168 9111
+- National Domestic Violence Helpline: 0808 2000 247
+- Samaritans: 116 123
+- Crime Victims’ Services: www.crimevictimsservices.org.uk
+
+**These services are available to offer support and guidance. support and guidance.**
+
+Entendemos que algumas pessoas podem se sentir angustiadas após refletir sobre segurança, insegurança e vitimização recente. Por favor, consulte os seguintes recursos relevantes para Portugal:
+
+- Linha de Apoio a Vítimas de Crimes: 116 006
+- Serviço de Atendimento a Vítimas de Violência Doméstica: 800 202 148
+- SOS Mulher: 800 202 148
+- Instituto de Segurança Social: 800 202 678
+
+Estes serviços estão disponíveis para oferecer apoio e orientação.
+
