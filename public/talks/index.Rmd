@@ -11,6 +11,13 @@ output:
 
 From 2020 on I will try to collect all my talks here, but for earlier years it's really just going to be the talks which were recorded by the organisers (usually the larger venues). For a full list of talks please see my CV at [rekadata.net/cv/cv.pdf](https://rekadata.net/cv/cv.pdf)
 
+# 2024
+
+#### Univeristy of Porto
+- Title: R Software in Criminological Research: Benefits of an Open Source Framework
+- Slides: [https://rekadata.net/talks/r_in_porto.html](https://rekadata.net/talks/r_in_porto.html)
+
+
 # 2022
 
 #### NSCR 

@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>slides.knit</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="" />
+    <script src="slides_files/header-attrs/header-attrs.js"></script>
+    <link href="slides_files/remark-css/default.css" rel="stylesheet" />
+    <script src="slides_files/kePrint/kePrint.js"></script>
+    <link href="slides_files/lightable/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="UoM.css" type="text/css" />
+    <link rel="stylesheet" href="titleCrim.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+class: title-slide  
+
+.container[
+.UoM-right[
+
+# R Software in Criminological Research: Benefits of an Open Source Framework
+## 
+## Réka Solymosi
+## Department of Criminology
+## University of Manchester
+## reka.solymosi@manchester.ac.uk
+
+]
+
+
+.left-plot-title[
+
+&lt;img src="logos/CrimUoM-icon-logo-Y.png" width="180" /&gt;
+]
+]
+
+---
+# Overview
+
+
+- Brief introduction to the importance of data analysis in criminology 
+
+--
+
+- Overview of R as an open-source programming language and software environment 
+
+--
+
+- Advantages of R 
+
+--
+
+- Examples of utility 
+
+--
+
+- How to get started 
+
+--
+
+- Practice example 
+
+--
+
+- Q &amp; A 
+
+
+
+---
+
+# The importance of data analysis in criminology
+
+--
+
+- Academic Research and Theoretical Development
+
+--
+
+- Understanding Crime Patterns
+
+--
+
+- Informed Decision-Making
+
+--
+
+- Evaluation of Criminal Justice Policies
+
+--
+
+- Interdisciplinary Applications
+
+--
+
+- and so on... 
+
+---
+
+# So why R?
+
+---
+
+# Reason 1: Open source 
+
+---
+
+## Free (accessible)
+
+- For students, teachers, professionals
+- No licence required
+- Download R: [https://www.r-project.org/](https://www.r-project.org/)
+- Download R Studio (IDE): [https://posit.co/downloads/](https://posit.co/downloads/)
+
+---
+
+## Many contributors (range of packages)
+
+- Any type of analysis you want to do - it is possible
+- Anyone can contribute
+- If it doesn't exist, someone will write it
+
+
+&lt;img src="figures/sppt.png" width="49%" /&gt;&lt;img src="figures/synthetic-crime.png" width="49%" /&gt;&lt;img src="figures/crimedata.png" width="49%" /&gt;&lt;img src="figures/aoristic.png" width="49%" /&gt;
+
+---
+
+## Community support
+
+&lt;img src="figures/stackoverflow.png" width="60%" /&gt;
+
+[https://stackoverflow.com/questions/57675328/neighbour-list-with-poly2nb-works-on-2004-census-shapefile-but-not-on-2011](https://stackoverflow.com/questions/57675328/neighbour-list-with-poly2nb-works-on-2004-census-shapefile-but-not-on-2011)
+
+---
+
+## Community support
+
+
+&lt;img src="figures/twitter1.png" width="60%" /&gt;
+
+---
+
+## Community support
+
+
+&lt;img src="figures/twitter2.png" width="60%" /&gt;
+
+---
+
+## Community support
+
+
+&lt;img src="figures/twitter3.png" width="60%" /&gt;
+
+---
+
+## Community support
+
+
+&lt;img src="figures/twitter4.png" width="60%" /&gt;
+
+
+---
+
+# Reason 2: Versatile 
+
+---
+
+## Data
+
+
+```r
+library(fivethirtyeight)
+
+head(hate_crimes)
+```
+
+```
+##        state state_abbrev median_house_inc share_unemp_seas share_pop_metro
+## 1    Alabama           AL            42278            0.060            0.64
+## 2     Alaska           AK            67629            0.064            0.63
+## 3    Arizona           AZ            49254            0.063            0.90
+## 4   Arkansas           AR            44922            0.052            0.69
+## 5 California           CA            60487            0.059            0.97
+## 6   Colorado           CO            60940            0.040            0.80
+##   share_pop_hs share_non_citizen share_white_poverty gini_index share_non_white
+## 1        0.821              0.02                0.12      0.472            0.35
+## 2        0.914              0.04                0.06      0.422            0.42
+## 3        0.842              0.10                0.09      0.455            0.49
+## 4        0.824              0.04                0.12      0.458            0.26
+## 5        0.806              0.13                0.09      0.471            0.61
+## 6        0.893              0.06                0.07      0.457            0.31
+##   share_vote_trump hate_crimes_per_100k_splc avg_hatecrimes_per_100k_fbi
+## 1             0.63                0.12583893                   1.8064105
+## 2             0.53                0.14374012                   1.6567001
+## 3             0.50                0.22531995                   3.4139280
+## 4             0.60                0.06906077                   0.8692089
+## 5             0.33                0.25580536                   2.3979859
+## 6             0.44                0.39052330                   2.8046888
+```
+
+---
+
+## Analysis 
+
+
+```r
+library(skimr)
+skim(hate_crimes)
+```
+
+&lt;table class="table" style="color: black; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; skim_variable &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; n_missing &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; numeric.mean &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; numeric.hist &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; state &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; median_house_inc &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5.522361e+04 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; ▂▆▇▅▂ &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; share_unemp_seas &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4.956860e-02 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; ▅▇▇▇▂ &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; share_pop_metro &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7.501961e-01 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; ▁▂▅▆▇ &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; share_pop_hs &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 8.691176e-01 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; ▃▅▃▆▇ &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; share_non_citizen &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5.458330e-02 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; ▇▆▆▂▂ &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+## Summary stats
+
+
+```r
+summary_hate_crimes &lt;- summary(hate_crimes$hate_crimes_per_100k_splc)
+summary_hate_crimes
+```
+
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+## 0.06745 0.14271 0.22620 0.30409 0.35694 1.52230       4
+```
+
+---
+
+## T-test
+
+
+```r
+# Create a new variable to categorise states
+hate_crimes$income_category &lt;- ifelse(hate_crimes$median_house_inc &gt; median(hate_crimes$median_house_inc), "High", "Low")
+
+# Perform a t-test
+t_test_result &lt;- t.test(hate_crimes$hate_crimes_per_100k_splc ~ hate_crimes$income_category)
+t_test_result
+```
+
+```
+## 
+## 	Welch Two Sample t-test
+## 
+## data:  hate_crimes$hate_crimes_per_100k_splc by hate_crimes$income_category
+## t = 2.1658, df = 27.187, p-value = 0.03926
+## alternative hypothesis: true difference in means between group High and group Low is not equal to 0
+## 95 percent confidence interval:
+##  0.008498125 0.312551012
+## sample estimates:
+## mean in group High  mean in group Low 
+##          0.3894784          0.2289538
+```
+
+---
+
+## Missing values
+
+
+```r
+missing_values &lt;- sum(is.na(hate_crimes$hate_crimes_per_100k_splc))
+missing_values
+```
+
+```
+## [1] 4
+```
+
+---
+
+## Calculate correlation
+
+
+```r
+correlation &lt;- cor.test(hate_crimes$median_house_inc, 
+                   hate_crimes$hate_crimes_per_100k_splc, 
+                   use = "complete.obs", 
+                   method = "pearson")
+
+correlation
+```
+
+```
+## 
+## 	Pearson's product-moment correlation
+## 
+## data:  hate_crimes$median_house_inc and hate_crimes$hate_crimes_per_100k_splc
+## t = 2.5122, df = 45, p-value = 0.01565
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  0.07066435 0.57951602
+## sample estimates:
+##       cor 
+## 0.3507143
+```
+---
+
+## Calculate regression
+
+
+```r
+# Fit a linear regression model
+model &lt;- lm(hate_crimes_per_100k_splc ~ median_house_inc + 
+              share_vote_trump + 
+              share_non_citizen, 
+            data = hate_crimes)
+
+summary(model)
+```
+
+```
+## 
+## Call:
+## lm(formula = hate_crimes_per_100k_splc ~ median_house_inc + share_vote_trump + 
+##     share_non_citizen, data = hate_crimes)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.35450 -0.11333 -0.04116  0.08900  0.50329 
+## 
+## Coefficients:
+##                     Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)        1.626e+00  3.996e-01   4.068  0.00021 ***
+## median_house_inc  -4.351e-06  4.122e-06  -1.056  0.29729    
+## share_vote_trump  -2.006e+00  3.880e-01  -5.169  6.5e-06 ***
+## share_non_citizen -2.083e+00  1.149e+00  -1.814  0.07707 .  
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.1881 on 41 degrees of freedom
+##   (6 observations deleted due to missingness)
+## Multiple R-squared:  0.4791,	Adjusted R-squared:  0.441 
+## F-statistic: 12.57 on 3 and 41 DF,  p-value: 5.751e-06
+```
+
+---
+
+## Present results nicely
+
+
+```r
+library(broom)
+
+# Tidy the model results
+tidy_model &lt;- tidy(model)
+
+# Print the tidy model as an HTML table
+tidy_model %&gt;%
+  knitr::kable("html", caption = "Regression Results") %&gt;%
+  kableExtra::kable_styling(full_width = FALSE)
+```
+
+&lt;table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption&gt;Regression Results&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; term &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; estimate &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; std.error &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; statistic &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; p.value &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; (Intercept) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.6255048 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.3996144 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4.067683 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0002104 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; median_house_inc &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.0000044 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0000041 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -1.055686 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2972927 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; share_vote_trump &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -2.0056482 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.3879999 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -5.169197 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0000065 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; share_non_citizen &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -2.0833768 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.1487938 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -1.813534 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0770737 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+---
+
+
+
+
+
+```r
+library(sjPlot)
+# Create a forest plot for the regression model
+plot_model(model, type = "est", show.values = TRUE, show.ci = TRUE) +
+  labs(title = "Forest Plot of Regression Coefficients", x = "Estimate", y = "Predictors")
+```
+
+&lt;img src="figures/unnamed-chunk-8-1.png" width="302.4" /&gt;
+
+---
+
+## Many types of analysis
+
+---
+
+## Network
+.container[
+.left-plot[
+
+```r
+# Load the libraries
+library(igraph)
+library(igraphdata)
+
+# Load a sample network dataset
+data("USairports")
+
+# Plot the network graph
+plot(USairports, 
+     vertex.size=5, 
+     vertex.label=NA, 
+     edge.arrow.size=0.3, 
+     main="US Airports Network")
+```
+]
+
+.right-plot[
+![](figures/networkexample-1.png)
+]
+]
+---
+
+##Spatial
+.container[
+.left-plot[
+
+```r
+# Load the library
+library(tmap)
+
+# Load the inbuilt dataset
+data("World")
+
+# Create a quick map
+tm_shape(World) + 
+  tm_polygons("pop_est", 
+              title = "Population") +
+  tm_layout(main.title = "World Population Map", 
+            frame = FALSE)
+```
+]
+
+.right-plot[
+![](figures/spatialexample-1.png)
+]
+]
+---
+
+## Text 
+.container[
+.left-plot[
+
+```r
+# Load the libraries
+library(wordcloud)
+library(tm)
+
+# Load a sample text dataset
+data("crude")
+
+# Create a term-document matrix
+tdm &lt;- TermDocumentMatrix(crude)
+
+# Convert the matrix to a format for word cloud
+m &lt;- as.matrix(tdm)
+word_freq &lt;- sort(rowSums(m), 
+                  decreasing=TRUE)
+
+# Generate the word cloud
+wordcloud(names(word_freq), 
+          word_freq, max.words=100)
+```
+]
+
+.right-plot[
+![](figures/textexample-1.png)
+]
+]
+---
+
+## Machine learning 
+.container[
+.left-plot[
+
+```r
+# Load the libraries
+library(rpart)
+library(ggparty)
+
+# Load the dataset
+data(iris)
+
+# Create a decision tree model using rpart directly
+model &lt;- rpart(Species ~ ., data = iris)
+```
+]
+
+.right-plot[
+&lt;img src="figures/mlexampleplot-1.png" width="302.4" /&gt;
+]
+]
+
+---
+
+## More ML
+
+.container[
+.left-code[
+
+```r
+library(caret)
+# Load the iris dataset
+data(iris)
+
+# Split the data into training and testing sets (70% training, 30% testing)
+set.seed(123)
+trainIndex &lt;- createDataPartition(iris$Species, p = 0.7, list = FALSE)
+trainData &lt;- iris[trainIndex, ]
+testData &lt;- iris[-trainIndex, ]
+
+# Train a KNN model
+model &lt;- train(Species ~ ., data = trainData, method = "knn", tuneLength = 5)
+
+# Predict on the test data
+predictions &lt;- predict(model, testData)
+
+# Evaluate the model with a confusion matrix
+confusionMatrix(predictions, testData$Species)
+```
+
+```
+## Confusion Matrix and Statistics
+## 
+##             Reference
+## Prediction   setosa versicolor virginica
+##   setosa         15          0         0
+##   versicolor      0         14         1
+##   virginica       0          1        14
+## 
+## Overall Statistics
+##                                           
+##                Accuracy : 0.9556          
+##                  95% CI : (0.8485, 0.9946)
+##     No Information Rate : 0.3333          
+##     P-Value [Acc &gt; NIR] : &lt; 2.2e-16       
+##                                           
+##                   Kappa : 0.9333          
+##                                           
+##  Mcnemar's Test P-Value : NA              
+## 
+## Statistics by Class:
+## 
+##                      Class: setosa Class: versicolor Class: virginica
+## Sensitivity                 1.0000            0.9333           0.9333
+## Specificity                 1.0000            0.9667           0.9667
+## Pos Pred Value              1.0000            0.9333           0.9333
+## Neg Pred Value              1.0000            0.9667           0.9667
+## Prevalence                  0.3333            0.3333           0.3333
+## Detection Rate              0.3333            0.3111           0.3111
+## Detection Prevalence        0.3333            0.3333           0.3333
+## Balanced Accuracy           1.0000            0.9500           0.9500
+```
+]
+
+.right-plot[
+
+![](figures/mlexample2-1.png)
+
+]
+]
+---
+
+## Sentiment analysis
+
+.container[
+.left-plot[
+
+```r
+# Load the libraries
+library(tidytext)
+library(janeaustenr)
+library(dplyr)
+library(ggplot2)
+
+# Load the dataset and convert it to a tidy format
+data("austen_books")
+tidy_books &lt;- austen_books() %&gt;%
+  unnest_tokens(word, text)
+
+# Perform sentiment analysis using the Bing lexicon
+sentiments &lt;- tidy_books %&gt;%
+  inner_join(get_sentiments("bing")) %&gt;%
+  group_by(book, sentiment) %&gt;% 
+  count()
+```
+]
+
+
+.right-plot[
+
+&lt;img src="figures/sentiexplot-1.png" width="302.4" /&gt;
+
+]
+]
+---
+
+## Plotting 
+
+---
+
+.container[
+.left-plot[
+
+```r
+# Load necessary library
+library(ggplot2)
+
+# Basic scatter plot
+ggplot(hate_crimes, 
+       aes(x = median_house_inc, 
+           y = hate_crimes_per_100k_splc)) +
+  geom_point() +
+  labs(title = "Hate Crimes vs. Income",
+       x = "Median Household Income",
+       y = "Hate Crimes per 100k") +
+  theme_minimal()
+```
+]
+.right-plot[
+![](figures/scatter1-1.png)
+]
+]
+---
+
+.container[
+.left-plot[
+
+```r
+# Scatter plot with colour
+ggplot(hate_crimes, 
+       aes(x = median_house_inc, 
+           y = hate_crimes_per_100k_splc, 
+           color = share_pop_metro)) +
+  geom_point() +
+  labs(title = "Hate Crimes vs.Income",
+       x = "Median Household Income",
+       y = "Hate Crimes per 100k",
+       color = "Population Share (Metro)") +
+  theme_minimal() +
+  scale_color_gradient(low = "#FFCC33", 
+                       high = "#660099")
+```
+
+]
+.right-plot[
+![](figures/scatter2-1.png)
+]
+]
+
+---
+
+.container[
+.left-plot[
+
+```r
+# Scatter plot with regression line
+ggplot(hate_crimes, 
+       aes(x = median_house_inc, 
+           y = hate_crimes_per_100k_splc, 
+           color = share_pop_metro)) +
+  geom_point() +
+  geom_smooth(method = "lm", 
+              se = FALSE, 
+              color = "black") +
+  labs(title = "Hate Crimes vs.Income",
+       x = "Median Household Income",
+       y = "Hate Crimes per 100k",
+       color = "Population Share (Metro)") +
+  theme_minimal() +
+  scale_color_gradient(low = "#FFCC33", 
+                       high = "#660099")
+```
+
+]
+.right-plot[
+![](figures/scatter3-1.png)
+]
+]
+
+---
+.container[
+.left-plot[
+
+
+```r
+# add faceting
+ggplot(hate_crimes, 
+       aes(x = median_house_inc, 
+           y = hate_crimes_per_100k_splc, 
+           color = share_pop_metro)) +
+  geom_point() +
+  geom_smooth(method = "lm", 
+              se = FALSE, 
+              color = "black") +
+  labs(title = "The importance of Trump Voters",
+       x = "Median Household Income",
+       y = "Hate Crimes per 100k",
+       color = "Population") +
+  theme_minimal() +
+  scale_color_gradient(low = "#FFCC33", 
+                       high = "#660099") +
+  facet_wrap(~ cut(share_vote_trump, 
+                   breaks = c(-Inf, 0.4, 0.6, 
+                              0.8, 1), 
+                   labels = c("Low", "Medium", 
+                              "High", "Very High")), 
+               labeller = label_both)
+```
+]
+.right-plot[
+![](figures/scatter4-1.png)
+]
+]
+]
+
+---
+.container[
+.left-plot[
+
+```r
+mean_hc &lt;- mean(hate_crimes$hate_crimes_per_100k_splc, 
+                               na.rm = TRUE)
+mean_inc &lt;- mean(hate_crimes$median_house_inc, 
+                 na.rm = TRUE)
+ggplot(hate_crimes, 
+       aes(x = median_house_inc, 
+           y = hate_crimes_per_100k_splc, 
+           color = share_pop_metro)) +
+  geom_point(size = 3, 
+             alpha = 0.6) +
+  geom_smooth(method = "lm", 
+              se = FALSE, 
+              color = "black", 
+              linetype = "dashed") +
+  labs(title = "Hate Crimes vs. Income",
+       x = "Median Household Income",
+       y = "Hate Crimes per 100k",
+       color = "Population Share (Metro)") +
+  theme_minimal() +
+  scale_color_gradient(low = "#FFCC33", 
+                       high = "#660099") +
+  theme(plot.title = element_text(hjust = 0.5, 
+                                  size = 14),
+        axis.title = element_text(size = 12),
+        legend.position = "bottom") +
+  geom_hline(yintercept = mean_hc, 
+             linetype = "dotted", 
+             color = "grey") +
+  geom_vline(xintercept = mean_inc, 
+             linetype = "dotted", 
+             color = "grey")
+```
+
+]
+.right-plot[
+![](figures/scatter5-1.png)
+]
+]
+]
+
+---
+
+# Reason 3: Reproducibility
+
+---
+
+## For open science
+
+--
+
+- **Enhances Transparency:** Open science promotes transparency in research methods and data, allowing for better scrutiny and validation of findings.
+
+--
+
+- **Fosters Collaboration:** Sharing data and methodologies encourages collaboration among criminologists, leading to more comprehensive studies.
+
+--
+
+- **Accelerates Innovation:** Open access to research can accelerate the development of new theories and approaches in criminology.
+
+--
+
+- Key Resources
+  - **CrimRxiv:** An open-access preprint repository for the criminology community: [https://www.crimrxiv.com/](https://www.crimrxiv.com/) 
+  - **Open Science Working Group at the ESC:**[https://esc-enoc.github.io/](https://esc-enoc.github.io/)
+
+
+---
+
+## For yourself (e.g., changes for reviewer or repeat analysis/batch processing)
+
+.container[
+.left-plot[
+
+```r
+# Scatter plot with regression line
+ggplot(hate_crimes, 
+       aes(x = median_house_inc, 
+           y = hate_crimes_per_100k_splc, 
+           color = share_pop_metro)) +
+  geom_point() +
+  geom_smooth(method = "lm", 
+              se = FALSE, 
+              color = "black") +
+  labs(title = "Hate Crimes vs.Income",
+       x = "Median Household Income",
+       y = "Hate Crimes per 100k",
+       color = "Population Share (Metro)") +
+  theme_minimal() +
+  scale_color_gradient(low = "grey90", 
+                       high = "black")
+```
+
+]
+.right-plot[
+![](figures/scatterbw-1.png)
+]
+]
+
+---
+
+## Less point and click = more transparency, less space for errors 
+
+- In 2010, economists Carmen Reinhart and Kenneth Rogoff published a paper titled "Growth in a Time of Debt."
+- The paper claimed that countries with debt levels above 90% of GDP experienced slower economic growth.
+- A spreadsheet error in their data analysis led to faulty conclusions.
+- The findings influenced austerity measures globally, including in the EU and the US.
+- Policymakers used the conclusions to justify harsh budget cuts and economic policies.
+- See: [https://www.bbc.com/news/magazine-22223190](https://www.bbc.com/news/magazine-22223190)
+
+---
+
+## Beyond analysis...
+
+--
+- Slides/ reporting (demo next)
+
+--
+- Websites
+
+--
+- Books
+
+---
+
+## Is it R? 
+
+&lt;img src="figures/is_it_cake.png" width="20%" /&gt;
+
+--
+- these slides?
+
+--
+- [rekadata.net](https://rekadata.net/)
+
+--
+- [This ESC presentation](http://lesscrime.info/talk/esc-stadia-2024/)
+
+--
+
+- This book
+
+&lt;img src="figures/cm_book.png" width="40%" /&gt;
+
+---
+
+## Getting Started with R
+
+- **[R for Data Science](https://r4ds.had.co.nz/)**: A free online book that’s an excellent resource for learning R and data science workflows.
+- **[Hands-On Programming with R](https://rstudio-education.github.io/hopr/)**: Friendly intro to R language for non-programmers
+- **[DataCamp: Introduction to R](https://www.datacamp.com/courses/free-introduction-to-r)**: Free course offering an interactive way to learn R basics.
+
+## Visualisation
+
+- **[Data Visualization: A practical introduction](https://socviz.co/)**: Beautiful book on data visualisation
+- **[ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/)**: A resource for those interested to understand the logic of the Grammar of Graphics that ggplot2 uses.
+  
+## R Resources for Criminology/ Social Science
+
+
+- **[Quantitative Social Science: An Introduction](https://press.princeton.edu/books/paperback/9780691175461/quantitative-social-science)**: My favourite social science stats textbook - also uses R
+- **[Discovering Statistics Using R](https://uk.sagepub.com/en-gb/eur/discovering-statistics-using-r/book236067)**: Very comprehensive, from field of psychology
+- **[A Beginner’s Guide to Statistics for Criminology and Criminal Justice Using R](https://link.springer.com/book/10.1007/978-3-030-50625-4)**: Written as a companion to classic stats book by Weisburd and Britt
+- **[R for Criminologists](https://maczokni.github.io/R-for-Criminologists/)**: Our course material for PGT
+- **[R for Criminologists](https://uom-resquant.github.io/modelling_book/)**: Our course material for UG
+
+
+---
+
+## Additional Learning
+
+- **[Stack Overflow](https://stackoverflow.com/questions/tagged/r)**: Get help from the R community by browsing or asking questions.
+- **[R Bloggers](https://www.r-bloggers.com/)**: Collection of blogs about using R in a variety of disciplines, including criminology.
+- Twitter (or maybe Blue Sky now? I don't know!!!)
+
+---
+
+# Demo 
+
+---
+
+# Exercise
+
+Code to copy:
+
+
+```r
+# Install necessary packages if they are not already installed
+if(!require(ggplot2)) install.packages("ggplot2", dependencies = TRUE)
+if(!require(fivethirtyeight)) install.packages("fivethirtyeight", dependencies = TRUE)
+
+# Load the packages
+library(ggplot2)
+library(fivethirtyeight)
+
+# Create a basic scatter plot of median_house_inc vs. hate_crimes_per_100k_splc
+ggplot(hate_crimes, aes(x = median_house_inc, y = hate_crimes_per_100k_splc)) +
+  geom_point(color = "blue", size = 3, alpha = 0.6) +  # Scatter plot with blue points
+  labs(title = "Hate Crimes per 100k vs. Median Household Income",
+       x = "Median Household Income",
+       y = "Hate Crimes per 100k") +
+  theme_minimal()  # Apply minimal theme for a clean look
+```
+
+
+
+---
+
+
+## Exercise 1: Change the Aesthetics
+
+- **Task:** Modify the color, size, or transparency of the points in the scatter plot.
+- **Hint:** Use color, size, and alpha arguments in geom_point().
+
+--
+
+**Answer: **
+
+```r
+# Modify color and size of points
+ggplot(hate_crimes, aes(x = median_house_inc, y = hate_crimes_per_100k_splc)) +
+  geom_point(color = "red", size = 5, alpha = 0.8) +  # Experiment with different aesthetics
+  labs(title = "Modified Scatter Plot", x = "Median Household Income", y = "Hate Crimes per 100k") +
+  theme_minimal()
+```
+
+
+---
+
+
+## Exercise 2:  Add a Regression Line
+
+- **Task:** Add a linear regression line to the scatter plot to show the trend.
+- **Hint:** Use geom_smooth() with method = "lm" to add a linear model.
+
+--
+
+**Answer: **
+
+```r
+# Scatter plot with a regression line
+ggplot(hate_crimes, aes(x = median_house_inc, y = hate_crimes_per_100k_splc)) +
+  geom_point(color = "blue", size = 3, alpha = 0.6) +
+  geom_smooth(method = "lm", color = "black", se = FALSE) +  # Add a regression line
+  labs(title = "Scatter Plot with Regression Line", x = "Median Household Income", y = "Hate Crimes per 100k") +
+  theme_minimal()
+```
+
+
+---
+
+
+## Exercise 3:  Group Points by a Third Variable
+
+- **Task:** Color the points by a third variable such as share_pop_metro to explore how urban/rural distribution affects the relationship.
+- **Hint:** Use color = share_pop_metro inside the aes() function.
+
+--
+
+**Answer: **
+
+```r
+# Scatter plot with points colored by share_pop_metro
+ggplot(hate_crimes, aes(x = median_house_inc, y = hate_crimes_per_100k_splc, color = share_pop_metro)) +
+  geom_point(size = 3, alpha = 0.6) +
+  labs(title = "Scatter Plot Colored by Population Share (Metro)",
+       x = "Median Household Income", y = "Hate Crimes per 100k", color = "Share Pop Metro") +
+  theme_minimal() +
+  scale_color_gradient(low = "blue", high = "red")
+```
+
+
+---
+
+
+## Exercise 4:  Customize the Plot Theme
+
+- **Task:** Explore different ggplot2 themes such as theme_classic(), theme_bw(), or even modify axis titles, labels, and legend positions.
+- **Hint:** Use theme() to customize the plot or apply pre-built themes like theme_classic().
+
+--
+
+**Answer: **
+
+```r
+# Custom theme applied to scatter plot
+ggplot(hate_crimes, aes(x = median_house_inc, y = hate_crimes_per_100k_splc, color = share_pop_metro)) +
+  geom_point(size = 3, alpha = 0.6) +
+  labs(title = "Scatter Plot with Custom Theme",
+       x = "Median Household Income", y = "Hate Crimes per 100k", color = "Share Pop Metro") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, size = 14),
+        axis.title = element_text(size = 12),
+        legend.position = "bottom")
+```
+
+---
+
+## Thank you
+
+Contact: reka.solymosi@manchester.ac.uk
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"slideNumberFormat": "",
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
