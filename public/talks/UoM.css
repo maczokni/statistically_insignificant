@@ -187,28 +187,37 @@ blockquote:before {
 
 /* code and plotting side by side  */
 
+/* Ensure code and plot are side by side */
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;  /* Set to full viewport height to fit content */
+}
+
+/* Style for the left-side code block */
 .left-code {
   width: 45%;
-  float: left;
+  font-size: 1vw;  /* Dynamically scale the font size */
+  white-space: pre-wrap;  /* Ensure long lines wrap */
+  word-wrap: break-word;
+  overflow: auto;  /* Allow scrolling if needed */
+  padding-right: 1%;  /* Add spacing between code and plot */
+  background-color: #660099;  /* Purple background */
+  color: white;  /* White text */
 }
+
+/* Style for the right-side plot */
 .right-plot {
-  position: absolute;
-  top: 8%;
-  left: 48%;
+  width: 45%;  /* Ensure plot fits on the right */
+  display: flex;
+  justify-content: center;  /* Center the plot within the div */
+  align-items: center;
 }
 
-.right-plot ~ * {
-  clear: both;
+.right-plot img {
+  max-width: 100%;  /* Ensure plot scales dynamically */
+  height: auto;
 }
-
-.right-plot img{
-  padding: 0;
-}
-
-
-
-
-
-
 
 

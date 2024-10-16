@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>slides.knit</title>
+    <title>r_in_porto.knit</title>
     <meta charset="utf-8" />
     <meta name="author" content="" />
-    <script src="slides_files/header-attrs/header-attrs.js"></script>
-    <link href="slides_files/remark-css/default.css" rel="stylesheet" />
-    <script src="slides_files/kePrint/kePrint.js"></script>
-    <link href="slides_files/lightable/lightable.css" rel="stylesheet" />
+    <script src="r_in_porto_files/header-attrs/header-attrs.js"></script>
+    <link href="r_in_porto_files/remark-css/default.css" rel="stylesheet" />
+    <script src="r_in_porto_files/kePrint/kePrint.js"></script>
+    <link href="r_in_porto_files/lightable/lightable.css" rel="stylesheet" />
     <link rel="stylesheet" href="UoM.css" type="text/css" />
     <link rel="stylesheet" href="titleCrim.css" type="text/css" />
   </head>
@@ -982,23 +982,29 @@ ggplot(hate_crimes,
 
 ---
 
-# Exercise
+## Exercise
 
 Code to copy:
 
 
 ```r
 # Install necessary packages if they are not already installed
-if(!require(ggplot2)) install.packages("ggplot2", dependencies = TRUE)
-if(!require(fivethirtyeight)) install.packages("fivethirtyeight", dependencies = TRUE)
+if(!require(ggplot2)) 
+  install.packages("ggplot2", dependencies = TRUE)
+if(!require(fivethirtyeight)) 
+  install.packages("fivethirtyeight", dependencies = TRUE)
 
 # Load the packages
 library(ggplot2)
 library(fivethirtyeight)
 
 # Create a basic scatter plot of median_house_inc vs. hate_crimes_per_100k_splc
-ggplot(hate_crimes, aes(x = median_house_inc, y = hate_crimes_per_100k_splc)) +
-  geom_point(color = "blue", size = 3, alpha = 0.6) +  # Scatter plot with blue points
+ggplot(hate_crimes, 
+       aes(x = median_house_inc, 
+           y = hate_crimes_per_100k_splc)) +
+  geom_point(color = "blue", 
+             size = 3, 
+             alpha = 0.6) +  # Scatter plot with blue points
   labs(title = "Hate Crimes per 100k vs. Median Household Income",
        x = "Median Household Income",
        y = "Hate Crimes per 100k") +
@@ -1021,9 +1027,12 @@ ggplot(hate_crimes, aes(x = median_house_inc, y = hate_crimes_per_100k_splc)) +
 
 ```r
 # Modify color and size of points
-ggplot(hate_crimes, aes(x = median_house_inc, y = hate_crimes_per_100k_splc)) +
-  geom_point(color = "red", size = 5, alpha = 0.8) +  # Experiment with different aesthetics
-  labs(title = "Modified Scatter Plot", x = "Median Household Income", y = "Hate Crimes per 100k") +
+ggplot(hate_crimes, aes(x = median_house_inc, 
+                        y = hate_crimes_per_100k_splc)) +
+  geom_point(color = "red", size = 5, alpha = 0.8) +  
+  labs(title = "Modified Scatter Plot", 
+       x = "Median Household Income", 
+       y = "Hate Crimes per 100k") +
   theme_minimal()
 ```
 
@@ -1042,10 +1051,14 @@ ggplot(hate_crimes, aes(x = median_house_inc, y = hate_crimes_per_100k_splc)) +
 
 ```r
 # Scatter plot with a regression line
-ggplot(hate_crimes, aes(x = median_house_inc, y = hate_crimes_per_100k_splc)) +
+ggplot(hate_crimes, 
+       aes(x = median_house_inc, 
+           y = hate_crimes_per_100k_splc)) +
   geom_point(color = "blue", size = 3, alpha = 0.6) +
-  geom_smooth(method = "lm", color = "black", se = FALSE) +  # Add a regression line
-  labs(title = "Scatter Plot with Regression Line", x = "Median Household Income", y = "Hate Crimes per 100k") +
+  geom_smooth(method = "lm", color = "black", se = FALSE) +  
+  labs(title = "Scatter Plot with Regression Line", 
+       x = "Median Household Income", 
+       y = "Hate Crimes per 100k") +
   theme_minimal()
 ```
 
@@ -1064,10 +1077,15 @@ ggplot(hate_crimes, aes(x = median_house_inc, y = hate_crimes_per_100k_splc)) +
 
 ```r
 # Scatter plot with points colored by share_pop_metro
-ggplot(hate_crimes, aes(x = median_house_inc, y = hate_crimes_per_100k_splc, color = share_pop_metro)) +
+ggplot(hate_crimes, 
+       aes(x = median_house_inc, 
+           y = hate_crimes_per_100k_splc, 
+           color = share_pop_metro)) +
   geom_point(size = 3, alpha = 0.6) +
-  labs(title = "Scatter Plot Colored by Population Share (Metro)",
-       x = "Median Household Income", y = "Hate Crimes per 100k", color = "Share Pop Metro") +
+  labs(title = "Scatter Plot by Population",
+       x = "Median Household Income", 
+       y = "Hate Crimes per 100k", 
+       color = "Share Pop Metro") +
   theme_minimal() +
   scale_color_gradient(low = "blue", high = "red")
 ```
