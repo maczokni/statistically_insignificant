@@ -29,9 +29,7 @@ file.copy(from = here::here("public/cv/books.bib"), to = citations_0)
 citations_1 <- tempfile(fileext = ".bib")
 file.copy(from = here::here("public/cv/published.bib"), to = citations_1)
 citations_2 <- tempfile(fileext = ".bib")
-file.copy(from = here::here("public/cv/accepted.bib"), to = citations_2)
-citations_3 <- tempfile(fileext = ".bib")
-file.copy(from = here::here("public/cv/underreview.bib"), to = citations_3)
+file.copy(from = here::here("public/cv/underreview.bib"), to = citations_2)
 citations_4 <- tempfile(fileext = ".bib")
 file.copy(from = here::here("public/cv/otherpubs.bib"), to = citations_4)
 ```
@@ -93,6 +91,11 @@ orcid_employments(my_orcid) %>%
 ```{r visiting}
 tribble(
 	~title, ~start_date, ~end_date, ~value, ~funder,
+	
+	"Visiting Scholar", 2024, "2024", "University of Porto, Portugal", "Funded visiting post at University of Porto contributing to university lectures, presentations, and working collaboratively on research with local colleagues.",	
+	
+	"Associate Strategy and Insight Manager", 2022, "2022", "Crest Advisory", "Completed a paid secondment as a Senior Researcher, contributing to various projects, including the development of a theory of change and evaluation plan for the Cleveland Unit for Reducing Violence (CURV)",
+	
 	"Visiting Scholar", 2020, "2020", "Griffith University", "Spent my research leave visiting Griffith Criminology Institute to work on collaborative research",
 	
 	"Visiting Scholar", 2020, "2020", "Queensland University of Technology", "Spent my research leave visiting QUT Centre for Justice to work on collaborative research",
@@ -149,12 +152,6 @@ OSF profile: [osf.io/3nzk2](osf.io/3nzk2).
 ```{r accepted}
 bibliography_entries(citations_2) %>% 
 	mutate(journal = paste("pre-print on", publisher))
-```
-
-### Forthcoming publications pending submission. 
-
-```{r underreview}
-bibliography_entries(citations_3) 
 ```
 
 
@@ -237,6 +234,13 @@ tribble(
 ```{r invitedtalks}
 tribble(
 	~title, ~date, ~venue, 
+	
+		"Numbers and Narratives: Data-Driven Exploration of Crime and Fear", "2024", "University of Porto",
+	
+		"R Software in Criminological Research: Benefits of an Open Source Framework", "2024", "University of Porto",
+	
+		"Evaluating Bystander Intervention: Insights from Victim Perspectives and Biometric Data", "2024", "University of Porto",
+	
 	"Hot Routes and Street Profiles", "2022", "Netherlands Institute for the Study of Crime and Law Enforcement",
 	
 	"Near Misses in Research on Crime and Fear of Crime", "2022", "Crest Advisory Internal Seminar",

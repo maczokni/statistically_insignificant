@@ -192,15 +192,25 @@ thing$highlight <- case_when(thing$Crime.type == "Sex offences" ~ "so",
 
 a <- ifelse(thing$Crime.type == "Violence and sexual offences","#a9a9a9" , "black")
 
-ggplot(thing, aes( x = reorder(Crime.type,mean), y = mean, fill = highlight)) + 
-  geom_bar(stat = "identity") + 
-  scale_fill_manual(values = c("black", "orange", "#a9a9a9")) + 
+# p1 <- ggplot(thing %>% filter(Crime.type != "Violence and sexual offences"), aes( x = reorder(Crime.type,mean), y = mean, fill = highlight)) +
+#   geom_bar(stat = "identity") +
+#   scale_fill_manual(values = c("black", "orange", "#a9a9a9")) +
+#   coord_flip() +
+#   theme_bw() +
+#   theme(legend.position = "none",
+#         axis.text.x = element_text(colour = a))  +
+#   xlab("") +
+#   ylab("Average offences per month")
+
+ggplot(thing, aes( x = reorder(Crime.type,mean), y = mean, fill = highlight)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = c("black", "orange", "#a9a9a9")) +
   coord_flip() +
   theme_bw() +
-  theme(text = element_text(size=rel(4)), 
-        legend.position = "none", 
-        axis.text.x = element_text(colour = a))  + 
-  xlab("") + 
+  theme(text = element_text(size=rel(4)),
+        legend.position = "none",
+        axis.text.x = element_text(colour = a))  +
+  xlab("") +
   ylab("Average offences per month")
 
 
@@ -222,6 +232,16 @@ thing$highlight <- case_when(thing$Crime.type == "Sex offences" ~ "so",
 
 a <- ifelse(thing$Crime.type == "Violence and sexual offences","#a9a9a9" , "black")
 
+# p2 <- ggplot(thing %>% filter(Crime.type != "Violence and sexual offences"), aes( x = reorder(Crime.type,mean), y = mean, fill = highlight)) +
+#   geom_bar(stat = "identity") +
+#   scale_fill_manual(values = c("black", "orange", "#a9a9a9")) +
+#   coord_flip() +
+#   theme_bw() +
+#   theme(legend.position = "none",
+#         axis.text.x = element_text(colour = a))  +
+#   xlab("") +
+#   ylab("Average offences per month")
+
 ggplot(thing, aes( x = reorder(Crime.type,mean), y = mean, fill = highlight)) + 
   geom_bar(stat = "identity") + 
   scale_fill_manual(values = c("black", "orange", "#a9a9a9")) + 
@@ -233,6 +253,25 @@ ggplot(thing, aes( x = reorder(Crime.type,mean), y = mean, fill = highlight)) +
   xlab("") + 
   ylab("Average offences per month")
 
+# library(patchwork)
+# 
+# # Add titles to the plots
+# p1 <- p1 + ggtitle("Recorded figures") +
+#   theme(
+#     axis.text.y = element_text(size =12), 
+#     axis.text.x = element_text(size = 12), 
+#     plot.title = element_text(size = 14)  
+#   )
+# p2 <- p2 + ggtitle("Re-calculated figures", 
+#                    subtitle = "(adjusted for underreporting)") +
+#   theme(
+#     axis.text.y = element_text(size = 12), 
+#      axis.text.x = element_text(size = 12), 
+#     plot.title = element_text(size = 14)  
+#   )
+# 
+# # Combine the plots side by side
+# combined_plot <- p1 | p2
 
 
 ```
