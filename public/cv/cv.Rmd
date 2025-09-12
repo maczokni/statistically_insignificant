@@ -1,11 +1,10 @@
 ---
-name: Reka Solymosi
+name: Réka Solymosi
 position: "Senior Lecturer in Quantitative Methods"
 address: "School of Social Sciences, University of Manchester"
 phone: +44 161 275 3468
 www: rekadata.net
 email: reka.solymosi@manchester.ac.uk
-twitter: r_solymosi
 github: maczokni
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::hyndman
@@ -108,7 +107,7 @@ tribble(
 	
 	"Fellow", 2019, "present", "Higher Education Academy", "Fellowship awarded to professionals who meet the criteria of Descriptor 2 of the UK Professional Standards Framework for teaching and supporting learning in higher education.",
 	
-	"Board member", 2017, "present", "Economic and Social Research Council Business and Local Government Data Research Centre", "Data Acquisition Board"
+	"Board member", 2017, "2019", "Economic and Social Research Council Business and Local Government Data Research Centre", "Data Acquisition Board"
 ) %>% 
 	arrange(desc(start_date)) %>% 
 	brief_entries(
@@ -145,14 +144,14 @@ bibliography_entries(citations_1)
 
 
 
-### Publications accepted or under review (pre-prints available). 
+<!-- ### Publications accepted or under review (pre-prints available).  -->
 
-OSF profile: [osf.io/3nzk2](osf.io/3nzk2).
+<!-- OSF profile: [osf.io/3nzk2](osf.io/3nzk2). -->
 
-```{r accepted}
-bibliography_entries(citations_2) %>% 
-	mutate(journal = paste("pre-print on", publisher))
-```
+<!-- ```{r accepted} -->
+<!-- bibliography_entries(citations_2) %>%  -->
+<!-- 	mutate(journal = paste("pre-print on", publisher)) -->
+<!-- ``` -->
 
 
 ### Media and other outputs
@@ -169,6 +168,8 @@ bibliography_entries(citations_4)
 ```{r fundingpi}
 tribble(
 	~title, ~start_date, ~end_date, ~value, ~funder,
+	"Manchester Policing Academic Centre of Excellence (PI for University of Manchester)", 2025, 2028, "GBP 600,000", "UK Research and Innovation (UKRI)",
+	"Mapping perceptions of safety in Manchester’s urban regeneration areas using participatory mapping techniques", 2024, 2025, "GBP 9,000", "University of Manchester",
 	"Exploring perceptions of direct and indirect bystander intervention", 2022, 2022, "GBP 8,930", "School of Social Sciences Research Support Funds 2021-22",
 	"Geoprivacy, confidentiality and data sharing in research & practice", 2022, 2022, "GBP 4,293", "KTH Royal Institute of Technology and Stockholm University Joint Research Seed Fund",
 	"Understanding changing demand for police during the coronavirus pandemic", 2020, 2021, "GBP 20,000", "N8 Policing Research Partnership",	
@@ -210,7 +211,9 @@ tribble(
 	~name, ~start_date, ~end_date, ~title, ~funder,
 	"Nicola Fox", 2022, 2026, "Identifying vulnerability, harm, and useful police intelligence in interviews with missing children in England", "Funded by School of Social Sciences, University of Manchester",
 	
-	"Nathan Khadaroo", 2019, 2023, "Citizen Data Science for Public Good", "Funded by Data Analytics and Society Centre for Doctoral Training, University of Manchester",
+	"Nathan Khadaroo", 2019, 2025, "From Participation to Data Integrity: Addressing
+Engagement and Bias Challenges in Citizen Science and
+mHealth Research, a mixed-methods approach", "Funded by Data Analytics and Society Centre for Doctoral Training, University of Manchester",
 
 		"Sebastian Acevedo", 2018, 2022, "Unequal Distribution of Access to Public Safety: The Case of Local Governments in Chile", "Funded by Capital Humano Avanzado Conicyt - Becas Chile",
 	
@@ -355,7 +358,7 @@ brief_entries(
 # Teaching and Learning
 
 
-My teaching areas include, research methods, quantitative data analysis/ statistical methods, spatial data analysis and GIS, and environmental criminology. 
+My teaching areas include, research methods, compuatational criminology, quantitative data analysis/ statistical methods, spatial data analysis and GIS, and environmental criminology. 
 
 
 
@@ -364,10 +367,9 @@ My teaching areas include, research methods, quantitative data analysis/ statist
 ```{r teachingug}
 tribble(
 	~title, ~start_date, ~end_date, ~code, ~level,
-	"Making Sense of Criminological Data", 2016, "present", "LAWS20441", "Introduction to quantitative research for 2nd year undergraduates.",
-	"Modelling Criminological Data", 2017, "present", "LAWS20452 ", "Inferential statistics course for 2nd year undergraduates.",
-	"Crime Mapping: An introduction to GIS and spatial analysis", 2018, "present", "LAWS31152", "Basics of spatial data visualisation and analysis for 3rd year undergraduate and all graduate students.",
-	"Short Dissertation", 2017, "present", "LAWS30620", "Lectures and supervision of students on secondary data analysis pathway for their final year dissertation."
+	"Making Sense of Criminological Data", 2016, "2022", "CRIM20441", "Introduction to quantitative research for 2nd year undergraduates.",
+	"Modelling Criminological Data", 2017, "present", "CRIM20452", "Inferential statistics course for 2nd year undergraduates.",
+	"Crime Mapping: An introduction to GIS and spatial analysis", 2018, "present", "CRIM31152", "Basics of spatial data visualisation and analysis for 3rd year undergraduate and all graduate students."
 	
 ) %>% 
 	arrange(desc(start_date)) %>% 
@@ -385,8 +387,10 @@ tribble(
 ```{r teachingpgt}
 tribble(
 	~title, ~start_date, ~end_date, ~code, ~level,
-	"Designing Criminological Research", 2016, "present", "LAWS70311", "Course director and primary lecturer on compulsory research methods module for all Masters streams",
-	"Data Analysis with R & R Studio", 2016, "2019", "LAWS70821", "2016: Course director and sole lecturer, 2018 onwards: ad-hoc lecturer on introductory statistics for MRes students using R",
+	"PG Crime Mapping and Spatial Analysis", 2017, "present", "CRIM60142", "Spatial crime analysis training with R and environmental criminology framework",
+	"Qualitative Research Methods", 2025, "present", "CRIM71361", "Delivering lecture on using unsolicited online data", 
+	"Designing Criminological Research", 2016, "2019", "LAWS70311", "Course director and primary lecturer on compulsory research methods module for all Masters streams",
+	"Data Analysis with R & R Studio", 2016, "2024", "LAWS70821", "2016: Course director and sole lecturer, 2018 onwards: ad-hoc lecturer on introductory statistics for MRes students using R",
 	"Evaluating Policy and Practice", 2018, "2019", "LAWS70542", "Lecturer on mandatory module for all Masters streams introducing evaluation research beyond academia"
 ) %>% 
 	arrange(desc(start_date)) %>% 
@@ -459,7 +463,9 @@ tribble(
 ```{r service}
 tribble(
 	~title, ~start_date, ~end_date, ~code, ~level,
-	"Programme Director for Postgraduate Taught Programmes (Masters degrees)", 2017, "present", "Department of Criminology", "Strategic oversight of programme direction teaching curriculum for all Masters' streams, alongside day-to-day administrative and pastoral responsibilities.",
+	"Director for methods@manchester, a Faculty level organisation delivering methods training for staff and graduate students as well as external customers", 2020, "2022", "Faculty of Humanities", "Planning the Faculty’s research methods curriculum and external training offer, liaising with internal and external training providers, coordinating with postgraduate researcher networks and representatives from other universities, and overseeing flagship events such as the annual Methods Fair and Summer School.",
+	
+	"Programme Director for Postgraduate Taught Programmes (Masters degrees)", 2017, "2020", "Department of Criminology", "Strategic oversight of programme direction teaching curriculum for all Masters' streams, alongside day-to-day administrative and pastoral responsibilities.",
 	
 	"Coordinator of the University of Manchester R User Group", 2016, "2019", "University of Manchester", "Direction and organisation of user group activities such as monthly meetings, hackathons, and preparation of joint research outputs.",
 	
