@@ -9,3 +9,5 @@ blogdown::new_post(title="Can chatGPT pass my statistics module?", ext = ".Rmark
 
 blogdown::check_site()
 blogdown::hugo_version()
+blogdown::update_hugo()
+
