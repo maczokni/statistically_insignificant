@@ -1,0 +1,253 @@
+---
+title: "AI Tools for Researchers: A Practical Introduction"
+author: ~
+date: '2026-03-04'
+slug: ai-tools-for-researchers
+categories: []
+tags: [ai, copilot, quarto, tools]
+images: []
+---
+
+> **RESQUANT seminar resource.** This post is designed to be a clickable companion for a live demo session. Work through it at your own pace, or use it afterwards to set things up yourself.
+
+---
+
+# What are we doing today?
+
+This session covers three things:
+
+1. **What AI tools actually are** — enough to use them confidently and critically
+2. **Microsoft Copilot** — the AI assistant you already have access to via your university Microsoft 365 account
+3. **GitHub Copilot in RStudio** — AI-assisted coding, and how to set it up
+4. **Quarto** — the modern evolution of R Markdown, and why it's worth switching
+
+---
+
+# Part 1: What is AI? 
+
+## The short version
+
+The AI tools we're talking about — ChatGPT, Copilot, Claude — are **large language models (LLMs)**. They are trained on enormous amounts of text and learn to predict what comes next in a sequence of words. That's it. That's the core trick. But it turns out that doing this very well produces something that can write, summarise, reason, code, and explain.
+
+They are not:
+
+- Searching the internet (unless explicitly told to)
+- "Thinking" in the way humans do
+- Infallible — they can and do produce convincing nonsense ("hallucinations")
+
+They *are* very good at:
+
+- Drafting and editing text
+- Explaining concepts
+- Writing and debugging code
+- Summarising documents
+- Generating structured output (tables, lists, templates)
+
+## Resources 
+
+**The University of Manchester** has its own [AI Hub guidelines](https://www.staffnet.manchester.ac.uk/ai-hub/guidelines/covering how staff should use AI tools in teaching, research, and everyday work. 
+
+The key principles are:  
+- transparency (declare how you've used AI), 
+- accountability (you own the output — verify it), 
+- competence (know how to use AI well) 
+- responsible use (ethical, legal, fair), 
+- respect (society, individual rights, environment)
+
+For anything involving sensitive data, use the university's **enterprise Microsoft Copilot** rather than public tools like ChatGPT — it keeps your data within university systems.
+
+Some research-specific issues raised:      
+- synthesised data must be clearly labelled as such, 
+- corresponding author responsible for all written content, so check anything that you use AI for
+- reviewers should never upload confidential manuscript content to public AI services. 
+
+Worth a read before you start integrating these tools into your workflow.
+
+
+### External stuff
+
+- **AI Snake Oil** A book and project by academics (Prof and PhD student at Princeton) who are cautious about AI but not just doom and gloom. They have a newsletter [https://www.normaltech.ai/](https://www.normaltech.ai/) and a book we have in the library [https://www.librarysearch.manchester.ac.uk/permalink/44MAN_INST/1l23p04/alma992988705349101631](https://www.librarysearch.manchester.ac.uk/permalink/44MAN_INST/1l23p04/alma992988705349101631) and a talk [https://www.youtube.com/watch?v=C3TqcUEFR58](https://www.youtube.com/watch?v=C3TqcUEFR58) 
+- **Anthropic** has some useful videos in their AI Claude here: [https://www.anthropic.com/learn](https://www.anthropic.com/learn)
+- Andy Wheeler has a book out I just ordered for the library: [https://crimede-coder.com/blogposts/2026/LLMsForMortals](https://crimede-coder.com/blogposts/2026/LLMsForMortals) - the examples are in python but I suspect easy to adapt to R
+
+## A note on limitations for research
+
+- **Don't trust AI for citations or facts** — always verify
+- **Data privacy matters** — don't paste sensitive or confidential data into public AI tools
+- 
+
+
+---
+
+# Part 2: Microsoft Copilot
+
+## What is it?
+
+Microsoft Copilot is Microsoft's AI assistant, built on OpenAI's GPT models. If your institution has Microsoft 365, you likely have access to Copilot already — it's built into Word, Outlook, Teams, and available as a standalone chat interface.
+
+**Access it here:** [copilot.microsoft.com](https://copilot.microsoft.com) — sign in with your university Microsoft account.
+
+## What can you use it for?
+
+**In Word:**
+
+- Drafting sections from bullet points
+- Summarising long documents
+- Rewriting for tone or audience
+- Generating tables and structured content
+
+**In Outlook:**
+
+- Drafting email replies
+- Summarising long email threads
+
+**In Teams:**
+
+- Summarising meeting transcripts
+- Generating action points from meetings
+
+**As a standalone chat:**
+
+- Much like ChatGPT: general purpose, good for thinking out loud, drafting, explaining concepts
+
+## Practical demo prompts to try
+
+```
+Summarise the following abstract in two sentences for a non-specialist audience: [paste abstract]
+```
+
+```
+I'm writing a methods section for a quantitative criminology paper.
+Draft a paragraph explaining [your method] for a general social science audience.
+```
+
+```
+Here are my bullet points for a discussion section.
+Turn these into coherent prose, academic in tone: [paste bullets]
+```
+
+## Tips
+
+- **Be specific**: the more context you give, the better the output
+- **Iterate**: treat it as a first draft, not a final product
+- **Use it for structure**: great for getting past blank page paralysis
+
+---
+
+# Part 3: GitHub Copilot in RStudio
+
+## What is GitHub Copilot?
+
+[GitHub Copilot](https://github.com/features/copilot) is an AI coding assistant that suggests code as you type, directly inside your editor. It's trained on public code repositories and is particularly good at:
+
+- Completing functions you've started
+- Suggesting the next logical step in a data pipeline
+- Writing boilerplate code (loading packages, reading data, etc.)
+- Explaining what a piece of code does
+
+## Getting access
+
+GitHub Copilot is a paid service, but:
+
+- **Free for verified students and educators** via the [GitHub Education programme](https://education.github.com/)
+- If you have an academic email address, you can likely get access for free
+
+Steps:
+
+1. Create a [GitHub account](https://github.com) if you don't have one
+2. Apply for [GitHub Education](https://education.github.com/benefits) using your university email — select "Teacher" or "Researcher" as appropriate
+3. Once approved, Copilot is available under your account settings
+
+## Setting up in RStudio
+
+RStudio (version 2023.09.0 or later) has native GitHub Copilot integration.
+
+**Steps:**
+
+1. Open RStudio → `Tools` → `Global Options` → `Copilot`
+2. Click `Sign In` and follow the prompts to authenticate with your GitHub account
+3. Enable Copilot suggestions
+
+Once enabled, suggestions appear as greyed-out text as you type. Press `Tab` to accept.
+
+**Helpful links:**
+
+- [Posit's GitHub Copilot documentation](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html)
+- [GitHub Copilot documentation](https://docs.github.com/en/copilot)
+
+## Using Copilot effectively in R
+
+Copilot works best when you give it context. The most reliable way to do this is with a **comment describing what you want**:
+
+```{r}
+# Load the tidyverse and read in a CSV called "crime_data.csv" from the data folder
+
+# Create a bar chart showing counts of crime type, ordered from most to least frequent
+
+# Filter to include only incidents in 2023, then group by month and summarise total count
+
+```
+
+The more descriptive your comment, the better the suggestion. Think of it as pair programming with someone who types faster than you.
+
+## Live demo
+
+- Open a new R script
+- Write a comment and watch Copilot suggest the code
+- Accept with `Tab`, cycle through alternatives with `Alt+]`
+
+---
+
+# Part 4: Quarto
+
+## What is Quarto?
+
+[Quarto](https://quarto.org/) is the successor to R Markdown, developed by Posit (the company behind RStudio). If you've used R Markdown, it will feel immediately familiar — but it works across R, Python, and Julia, and produces much more polished output by default.
+
+Key things Quarto can produce:
+
+- HTML reports and websites
+- PDF documents
+- Word documents
+- Presentations (via reveal.js)
+- Academic manuscripts (including journal submission formats)
+- Entire books
+
+## Why switch from R Markdown?
+
+- **Better defaults**: output looks nicer out of the box
+- **More output formats**: especially good for slides and websites
+- **Cross-language**: works with Python and Julia too, not just R
+- **Active development**: Quarto likely to replace rmarkdown?
+- **Easier to learn**: am told it's even easier to pick up.
+
+
+## Getting started
+
+AFAIK quarto is now included with your RStudio download, so you just start a new qmd document and go from there. 
+
+It basically looks like Rmarkdown, but you can use the visual editor too
+
+
+## Key resources
+
+- [Quarto documentation](https://quarto.org/docs/guide/) — comprehensive and well-written
+- [R for Data Science (2nd ed.)](https://r4ds.hadley.nz/quarto.html) — chapter on Quarto by Hadley Wickham
+- [Quarto gallery](https://quarto.org/docs/gallery/) — examples of what's possible
+- [Awesome Quarto](https://github.com/mcanouil/awesome-quarto) — curated list of Quarto resources, extensions, and examples
+- [Quarto books](https://blog.stephenturner.us/p/quarto-books) by Stephen Turner: moving from bookdown/ rmarkdown to quarto, with lots of good resource links in there. 
+
+---
+
+# Putting it all together
+
+These tools work well in combination:
+
+| Task | Tool |
+|------|------|
+| Understanding a method or concept | Microsoft Copilot / ChatGPT |
+| Writing and editing prose | Microsoft Copilot (in Word) |
+| Writing R code | GitHub Copilot (in RStudio) |
+| Producing reports / papers | Quarto |
+| Reproducible research output | Quarto + GitHub |
+
